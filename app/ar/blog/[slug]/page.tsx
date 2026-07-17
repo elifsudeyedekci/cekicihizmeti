@@ -31,8 +31,9 @@ export function generateStaticParams() {
   return arPosts.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = getArPost(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getArPost(slug);
   if (!post) return {};
   return {
     title: post.metaTitle,
@@ -41,8 +42,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ArabicBlogPostPage({ params }: { params: { slug: string } }) {
-  const post = getArPost(params.slug);
+export default async function ArabicBlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getArPost(slug);
   if (!post) notFound();
   const related = post.relatedPostSlugs.map((s) => getArPost(s)).filter((p): p is NonNullable<typeof p> => Boolean(p));
 

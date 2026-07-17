@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/config";
-import { districtMapEmbed } from "@/lib/data/districts";
+import { businessMapEmbed } from "@/lib/data/districts";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton, ShareLocationButton } from "@/components/CtaButtons";
 
@@ -55,8 +55,8 @@ export default function ContactPage() {
 
         <div className="mt-6 overflow-hidden rounded-xl border border-[var(--color-navy-100)]">
           <iframe
-            title="İstanbul hizmet bölgesi haritası"
-            src={districtMapEmbed("İstanbul")}
+            title="Konumumuz"
+            src={businessMapEmbed()}
             className="h-80 w-full"
             loading="lazy"
           />

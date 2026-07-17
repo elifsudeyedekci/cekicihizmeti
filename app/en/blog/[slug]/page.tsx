@@ -31,8 +31,9 @@ export function generateStaticParams() {
   return enPosts.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = getEnPost(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getEnPost(slug);
   if (!post) return {};
   return {
     title: post.metaTitle,
@@ -41,8 +42,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function EnglishBlogPostPage({ params }: { params: { slug: string } }) {
-  const post = getEnPost(params.slug);
+export default async function EnglishBlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getEnPost(slug);
   if (!post) notFound();
   const related = post.relatedPostSlugs.map((s) => getEnPost(s)).filter((p): p is NonNullable<typeof p> => Boolean(p));
 

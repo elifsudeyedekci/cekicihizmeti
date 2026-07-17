@@ -17,8 +17,9 @@ export function generateStaticParams() {
   return districts.filter((d) => !RESERVED.includes(d.slug)).map((d) => ({ slug: d.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const d = getDistrict(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const d = getDistrict(slug);
   if (!d) return {};
   return {
     title: `${d.name} Çekici Hizmeti | 7/24 Oto Çekici — 0535 404 80 44`,
@@ -27,9 +28,10 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function DistrictPage({ params }: { params: { slug: string } }) {
-  if (RESERVED.includes(params.slug)) notFound();
-  const d = getDistrict(params.slug);
+export default async function DistrictPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  if (RESERVED.includes(slug)) notFound();
+  const d = getDistrict(slug);
   if (!d) notFound();
 
   const neighbors = d.neighbors.map((n) => getDistrict(n)).filter((n): n is NonNullable<typeof n> => Boolean(n));

@@ -1,0 +1,227 @@
+import type { Highway } from "./types";
+
+/** 7 otoyol/köprü — "orada mahsur kaldım" yüksek niyetli aramalar için */
+export const highways: Highway[] = [
+  {
+    slug: "tem-otoyolu",
+    name: "TEM Otoyolu (O-2/O-3)",
+    metaTitle: "TEM Otoyolunda Araç Arızası ve Çekici | 7/24 — 0535 404 80 44",
+    intro:
+      "TEM Otoyolu'nda aracınız mı arızalandı? 0535 404 80 44'ü arayın: Mahmutbey'den Sultanbeyli gişelerine, Kavacık'tan Hadımköy'e TEM'in tüm kesimlerine otoyol güvenlik prosedürüyle 7/24 müdahale ediyoruz.",
+    routeInfo: [
+      "TEM (Trans European Motorway), İstanbul'u doğu-batı ekseninde kat eden ana otoyoldur: Avrupa'da O-3 (Mahmutbey-Silivri-Edirne yönü) ve şehir geçişinde O-2 (Mahmutbey-FSM Köprüsü-Sultanbeyli) kesimlerinden oluşur.",
+      "Kritik kavşaklar: Mahmutbey gişeleri, Hadımköy, Habipler, Alibeyköy, Seyrantepe, Kavacık, Ümraniye-Dudullu, Samandıra, Sultanbeyli gişeleri, Orhanlı.",
+      "Hız limiti yüksek (120+ km/s) olduğundan emniyet şeridindeki bir araç için en tehlikeli otoyoldur; araç içinde/arkasında beklemek ölümcül risktir.",
+    ],
+    safetyNotes: [
+      "Aracı emniyet şeridine alın, tekerlekleri sağa kırın, dörtlü flaşörü yakın.",
+      "Reflektörü aracın en az 100 metre gerisine koyun (otoyolda mesafe artar).",
+      "Tüm yolcularla birlikte bariyerin DIŞINA geçin; araç içinde asla beklemeyin.",
+      "Konumunuzu kilometre levhası veya son kavşak adıyla, en iyisi WhatsApp canlı konumla bildirin.",
+      "Gece ise reflektörlü yelek giyin (araçta bulundurulması zorunludur).",
+    ],
+    districtSlugs: ["bagcilar", "basaksehir", "esenler", "sultangazi", "eyupsultan", "kagithane", "sariyer", "beykoz", "umraniye", "atasehir", "sancaktepe", "sultanbeyli", "pendik", "tuzla", "silivri", "catalca", "arnavutkoy"],
+    faqs: [
+      { q: "TEM'de aracım arıza yaptı, ilk ne yapmalıyım?", a: "Emniyet şeridine alın, dörtlüleri yakın, reflektörü 100 m geriye koyun ve tüm yolcularla bariyer dışına geçin; sonra 0535 404 80 44'ü arayın." },
+      { q: "TEM'e çekici ne kadar sürede gelir?", a: "Bulunduğunuz kesime göre 15-40 dakika; TEM güzergâhı boyunca ekiplerimiz konuşlu olduğundan çoğu kesime 20-25 dakikada ulaşırız." },
+      { q: "TEM'de hangi kilometrede olduğumu bilmiyorum, nasıl tarif ederim?", a: "En son geçtiğiniz kavşak/gişe adını söyleyin veya WhatsApp'tan canlı konum paylaşın — en sağlıklı yöntem budur." },
+      { q: "TEM'de lastik değiştirmek yasak mı?", a: "Yasak değil ama çok tehlikeli; emniyet şeridinde lastik değişimi yerine aracı güvenli alana çekip orada değiştirmeyi öneririz." },
+      { q: "Gişelerde (Mahmutbey/Sultanbeyli) arıza yaptım, ne yapmalıyım?", a: "Gişe adacığında durmayın; mümkünse gişe sonrası cebe ilerleyin, olmuyorsa görevlilere haber verip bariyer dışında bekleyin." },
+      { q: "TEM'de yakıtım bitti, ceza yer miyim?", a: "Otoyolda yakıtsız kalmak kusur sayılabilir; öncelik güvenliğiniz — bariyer dışına geçin, yakıt ikmal ekibimiz gelsin." },
+      { q: "TEM'de gece arıza çok mu riskli?", a: "Gece görünürlük azalır, risk artar; reflektör + yelek + bariyer dışı bekleme hayati önemdedir. Ekibimiz ikaz donanımıyla gelir." },
+      { q: "Otoyol işletmesinin çekicisi mi gelmeli, sizi mi arayayım?", a: "Otoyol güvenliği trafik akışı için müdahale edebilir; aracınızın istediğiniz yere taşınması için bizi arayın — koordinasyonu üstleniriz." },
+      { q: "TEM'de kaza yaptım, araçlar yolu kapattı; ne yapmalıyım?", a: "Yaralı varsa 112, güvenliğe geçin, fotoğraflayın; mümkünse araçları emniyet şeridine alın. Ekibimiz ve gerekirse polis koordinasyonuyla yolu açarız." },
+      { q: "TEM'den şehirlerarası devam edecektim, aracım taşınırken ben ne yapacağım?", a: "Sizi güzergâh üzerinde uygun noktaya bırakır veya araçla birlikte (platform kabininde) taşırız; telefonda planlarız." },
+    ],
+  },
+  {
+    slug: "d-100-e-5",
+    name: "D-100 / E-5 Karayolu",
+    metaTitle: "D-100 (E-5) Üzerinde Arıza ve Çekici | 7/24 — 0535 404 80 44",
+    intro:
+      "D-100 (E-5) üzerinde aracınız mı kaldı? 0535 404 80 44'ü arayın: Silivri'den Tuzla'ya, metrobüs koridoru boyunca tüm D-100 kesimlerine 7/24 hızlı müdahale ediyoruz.",
+    routeInfo: [
+      "D-100 (eski adıyla E-5), İstanbul'un şehir içinden geçen ana karayoludur: Avrupa'da Silivri-Avcılar-Merter-Topkapı, Anadolu'da Kadıköy-Maltepe-Kartal-Pendik-Tuzla hattını izler.",
+      "Metrobüs koridoru Avcılar-Söğütlüçeşme arasında D-100'e paraleldir; arıza anında metrobüs yoluna girmek hem yasak hem çok tehlikelidir.",
+      "TEM'e göre daha yavaş ama çok daha yoğun akar; gündüz her kesimi doludur ve arızalanan araç dakikalar içinde uzun kuyruk yaratır.",
+    ],
+    safetyNotes: [
+      "Aracı sağ şeride/cebe alın, dörtlü flaşörü yakın.",
+      "Metrobüs yoluna KESİNLİKLE girmeyin ve yanaşmayın.",
+      "Reflektörü 45-50 metre geriye koyun, kaldırım/bariyer tarafında bekleyin.",
+      "Köprülü kavşaklarda (Cevizlibağ, Haramidere, Cevizli vb.) hangi ayakta olduğunuzu tarif edin veya konum paylaşın.",
+    ],
+    districtSlugs: ["silivri", "buyukcekmece", "beylikduzu", "esenyurt", "avcilar", "kucukcekmece", "bahcelievler", "bagcilar", "gungoren", "bakirkoy", "zeytinburnu", "kadikoy", "maltepe", "kartal", "pendik", "tuzla", "atasehir"],
+    faqs: [
+      { q: "D-100'de aracım arıza yaptı, ilk ne yapmalıyım?", a: "Sağ şeride/cebe alın, dörtlüleri yakın, reflektör koyun ve güvenli tarafta bekleyin; sonra 0535 404 80 44'ü arayın." },
+      { q: "D-100'e çekici ne kadar sürede gelir?", a: "D-100 hattı boyunca ekiplerimiz konuşludur; çoğu kesime 15-20 dakikada ulaşırız." },
+      { q: "Metrobüs yoluna çekilebilir miyim, orası boş görünüyor?", a: "Kesinlikle hayır — hem ağır cezası var hem metrobüsler yüksek hızla gelir; sağ tarafta kalın." },
+      { q: "D-100'de sol şeritte kaldım, sağa geçemiyorum; ne yapayım?", a: "Araçta kalmayın; trafiği kollayarak yolun sağına yürüyün ve bizi arayın — ekibimiz güvenlik koridoru kurarak aracı alır." },
+      { q: "Köprülü kavşaktayım ama hangi yönde bilmiyorum, nasıl tarif ederim?", a: "Gittiğiniz istikameti (Ankara yönü / Edirne yönü) ve son gördüğünüz tabelayı söyleyin; en iyisi WhatsApp canlı konumdur." },
+      { q: "D-100'de gece arıza yaptım, güvenli mi?", a: "Gece D-100'de hız artar; reflektör ve yelek kullanın, aydınlık noktada bekleyin. Gece varışımız genelde 15 dakikanın altındadır." },
+      { q: "E-5'te kaza yaptım, tutanak bitmeden çekilebilir mi?", a: "Hayır, tespit tamamlanmadan araç oynatılmaz (trafiği tehlikeye atan istisnalar hariç); ekibimiz gerekirse bekler." },
+      { q: "D-100 yan yolda mı ana yolda mı olduğum fark eder mi?", a: "Evet, müdahale planı değişir; yan yol/ana yol bilgisini ve yön bilgisini paylaşın." },
+      { q: "Aracım D-100'de su birikintisinde stop etti, çalıştırayım mı?", a: "Hayır — su çekmiş motorda çalıştırma denemesi ağır hasar yaratır; çalıştırmadan platformla alalım." },
+      { q: "D-100'den havalimanına yetişecektim, ne yapabilirsiniz?", a: "Öncelikli kayıt açarız: önce sizin ulaşımınızı çözer (taksi/transfer önerisi), aracı emanet protokolüyle istediğiniz adrese taşırız." },
+    ],
+  },
+  {
+    slug: "15-temmuz-sehitler-koprusu",
+    name: "15 Temmuz Şehitler Köprüsü",
+    metaTitle: "15 Temmuz Köprüsünde Arıza ve Çekici | 7/24 — 0535 404 80 44",
+    intro:
+      "15 Temmuz Şehitler Köprüsü'nde veya yaklaşımlarında aracınız mı kaldı? 0535 404 80 44'ü arayın: köprü ve çevre yolu (O-1) müdahalelerinde deneyimli ekibimiz güvenlik prosedürüyle 7/24 hazır.",
+    routeInfo: [
+      "15 Temmuz Şehitler Köprüsü (Boğaziçi Köprüsü), O-1 çevre yolunun Boğaz geçişidir: Avrupa'da Ortaköy/Beşiktaş, Anadolu'da Beylerbeyi/Altunizade bağlantılarıyla çalışır.",
+      "Köprü üzerinde durmak ve yaya olarak bulunmak yasaktır; arızalanan araç işletme güvenliği tarafından da izlenir.",
+      "En kritik noktalar köprü üstünden çok yaklaşım rampalarıdır: Ortaköy kavşağı ve Altunizade örgü bölgeleri İstanbul'un en yoğun kesişimlerindendir.",
+    ],
+    safetyNotes: [
+      "Köprü üstünde arıza: dörtlüleri yakın, araç İÇİNDE kalın (köprüde yaya olmak yasak ve tehlikelidir), hemen arayın.",
+      "Yaklaşım rampalarında: emniyet şeridine alın, bariyer dışına geçin.",
+      "Köprü işletmesinin müdahale aracı sizi güvenli alana alabilir; sonrasında taşımayı biz üstleniriz.",
+      "Rüzgârlı havada yüksek profilli araçlar (panelvan, karavan) köprüde ekstra dikkat etmelidir.",
+    ],
+    districtSlugs: ["besiktas", "uskudar", "sisli", "kadikoy"],
+    faqs: [
+      { q: "Köprünün tam üstünde arıza yaptım, dışarı çıkabilir miyim?", a: "Hayır — köprü üzerinde yaya bulunmak yasak ve rüzgâr nedeniyle tehlikelidir. Dörtlüleri yakıp araçta kalın ve hemen bizi arayın; işletme güvenliğiyle koordineli müdahale edilir." },
+      { q: "Köprüye çekici girebiliyor mu?", a: "Evet; köprü ve O-1 müdahale prosedürlerini biliyoruz, işletme güvenliğiyle koordineli çalışırız." },
+      { q: "Ortaköy girişinde (Avrupa yakası) kaldım, ne kadar sürede gelirsiniz?", a: "Köprü yaklaşımları en yüksek öncelikli bölgemizdir; ortalama 15-20 dakikada ulaşırız." },
+      { q: "Altunizade tarafında örgü bölgesinde kaldım, nasıl tarif edeyim?", a: "Gittiğiniz yönü (köprü yönü/Kadıköy yönü) söyleyin ve WhatsApp canlı konum atın; bölgenin her rampasını biliriz." },
+      { q: "Köprüde yakıtım bitti, ceza var mı?", a: "Köprü/otoyolda yakıtsız kalmak kusur sayılabilir; önceliğiniz güvenlik olsun, gerisini birlikte çözeriz." },
+      { q: "Motosikletim köprüde arızalandı, motosiklet için de geliyor musunuz?", a: "Evet, motosiklet platformumuzla köprü ve çevre yoluna 7/24 müdahale ediyoruz." },
+      { q: "Köprü ücretini ödeyemeden (HGS sorunlu) arızalandım, sorun olur mu?", a: "HGS/geçiş konusu işletmenin idari sürecidir; aracınızın kurtarılması bundan bağımsız ilerler." },
+      { q: "Lodosta panelvanım köprüde zorlanıyor, önlem var mı?", a: "Şiddetli rüzgârda köprü geçişini ertelemek en iyisidir; araç kontrolü zorlaşırsa güvenli noktada durup bizi arayın." },
+      { q: "Köprü gece kapalıyken (bakım) arıza yaptım, alternatif ne?", a: "FSM veya Avrasya Tüneli güzergâhıyla taşırız; gece bakım takvimini takip ediyoruz." },
+      { q: "Kazalı aracım köprü girişinde, trafik kilitlendi; öncelik verir misiniz?", a: "Evet, köprü yaklaşımındaki kazalara filo önceliğimiz en yüksektir; önce yolu açarız." },
+    ],
+  },
+  {
+    slug: "fatih-sultan-mehmet-koprusu",
+    name: "Fatih Sultan Mehmet Köprüsü",
+    metaTitle: "FSM Köprüsünde Arıza ve Çekici | 7/24 — 0535 404 80 44",
+    intro:
+      "FSM Köprüsü'nde veya bağlantı yollarında aracınız mı kaldı? 0535 404 80 44'ü arayın: O-2 çevre yolu ve köprü yaklaşımlarında (Kavacık, Hisarüstü) 7/24 deneyimli müdahale ekibimiz hazır.",
+    routeInfo: [
+      "Fatih Sultan Mehmet Köprüsü, TEM/O-2'nin Boğaz geçişidir; Avrupa'da Hisarüstü/Sarıyer, Anadolu'da Kavacık/Beykoz bağlantılarıyla çalışır ve şehirlerarası transit trafiği taşır.",
+      "TEM aksında olduğu için hız yüksektir; kamyon-TIR oranı 15 Temmuz Köprüsü'nden belirgin biçimde fazladır.",
+      "Kritik noktalar: Kavacık kavşağı (Anadolu), Hisarüstü-Etiler bağlantısı (Avrupa) ve köprü öncesi örgü bölgeleri.",
+    ],
+    safetyNotes: [
+      "Köprü üstünde: dörtlüleri yakın, araçta kalın, hemen arayın — köprüde yaya bulunmak yasaktır.",
+      "Yaklaşımlarda: emniyet şeridi + reflektör 100 m + bariyer dışında bekleme.",
+      "Transit kamyon trafiği yoğundur; emniyet şeridinde araç kapısını yol tarafından açmayın.",
+      "Rüzgârlı günlerde köprü üzeri savrulma riski için yüksek profilli araçlar yavaşlamalıdır.",
+    ],
+    districtSlugs: ["beykoz", "sariyer", "umraniye", "atasehir", "kagithane", "besiktas"],
+    faqs: [
+      { q: "FSM üzerinde arıza yaptım, ne yapmalıyım?", a: "Dörtlüleri yakın, araçta kalın (köprüde yaya yasak) ve 0535 404 80 44'ü arayın; işletme güvenliğiyle koordineli müdahale ederiz." },
+      { q: "FSM'ye çekici ne kadar sürede gelir?", a: "Kavacık ve Hisarüstü taraflarında konuşlu ekiplerimizle yaklaşımlarına 15-20 dakikada ulaşırız." },
+      { q: "Kavacık kavşağında kaldım, hangi bilgiyi vermeliyim?", a: "Yönünüzü (köprü/Beykoz/TEM Ankara yönü) ve son tabelayı söyleyin; WhatsApp konumu en hızlısıdır." },
+      { q: "TIR'ım FSM yaklaşımında arızalandı, ağır vasıta müdahaleniz var mı?", a: "Evet, ağır vasıta kurtarıcımızla köprü aksında TIR/kamyon müdahalesi yapıyoruz." },
+      { q: "FSM'de şerit daraltması/bakım varken arıza yaptım, daha mı riskli?", a: "Evet; bakım bölgelerinde şerit disiplini kritiktir. Konumunuzu bildirin, işletmeyle koordineli hızlı alırız." },
+      { q: "Köprü geçişinde aracım hararet yaptı, durmalı mıyım?", a: "Köprü üstünde durmak son çare olmalı; mümkünse köprü sonrası ilk cebe ilerleyin. Motor zorlanıyorsa dörtlülerle yavaşlayıp güvenli ilk noktada durun." },
+      { q: "Gece FSM'de kaldım, geliyor musunuz?", a: "Evet, 7/24; gece köprü aksı varışlarımız genellikle 15 dakika civarındadır." },
+      { q: "Elektrikli aracımın şarjı köprü öncesi bitti, ne yapacaksınız?", a: "Flatbed ile alır, güzergâh üzerindeki en uygun DC şarj istasyonuna taşırız." },
+      { q: "FSM yasağı olan saatlerde kamyonum kaldı (geçiş kısıtı), sorun olur mu?", a: "Kısıt saatleri idari konudur; kurtarma bundan bağımsız yapılır, gerekirse trafik birimleriyle koordine oluruz." },
+      { q: "Köprü yaklaşımında zincirleme kazaya karıştım, ne yapmalıyım?", a: "Yaralı için 112, güvenli alana geçin, fotoğraflayın; çoklu araç çekimi için birden fazla platform yönlendirebiliriz." },
+    ],
+  },
+  {
+    slug: "yavuz-sultan-selim-koprusu",
+    name: "Yavuz Sultan Selim Köprüsü",
+    metaTitle: "YSS Köprüsünde (Kuzey Marmara) Arıza ve Çekici | 7/24 — 0535 404 80 44",
+    intro:
+      "Yavuz Sultan Selim Köprüsü'nde veya Kuzey Marmara bağlantılarında aracınız mı kaldı? 0535 404 80 44'ü arayın: şehir merkezine uzak bu aksta bile 7/24 müdahale ediyor, varış süresini baştan dürüstçe bildiriyoruz.",
+    routeInfo: [
+      "YSS Köprüsü, Kuzey Marmara Otoyolu'nun (O-7) Boğaz geçişidir; Odayeri (Avrupa) ve Riva/Çamlık (Anadolu) bağlantılarıyla çalışır, transit ve ağır vasıta trafiğinin ana güzergâhıdır.",
+      "Şehir merkezine uzak, yerleşim seyrek: en yakın yardım noktası diğer köprülere göre uzaktır — bu yüzden telefonla net konum ve araç bilgisi kritiktir.",
+      "Rakım ve açık coğrafya nedeniyle rüzgâr ve kışın buzlanma diğer köprülerden daha etkilidir.",
+    ],
+    safetyNotes: [
+      "Köprü/otoyol üstünde: dörtlüler + araçta bekleme (yaya yasak), hemen arama.",
+      "Bağlantı yollarında: emniyet şeridi + reflektör 100 m + bariyer dışı bekleme.",
+      "Bölge tenha olduğundan gece güvenlik teyidi (plaka SMS'i) prosedürümüz standarttır.",
+      "Kışın köprü ve viyadüklerde siyah buz riski yüksektir; hız düşürün.",
+    ],
+    districtSlugs: ["sariyer", "beykoz", "arnavutkoy", "eyupsultan", "cekmekoy"],
+    faqs: [
+      { q: "YSS Köprüsü'nde arıza yaptım, buraya gerçekten çekici gelir mi?", a: "Evet; Kuzey Marmara aksı görev bölgemizdir. Uzaklık nedeniyle varış süresini baştan net söyler, yolda sizi bilgilendiririz." },
+      { q: "YSS'ye çekici ne kadar sürede gelir?", a: "Kesime göre 25-45 dakika; Odayeri ve Riva bağlantılarına konuşlanmamıza göre değişir, telefonda net veririz." },
+      { q: "Kuzey Marmara Otoyolu'nda konumumu nasıl tarif ederim?", a: "Kilometre levhası, son kavşak (Odayeri, Hasdal, Riva…) ve yön bilgisi; en iyisi WhatsApp canlı konumdur." },
+      { q: "TIR'ım YSS aksında arızalandı, ağır vasıta geliyor mu?", a: "Evet, bu aks ağır vasıta yoğun olduğundan kurtarıcımız bu güzergâha aşinadır." },
+      { q: "Gece bu ıssız akста beklemek güvenli mi?", a: "Kapıları kilitli araçta bekleyin; ekip yola çıkınca plaka/sürücü bilgisini SMS'le göndeririz — teyitsiz araca güvenmeyin." },
+      { q: "Kışın köprüde buzlanma oldu ve aracım kaydı, kurtarıyor musunuz?", a: "Evet, kış donanımlı kurtarma aracımızla müdahale ederiz; viyadük buzlanmalarında ekstra dikkatli olun." },
+      { q: "Havalimanına (İGA) giderken bu yolda kaldım, uçağım var; ne yapabilirsiniz?", a: "Öncelikli kayıt açar, önce ulaşımınızı çözer, aracı emanet protokolüyle istediğiniz adrese taşırız." },
+      { q: "YSS'de yakıtım bitti, istasyonlar çok seyrek; ikmal geliyor mu?", a: "Evet, güvenli kapta yakıt ikmali yapıyoruz; bu aksta 'istasyona yetişirim' riskine girmeyin." },
+      { q: "Şiddetli rüzgârda köprüden geçmek güvenli mi?", a: "Yüksek profilli araçlar için lodos/poyraz günlerinde risklidir; savrulma hissederseniz hız düşürüp geçiş sonrası ilk cepte durun." },
+      { q: "Bu köprüden şehirlerarası taşıma yapıyor musunuz?", a: "Evet, Kuzey Marmara aksı şehirlerarası taşımalarımızın ana güzergâhlarındandır." },
+    ],
+  },
+  {
+    slug: "kuzey-marmara-otoyolu",
+    name: "Kuzey Marmara Otoyolu (O-7)",
+    metaTitle: "Kuzey Marmara Otoyolunda Arıza ve Çekici | 7/24 — 0535 404 80 44",
+    intro:
+      "Kuzey Marmara Otoyolu'nda aracınız mı kaldı? 0535 404 80 44'ü arayın: Kınalı'dan İzmit yönüne, İstanbul Havalimanı bağlantılarından YSS Köprüsü'ne otoyolun tüm kesimlerine 7/24 müdahale ediyoruz.",
+    routeInfo: [
+      "Kuzey Marmara Otoyolu (O-7), İstanbul'u kuzeyden saran en yeni otoyoldur: Kınalı-Odayeri-YSS Köprüsü-Riva-Kurtköy-İzmit hattını izler ve İstanbul Havalimanı'nın ana bağlantısıdır.",
+      "Yüksek hız limiti (140 km/s'e varan kesimler) ve seyrek yerleşim: arıza anında en yakın istasyon/yardım uzak olabilir.",
+      "Kritik bağlantılar: Havalimanı kavşakları, Odayeri, Hasdal, Habipler, Riva-Çamlık, Sancaktepe-Çekmeköy bağlantısı, Kurtköy (Sabiha Gökçen).",
+    ],
+    safetyNotes: [
+      "Hız yüksek: reflektörü en az 100-150 m geriye koyun, bariyer dışında bekleyin.",
+      "İstasyon ve tesis aralıkları uzundur; yakıt ve şarj planınızı otoyola girmeden yapın.",
+      "Tenha kesimlerde gece güvenlik teyidi (plaka SMS'i) prosedürümüz standarttır.",
+      "İki havalimanını bağlayan aks olduğundan 'uçağa yetişme' vakalarında öncelikli kayıt açarız.",
+    ],
+    districtSlugs: ["arnavutkoy", "basaksehir", "eyupsultan", "sariyer", "beykoz", "cekmekoy", "sancaktepe", "pendik", "tuzla", "silivri", "catalca", "sultangazi"],
+    faqs: [
+      { q: "Kuzey Marmara'da aracım arızalandı, en yakın yardım çok uzak görünüyor; gelir misiniz?", a: "Evet, O-7 düzenli görev bölgemizdir; konumunuza göre 20-45 dakikada ulaşır, süreyi baştan net söyleriz." },
+      { q: "Havalimanına giderken bu otoyolda kaldım, uçağım kalkacak; ne yapıyorsunuz?", a: "Öncelikli kayıt: önce ulaşım çözümü (taksi/transfer), sonra aracınızı emanet protokolüyle teslim alıp istediğiniz adrese taşırız." },
+      { q: "O-7'de şarjım bitti (elektrikli araç), istasyon da yok; ne olacak?", a: "Flatbed ile en uygun DC şarj noktasına taşırız; bu otoyola girmeden şarj planı yapmanızı öneririz." },
+      { q: "140 km/s kesimde emniyet şeridinde beklemek güvenli mi?", a: "Araç içinde/yanında asla beklemeyin; reflektörü 150 m geriye koyup bariyer dışına geçin — bu otoyolda kural daha da kritiktir." },
+      { q: "Gişelerden geçtim ama HGS bakiyem yetersizdi, şimdi de arızalandım; sorun olur mu?", a: "HGS idari konudur, kurtarmayı etkilemez; aracınızı taşırız, bakiyeyi sonra tamamlarsınız." },
+      { q: "O-7'de gece kaldım, çok tenha; güvenlik önleminiz ne?", a: "Ekip yola çıkınca plaka/sürücü bilgisi SMS'i göndeririz; teyitsiz hiçbir araca aracınızı teslim etmeyin, biz de aynı kuralı uygularız." },
+      { q: "TIR'ım O-7'de arızalandı, ağır vasıta hizmetiniz var mı?", a: "Evet, O-7 transit yük güzergâhıdır ve ağır vasıta kurtarıcımız bu aksta düzenli çalışır." },
+      { q: "Riva kesiminde kaldım, hangi ilçedeyim bile bilmiyorum; nasıl bulacaksınız?", a: "WhatsApp canlı konum atın; O-7'nin tüm kavşak ve viyadüklerini biliriz, konum yeterlidir." },
+      { q: "Kışın bu otoyol daha mı riskli?", a: "Evet, kuzey ormanlık kesimlerde sis ve buzlanma sık görülür; kış lastiği şarttır, buzlanma vakalarına kış donanımıyla geliriz." },
+      { q: "O-7 üzerinden şehirlerarası taşıma yapıyor musunuz?", a: "Evet, İzmit-Anadolu yönü ve Trakya yönü taşımalarımızın ana güzergâhıdır." },
+    ],
+  },
+  {
+    slug: "avrasya-tuneli",
+    name: "Avrasya Tüneli",
+    metaTitle: "Avrasya Tüneli Yaklaşımlarında Arıza ve Çekici | 7/24 — 0535 404 80 44",
+    intro:
+      "Avrasya Tüneli yaklaşımlarında aracınız mı kaldı? 0535 404 80 44'ü arayın: tünel içi müdahale işletmenin uzman ekiplerince yapılır; tünel öncesi/sonrası tüm noktalarda ve aracınızın tünelden çıkarılması sonrasında 7/24 yanınızdayız.",
+    routeInfo: [
+      "Avrasya Tüneli, Boğaz'ın altından geçen karayolu tünelidir: Avrupa'da Kennedy Caddesi/Kumkapı (Fatih), Anadolu'da Göztepe/D-100 (Kadıköy) bağlantılarıyla çalışır; yalnızca otomobil ve minibüs sınıfına açıktır.",
+      "Tünel içinde durmak, şerit değiştirmek ve motosiklet/kamyon girişi yasaktır; tünel 7/24 kameralarla izlenir ve kendi acil müdahale ekipleri vardır.",
+      "Bizim görev alanımız: tünel yaklaşımları (Kennedy Cad., Göztepe kavşağı) ve tünel işletmesinin aracı güvenli alana çıkarması sonrası taşıma.",
+    ],
+    safetyNotes: [
+      "Tünel İÇİNDE arıza: dörtlüleri yakın, araçta kalın, acil telefonları/işletme anonslarını izleyin — işletme ekibi sizi güvenli alana alır.",
+      "Tünel çıkışında/girişinde arıza: emniyet şeridine alın, bizi arayın.",
+      "Elektrikli araçlar tünele girebilir; ancak şarj kritikse tünel öncesi şarjı planlayın.",
+      "Tünel ücret/HGS konuları idaridir, kurtarmayı etkilemez.",
+    ],
+    districtSlugs: ["fatih", "kadikoy", "zeytinburnu", "uskudar"],
+    faqs: [
+      { q: "Avrasya Tüneli'nin içinde arıza yaptım, sizi mi arayayım?", a: "Tünel içinde işletmenin acil ekipleri devreye girer ve sizi güvenli alana alır; hemen ardından bizi arayın, aracı teslim alıp dilediğiniz yere taşıyalım." },
+      { q: "Tünel girişinde (Kennedy Cad. tarafı) aracım stop etti, geliyor musunuz?", a: "Evet, tünel yaklaşımları en öncelikli bölgelerimizdendir; ortalama 15-20 dakikada ulaşırız." },
+      { q: "Göztepe tarafında tünel çıkışında kaldım, ne yapmalıyım?", a: "Emniyet şeridine alın, dörtlüleri yakın ve arayın; D-100 bağlantısındaki konumunuza hızla ulaşırız." },
+      { q: "Motosikletle tünele girebilir miyim?", a: "Hayır, motosiklet girişi yasaktır; karşıya geçiş için köprüler veya feribot kullanılır. Motosiklet arızanızda köprü güzergâhıyla taşırız." },
+      { q: "Tünelde aracım arızalanırsa ceza öder miyim?", a: "Arıza cezai değildir; işletme aracı güvenle çıkarır. Sonraki taşıma için faturalı hizmetimiz hazırdır." },
+      { q: "Elektrikli aracım tünelde şarj bitirirse ne olur?", a: "İşletme ekibi çıkarır, biz flatbed ile en yakın DC istasyona taşırız; tünel öncesi şarjınızı %20 üzerinde tutmanızı öneririz." },
+      { q: "Tünel geçişinde hararet uyarısı aldım, tünelde durmalı mıyım?", a: "Tünelde durmak son çaredir; mümkünse çıkışa kadar düşük devirle ilerleyin, çıkışta ilk cepte durun ve bizi arayın." },
+      { q: "Tünel ücretini ödeyemedim (HGS), aracım da arızalı; iki sorun oldu, ne yapayım?", a: "HGS idari süreçtir, sonradan ödenir; aracınızın kurtarılması bundan bağımsızdır — bizi arayın." },
+      { q: "Gece tünel kapalıyken (bakım) karşıya nasıl taşırsınız?", a: "Köprü güzergâhlarını kullanırız; bakım takvimini takip ettiğimiz için rota planı hazırdır." },
+      { q: "Kazalı aracım tünel işletmesince çıkarıldı, şimdi ne olacak?", a: "Teslim noktasından aracınızı alır, fotoğraflı raporla servise/otoparka taşırız; sigorta evraklarında da yol gösteririz." },
+    ],
+  },
+];
+
+export function getHighway(slug: string): Highway | undefined {
+  return highways.find((h) => h.slug === slug);
+}

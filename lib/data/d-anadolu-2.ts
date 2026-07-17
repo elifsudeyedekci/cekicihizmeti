@@ -1,0 +1,278 @@
+import type { District } from "./types";
+
+/** Anadolu Yakası ilçeleri — Bölüm 2/2 */
+export const anadolu2: District[] = [
+  {
+    slug: "pendik",
+    name: "Pendik",
+    yaka: "anadolu",
+    neighborhoods: ["Kaynarca", "Kurtköy", "Şeyhli", "Yenişehir", "Güzelyalı", "Batı Mahallesi", "Doğu Mahallesi", "Velibaba", "Sanayi Mahallesi"],
+    roads: ["D-100 (E-5) Pendik kesimi", "TEM Otoyolu Kurtköy kavşağı", "Sabiha Gökçen Havalimanı bağlantı yolu", "Sahil yolu (Pendik-Tuzla)"],
+    landmarks: ["Sabiha Gökçen Havalimanı", "Viaport AVM", "Pendik Marina", "Pendik-Yalova İDO iskelesi", "Teknopark İstanbul"],
+    arrivalMinutes: "15-30",
+    arrivalTable: [
+      { area: "Pendik merkez / sahil", minutes: "15-25 dk" },
+      { area: "Kurtköy / Sabiha Gökçen çevresi", minutes: "15-25 dk" },
+      { area: "Kaynarca / Yenişehir", minutes: "15-25 dk" },
+      { area: "Şeyhli / Kuzey Pendik", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Pendik'te aracınız bozulduysa 0535 404 80 44'ü arayın; Sabiha Gökçen Havalimanı çevresi, D-100, TEM Kurtköy ve tüm mahallelere 7/24 ortalama 15-30 dakikada çekici gönderiyoruz.",
+    localNote:
+      "Pendik, Sabiha Gökçen Havalimanı sayesinde Anadolu Yakası'nın en yoğun 'yolcu trafiği' ilçesi. Uçağa yetişmeye çalışırken yolda kalan sürücüler, havalimanı otoparkında günlerce bekleyip aküsü biten araçlar ve kiralık araç devir sorunları günlük çağrılarımızın önemli kısmını oluşturur. Kurtköy tarafı TEM'e, merkez ise D-100 ve sahil yoluna bağlanır; iki aks arasındaki Yenişehir-Kaynarca hattında da yoğun konut trafiği vardır.",
+    scenario:
+      "Örnek: Sabah 05:40 uçağına yetişecekken Kurtköy'de aracınız çalışmadı. Bizi aradığınızda gece ekibimiz 15 dakikada gelir; akü takviyesiyle araç çalışırsa yolunuza devam edersiniz, çalışmazsa aracınızı güvenli otoparka çeker, sizin de taksiyle terminale ulaşmanız için zaman kazandırırız.",
+    faqs: [
+      { q: "Pendik'te çekici ne kadar sürede gelir?", a: "Pendik merkez, Kurtköy ve Kaynarca'ya ortalama 15-25 dakikada; kuzey mahallelere 20-30 dakikada ulaşıyoruz. Gece saatlerinde süre kısalır." },
+      { q: "Sabiha Gökçen otoparkında aracımın aküsü bitti, terminale gelir misiniz?", a: "Evet, havalimanı katlı ve açık otoparklarına akü takviyesi için düzenli gidiyoruz; otopark giriş prosedürüne uygun şekilde aracınızın yanına geliriz." },
+      { q: "TEM Kurtköy gişelerinde aracım arıza yaptı, ne yapmalıyım?", a: "Gişe adacığı yüksek riskli bölgedir; mümkünse gişe sonrası cebe ilerleyin, dörtlüleri yakın ve bariyer dışında bekleyin. Ekibimiz otoyol kurallarına uygun şekilde 15-25 dakikada müdahale eder." },
+      { q: "Pendik İDO'da feribot kuyruğunda aracım stop etti, öncelik verir misiniz?", a: "Evet, feribot saatli çağrılara öncelik veriyoruz; çoğu vakada aracı sefere yetiştiriyoruz." },
+      { q: "Viaport çevresinde gece lastiğim patladı, yerinde değişim var mı?", a: "Evet, yedek lastiğiniz varsa yerinde takıyoruz; yoksa aracı en yakın nöbetçi lastikçiye taşıyoruz." },
+      { q: "Teknopark'tan şirket aracımızı servise çektirebilir miyiz?", a: "Evet, kurumsal araçlar için giriş-çıkış prosedürlerine uygun, tutanaklı ve fotoğraf raporlu taşıma yapıyoruz; filo anlaşmaları için arayın." },
+      { q: "Pendik'ten Yalova/Bursa yönüne araç taşıyor musunuz?", a: "Evet, hem İDO bağlantılı hem karayolu (Osmangazi Köprüsü) üzerinden şehirlerarası taşıma yapıyoruz." },
+      { q: "Pendik çekici ücreti ne kadar?", a: "Ücret konum, mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Kaynarca'da site otoparkında aracım hareket etmiyor, vites P'de kilitli; çekebilir misiniz?", a: "Evet, vites kilidi/park kilidi olan otomatik araçlar için tekerlek paletli özel yükleme yapıyoruz; araca zarar vermeden platforma alırız." },
+      { q: "Pendik sahilde motosikletim devrildi ve çalışmıyor, taşır mısınız?", a: "Evet, motosiklet taşıma aparatlı platformumuzla hasarsız taşıyoruz." },
+    ],
+    neighbors: ["kartal", "tuzla", "sultanbeyli", "sancaktepe"],
+    blogParagraphs: [
+      "Pendik'te çekici hizmetinin ritmini Sabiha Gökçen Havalimanı belirler. Günün her saatinde kalkış-varış trafiği olduğu için Pendik'te 'yoğun saat' kavramı diğer ilçelerden farklıdır: gece 03:00'te bile havalimanı yolunda yardım bekleyen sürücüler olur. Havalimanı otoparklarında uzun süre kalan araçların akü sorunları, kiralama şirketlerinin devir arızaları ve karşılama trafiğindeki küçük kazalar, ekiplerimizin bölgede 7/24 hazır durmasının ana nedenidir.",
+      "İlçenin güneyi (merkez, sahil, İDO) ile kuzeyi (Kurtköy, Şeyhli, Teknopark) arasında D-100 ve TEM olmak üzere iki ayrı otoyol aksı çalışır. Formula 1'in koştuğu dönemlerden bu yana bilinen İstanbul Park pisti de hemen komşu Tuzla-Akfırat sınırındadır; etkinlik günlerinde Kurtköy-Akfırat hattında trafik ve buna bağlı arıza çağrıları belirgin artar.",
+      "Pendik ayrıca Anadolu Yakası'nın en büyük oto sanayi sitelerinden birine (Pendik Sanayi/Velibaba hattı) sahiptir; çevre ilçelerden bu servislere sürekli araç taşırız. Aracınızı hangi servise çektireceğinizi bilmiyorsanız, arıza tipinize göre Velibaba veya Kurtköy'deki uygun servislere yönlendirme yapıyoruz.",
+    ],
+  },
+  {
+    slug: "sancaktepe",
+    name: "Sancaktepe",
+    yaka: "anadolu",
+    neighborhoods: ["Sarıgazi", "Samandıra", "Yenidoğan", "Abdurrahmangazi", "Eyüp Sultan Mahallesi", "Fatih Mahallesi", "Osmangazi", "Veysel Karani"],
+    roads: ["TEM Otoyolu Samandıra kavşağı", "Kuzey Marmara Otoyolu bağlantısı", "Sancaktepe-Sultanbeyli bağlantı yolu", "Eski Ankara Asfaltı"],
+    landmarks: ["Sancaktepe Şehir Hastanesi (Emin. Feyzi Cücü)", "Sarıgazi merkez", "Samandıra kavşağı", "Aydos Ormanı kuzey etekleri"],
+    arrivalMinutes: "20-30",
+    arrivalTable: [
+      { area: "Sarıgazi / merkez", minutes: "15-25 dk" },
+      { area: "Samandıra / TEM kavşağı", minutes: "15-25 dk" },
+      { area: "Yenidoğan / kuzey mahalleler", minutes: "20-30 dk" },
+      { area: "Şehir hastanesi çevresi", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Sancaktepe'de aracınız yolda kaldıysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. TEM Samandıra kavşağı ve tüm mahallelere ortalama 20-30 dakikada ulaşıyoruz.",
+    localNote:
+      "Sancaktepe, TEM'in Samandıra kavşağı ile Kuzey Marmara Otoyolu bağlantısı arasında hızla büyüyen bir ilçe. Şehir hastanesinin açılması bölge trafiğini kalıcı olarak artırdı; hastane çevresi ve Eski Ankara Asfaltı gün boyu yoğundur. Sarıgazi ve Yenidoğan'ın iç sokakları dar ve eğimli olduğundan buralarda kompakt çekici kullanırız.",
+    scenario:
+      "Örnek: Sancaktepe Şehir Hastanesi otoparkında ziyaret dönüşü aracınız marş basmıyor. Bizi aradığınızda 20 dakika içinde akü takviye ekibi geliyor; sorun aküdeyse yerinde çözülüyor, alternatörse aracınızı Sarıgazi sanayi bölgesindeki servise çekiyoruz.",
+    faqs: [
+      { q: "Sancaktepe'de çekici ne kadar sürede gelir?", a: "Sarıgazi, Samandıra ve hastane çevresine 15-25 dakikada; kuzey mahallelere 20-30 dakikada ulaşıyoruz." },
+      { q: "TEM Samandıra kavşağında arıza yaptım, ne yapmalıyım?", a: "Kavşak bölgesi hızlı akan trafiğe sahiptir; aracı emniyet şeridine alın, reflektör koyun, bariyer arkasında bekleyin ve bizi arayın. Otoyol deneyimli ekibimiz kısa sürede ulaşır." },
+      { q: "Kuzey Marmara Otoyolu bağlantısında hizmetiniz var mı?", a: "Evet, Kuzey Marmara Otoyolu'nun Sancaktepe-Çekmeköy bağlantı kesimlerine müdahale ediyoruz." },
+      { q: "Şehir hastanesi otoparkından araç çekiyor musunuz?", a: "Evet, hastane otoparkı ve çevresine akü takviyesi, lastik ve çekici hizmeti için düzenli gidiyoruz; hasta yakınlarına öncelik tanıyoruz." },
+      { q: "Sarıgazi'de dar sokakta aracım arızalandı, büyük çekici giremez, ne olacak?", a: "Dar sokaklar için kısa şasili kompakt platform aracımız var; Sarıgazi ve Yenidoğan içlerinde bu araçla çalışıyoruz." },
+      { q: "Gece Samandıra'da aküm bitti, takviye gelir mi?", a: "Evet, 7/24 akü takviye ekibimiz var; gece Samandıra'ya ortalama 15-20 dakikada ulaşırız." },
+      { q: "Sancaktepe çekici fiyatı nasıl öğrenilir?", a: "Fiyat mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Ticari minibüsüm Eski Ankara Asfaltı'nda kaldı, ağır araç çekiyor musunuz?", a: "Evet, minibüs, panelvan ve kamyonete uygun platformlarımız ve ağır vasıta için kurtarıcımız mevcut." },
+      { q: "Sancaktepe'den Sabiha Gökçen'e araç taşır mısınız?", a: "Evet, Kurtköy-Sabiha Gökçen hattına düzenli taşıma yapıyoruz." },
+      { q: "Yenidoğan'da kaza yaptım, değer kaybı için ne yapmalıyım?", a: "Önce tutanak ve fotoğraflarınızı eksiksiz alın; aracınızı güvenli noktaya çekelim. Değer kaybı başvurusu için tutanak ve ekspertiz raporlarını saklamanız gerekir; süreçle ilgili temel yönlendirmeyi yaparız." },
+    ],
+    neighbors: ["umraniye", "cekmekoy", "sultanbeyli", "kartal", "maltepe", "pendik", "atasehir"],
+    blogParagraphs: [
+      "Sancaktepe'nin çekici haritasında iki çekim merkezi vardır: TEM Samandıra kavşağı ve Sancaktepe Şehir Hastanesi. Samandıra kavşağı, Anadolu Yakası'nın doğu ilçelerinden köprülere akan trafiğin toplandığı noktadır; buradaki bir arıza hızla kilometrelerce kuyruk yaratır. Hastane ise günde on binlerce ziyaretçi trafiğiyle otopark kaynaklı çağrıların (akü, lastik, kapı kilitleme) merkezidir.",
+      "İlçe içi dokuda Sarıgazi ve Yenidoğan'ın dar, eğimli sokakları öne çıkar. Bu sokaklarda çift park yaygındır ve standart uzun şasili çekiciler manevra yapamaz; Sancaktepe operasyonlarımızı bu nedenle kompakt platform araçla planlarız. Kuzey Marmara Otoyolu'nun devreye girmesiyle ilçenin kuzeyinden yeni bir yüksek hızlı aks geçti; bu kesimdeki arızalarda otoyol güvenlik prosedürlerini eksiksiz uyguluyoruz.",
+      "Sancaktepe, Ümraniye-Dudullu OSB'ye ve Pendik sanayi hattına komşuluğu sayesinde servis taşıma güzergâhlarının kesişimindedir; aracınızı marka yetkili servisine ya da güvendiğiniz özel servise, hangi ilçede olursa olsun tutanaklı şekilde ulaştırıyoruz.",
+    ],
+  },
+  {
+    slug: "sultanbeyli",
+    name: "Sultanbeyli",
+    yaka: "anadolu",
+    neighborhoods: ["Abdurrahmangazi", "Mecidiye", "Necip Fazıl", "Fatih", "Adil", "Ahmet Yesevi", "Battalgazi", "Hasanpaşa"],
+    roads: ["TEM Otoyolu Sultanbeyli kesimi ve gişeleri", "Fatih Bulvarı", "Sultanbeyli-Pendik bağlantı yolu", "Eski Ankara Yolu"],
+    landmarks: ["Sultanbeyli gölet", "Fatih Bulvarı çarşı hattı", "TEM Sultanbeyli gişeleri", "Aydos Ormanı doğu etekleri"],
+    arrivalMinutes: "20-30",
+    arrivalTable: [
+      { area: "Merkez / Fatih Bulvarı", minutes: "15-25 dk" },
+      { area: "TEM gişeleri çevresi", minutes: "15-25 dk" },
+      { area: "Aydos etekleri / batı mahalleler", minutes: "20-30 dk" },
+      { area: "Pendik bağlantı hattı", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Sultanbeyli'de aracınız bozulduysa 0535 404 80 44'ü arayın; TEM gişeleri, Fatih Bulvarı ve tüm mahallelere 7/24 ortalama 20-30 dakikada çekici ulaştırıyoruz.",
+    localNote:
+      "Sultanbeyli, TEM Otoyolu'nun ikiye böldüğü, yoğun nüfuslu bir ilçe. TEM Sultanbeyli gişeleri Anadolu Yakası'nın doğu giriş kapısıdır; şehirlerarası yolculuğa çıkan araçların son kontrol noktası gibidir ve gişe çevresinde arıza çağrısı yoğundur. İlçe içinde Fatih Bulvarı ana ticari aks olup gün boyu yavaş akar; iç mahalleler eğimli ve yer yer dar sokaklıdır.",
+    scenario:
+      "Örnek: Ankara yönüne tatile çıkarken TEM Sultanbeyli gişelerini geçtikten sonra aracınız hararet yaptı. Bizi aradığınızda gişe sonrası cep bölgesindeki konumunuza 20 dakikada ulaşırız; radyatör kaynaklıysa güvenli noktada soğutup kontrol eder, yola devam edilemeyecekse aracı istediğiniz servise çekeriz.",
+    faqs: [
+      { q: "Sultanbeyli'de çekici ne kadar sürede gelir?", a: "Merkez ve TEM gişe çevresine 15-25 dakikada, Aydos etekleri ve uç mahallelere 20-30 dakikada ulaşıyoruz." },
+      { q: "TEM Sultanbeyli gişelerinde aracım kaldı, ne yapmalıyım?", a: "Gişe bölgesinde asla araç içinde beklemeyin; aracı mümkünse cebe alın, dörtlüleri yakın ve bariyer dışına çıkın. Ekibimiz otoyol prosedürüyle kısa sürede müdahale eder." },
+      { q: "Şehirlerarası yola çıkmadan aracım arıza verdi, kontrol de yapıyor musunuz?", a: "Çekici ekibimiz temel arıza ön teşhisi yapar; yola devam etmenin riskli olup olmadığı konusunda dürüst görüş verir, gerekirse servise taşırız." },
+      { q: "Sultanbeyli'de gece akü takviyesi var mı?", a: "Evet, 7/24 akü takviye hizmeti veriyoruz; gece ortalama varış 15-20 dakikadır." },
+      { q: "Fatih Bulvarı'nda trafik çok yoğun, çekici nasıl ulaşacak?", a: "Bulvar trafiğini bildiğimiz için paralel sokaklardan yaklaşıyor, yükleme noktasını sizinle telefonda netleştiriyoruz." },
+      { q: "Sultanbeyli çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Kamyonetim pazar yükü ile birlikte kaldı, yüklü araç çekiyor musunuz?", a: "Evet, yüklü hafif ticari araçları yük güvenliğini koruyarak taşıyabiliyoruz; ağır tonajlar için kurtarıcı ekibimiz devreye girer." },
+      { q: "Aydos eteklerinde kışın buzlanmada aracım kaydı, kurtarıyor musunuz?", a: "Evet, kış aylarında Aydos ve eğimli mahalleler için zincir donanımlı kurtarma aracımız hazırdır." },
+      { q: "Sultanbeyli'den Sabiha Gökçen'e veya Pendik'e araç çekiyor musunuz?", a: "Evet, Pendik-Kurtköy hattına ve havalimanına düzenli taşıma yapıyoruz." },
+      { q: "Aracım sitede kilitli otoparkta, anahtar içinde kaldı; kapı açma hizmetiniz var mı?", a: "Hasarsız kapı açma konusunda çilingir iş ortağımızla birlikte çözüm sağlıyoruz; aracınıza zarar verilmeden müdahale edilir." },
+    ],
+    neighbors: ["sancaktepe", "pendik", "kartal", "cekmekoy"],
+    blogParagraphs: [
+      "Sultanbeyli'nin çekici hizmetindeki en kritik nokta TEM gişeleridir. İstanbul'dan Anadolu'ya çıkışın son eşiği olan bu bölgede, uzun yola hazırlıksız çıkan araçların arızaları yoğunlaşır: hararet, lastik ve akü üçlüsü çağrıların çoğunu oluşturur. Gişe öncesi ve sonrası cep bölgelerini metre metre bildiğimiz için sürücüye telefonda güvenli bekleme noktasını tarif ederek başlıyoruz.",
+      "İlçe içinde Fatih Bulvarı, çarşı trafiğiyle gün boyu yavaş ilerler; buradaki arızalarda çift park ve yoğun yaya trafiği nedeniyle yükleme güvenliği ön plandadır. İç mahallelerde ise eğim belirleyicidir — özellikle kış aylarında Aydos Ormanı'na komşu batı mahallelerin yokuşlarında buzlanma kaynaklı kayma vakaları artar; bu dönemde bölgeye kış donanımlı araç ayırıyoruz.",
+      "Sultanbeyli'de ticari araç yoğunluğu (kamyonet, panelvan, pazarcı araçları) İstanbul ortalamasının üzerindedir. Yüklü ticari araç çekimi, yük dengesi ve sabitleme açısından binek çekiminden farklı uzmanlık ister; ekiplerimiz yük kaydırmadan taşıma prosedürü uygular.",
+    ],
+  },
+  {
+    slug: "sile",
+    name: "Şile",
+    yaka: "anadolu",
+    neighborhoods: ["Merkez (Balibey, Hacıkasım)", "Ağva", "Kumbaba", "Sofular", "Yeniköy", "Teke", "Sahilköy", "Doğancılı"],
+    roads: ["Şile Otoyolu", "Şile-Ağva yolu", "Sahilköy-Doğancılı sahil hattı", "Kuzey Marmara Otoyolu Şile bağlantısı"],
+    landmarks: ["Şile Feneri", "Kumbaba plajı", "Ağva merkez", "Şile Kalesi", "Uzunkum sahili"],
+    arrivalMinutes: "40-60",
+    arrivalTable: [
+      { area: "Şile merkez", minutes: "40-55 dk" },
+      { area: "Ağva", minutes: "55-70 dk" },
+      { area: "Şile Otoyolu üzeri", minutes: "25-45 dk" },
+      { area: "Sahil köyleri", minutes: "45-65 dk" },
+    ],
+    intro:
+      "Şile veya Ağva'da aracınız yolda kaldıysa 0535 404 80 44 numarasını arayın; Şile Otoyolu dahil bölgeye 7/24 çekici gönderiyoruz. Merkeze ortalama 40-55, Ağva'ya 55-70 dakikada ulaşıyoruz ve yoldayken sizi telefonla bilgilendiriyoruz.",
+    localNote:
+      "Şile, İstanbul'un en uzak ilçesi ve tam bir mevsimlik yoğunluk bölgesi: yaz hafta sonlarında nüfus katlanır, Kumbaba ve Ağva yolu kilitlenir. Plaj otoparklarında kuma saplanan araçlar, sahil köy yollarında lastik hasarları ve dönüş trafiğinde hararet vakaları yaz çağrılarının tipik profilidir. Kışın ise Şile yolu sis ve buzlanmasıyla bilinir; bu koşullarda kurtarma operasyonlarını çift kişilik ekiple yapıyoruz.",
+    scenario:
+      "Örnek: Ağustos'ta pazar akşamı Kumbaba plaj çıkışında aracınız kuma gömüldü ve patinaj yapıyor. Bizi aradığınızda vinçli kurtarma aracımız yola çıkar; varana kadar telefonla aracın daha fazla gömülmemesi için ne yapmanız (gaza yüklenmeme, lastik altı takviye) gerektiğini anlatırız ve aracı hasarsız çekip asfalta alırız.",
+    faqs: [
+      { q: "Şile'ye çekici gerçekten geliyor mu? Çok uzak diye geri çeviren firmalar oldu.", a: "Evet, Şile ve Ağva dahil İstanbul'un 39 ilçesinin tamamına gidiyoruz. Uzaklık nedeniyle varış süresini baştan dürüstçe söyler, yoldayken sizi bilgilendiririz." },
+      { q: "Şile Otoyolu'nda aracım arıza yaptı, ne kadar sürede gelirsiniz?", a: "Otoyolun hangi kesiminde olduğunuza göre 25-45 dakika arasında ulaşıyoruz; konumunuzu WhatsApp'tan paylaşmanız süreci hızlandırır." },
+      { q: "Plajda aracım kuma saplandı, normal çekici yeterli mi?", a: "Kuma gömülen araç için vinçli kurtarma gerekir; standart çekici kumda kendisi de saplanabilir. Bu vakalara özel donanımlı aracımızla geliyoruz." },
+      { q: "Ağva'da tatildeyim, aracım çalışmıyor; İstanbul'a dönmem lazım, aracı da eve getirebilir misiniz?", a: "Evet, aracınızı Ağva'dan İstanbul'daki adresinize veya servise taşıyoruz; teslimatı fotoğraflı raporluyoruz." },
+      { q: "Şile yolunda gece sis çok yoğun, gece de geliyor musunuz?", a: "Evet, 7/24 geliyoruz. Sisli gecelerde ekiplerimiz ek ikaz donanımıyla çalışır; siz de aracınızın dörtlülerini yakıp yol dışında bekleyin." },
+      { q: "Şile çekici ücreti neye göre belirleniyor?", a: "Mesafe, araç tipi ve kurtarma zorluğuna göre belirlenir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Karavanım Şile kamp alanında arıza yaptı, karavan çekiyor musunuz?", a: "Evet, karavan ve römork taşımaya uygun ekipmanımız var; kamp alanından güvenli çıkış dahil planlıyoruz." },
+      { q: "Kışın Şile yolunda buzlanmada kaza yaptım, araç şaramponde; kurtarabilir misiniz?", a: "Evet, şarampole inen araçlar için vinçli kurtarma yapıyoruz; jandarma/polis koordinasyonu gerekiyorsa süreci birlikte yönetiriz." },
+      { q: "Sahil köylerinde (Sahilköy, Doğancılı) hizmet var mı?", a: "Evet, tüm Şile köylerine gidiyoruz; köy içi dar yollar için uygun araç seçiyoruz." },
+      { q: "Motosikletle Şile turundaydım, zincir koptu; motosiklet için de geliyor musunuz?", a: "Evet, motosiklet taşıma aparatlı platformumuzla Şile-Ağva hattından motosiklet taşıyoruz." },
+    ],
+    neighbors: ["beykoz", "cekmekoy"],
+    blogParagraphs: [
+      "Şile, İstanbul çekicilik haritasının en özel bölgesi: il sınırları içinde ama şehir merkezine 70 km uzakta. Bu mesafe, birçok çekici firmasının Şile çağrılarını geri çevirmesine neden olur — biz ise Şile ve Ağva'yı düzenli hizmet bölgemiz olarak tanımladık. Yaz sezonunda bölgede artan talebi karşılamak için hafta sonları Şile Otoyolu aksında ekip bulunduruyoruz.",
+      "Şile vakalarının önemli kısmı 'tatil profili' taşır: plaj otoparkında kuma gömülen araçlar, bungalov tesislerinin stabilize yollarında hasar alan alçak araçlar, kamp dönüşü akü bitmesi ve Ağva'nın dar köprülü girişindeki sıkışmalar. Bu vakaların çoğu standart çekicilikten çok 'kurtarma' işidir ve vinç, çekme halatı, lastik altı takviye gibi ekipman gerektirir.",
+      "Kış aylarında ise Şile yolu tamamen farklı bir karaktere bürünür: Karadeniz'den gelen nem, orman içi kesimlerde yoğun sis ve siyah buz (black ice) oluşturur. Aralık-Şubat arasında bu yolda şarampole inen araç kurtarmaları belirgin artar. Kış döneminde Şile yönüne çıkacaksanız kar lastiğinin yanında sis farlarınızın çalıştığından emin olun; yolda kalırsanız aracın en az 30 metre gerisine reflektör koyup yol dışında bekleyin.",
+    ],
+  },
+  {
+    slug: "tuzla",
+    name: "Tuzla",
+    yaka: "anadolu",
+    neighborhoods: ["İçmeler", "Aydınlı", "Postane", "Mimar Sinan", "Şifa", "Akfırat", "Orhanlı", "Tepeören"],
+    roads: ["D-100 (E-5) Tuzla kesimi", "TEM Otoyolu Orhanlı gişeleri", "Sahil yolu (Tuzla tersaneler hattı)", "Akfırat-İstanbul Park yolu"],
+    landmarks: ["Tuzla Tersaneleri", "Viaport Marina", "İstanbul Park pisti (Akfırat)", "Tuzla İçmeler köprüsü", "Sabancı Üniversitesi"],
+    arrivalMinutes: "20-35",
+    arrivalTable: [
+      { area: "İçmeler / Postane / sahil", minutes: "20-30 dk" },
+      { area: "Aydınlı / Şifa", minutes: "20-30 dk" },
+      { area: "Orhanlı / TEM gişeleri", minutes: "20-30 dk" },
+      { area: "Akfırat / Tepeören", minutes: "25-40 dk" },
+    ],
+    intro:
+      "Tuzla'da aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. D-100, TEM Orhanlı gişeleri, tersaneler bölgesi ve Akfırat dahil tüm Tuzla'ya ortalama 20-35 dakikada ulaşıyoruz.",
+    localNote:
+      "Tuzla, İstanbul'un Anadolu Yakası'ndaki son ilçesi ve ağır sanayi karakteri en belirgin bölgesi: tersaneler, Orhanlı-Tepeören sanayi havzası ve lojistik depoları nedeniyle kamyon-TIR yoğunluğu yüksektir. TEM Orhanlı gişeleri İstanbul'a doğu girişinin ana kapısıdır. Akfırat'taki İstanbul Park pisti etkinlik günlerinde on binlerce araç çeker; bu günlerde bölgeye ek ekip planlarız.",
+    scenario:
+      "Örnek: Orhanlı'daki depodan yükünü alan panelvanınız TEM gişeler öncesinde debriyaj arızası verdi. Bizi aradığınızda ağır hafif-ticari platformumuz 25 dakikada ulaşır; yüklü aracı dengesini koruyarak yükler ve teslimat adresinize en yakın servise taşırız.",
+    faqs: [
+      { q: "Tuzla'da çekici ne kadar sürede gelir?", a: "İçmeler, Aydınlı ve Orhanlı çevresine 20-30 dakikada; Akfırat-Tepeören hattına 25-40 dakikada ulaşıyoruz." },
+      { q: "TEM Orhanlı gişelerinde aracım arıza yaptı, ne yapmalıyım?", a: "Gişe bölgesinde aracı mümkünse cebe alın, dörtlüleri yakın, bariyer dışında bekleyin ve bizi arayın; otoyol prosedürlü ekibimiz kısa sürede gelir." },
+      { q: "TIR'ım/kamyonum Tuzla'da arıza yaptı, ağır vasıta kurtarıcınız var mı?", a: "Evet, ağır vasıta kurtarma ekipmanımızla kamyon, çekici ve TIR kurtarması yapıyoruz; Orhanlı-Tepeören sanayi bölgesine düzenli hizmet veriyoruz." },
+      { q: "İstanbul Park'ta etkinlik günü aracım kaldı, ulaşabiliyor musunuz?", a: "Evet, etkinlik günlerinde Akfırat bölgesinde ek ekip bulunduruyoruz; organizasyon trafiği planına uygun şekilde ulaşırız." },
+      { q: "Viaport Marina otoparkında aracım çalışmadı, gelir misiniz?", a: "Evet, marina ve AVM otoparklarına akü takviyesi ve çekici hizmeti veriyoruz." },
+      { q: "Tuzla tersanelerde çalışıyorum, vardiya çıkışı gece 24:00'te aracım çalışmazsa gelir misiniz?", a: "Evet, 7/24 çalışıyoruz; tersaneler bölgesine gece varışımız genellikle 20 dakikanın altındadır." },
+      { q: "Tuzla çekici ücreti ne kadar?", a: "Ücret mesafeye, araç tipine ve kurtarma zorluğuna göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Sabancı Üniversitesi kampüsünden araç çekilir mi?", a: "Evet, kampüs güvenlik prosedürlerine uygun şekilde araç teslim alıyoruz." },
+      { q: "İçmeler'de deniz kenarı otoparkta aracım kuma/çamura saplandı, kurtarıyor musunuz?", a: "Evet, vinçli kurtarma aracımızla saplanan araçları hasarsız çıkarıyoruz." },
+      { q: "Tuzla'dan Gebze/Kocaeli yönüne araç taşıyor musunuz?", a: "Evet, il sınırı ötesine — Gebze, İzmit ve tüm Türkiye'ye şehirlerarası taşıma yapıyoruz." },
+    ],
+    neighbors: ["pendik", "kartal"],
+    blogParagraphs: [
+      "Tuzla, İstanbul çekiciliğinde 'ağır vasıta kapısı' olarak bilinir: tersaneler, Orhanlı-Tepeören lojistik havzası ve TEM gişeleri nedeniyle kamyon ve TIR kurtarma taleplerinin Anadolu Yakası'ndaki merkezi burasıdır. Ağır vasıta kurtarması binek çekiciliğinden tamamen farklı bir disiplindir: tonaja uygun kurtarıcı, hava fren sistemine müdahale bilgisi ve yük güvenliği prosedürü gerektirir — ekibimiz bu donanıma sahiptir.",
+      "İlçenin binek araç profili ise iki bölgede yoğunlaşır: İçmeler-Postane sahil hattında (marina, plaj ve site trafiği) ve Aydınlı-Şifa konut bölgelerinde. D-100'ün Tuzla'da sona erip Kocaeli'ye bağlanması, şehirlerarası yolculuğa çıkan araçların son arıza noktası olmasına yol açar; 'İstanbul'dan çıkamadan yolda kaldım' çağrılarının önemli kısmı bu kesimden gelir.",
+      "Akfırat'taki İstanbul Park pisti, yarış ve test günlerinde bölge trafiğini katlar; pist etkinliklerinde modifiyeli ve alçatılmış araçların rampa sorunları için düşük açılı (low-angle) platformumuzla hizmet veriyoruz. Ayrıca Tuzla'nın hızla büyüyen konut projelerindeki kapalı otoparklarda alçak tavan uyumlu aracımız görev yapar.",
+    ],
+  },
+  {
+    slug: "umraniye",
+    name: "Ümraniye",
+    yaka: "anadolu",
+    neighborhoods: ["Atakent", "Çakmak", "Ihlamurkuyu", "İnkılap", "Aşağı Dudullu", "Yukarı Dudullu", "Site", "Atatürk Mahallesi", "Tantavi bölgesi"],
+    roads: ["TEM Otoyolu (O-2) Dudullu kavşağı", "Şile Otoyolu başlangıç kesimi", "Alemdağ Caddesi", "FSM Köprüsü bağlantısı"],
+    landmarks: ["Dudullu Organize Sanayi Bölgesi", "Canpark AVM", "Meydan İstanbul (İKEA) bölgesi", "Ümraniye Eğitim ve Araştırma Hastanesi", "Çakmak metro hattı"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Merkez / İnkılap / Atakent", minutes: "15-20 dk" },
+      { area: "Dudullu / OSB", minutes: "15-25 dk" },
+      { area: "Çakmak / Ihlamurkuyu", minutes: "15-25 dk" },
+      { area: "TEM Dudullu kavşağı", minutes: "10-20 dk" },
+    ],
+    intro:
+      "Ümraniye'de aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici hizmeti alabilirsiniz. TEM Dudullu kavşağı ve tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Ümraniye, Anadolu Yakası'nın nüfus ve ticaret devlerinden: TEM'in Dudullu kavşağı, FSM Köprüsü'ne akan trafiğin ana toplanma noktalarından biridir ve Dudullu OSB, on binlerce ticari aracın her gün giriş-çıkış yaptığı bir üretim havzasıdır. Alemdağ Caddesi ilçeyi boydan boya kat eder ve gün boyu yavaş akar. Bu yoğunluk, Ümraniye'yi çekici çağrısı en yüksek ilçelerimizden biri yapar — bu yüzden burada sabit ekip bulunduruyoruz.",
+    scenario:
+      "Örnek: Sabah 08:00'de TEM Dudullu kavşağında işe giderken aracınızın lastiği patladı. Konumu WhatsApp'tan paylaştığınızda kavşağa en yakın ekibimiz 10-15 dakikada ulaşır; yedek lastiğinizi güvenlik koridoru kurarak değiştirir veya aracı platforma alıp lastikçiye götürür — işinize en fazla bir saat gecikmeyle devam edersiniz.",
+    faqs: [
+      { q: "Ümraniye'de çekici ne kadar sürede gelir?", a: "Ümraniye'de sabit ekibimiz olduğu için merkez mahallelere 15-20, Dudullu ve Çakmak tarafına 15-25 dakikada ulaşıyoruz; TEM kavşağına varış çoğu zaman 15 dakikanın altındadır." },
+      { q: "TEM Dudullu kavşağında aracım arıza yaptı, ne yapmalıyım?", a: "Aracı emniyet şeridine alın, dörtlüleri yakın, reflektörü koyun ve bariyer arkasında bekleyin. Kavşak bölgesini iyi bildiğimiz için ekibimiz en kısa yoldan ulaşır." },
+      { q: "Dudullu OSB'de servis aracımız arızalandı, ticari araç çekiyor musunuz?", a: "Evet, panelvan, minibüs ve kamyonetlere uygun platformlarımız var; OSB firmalarıyla kurumsal anlaşma da yapıyoruz." },
+      { q: "Ümraniye'de akü takviyesi ne kadar sürede gelir?", a: "Ortalama 15-20 dakikada; akü ömrünü tamamladıysa yerinde değişim seçeneği için de yönlendirme yapıyoruz." },
+      { q: "Canpark ya da Meydan İstanbul otoparkından araç çekebiliyor musunuz?", a: "Evet, kapalı otoparklara uygun alçak tavanlı aracımızla AVM otoparklarından düzenli araç alıyoruz." },
+      { q: "Ümraniye'den Avrupa Yakası'na araç taşıyor musunuz?", a: "Evet, FSM Köprüsü üzerinden Avrupa Yakası'nın tüm ilçelerine taşıma yapıyoruz." },
+      { q: "Ümraniye çekici fiyatı ne kadar?", a: "Fiyat mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Gece Ihlamurkuyu'da kaza yaptım, hem çekici hem yönlendirme lazım; yardım eder misiniz?", a: "Evet, 7/24 kaza müdahalesi yapıyoruz: aracı güvenli noktaya çeker, tutanak ve sigorta süreci için temel yönlendirmeyi veririz." },
+      { q: "Elektrikli aracım Çakmak'ta şarjsız kaldı, nasıl taşınıyor?", a: "Elektrikli araçlar yalnızca kayar platformla (flatbed) taşınır; aracınız Ümraniye'deki en yakın hızlı şarj noktasına veya evinize güvenle götürülür." },
+      { q: "Şirket filomuz Ümraniye'de, düzenli çekici anlaşması yapıyor musunuz?", a: "Evet, filo ve kurumsal müşterilere öncelikli müdahale içeren anlaşmalar sunuyoruz; detay için arayın: 0535 404 80 44." },
+    ],
+    neighbors: ["uskudar", "atasehir", "cekmekoy", "sancaktepe", "beykoz", "kadikoy"],
+    blogParagraphs: [
+      "Ümraniye, Anadolu Yakası çekici operasyonumuzun kalbidir. Bunun nedeni basit: TEM'in Dudullu kavşağı ve FSM bağlantısı, yakanın doğu ilçelerinden köprüye akan tüm trafiğin geçtiği şah damarıdır. Sabah 07:00-10:00 arasında bu aksta yaşanan tek bir arıza bile on binlerce aracı etkiler; bu yüzden sabah kuşağında kavşak çevresinde hazır ekip bulundururuz.",
+      "İlçenin ikinci karakteri Dudullu Organize Sanayi Bölgesi'dir: binlerce işletmenin servis, sevkiyat ve personel araçları her gün OSB'ye girip çıkar. Ticari araç arızaları — özellikle yüklü panelvan ve kamyonetler — Ümraniye çağrılarımızın belirgin bir dilimini oluşturur. OSB firmalarına, tek telefonla öncelikli müdahale içeren kurumsal çekici anlaşmaları sunuyoruz.",
+      "Konut tarafında Çakmak, Ihlamurkuyu ve Atakent'in yoğun siteleşmiş dokusu kapalı otopark vakalarını öne çıkarır: akü bitmesi, park halinde lastik sönmesi ve otopark içi manevra kazaları. Metro hattının açılmasıyla araçlarını günlerce site otoparkında bırakan sürücülerin sayısı arttı — uzun süre çalıştırılmayan araçlarda akü bitmesi, Ümraniye'de en sık çözdüğümüz sorundur.",
+    ],
+  },
+  {
+    slug: "uskudar",
+    name: "Üsküdar",
+    yaka: "anadolu",
+    neighborhoods: ["Altunizade", "Bağlarbaşı", "Beylerbeyi", "Çengelköy", "Kandilli", "Kuzguncuk", "Kısıklı", "Bulgurlu", "Ünalan", "Acıbadem sınırı", "Salacak"],
+    roads: ["15 Temmuz Şehitler Köprüsü Anadolu girişi", "Altunizade kavşağı (D-100 başlangıcı)", "Boğaz sahil yolu (Salacak-Beylerbeyi-Çengelköy)", "Büyük Çamlıca bağlantı yolları", "TEM-Kısıklı bağlantısı"],
+    landmarks: ["Kız Kulesi/Salacak sahili", "Çamlıca Kulesi", "Büyük Çamlıca Camii", "Üsküdar Meydanı ve Marmaray", "Beylerbeyi Sarayı", "Capitol AVM"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Üsküdar merkez / Salacak", minutes: "15-25 dk" },
+      { area: "Altunizade / Acıbadem", minutes: "15-20 dk" },
+      { area: "Beylerbeyi / Çengelköy / Kandilli sahil", minutes: "20-30 dk" },
+      { area: "Kısıklı / Çamlıca / Bulgurlu", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Üsküdar'da aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. 15 Temmuz Köprüsü girişi, Altunizade kavşağı ve Boğaz sahil hattı dahil tüm Üsküdar'a ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Üsküdar, Anadolu Yakası'nın köprüye açılan kapısı: 15 Temmuz Şehitler Köprüsü'nün Anadolu ayağı ve D-100'ün başlangıcı olan Altunizade kavşağı buradadır. Köprü girişindeki bir arıza tüm yaka trafiğini etkilediği için bu bölge çağrılarına en yüksek önceliği veririz. Boğaz sahil hattı (Kuzguncuk-Beylerbeyi-Çengelköy-Kandilli) ise dar, tarihi dokulu ve hafta sonları yoğundur; buralarda kompakt çekiciyle çalışırız.",
+    scenario:
+      "Örnek: Cuma akşamı 15 Temmuz Köprüsü'ne çıkış rampasında (Altunizade tarafı) aracınız stop etti. Bizi aradığınızda köprü bölge ekibimiz güvenlik prosedürüyle 15 dakikada ulaşır; trafiği yönetecek ikaz düzenini kurup aracınızı hızla platforma alır ve rampayı trafiğe açarız — sizi de istediğiniz noktaya bırakırız.",
+    faqs: [
+      { q: "Üsküdar'da çekici ne kadar sürede gelir?", a: "Altunizade ve merkez bölgeye 15-20 dakikada, Boğaz sahil hattına (Çengelköy-Kandilli) 20-30 dakikada ulaşıyoruz. Köprü girişi çağrılarına en yüksek önceliği veriyoruz." },
+      { q: "15 Temmuz Köprüsü girişinde aracım kaldı, çok tehlikeli; ne yapmalıyım?", a: "Kesinlikle araç içinde ve arkasında durmayın; bariyer dışına geçin, dörtlüleri yakın ve hemen bizi arayın. Köprü yaklaşımları en riskli müdahale bölgeleridir, ekibimiz güvenlik koridoru kurarak çalışır." },
+      { q: "Altunizade kavşağında hangi noktada olduğumu nasıl tarif ederim?", a: "Üst geçit/alt geçit, hangi yöne gittiğiniz (köprü yönü / Kadıköy yönü) ve en son gördüğünüz tabela yeterli; en sağlıklısı WhatsApp canlı konum paylaşmanızdır." },
+      { q: "Kuzguncuk'un dar sokaklarına çekici girer mi?", a: "Evet, Kuzguncuk, Beylerbeyi ve Çengelköy'ün dar sokakları için kısa şasili kompakt platformumuz var." },
+      { q: "Çamlıca Kulesi/tepe bölgesinde aracım el freni sorunu yaşadı, eğimde kurtarma yapıyor musunuz?", a: "Evet, Çamlıca'nın dik yollarında eğimli zemin kurtarması için vinçli aracımızla çalışıyoruz." },
+      { q: "Üsküdar'dan Avrupa Yakası'na araç çekiyor musunuz?", a: "Evet, 15 Temmuz Köprüsü veya Avrasya Tüneli üzerinden Avrupa Yakası'nın her noktasına taşıma yapıyoruz." },
+      { q: "Üsküdar çekici fiyatı ne kadar?", a: "Fiyat mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Salacak sahilde fotoğraf çekimi için durdum, aracım çalışmadı; akü takviyesi gelir mi?", a: "Evet, Salacak-Harem sahil hattına akü takviyesi ortalama 15-20 dakikada ulaşır." },
+      { q: "Beylerbeyi'nde klasik aracım var, hassas taşıma yapabiliyor musunuz?", a: "Evet, klasik ve koleksiyon araçları düşük açılı rampa ve tekstil bağlama kayışlarıyla hasarsız taşıyoruz." },
+      { q: "Marmaray'a aracımı bırakıp işe gidiyorum, akşam araç çalışmazsa gece kaçta olursa olsun gelir misiniz?", a: "Evet, 7/24 hizmet veriyoruz; Üsküdar meydan ve Marmaray otoparkı çevresine gece varışımız genellikle 15 dakika civarındadır." },
+    ],
+    neighbors: ["kadikoy", "umraniye", "beykoz", "atasehir"],
+    blogParagraphs: [
+      "Üsküdar'da çekicilik iki farklı uzmanlık ister. Birincisi otoyol disiplini: 15 Temmuz Şehitler Köprüsü'nün Anadolu yaklaşımı ve Altunizade kavşağı, İstanbul'un en kritik trafik noktaları arasındadır; buradaki müdahaleler hız, ikaz düzeni ve trafik yönetimi gerektirir. İkincisi ise tarihi doku hassasiyeti: Kuzguncuk'tan Kandilli'ye uzanan sahil hattının dar sokaklarında büyük çekici manevra yapamaz — bu hat için kompakt aracımız görevlidir.",
+      "Altunizade-Acıbadem aksı, hastane ve plaza yoğunluğuyla gün içi çağrıların merkezi; Capitol çevresi ve Bağlarbaşı'nda otopark kaynaklı vakalar öne çıkar. Çamlıca tepesi bölgesi ise hem turistik trafiği hem dik eğimleriyle ayrı bir kategori: kule ve cami ziyaretçilerinin araçlarında el freni ve eğimde kalkış sorunlarına düzenli müdahale ederiz.",
+      "Üsküdar'ın Boğaz hattı, İstanbul'un klasik ve koleksiyon araç yoğunluğu en yüksek bölgelerinden biridir; Beylerbeyi ve Kandilli'deki araç sahipleri için hasarsız, kayışlı ve düşük açılı taşıma protokolümüz vardır. Ayrıca köprü altı sahil yolunda hafta sonu etkinlik trafiğinde (koşu, bisiklet etkinlikleri) yol kapamalarını takip ederek ulaşım planı yaparız.",
+    ],
+  },
+];

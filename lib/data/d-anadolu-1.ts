@@ -1,0 +1,278 @@
+import type { District } from "./types";
+
+/** Anadolu Yakası ilçeleri — Bölüm 1/2 */
+export const anadolu1: District[] = [
+  {
+    slug: "adalar",
+    name: "Adalar",
+    yaka: "anadolu",
+    neighborhoods: ["Büyükada Nizam", "Büyükada Maden", "Heybeliada", "Burgazada", "Kınalıada"],
+    roads: ["Bostancı-Adalar deniz hattı", "Kabataş-Adalar vapur hattı", "Kartal-Büyükada motoru"],
+    landmarks: ["Büyükada İskelesi", "Heybeliada Sanatoryumu bölgesi", "Kınalıada sahili"],
+    arrivalMinutes: "Planlı operasyon",
+    arrivalTable: [
+      { area: "Büyükada", minutes: "Deniz aracı ile planlı" },
+      { area: "Heybeliada", minutes: "Deniz aracı ile planlı" },
+      { area: "Burgazada / Kınalıada", minutes: "Deniz aracı ile planlı" },
+      { area: "Bostancı iskele (karşılama)", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Adalar'da motorlu araç trafiği kısıtlı olduğu için çekici ihtiyacı özel operasyon gerektirir. Elektrikli hizmet aracınız, golf tipi aracınız veya izinli motorlu aracınız için 0535 404 80 44 numarasını arayın; deniz yolu dahil taşıma operasyonunu birlikte planlayalım.",
+    localNote:
+      "Adalar, İstanbul'un motorlu araç trafiğine kapalı tek ilçesidir; ulaşım büyük oranda elektrikli minibüsler, bisiklet ve yaya odaklıdır. Bu nedenle Adalar kaynaklı çekici talepleri genellikle iki tiptedir: ada içindeki izinli hizmet araçları/elektrikli araçlar için kurtarma ve Bostancı-Kartal-Maltepe iskelelerine gelen araç sahiplerinin ana karadaki araç arızaları.",
+    scenario:
+      "Örnek: Büyükada'da belediye izinli elektrikli servis aracınız yokuşta arıza yaptı. Bizi aradığınızda önce telefonla durumu netleştirir, gerekirse deniz taşımacılığı yapan iş ortağımızla platformlu taşıma planlar, aracınızı ana karadaki anlaşmalı servise kadar götürürüz. Bostancı'da vapurdan indiğinizde aracınız çalışmıyorsa, iskele önüne ortalama 15-25 dakikada çekici ulaştırırız.",
+    faqs: [
+      { q: "Adalar'a çekici gelebiliyor mu?", a: "Adalar motorlu araç trafiğine kapalı olduğu için standart çekici adaya giremez. İzinli araçlar için deniz yolu üzerinden özel taşıma operasyonu planlıyoruz; 0535 404 80 44 numarasından arayarak detayları öğrenebilirsiniz." },
+      { q: "Büyükada'da elektrikli aracım bozuldu, ne yapmalıyım?", a: "Ada içi izinli elektrikli araçlar için platformlu özel kurtarma planlıyoruz. Bizi arayın; aracın tipi ve konumuna göre en hızlı çözümü organize edelim." },
+      { q: "Bostancı iskelesinde aracım çalışmadı, ne kadar sürede gelirsiniz?", a: "Bostancı sahil ve iskele çevresine ortalama 15-25 dakikada çekici ulaştırıyoruz. Konumunuzu WhatsApp'tan paylaşmanız yeterli." },
+      { q: "Adalar'dan ana karaya araç taşıması yapıyor musunuz?", a: "Evet, izinli araçların deniz yolu ile ana karaya taşınmasını iş ortaklarımızla birlikte organize ediyoruz. Bu planlı bir operasyondur; fiyat ve süre için arayınız." },
+      { q: "Heybeliada'da golf tipi araç kurtarması yapıyor musunuz?", a: "Evet, hafif elektrikli ve golf tipi araçlar için uygun ekipmanla ada içi kurtarma organize ediyoruz." },
+      { q: "Adalar vapuruna binmeden önce aracım Kabataş'ta arıza yaptı, yardımcı olur musunuz?", a: "Elbette. Kabataş, Bostancı ve Kartal iskale çevreleri dahil İstanbul'un her noktasına 7/24 çekici gönderiyoruz." },
+      { q: "Adalar'da akü takviyesi hizmeti var mı?", a: "İzinli motorlu ve elektrikli araçlar için ada içinde akü takviyesi operasyonu planlanabilir. Standart ve en hızlı çözüm için önce telefonla durumu değerlendiriyoruz." },
+      { q: "Adalar operasyonunun ücreti nasıl belirlenir?", a: "Deniz taşıması içeren operasyonlar aracın tipine, adaya ve taşıma şekline göre planlanır. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Kınalıada'da aracım için gece kurtarma mümkün mü?", a: "Gece operasyonları deniz koşullarına ve iskele çalışma saatlerine bağlıdır. 7/24 telefonlarımız açık; arayın, en erken uygulanabilir planı birlikte yapalım." },
+      { q: "Adalar'a en yakın karadan hizmet noktanız neresi?", a: "Bostancı, Maltepe ve Kartal sahil hattında ekiplerimiz sürekli hazırdır; iskelelere ortalama 15-25 dakikada ulaşırız." },
+    ],
+    neighbors: ["kartal", "maltepe", "kadikoy"],
+    blogParagraphs: [
+      "Adalar, çekicilik açısından İstanbul'un en özel ilçesidir. Fayton döneminin kapanmasıyla ada içi ulaşım elektrikli araçlara döndü; bu da arıza yapan elektrikli minibüs, hizmet aracı ve golf tipi araçlar için yeni bir kurtarma ihtiyacı doğurdu. Standart bir çekici kamyonu adaya giremeyeceği için bu işler ancak deniz taşımacılığı deneyimi olan ekiplerle, planlı şekilde yapılabilir.",
+      "Ada sakinlerinin ve yazlıkçıların en sık yaşadığı durum aslında ana karada gerçekleşir: Bostancı veya Kartal iskelesine dönüşte otoparkta bekleyen aracın aküsünün bitmesi. Özellikle yaz sezonu sonunda haftalarca kullanılmayan araçlarda akü bitmesi ve lastik basınç kaybı çok yaygındır. Bu durumda iskele önüne akü takviyesi veya çekici gönderiyoruz.",
+      "Şile ve Adalar gibi mevsimsel yoğunluk yaşayan bölgelerde yaz aylarında talep belirgin şekilde artar. Adalar için önerimiz: aracınızı iskele otoparkında uzun süre bırakacaksanız akü şalterini kontrol ettirin ve dönüş gününüzü bize önceden bildirirseniz olası bir arızada öncelikli planlama yapalım.",
+    ],
+  },
+  {
+    slug: "atasehir",
+    name: "Ataşehir",
+    yaka: "anadolu",
+    neighborhoods: ["Atatürk Mahallesi", "Barbaros", "İçerenköy", "Küçükbakkalköy", "Kayışdağı", "Yenisahra", "Ferhatpaşa", "Mustafa Kemal"],
+    roads: ["TEM Otoyolu (O-2) Ataşehir bağlantısı", "D-100 (E-5) İçerenköy kesimi", "Şile Otoyolu başlangıcı", "Fatih Sultan Mehmet Köprüsü bağlantı yolu"],
+    landmarks: ["İstanbul Finans Merkezi", "Watergarden", "Brandium AVM", "Palladium AVM", "Ataşehir Migros kavşağı"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Atatürk Mah. / Finans Merkezi", minutes: "15-20 dk" },
+      { area: "İçerenköy / Küçükbakkalköy", minutes: "15-25 dk" },
+      { area: "Kayışdağı / Ferhatpaşa", minutes: "20-30 dk" },
+      { area: "Yenisahra / Barbaros", minutes: "15-20 dk" },
+    ],
+    intro:
+      "Ataşehir'de aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici hizmeti alabilirsiniz. TEM ve D-100'ün kesişimindeki konumumuz sayesinde Ataşehir'in tüm mahallelerine ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Ataşehir, TEM (O-2) ile D-100'ün (E-5) arasında kalan konumu ve İstanbul Finans Merkezi trafiği nedeniyle Anadolu Yakası'nın en yoğun geçiş ilçelerinden biridir. Özellikle sabah saatlerinde FSM Köprüsü'ne akan TEM trafiğinde ve akşam İçerenköy D-100 kesiminde arıza yapan araçlar hızla kuyruk oluşturur; bu noktalarda hızlı müdahale hem güvenlik hem trafik açısından kritiktir.",
+    scenario:
+      "Örnek: Akşam 18:30'da Watergarden çıkışında aracınız hararet yaptı ve D-100 yan yoluna zor attınız. Bizi aradığınızda konumunuzu WhatsApp'tan paylaşırsınız; İçerenköy'de konumlanan ekibimiz yoğun saatte bile yan yol üzerinden 20 dakika içinde yanınıza ulaşır, aracınızı Küçükbakkalköy'deki servisinize götürür.",
+    faqs: [
+      { q: "Ataşehir'de çekici ne kadar sürede gelir?", a: "Ataşehir merkez, İçerenköy ve Barbaros çevresine ortalama 15-20 dakikada, Kayışdağı ve Ferhatpaşa tarafına 20-30 dakikada ulaşıyoruz. Yoğun trafik saatlerinde yan yolları kullanarak süreyi kısaltıyoruz." },
+      { q: "TEM Otoyolu Ataşehir kesiminde aracım arıza yaptı, ne yapmalıyım?", a: "Önce dörtlü flaşörünüzü yakıp aracı emniyet şeridine alın, reflektörünüzü koyun ve bariyer arkasında bekleyin. Ardından 0535 404 80 44'ü arayın; TEM Ataşehir kesimine otoyol müdahale deneyimi olan ekip gönderiyoruz." },
+      { q: "İstanbul Finans Merkezi'nde kapalı otoparkta aracım çalışmıyor, gelebilir misiniz?", a: "Evet. Kapalı otoparklar için alçak tavan uyumlu araç ve akü takviye ekipmanımız mevcut; İFM ve çevre plazaların otoparklarına düzenli hizmet veriyoruz." },
+      { q: "Ataşehir'den Anadolu Yakası'ndaki başka bir ilçeye araç çekiyor musunuz?", a: "Evet, Ataşehir'den Kadıköy, Ümraniye, Maltepe dahil tüm ilçelere ve şehirlerarası noktalara araç taşıyoruz." },
+      { q: "Gece Ataşehir'de çekici bulabilir miyim?", a: "Evet, 7/24 çalışıyoruz. Gece saatlerinde Ataşehir'e varış süremiz trafik olmadığı için genellikle 15 dakikanın altına iner." },
+      { q: "Ataşehir'de akü takviyesi yapıyor musunuz?", a: "Evet, Ataşehir'in tüm mahallelerinde yerinde akü takviyesi yapıyoruz. Akü tamamen ömrünü doldurduysa yerinde akü değişimi için de yönlendirme sağlıyoruz." },
+      { q: "Kayışdağı yokuşunda aracım el freni çekili şekilde kaldı, kurtarma yapıyor musunuz?", a: "Evet, eğimli noktalarda vinçli ve sal tipi (kayar platform) araçlarımızla güvenli kurtarma yapıyoruz." },
+      { q: "Ataşehir çekici ücreti ne kadar?", a: "Ücret; aracın tipine, bulunduğu noktaya ve gideceği mesafeye göre değişir. Net fiyat için hemen arayınız: 0535 404 80 44." },
+      { q: "Elektrikli aracım Brandium otoparkında şarjı bitti, taşıyabilir misiniz?", a: "Evet, elektrikli araçları yalnızca kayar platformlu (flatbed) araçlarımızla taşıyoruz; bu, motor ve rejeneratif fren sistemine zarar gelmemesi için zorunludur." },
+      { q: "Ataşehir'de kaza yaptım, sigortam çekiciyi karşılar mı?", a: "Kasko poliçelerinin çoğu çekici masrafını limitler dahilinde karşılar. Kaza yerinde önce güvenliğinizi alın, tutanak sürecini tamamlayın; çekici belgesi ve faturanızı sigortaya ibraz edebilirsiniz. Detay için arayın, süreçte yardımcı oluyoruz." },
+    ],
+    neighbors: ["umraniye", "kadikoy", "maltepe", "sancaktepe", "cekmekoy"],
+    blogParagraphs: [
+      "Ataşehir'in çekici haritasını iki ana eksen belirler: kuzeyde FSM Köprüsü'ne bağlanan TEM Otoyolu, güneyde ise İçerenköy-Bostancı hattında ilerleyen D-100. Bu iki aks arasında kalan Atatürk Mahallesi, Barbaros ve Mustafa Kemal mahalleleri yoğun konut ve plaza bölgesidir; kapalı otopark arızaları, akü bitmesi ve lastik sorunları buradaki çağrıların büyük kısmını oluşturur.",
+      "İstanbul Finans Merkezi'nin açılmasıyla Ataşehir'de araç yoğunluğu belirgin biçimde arttı. Sabah 07:30-09:30 arasında Kayışdağı Caddesi ve TEM bağlantılarında, akşam 17:30-20:00 arasında D-100 İçerenköy kesiminde arıza yapan bir araç dakikalar içinde kilometrelerce kuyruğa neden olabilir. Bu yüzden Ataşehir'de konumlanmış ekibimiz yoğun saatlerde yan yol güzergâhlarını kullanarak standart sürelerin altında müdahale eder.",
+      "Ataşehir'de sık taşıma yaptığımız güzergâhlar arasında İçerenköy sanayi sitesindeki servisler, Küçükbakkalköy'deki yetkili servis bölgesi ve Dudullu OSB'deki bakım noktaları öne çıkar. Aracınızın gideceği servisi bilmiyorsanız, markanıza göre en yakın güvenilir servis konusunda da yönlendirme yapıyoruz.",
+    ],
+  },
+  {
+    slug: "beykoz",
+    name: "Beykoz",
+    yaka: "anadolu",
+    neighborhoods: ["Kavacık", "Çubuklu", "Paşabahçe", "Anadolu Hisarı", "Anadolu Kavağı", "Riva", "Acarkent bölgesi", "Tokatköy"],
+    roads: ["TEM Otoyolu Kavacık kavşağı", "Fatih Sultan Mehmet Köprüsü Anadolu çıkışı", "Riva yolu", "Beykoz sahil yolu (Paşabahçe hattı)"],
+    landmarks: ["Kavacık kavşağı", "Anadolu Hisarı", "Riva sahili", "Paşabahçe iskelesi", "Beykoz Çayırı"],
+    arrivalMinutes: "20-35",
+    arrivalTable: [
+      { area: "Kavacık / TEM bağlantısı", minutes: "15-25 dk" },
+      { area: "Çubuklu / Paşabahçe sahil", minutes: "20-30 dk" },
+      { area: "Anadolu Kavağı", minutes: "30-40 dk" },
+      { area: "Riva / Acarkent", minutes: "30-45 dk" },
+    ],
+    intro:
+      "Beykoz'da aracınız yolda kaldıysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. Kavacık merkezli ekibimiz FSM Köprüsü çıkışına, sahil hattına ve Riva yoluna ortalama 20-35 dakikada ulaşır.",
+    localNote:
+      "Beykoz, Anadolu Yakası'nın en geniş ve coğrafi olarak en engebeli ilçelerinden biridir. Kavacık, TEM ve FSM Köprüsü bağlantısıyla yoğun bir geçiş noktasıyken; Riva, Anadolu Kavağı ve orman içi yollar dar, virajlı ve eğimlidir. Hafta sonları Riva sahiline ve Polonezköy'e giden araçların dönüş saatlerinde arıza ve hafif kaza çağrıları belirgin şekilde artar.",
+    scenario:
+      "Örnek: Pazar akşamı Riva dönüşü, orman içi virajlı yolda aracınızın debriyajı koktu ve çekiş kayboldu. Konumu WhatsApp'tan paylaştığınızda Kavacık'taki ekibimiz sal tipi çekiciyle 35-40 dakikada yanınızda olur; aracı eğimli viraja uygun şekilde güvenle yükler ve istediğiniz servise taşırız.",
+    faqs: [
+      { q: "Beykoz'da çekici ne kadar sürede ulaşır?", a: "Kavacık ve TEM çevresine 15-25 dakikada, Paşabahçe-Çubuklu sahiline 20-30 dakikada, Riva ve Anadolu Kavağı gibi uzak noktalara 30-45 dakikada ulaşıyoruz." },
+      { q: "FSM Köprüsü Anadolu çıkışında aracım arıza yaptı, ne yapmalıyım?", a: "Aracı mümkünse emniyet şeridine alın, dörtlüleri yakın ve bariyer arkasına geçin. Köprü çıkışları yüksek hızlı bölgelerdir; bizi arayın, otoyol deneyimli ekibimiz kısa sürede müdahale eder." },
+      { q: "Riva yolunda gece aracım kaldı, gelir misiniz?", a: "Evet, 7/24 hizmet veriyoruz. Riva ve orman içi yollar için gece aydınlatmalı, vinçli kurtarma aracımızla geliyoruz." },
+      { q: "Anadolu Kavağı'na çekici gönderiyor musunuz?", a: "Evet, Anadolu Kavağı dahil Beykoz'un en uç noktalarına hizmet veriyoruz; dar sokaklar için uygun boyutlu araç seçiyoruz." },
+      { q: "Beykoz'da arazi aracım çamura saplandı, kurtarma yapıyor musunuz?", a: "Evet, Riva ve Polonezköy çevresindeki toprak yollarda vinçli kurtarma (off-road recovery) hizmetimiz var." },
+      { q: "Acarkent/Acarlar sitesi içinden araç çekiyor musunuz?", a: "Evet, site güvenliği prosedürlerine uygun şekilde site içinden araç teslim alıyoruz; araç sahibinin telefonla onayı yeterlidir." },
+      { q: "Beykoz'dan Avrupa Yakası'na araç taşıyor musunuz?", a: "Evet, FSM Köprüsü üzerinden Avrupa Yakası'nın tüm ilçelerine düzenli taşıma yapıyoruz." },
+      { q: "Beykoz çekici fiyatı ne kadar?", a: "Fiyat; konum, mesafe ve araç tipine göre belirlenir. Net bilgi için hemen arayınız: 0535 404 80 44." },
+      { q: "Kavacık'ta plazada kapalı otoparktan araç çekebiliyor musunuz?", a: "Evet, Kavacık plaza bölgesindeki kapalı otoparklar için alçak tavanlı kurtarma aracımız mevcut." },
+      { q: "Polonezköy'de aracım bozuldu, Beykoz ekibiniz mi gelir?", a: "Evet, Polonezköy Beykoz sınırlarındadır; Kavacık ekibimiz ortalama 30-40 dakikada ulaşır." },
+    ],
+    neighbors: ["uskudar", "umraniye", "cekmekoy", "sile", "sariyer"],
+    blogParagraphs: [
+      "Beykoz'da çekici hizmetinin karakterini coğrafya belirler. İlçenin güneybatısında Kavacık, TEM Otoyolu ve FSM Köprüsü'nün Anadolu ayağı olarak İstanbul'un en kritik geçiş noktalarından biridir; burada yaşanan bir arıza dakikalar içinde köprü trafiğini etkiler. Kuzeye çıkıldıkça Riva, Anadolu Kavağı ve orman köyleri devreye girer — dar, virajlı ve eğimli bu yollarda standart çekici yerine vinçli ve arazi şartlarına uygun kurtarma aracı gerekir.",
+      "Hafta sonu profili Beykoz'da bambaşkadır: Riva sahiline, Polonezköy'e ve Anadolu Kavağı'na günübirlik gelen binlerce araç, akşam dönüş saatinde tek şeritli yollarda kuyruk oluşturur. Bu saatlerde en sık aldığımız çağrılar hararet yapan araçlar, debriyaj sorunları ve toprak zeminlere saplanan SUV'lardır. Beykoz ekibimiz bu profil için hem sal tipi platform hem çekme vinci taşır.",
+      "Beykoz'un sahil hattı (Çubuklu, Paşabahçe, Beykoz merkez) tarihi ve dar dokuludur; buradaki müdahalelerde dar sokak manevrası yapabilen kompakt çekici kullanırız. Boğaz hattındaki restoran ve etkinlik yoğunluğunda vale kaynaklı küçük kazalar ve otopark sıkışmaları da düzenli aldığımız çağrılar arasındadır.",
+    ],
+  },
+  {
+    slug: "cekmekoy",
+    name: "Çekmeköy",
+    yaka: "anadolu",
+    neighborhoods: ["Merkez", "Taşdelen", "Alemdağ", "Ömerli", "Madenler sınırı", "Hamidiye", "Mehmet Akif", "Soğukpınar"],
+    roads: ["Şile Otoyolu Çekmeköy kesimi", "Kuzey Marmara Otoyolu bağlantısı", "Alemdağ Caddesi", "TEM bağlantı yolları"],
+    landmarks: ["Çekmeköy metro son durağı", "Alemdağ merkez", "Ömerli Barajı çevresi", "Taşdelen su dolum bölgesi"],
+    arrivalMinutes: "20-30",
+    arrivalTable: [
+      { area: "Merkez / Metro çevresi", minutes: "15-25 dk" },
+      { area: "Taşdelen / Alemdağ", minutes: "20-30 dk" },
+      { area: "Ömerli / baraj çevresi", minutes: "30-40 dk" },
+      { area: "Şile Otoyolu Çekmeköy kesimi", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Çekmeköy'de aracınız bozulduysa 0535 404 80 44'ü arayın; Şile Otoyolu, Alemdağ Caddesi ve tüm mahallelere 7/24, ortalama 20-30 dakikada çekici gönderiyoruz.",
+    localNote:
+      "Çekmeköy son on yılda İstanbul'un en hızlı büyüyen ilçelerinden biri oldu; metro hattının gelmesiyle konut yoğunluğu arttı ancak ana arterler hâlâ sınırlı: Alemdağ Caddesi ilçenin omurgası, Şile Otoyolu ise Şile yönüne tek yüksek standartlı çıkış. Yaz aylarında Şile'ye akan hafta sonu trafiği Çekmeköy kesiminde yoğunlaşır; bu dönemde otoyol üzeri arıza çağrıları ikiye katlanır.",
+    scenario:
+      "Örnek: Cumartesi sabahı Şile Otoyolu Çekmeköy gişeler öncesinde aracınızın lastiği patladı. Yedeğiniz yok. Bizi aradığınızda konumunuzu paylaşırsınız; mobil lastik ekibimiz 20-25 dakikada gelir, uygun lastik varsa yerinde değiştirir, yoksa aracınızı platforma alıp en yakın lastikçiye götürürüz.",
+    faqs: [
+      { q: "Çekmeköy'de çekici ne kadar sürede gelir?", a: "Merkez ve metro çevresine 15-25 dakikada, Taşdelen-Alemdağ hattına 20-30 dakikada, Ömerli tarafına 30-40 dakikada ulaşıyoruz." },
+      { q: "Şile Otoyolu'nda aracım arıza yaptı, hangi noktadayım nasıl tarif ederim?", a: "Otoyol üzerindeki kilometre levhalarını veya en son geçtiğiniz gişe/kavşak adını söylemeniz yeterli; ayrıca WhatsApp'tan canlı konum paylaşırsanız ekibimiz doğrudan size gelir." },
+      { q: "Ömerli Barajı çevresinde piknik dönüşü aracım çamura saplandı, kurtarır mısınız?", a: "Evet, vinçli kurtarma aracımızla toprak ve eğimli zeminlerden güvenli çekim yapıyoruz." },
+      { q: "Çekmeköy'den Şile'ye araç taşıyor musunuz?", a: "Evet, Şile Otoyolu üzerinden Şile ve Ağva'ya düzenli taşıma yapıyoruz." },
+      { q: "Gece Alemdağ'da aküm bitti, takviye gelir mi?", a: "Evet, 7/24 akü takviye ekibimiz var; gece Alemdağ'a ortalama 20-25 dakikada ulaşırız." },
+      { q: "Site içinden araç çekiyor musunuz?", a: "Evet, Çekmeköy'deki kapalı sitelerden güvenlik prosedürlerine uygun şekilde araç teslim alıyoruz." },
+      { q: "Çekmeköy çekici ücreti nasıl öğrenirim?", a: "Fiyat konuma, mesafeye ve araç tipine göre değişir; net fiyat için hemen arayınız: 0535 404 80 44." },
+      { q: "Kuzey Marmara Otoyolu Çekmeköy bağlantısında hizmet veriyor musunuz?", a: "Evet, Kuzey Marmara Otoyolu'nun Çekmeköy ve Sancaktepe bağlantı kesimlerine otoyol kurallarına uygun müdahale ekibi gönderiyoruz." },
+      { q: "Motosikletim Taşdelen'de zincir kopardı, motosiklet çekiyor musunuz?", a: "Evet, motosiklete özel bağlama aparatlı platformumuzla hasarsız taşıma yapıyoruz." },
+      { q: "Çekmeköy'de kaza sonrası aracımı otoparka çekebilir misiniz?", a: "Evet, kaza sonrası aracınızı anlaşmalı güvenli otoparka veya dilediğiniz adrese taşıyoruz; tutanak sürecinde de yol gösteriyoruz." },
+    ],
+    neighbors: ["umraniye", "sancaktepe", "beykoz", "sile", "atasehir"],
+    blogParagraphs: [
+      "Çekmeköy'ün çekici trafiğini iki dinamik şekillendirir: birincisi, metroyla birlikte hızla artan konut nüfusunun günlük arıza ihtiyaçları (akü, lastik, marş sorunları); ikincisi, Şile Otoyolu'nun ilçeden geçmesi nedeniyle hafta sonları katlanan geçiş trafiği. Cuma akşamı Şile yönüne, pazar akşamı İstanbul yönüne akan araçlar arasında arıza yapanlar genellikle Çekmeköy kesiminde yardım ister.",
+      "İlçenin kuzeydoğusundaki Ömerli, Koçullu ve baraj çevresi köy dokusunu korur; buradaki dar ve zaman zaman stabilize yollar standart çekiciler için zorlayıcıdır. Bu bölgeye her zaman vinç donanımlı araç yönlendiririz. Alemdağ Caddesi üzerindeki yoğun ticari hat ise gün içinde kısa mesafeli çekim ve otopark kurtarma çağrılarının merkezi durumundadır.",
+      "Çekmeköy'de kış aylarında rakım ve orman içi mikroklima nedeniyle buzlanma, Anadolu Yakası ortalamasının üzerindedir; özellikle Taşdelen ve Alemdağ'ın eğimli sokaklarında kar günlerinde kayan araçlar için kurtarma çağrıları yoğunlaşır. Kar lastiği olmayan araçların bu dönemde yokuşlu sokaklara park etmemesini öneriyoruz.",
+    ],
+  },
+  {
+    slug: "kadikoy",
+    name: "Kadıköy",
+    yaka: "anadolu",
+    neighborhoods: ["Moda", "Fenerbahçe", "Caddebostan", "Suadiye", "Bostancı", "Göztepe", "Koşuyolu", "Acıbadem", "Fikirtepe", "Kozyatağı"],
+    roads: ["D-100 (E-5) Kadıköy kesimi", "Bağdat Caddesi", "Minibüs Caddesi", "Sahil yolu (Bostancı-Moda)", "Kurbağalıdere Caddesi"],
+    landmarks: ["Kadıköy Rıhtım ve iskele", "Bağdat Caddesi", "Fenerbahçe Ülker Stadyumu bölgesi", "Bostancı İDO iskelesi", "Moda sahili", "Göztepe 60. Yıl Parkı"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Kadıköy merkez / Moda / Rıhtım", minutes: "15-25 dk" },
+      { area: "Bağdat Caddesi hattı (Göztepe-Suadiye)", minutes: "15-20 dk" },
+      { area: "Bostancı / sahil yolu", minutes: "15-20 dk" },
+      { area: "Koşuyolu / Acıbadem / Fikirtepe", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Kadıköy'de aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici hizmeti alabilirsiniz. Moda'dan Bostancı'ya, D-100'den sahil yoluna kadar tüm Kadıköy'e ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Kadıköy, Anadolu Yakası'nın en yoğun yaşam merkezi. Rıhtım-Moda hattının dar ve tek yönlü sokakları, Bağdat Caddesi'nin hız koridoru, D-100'ün kesintisiz akışı ve maç günlerinde stadyum çevresindeki kilitlenme — her biri farklı müdahale taktiği gerektirir. Moda ve Yeldeğirmeni gibi bölgelerde dar sokak manevrası yapabilen kompakt çekici şarttır; Bağdat Caddesi'nde ise gece hız kaynaklı kazalara sık müdahale ederiz.",
+    scenario:
+      "Örnek: Fenerbahçe maçı akşamı Kalamış'ta aracınız marş basmıyor ve trafik kilit. Konumu WhatsApp'tan atarsınız; motosikletli öncü ekibimiz akü takviye cihazıyla araç trafiğine takılmadan 15 dakikada gelir, araç çalışmazsa kompakt çekicimiz devreye girer.",
+    faqs: [
+      { q: "Kadıköy'de çekici ne kadar sürede gelir?", a: "Kadıköy merkez, Moda ve Bağdat Caddesi hattına ortalama 15-20 dakikada, Bostancı ve Acıbadem çevresine 15-25 dakikada ulaşıyoruz." },
+      { q: "Moda'nın dar sokaklarına çekici girebiliyor mu?", a: "Evet, Moda, Yeldeğirmeni ve Rasimpaşa gibi dar sokaklı bölgeler için kompakt kayar platformlu aracımız var; tek yönlü sokaklarda güvenli manevrayla yükleme yapıyoruz." },
+      { q: "Bağdat Caddesi'nde gece kaza yaptım, ne yapmalıyım?", a: "Önce güvenliğinizi alın, yaralı varsa 112'yi arayın. Maddi hasarlı kazada tutanak fotoğraflarını çekin, ardından bizi arayın; aracınızı güvenli noktaya veya servise çekelim." },
+      { q: "Kadıköy iskele çevresinde aracım otoparkta çalışmadı, yardım eder misiniz?", a: "Evet, rıhtım ve iskele çevresindeki açık/kapalı otoparklara akü takviyesi ve çekici hizmeti veriyoruz." },
+      { q: "D-100 Kadıköy kesiminde emniyet şeridinde bekliyorum, ne kadar sürede gelirsiniz?", a: "D-100 üzerindeki konumlara öncelikli müdahale ediyoruz; ortalama 15-20 dakikada yanınızdayız. Araçtan uzaklaşıp bariyer arkasında bekleyin." },
+      { q: "Fenerbahçe maç günü stadyum çevresinden araç çekebiliyor musunuz?", a: "Evet, maç günü trafik planını bildiğimiz için alternatif sokaklardan ulaşıyoruz; polis yönlendirmeleriyle koordineli çalışırız." },
+      { q: "Kadıköy'den karşı yakaya araç taşıyor musunuz?", a: "Evet, Avrasya Tüneli veya köprüler üzerinden Avrupa Yakası'na düzenli araç taşıması yapıyoruz." },
+      { q: "Kadıköy çekici fiyatı ne kadar?", a: "Fiyat mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Elektrikli aracım Kozyatağı'nda şarjsız kaldı, nasıl taşıyorsunuz?", a: "Elektrikli araçlar kesinlikle kayar platform (flatbed) ile taşınır; tekerlek üzerinde çekmek motor ve rejeneratif fren sistemine zarar verir. Platformlu aracımızla güvenle taşıyoruz." },
+      { q: "Klasik aracım için özel hassasiyetle taşıma yapıyor musunuz?", a: "Evet, Moda ve Fenerbahçe çevresinde klasik araç sahiplerine düşük açılı rampa ve yumuşak bağlama kayışlarıyla hasarsız taşıma sağlıyoruz." },
+    ],
+    neighbors: ["uskudar", "atasehir", "maltepe", "umraniye"],
+    blogParagraphs: [
+      "Kadıköy'de çekicilik, ilçenin çok katmanlı yapısına uyum ister. Rıhtım ve Moda'nın tarihî dar sokakları kompakt araç gerektirirken, Bağdat Caddesi-sahil hattında gece saatlerinde yüksek hız kaynaklı kazalara müdahale ederiz. Koşuyolu ve Acıbadem, hastane yoğunluğu (Acıbadem hastaneleri çevresi) nedeniyle otopark ve kısa mesafe çekim çağrılarının merkezi; Fikirtepe ise devam eden dönüşüm inşaatları nedeniyle rampa ve şantiye çevresi kurtarmaların yoğun olduğu bölgedir.",
+      "Kadıköy'ün bir diğer karakteristiği yoğun paralel park kültürüdür: Moda, Caddebostan ve Suadiye'de sıkışan, çift park nedeniyle kilitlenen veya yanlış parktan kaynaklı hareket edemeyen araçlar için 'sıkışık alandan çıkarma' operasyonları günlük işlerimizdendir. Bu operasyonlarda kısa şasili çekici ve tekerlek altı kaydırma paletleri kullanırız.",
+      "İskele ve İDO bağlantıları (Kadıköy ve Bostancı) nedeniyle Kadıköy, adalara ve Bursa-Yalova yönüne giden sürücülerin de geçiş noktasıdır. Vapur saatine yetişmeye çalışırken yolda kalan sürücülerden gelen 'acil' çağrılara öncelik veriyor, mümkünse önce aracı çalıştırıp yolculuğuna devam etmesini sağlıyoruz — her arıza çekici gerektirmez, telefonda ön teşhisle gereksiz masrafın önüne geçiyoruz.",
+    ],
+  },
+  {
+    slug: "kartal",
+    name: "Kartal",
+    yaka: "anadolu",
+    neighborhoods: ["Kordonboyu", "Soğanlık", "Yakacık", "Uğur Mumcu", "Hürriyet", "Cevizli sınırı", "Orhantepe", "Yalı"],
+    roads: ["D-100 (E-5) Kartal kesimi", "Sahil yolu (Kartal-Pendik hattı)", "TEM bağlantı yolu (Yakacık)", "Aydos Ormanı çevre yolları"],
+    landmarks: ["Anadolu Adalet Sarayı (Kartal Adliyesi)", "Kartal Marina ve sahil", "Aydos Ormanı", "Kartal-Yalova İDO iskelesi", "Lütfi Kırdar şehir hastanesi bölgesi"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Kartal merkez / Kordonboyu", minutes: "15-20 dk" },
+      { area: "Soğanlık / D-100 hattı", minutes: "15-20 dk" },
+      { area: "Yakacık / Aydos etekleri", minutes: "20-30 dk" },
+      { area: "Sahil yolu / marina", minutes: "15-20 dk" },
+    ],
+    intro:
+      "Kartal'da aracınız yolda kaldıysa 0535 404 80 44'ü arayın; D-100, sahil yolu ve tüm mahallelere 7/24, ortalama 15-25 dakikada çekici ulaştırıyoruz.",
+    localNote:
+      "Kartal, D-100'ün en yoğun Anadolu kesimlerinden birine ve İDO'nun Yalova bağlantısına ev sahipliği yapar. Adliye çevresinde gün içi kısa süreli park sirkülasyonu yüksektir; Yakacık ve Aydos eteklerine çıkan sokaklar ise dik eğimlidir — kışın buzlanmada bu yokuşlarda kayan araç çağrıları zirve yapar. İDO iskelesinde araç kuyruğundayken arıza yapan araçlara öncelikli müdahale ediyoruz, çünkü feribot saati kaçırmak zincirleme mağduriyet yaratıyor.",
+    scenario:
+      "Örnek: Yalova feribotuna 40 dakika kala İDO Kartal iskelesi kuyruğunda aracınız stop etti ve çalışmıyor. Bizi aradığınızda iskeleye en yakın ekibimiz 15 dakikada gelir; önce akü/marş kontrolü yapar, çalışmazsa aracı kuyruktan güvenle alıp ya feribota yetiştirecek çözümü ya da servise taşımayı organize ederiz.",
+    faqs: [
+      { q: "Kartal'da çekici ne kadar sürede gelir?", a: "Kartal merkez, Kordonboyu ve D-100 hattına 15-20 dakikada; Yakacık ve Aydos eteklerine 20-30 dakikada ulaşıyoruz." },
+      { q: "D-100 Kartal kesiminde arıza yaptım, nerede beklemeliyim?", a: "Aracı emniyet şeridine alın, dörtlü flaşörü yakın, reflektörü 45-50 metre geriye koyun ve bariyerin arkasında bekleyin. Ekibimiz ortalama 15-20 dakikada ulaşır." },
+      { q: "Kartal İDO iskelesinde aracım bozuldu, feribotu kaçırmamam lazım, ne yapabilirsiniz?", a: "İskele çağrılarına öncelik veriyoruz. Çoğu durumda akü takviyesi veya hızlı müdahale ile aracınızı feribota yetiştiriyoruz; olmuyorsa çekici ile plan B'yi birlikte kurarız." },
+      { q: "Yakacık yokuşunda kışın aracım kaydı, kurtarma yapıyor musunuz?", a: "Evet, buzlanmış eğimli sokaklarda vinçli ve kaymaya karşı sabitlenmiş kurtarma yapıyoruz; kış aylarında Yakacık-Aydos bölgesi için özel hazırlıklıyız." },
+      { q: "Kartal Adliyesi çevresinden araç çekiyor musunuz?", a: "Evet, adliye çevresindeki yoğun park bölgelerinden kısa sürede araç alıyoruz; işlem saatinize yetişmeniz için hızlı planlama yapıyoruz." },
+      { q: "Kartal'dan şehirlerarası araç taşıması yapıyor musunuz?", a: "Evet, Kartal'dan Türkiye'nin her iline şehirlerarası çekici ve çoklu araç taşıma hizmetimiz var." },
+      { q: "Gece Kartal sahilinde aküm bitti, gelir misiniz?", a: "Evet, 7/24 çalışıyoruz; gece sahil ve marina çevresine 15 dakika civarında ulaşırız." },
+      { q: "Kartal çekici ücreti ne kadar?", a: "Ücret mesafeye ve araç tipine göre değişir; fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Aydos Ormanı çevresinde off-road aracım kaldı, kurtarabilir misiniz?", a: "Evet, Aydos çevresindeki toprak yollarda vinçli arazi kurtarması yapıyoruz." },
+      { q: "Şehir hastanesine gidecek hastamız var, aracımız bozuldu; öncelik verir misiniz?", a: "Sağlık aciliyeti olan çağrılara her zaman öncelik veriyoruz; durumu telefonda belirtmeniz yeterli." },
+    ],
+    neighbors: ["maltepe", "pendik", "sultanbeyli", "sancaktepe"],
+    blogParagraphs: [
+      "Kartal'ın çekici yoğunluğu üç merkezde toplanır: D-100'ün Soğanlık-Kartal kesimi (İstanbul'un en yoğun arıza noktalarından biri), Anadolu Adalet Sarayı çevresinin park sirkülasyonu ve İDO iskelesinin feribot kuyrukları. Adliyeye işlem için gelen ve aracını uzun süre kapalı otoparkta bırakan sürücülerde akü bitmesi o kadar yaygın ki, adliye otoparkı çevresi akü takviye çağrılarında ilçe birincisidir.",
+      "Sahil hattında Kartal Marina ve yeni sahil düzenlemesi hafta sonu trafiği getirirken, Yakacık ve Aydos etekleri ilçenin topografik olarak en zorlu bölgesi. Aydos Ormanı çevresindeki dik sokaklar kar ve buz günlerinde İstanbul'un en riskli noktaları arasında; bu dönemde bölgeye kış donanımlı kurtarma aracı ayırıyoruz.",
+      "Kartal ayrıca sanayi geçmişi nedeniyle çok sayıda oto tamirci ve servis barındırır; Soğanlık ve Esentepe sanayi bölgelerindeki servislere çevre ilçelerden sürekli araç taşırız. Aracınızın arızasına göre hangi servise gitmeniz gerektiğinden emin değilseniz telefonda yönlendirme de yapıyoruz.",
+    ],
+  },
+  {
+    slug: "maltepe",
+    name: "Maltepe",
+    yaka: "anadolu",
+    neighborhoods: ["Cevizli", "Altayçeşme", "Bağlarbaşı", "Fındıklı", "İdealtepe", "Küçükyalı", "Zümrütevler", "Girne", "Büyükbakkalköy"],
+    roads: ["D-100 (E-5) Maltepe kesimi", "Sahil yolu (Küçükyalı-Maltepe)", "Bağdat Caddesi devamı (İdealtepe-Küçükyalı)", "TEM bağlantısı (Büyükbakkalköy)"],
+    landmarks: ["Maltepe sahil ve etkinlik alanı", "Maltepe Park AVM", "Cevizli Marmaray bölgesi", "Küçükyalı İDO", "Maltepe Üniversitesi bölgesi"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Maltepe merkez / Altayçeşme", minutes: "15-20 dk" },
+      { area: "Cevizli / D-100 hattı", minutes: "15-20 dk" },
+      { area: "Küçükyalı / İdealtepe sahil", minutes: "15-20 dk" },
+      { area: "Zümrütevler / Başıbüyük", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Maltepe'de aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. D-100, sahil yolu ve tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Maltepe, Kadıköy-Kartal aksının tam ortasında, D-100 ile sahil yolunun paralel ilerlediği bir geçiş ilçesi. Cevizli kavşağı ve Maltepe Park AVM çevresi gün boyu yoğun; sahil dolgu alanındaki konser ve miting günlerinde ise bölge trafiği tamamen değişir, bu günlerde alternatif güzergâh planıyla çalışırız. Zümrütevler ve Başıbüyük'ün yokuşlu sokakları kış müdahalelerinin yoğunlaştığı noktalardır.",
+    scenario:
+      "Örnek: D-100 Maltepe köprülü kavşağında sol şeritte aracınız aniden stop etti ve trafiği kilitledi. Bizi aradığınızda en yakın ekip sarı tepe lambalı aracıyla 15 dakikada ulaşır, güvenlik koridoru oluşturarak aracınızı platforma alır ve trafiği rahatlatıp sizi güvenli noktaya taşır.",
+    faqs: [
+      { q: "Maltepe'de çekici ne kadar sürede ulaşır?", a: "Merkez, Cevizli ve sahil hattına 15-20 dakikada; Zümrütevler ve Başıbüyük tarafına 20-30 dakikada ulaşıyoruz." },
+      { q: "Maltepe sahilinde etkinlik günü aracım kaldı, ulaşabilir misiniz?", a: "Evet, etkinlik günlerindeki yol kapamalarını takip ediyoruz ve polis koordinasyonuyla alternatif güzergâhtan ulaşıyoruz." },
+      { q: "Küçükyalı sahil yolunda lastiğim patladı, yerinde değişim yapar mısınız?", a: "Evet, yedek lastiğiniz varsa yerinde değiştiriyoruz; yoksa mobil lastik çözümü veya en yakın lastikçiye taşıma sağlıyoruz." },
+      { q: "Cevizli Marmaray otoparkında aracım çalışmadı, gelir misiniz?", a: "Evet, Marmaray ve metro otoparklarına akü takviyesi ve çekici gönderiyoruz." },
+      { q: "Maltepe'den havalimanına aracım bozukken nasıl gideceğim, aracı da almanız mümkün mü?", a: "Aracınızı dilediğiniz servise/adrese çekiyoruz; siz yolculuğunuza devam ederken araç teslimatını fotoğraflı olarak raporluyoruz." },
+      { q: "Gülsuyu-Zümrütevler yokuşunda aracım el freni boşaldı ve duvara dayandı, kurtarma yapar mısınız?", a: "Evet, sıkışmış ve dayanmış araçlar için vinçli hassas kurtarma yapıyoruz; hasarı büyütmeden aracı alırız." },
+      { q: "Maltepe çekici fiyatı ne kadar?", a: "Fiyat mesafe ve araç tipine göre belirlenir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Maltepe Park AVM otoparkından araç çekebiliyor musunuz?", a: "Evet, kapalı otopark yükseklik sınırına uygun aracımızla AVM otoparklarından araç alıyoruz." },
+      { q: "Motosikletim sahil yolunda arıza yaptı, taşıyor musunuz?", a: "Evet, motosiklete özel sabitleme aparatlarıyla hasarsız taşıma yapıyoruz." },
+      { q: "Maltepe'de gece 03:00'te çekici bulabilir miyim?", a: "Evet, 7/24 nöbetçi ekibimiz var; gece trafiksiz saatlerde varış süremiz genellikle 15 dakikanın altındadır." },
+    ],
+    neighbors: ["kadikoy", "kartal", "atasehir", "sancaktepe"],
+    blogParagraphs: [
+      "Maltepe'nin çekici profili 'geçiş ilçesi' kimliğiyle şekillenir: D-100 üzerinden her gün yüz binlerce araç ilçeden geçer ve Cevizli-Maltepe köprülü kavşak kesimi, Anadolu Yakası'nın arıza yoğunluğu en yüksek noktalarından biridir. Buna sahil dolgu alanındaki büyük etkinlik günleri eklenince, Maltepe'de çekicilik güncel trafik bilgisini sürekli takip etmeyi gerektirir.",
+      "İlçenin iç kesimleri iki farklı dünya gibidir: sahile paralel İdealtepe, Altayçeşme ve Küçükyalı düz ve düzenliyken; Zümrütevler, Gülsuyu ve Başıbüyük dik yokuşlarıyla bilinir. Kış aylarında bu yokuşlarda buzlanma kaynaklı kayma ve çarpma vakaları yoğunlaşır — bu bölgeler için kar zincirli kurtarma aracımız hazır bekler.",
+      "Maltepe ayrıca Anadolu Yakası'nın önemli sağlık akslarından birine (Süreyyapaşa ve çevre hastaneler) ev sahipliği yapar; hasta yakınlarının araç sorunlarında öncelikli müdahale prensibimiz var. Büyükbakkalköy tarafındaki TEM bağlantısı sayesinde Maltepe'den otoyola ve oradan köprülere hızlı taşıma güzergâhı kurabiliyoruz.",
+    ],
+  },
+];

@@ -1,0 +1,239 @@
+import type { District } from "./types";
+
+/** Avrupa Yakası ilçeleri — Bölüm 3/4 */
+export const avrupa3: District[] = [
+  {
+    slug: "fatih",
+    name: "Fatih",
+    yaka: "avrupa",
+    neighborhoods: ["Aksaray", "Laleli", "Fındıkzade", "Çapa", "Fener", "Balat", "Eminönü", "Sultanahmet", "Topkapı", "Vefa", "Kumkapı", "Yedikule"],
+    roads: ["Vatan Caddesi (Adnan Menderes Bulvarı)", "Millet Caddesi", "Kennedy Caddesi (sahil yolu)", "Atatürk Bulvarı", "Avrasya Tüneli Avrupa girişi", "O-1 Topkapı bağlantısı"],
+    landmarks: ["Sultanahmet Meydanı", "Kapalıçarşı", "Çapa ve Cerrahpaşa tıp fakülteleri", "Eminönü meydanı", "Topkapı surları", "Yenikapı etkinlik alanı ve Marmaray"],
+    arrivalMinutes: "15-30",
+    arrivalTable: [
+      { area: "Aksaray / Laleli / Beyazıt", minutes: "15-25 dk" },
+      { area: "Sultanahmet / Eminönü", minutes: "20-30 dk" },
+      { area: "Çapa / Fındıkzade / Topkapı", minutes: "15-25 dk" },
+      { area: "Kennedy Cad. / Yenikapı / Kumkapı", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Fatih'te aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici hizmeti alabilirsiniz. Sultanahmet'ten Topkapı'ya, Kennedy Caddesi'nden Balat'a tarihî yarımadanın her noktasına ortalama 15-30 dakikada ulaşıyoruz.",
+    localNote:
+      "Fatih, tarihî yarımadanın tamamı: dar Osmanlı sokak dokusu, tek yönlü labirentler, tramvay hattı ve turist yoğunluğu çekicilik açısından İstanbul'un en teknik bölgelerinden biridir. Vatan ve Millet caddeleri geniş akslar olarak rahat müdahale sunarken; Fener-Balat, Kumkapı ve Sultanahmet içleri kompakt araç ve sabır ister. Avrasya Tüneli'nin Avrupa girişi (Kennedy Cad.) kritik noktadır — tünel yaklaşımındaki arızalara en yüksek öncelik verilir.",
+    scenario:
+      "Örnek: Balat'ın renkli merdivenli sokaklarından birinde aracınızın debriyajı yandı; sokak dar, eğimli ve arkanızda tur minibüsü bekliyor. Bizi aradığınızda kompakt çekicimiz Fener sahilinden yaklaşır, aracı tekerlek paletiyle uygun noktaya kaydırıp platforma alır ve tarihi dokuya zarar vermeden operasyonu tamamlarız.",
+    faqs: [
+      { q: "Fatih'te çekici ne kadar sürede gelir?", a: "Aksaray, Çapa ve Topkapı çevresine 15-25 dakikada; Sultanahmet-Eminönü içlerine 20-30 dakikada ulaşıyoruz." },
+      { q: "Avrasya Tüneli girişinde aracım arıza yaptı, ne olacak?", a: "Tünel işletmesinin güvenlik aracı sizi güvenli noktaya alabilir; hemen bizi de arayın, tünel yaklaşımından aracınızı teslim alıp dilediğiniz yere taşıyalım." },
+      { q: "Sultanahmet'te turistik bölgeye çekici girebiliyor mu?", a: "Evet, yayalaştırılmış kesimler için zabıta koordinasyonuyla, diğer sokaklar için kompakt aracımızla giriyoruz." },
+      { q: "Çapa/Cerrahpaşa hastanesine hasta getirdim, aracım otoparkta çalışmıyor; öncelik var mı?", a: "Evet, hastane çevresi çağrılarına öncelik veriyoruz; Çapa bölgesine 15-20 dakikada ulaşırız." },
+      { q: "Kennedy Caddesi'nde (sahil yolu) lastiğim patladı, ne yapmalıyım?", a: "Aracı sağ şeride/cebe alın, dörtlüleri yakın; sahil yolunda seyir hızı yüksektir, araç dışında bariyer tarafında bekleyin. Ekibimiz kısa sürede gelir." },
+      { q: "Fatih çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Kapalıçarşı çevresinde esnafım, yüklü aracım kaldı; mal güvenliği nasıl sağlanır?", a: "Yük emniyet kayışlarıyla sabitler, gerekirse aktarma için beklemenize imkân verir, aracı mühürlü-fotoğraflı raporla taşırız." },
+      { q: "Turistim, kiralık aracım Sultanahmet'te bozuldu; İngilizce destek var mı?", a: "Evet, 7/24 İngilizce destek veriyoruz; kiralama firmasıyla koordinasyonu da üstleniriz. English support: +90 535 404 80 44." },
+      { q: "Yenikapı'da etkinlik günü aracım kaldı, ulaşabilir misiniz?", a: "Evet, Yenikapı etkinlik günlerindeki yol düzenlemelerini takip ediyoruz; alternatif rotayla ulaşırız." },
+      { q: "Tramvay hattının yanında aracım arızalandı (Beyazıt), tramvayı engellemekten korkuyorum; ne yapayım?", a: "Aracınızdan uzaklaşıp bizi arayın; tramvay işletmesiyle koordineli, raya yaklaşmadan hızlı yükleme prosedürümüz var." },
+    ],
+    neighbors: ["zeytinburnu", "bayrampasa", "beyoglu", "gaziosmanpasa", "gungoren"],
+    blogParagraphs: [
+      "Fatih'te çekicilik, tarihle iç içe çalışmaktır: sur içi dokusunda sokaklar araç için değil, yüzyıllar önce yayalar ve at arabaları için planlandı. Fener-Balat'ın merdivenli yokuşları, Kumkapı'nın balıkçı sokakları ve Vefa-Zeyrek'in tek yönlü labirentleri, uzun şasili çekicilerin giremeyeceği yerlerdir. Fatih operasyonlarımızın demirbaşı kompakt platform ve tekerlek paletidir; gerektiğinde aracı önce el gücü ve paletlerle uygun noktaya kaydırır, sonra yükleriz.",
+      "İlçenin modern yüzü ise bambaşka hızda akar: Vatan ve Millet caddeleri, tarihî yarımadanın geniş ve hızlı akslarıdır; Kennedy Caddesi sahil boyunca kesintisiz ilerler ve Avrasya Tüneli'nin Avrupa girişini besler. Tünel yaklaşımında yaşanan arızalar hem tünel trafiğini hem sahil aksını etkilediği için bu çağrılara filomuzun en yüksek önceliğini tanırız. Çapa-Cerrahpaşa tıp kompleksleri çevresi ise hastane vakalarının (hasta yakını araçları, otopark sorunları) yoğun bölgesidir.",
+      "Fatih'in turizm yükü de operasyona yansır: Sultanahmet-Eminönü hattında kiralık araç arızaları, yanlış parktan kaynaklı çekilme sorunları ve tur araçlarının vakaları günlük rutindedir. Yabancı sürücüler için İngilizce ve Arapça destek hattımız en çok bu bölgede çalışır. Laleli'nin toptan ticaret trafiği (bavul ticareti geleneği) yüklü ticari araç vakalarını, Eminönü'nün sevkiyat saatleri ise sabah erken çağrıları besler.",
+    ],
+  },
+  {
+    slug: "gaziosmanpasa",
+    name: "Gaziosmanpaşa",
+    yaka: "avrupa",
+    neighborhoods: ["Merkez", "Küçükköy", "Sarıgöl", "Karadeniz", "Yıldıztabya", "Barbaros Hayrettin Paşa", "Fevzi Çakmak", "Karayolları", "Hürriyet"],
+    roads: ["TEM (O-3) bağlantıları", "Eski Edirne Asfaltı", "Bereç-Küçükköy aksı", "Gaziosmanpaşa-Sultangazi hattı"],
+    landmarks: ["Gaziosmanpaşa Meydanı", "Küçükköy çarşı", "Gaziosmanpaşa Taksim Eğitim ve Araştırma Hastanesi", "Sarıgöl dönüşüm bölgesi"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "GOP merkez / meydan", minutes: "15-25 dk" },
+      { area: "Küçükköy / Karadeniz Mah.", minutes: "15-25 dk" },
+      { area: "Eski Edirne Asfaltı hattı", minutes: "15-20 dk" },
+      { area: "Yıldıztabya / Sarıgöl", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Gaziosmanpaşa'da aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. Eski Edirne Asfaltı, meydan çevresi ve tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Gaziosmanpaşa, Avrupa Yakası'nın kuzey konut kuşağının merkezinde, Eski Edirne Asfaltı'nın omurga olduğu yoğun bir ilçedir. Metro hattının (M7) gelişi trafiği kısmen rahatlattı ama dar sokak dokusu ve dik kesimler (Yıldıztabya, Sarıgöl) müdahalede kompakt araç gerektirir. Kentsel dönüşümün en yoğun yaşandığı ilçelerden biri olarak şantiye çevresi vakaları da gündemimizdedir.",
+    scenario:
+      "Örnek: Sabah işe giderken Eski Edirne Asfaltı'nda aracınızın şarj lambası yandı ve direksiyon ağırlaştı (alternatör arızası). Kenara çektiniz. Bizi aradığınızda ekibimiz 15-20 dakikada gelir; akü toparlanmayacağı için aracı platforma alır, Küçükköy'deki oto elektrikçinize taşırız.",
+    faqs: [
+      { q: "Gaziosmanpaşa'da çekici ne kadar sürede gelir?", a: "İlçe kompakt olduğu için tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz." },
+      { q: "Yıldıztabya'nın dik sokaklarında aracım kaldı, çıkabiliyor musunuz?", a: "Evet, eğimli ve dar sokaklar için kompakt vinçli aracımızla çalışıyoruz; kışın buzlanmada da bu bölgeye hazırlıklıyız." },
+      { q: "Eski Edirne Asfaltı'nda kaza yaptım, trafik birikti; hızlı gelir misiniz?", a: "Evet, bu aks önceliklidir; ortalama 15-20 dakikada ulaşıp önce yolu rahatlatırız." },
+      { q: "Taksim Eğitim Araştırma Hastanesi'ne hasta getirdim, aracım çalışmıyor; yardım eder misiniz?", a: "Evet, hastane çevresi çağrılarına öncelik veriyoruz." },
+      { q: "Gaziosmanpaşa çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Sarıgöl'de dönüşüm şantiyesi önünde aracıma beton mikseri sürttü, hareket edemiyor; ne yapmalı?", a: "Fotoğraflayıp tutanak sürecini başlatın; aracı ekspertiz noktasına veya servise çekelim, belge düzenleyelim." },
+      { q: "Gece Küçükköy'de aküm bitti, gelir misiniz?", a: "Evet, 7/24 hizmet veriyoruz; gece Küçükköy'e 15 dakika civarında ulaşırız." },
+      { q: "GOP'tan havalimanına (İGA) araç taşıyor musunuz?", a: "Evet, Kuzey Marmara bağlantısıyla İstanbul Havalimanı'na hızlı taşıma yapıyoruz." },
+      { q: "Minibüs hattı aracım arızalandı, yolcular içerideyken öncelik var mı?", a: "Evet, yolculu toplu taşıma araçlarına öncelikli müdahale ediyoruz." },
+      { q: "Metroya bıraktığım aracım akşam çalışmadı, M7 otoparklarına geliyor musunuz?", a: "Evet, metro otoparklarına akü takviyesi ve çekim hizmeti veriyoruz." },
+    ],
+    neighbors: ["sultangazi", "esenler", "bayrampasa", "eyupsultan", "kagithane"],
+    blogParagraphs: [
+      "Gaziosmanpaşa, Avrupa Yakası'nın kuzey konut kuşağında nüfus yoğunluğuyla öne çıkar; çekici talebi de buna paralel olarak 'günlük hayat' vakalarında yoğunlaşır: sabah işe çıkarken çalışmayan araçlar, okul servislerinin arızaları, market-pazar trafiğinde küçük kazalar. Eski Edirne Asfaltı ilçenin ana damarı olarak hem toplu taşıma hem özel araç yükünü taşır; bu akstaki arızalara öncelik veririz çünkü tek noktadaki duraksama üç ilçenin (GOP-Sultangazi-Esenler) trafiğini etkiler.",
+      "İlçenin topografyası kuzeye doğru sertleşir: Yıldıztabya ve Karadeniz mahallelerinin dik sokakları, kış buzlanmalarında Avrupa Yakası'nın riskli noktaları arasındadır. Bu bölgeler için kış aylarında zincir donanımlı kompakt aracımızı hazır tutarız. Sarıgöl ve çevresindeki kentsel dönüşüm şantiyeleri ise ağır iş makinesi trafiği, dar sokaklarda hafriyat kamyonlarıyla yaşanan sürtünme kazaları ve şantiye önü park sorunları üretir.",
+      "M7 metrosunun açılması Gaziosmanpaşa'da 'park et-devam et' alışkanlığını büyüttü: metro çevresi otoparklarında gün boyu bekleyen araçların akü ve lastik vakaları düzenli çağrı kaynağımızdır. İlçe esnafının yoğun kamyonet kullanımı da (nakliye, hırdavat, gıda toptancıları) ticari araç çekimlerini besler; yüklü kamyonet taşımada yük emniyeti prosedürümüz standarttır.",
+    ],
+  },
+  {
+    slug: "gungoren",
+    name: "Güngören",
+    yaka: "avrupa",
+    neighborhoods: ["Merter", "Güneştepe", "Tozkoparan", "Akıncılar", "Haznedar", "Sanayi", "Mareşal Çakmak", "Gençosman"],
+    roads: ["D-100 (E-5) Merter kesimi", "Eski Londra Asfaltı", "Merter tekstil merkezi iç yolları", "M1 metro hattı çevresi"],
+    landmarks: ["Merter tekstil merkezi", "Güngören Meydanı", "Haznedar çarşı", "Tozkoparan parkı bölgesi"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Merter / D-100 hattı", minutes: "15-20 dk" },
+      { area: "Güngören merkez / Haznedar", minutes: "15-25 dk" },
+      { area: "Tozkoparan / Gençosman", minutes: "15-25 dk" },
+      { area: "Eski Londra Asfaltı", minutes: "15-20 dk" },
+    ],
+    intro:
+      "Güngören'de aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici hizmeti alabilirsiniz. Merter, D-100 kesimi ve tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Güngören, İstanbul'un en küçük ama en yoğun ilçelerinden; kalbi Merter tekstil merkezidir. Türkiye'nin hazır giyim toptan ticaretinin başkenti olan Merter'de gün boyu yükleme-boşaltma yapan yüzlerce ticari araç döner. D-100'ün Merter kesimi ve metrobüs koridoru, ilçenin ana arıza noktasıdır. Kompakt yapısı sayesinde varış sürelerimiz istikrarlı biçimde kısadır.",
+    scenario:
+      "Örnek: Merter'de mağazalara sevkiyat yapan yüklü panelvanınız öğlen sıcağında D-100 yan yolda hararet yaptı; kasada teslim bekleyen siparişler var. Bizi aradığınızda 15 dakikada ulaşır, aracı yüküyle birlikte platforma alır; önce teslimat noktasına, sonra servise taşıyarak işinizi kurtarırız.",
+    faqs: [
+      { q: "Güngören'de çekici ne kadar sürede gelir?", a: "İlçe küçük olduğu için tüm mahallelere ortalama 15-25 dakikada, D-100 hattına çoğunlukla 15-20 dakikada ulaşıyoruz." },
+      { q: "Merter'de yüklü ticari aracım arızalandı, malın teslimi gecikecek; nasıl bir çözüm sunuyorsunuz?", a: "İki aşamalı taşıma: önce teslimat noktasına, ardından servise. Yük emniyetini bozmadan taşırız; Merter esnafına kurumsal anlaşma da sunuyoruz." },
+      { q: "D-100 Merter kesiminde metrobüs yolu tarafında kaldım, ne yapmalıyım?", a: "Metrobüs yoluna kesinlikle geçmeyin; sağ şeride alın veya araçtan çıkıp bariyer arkasında bekleyin. Ekibimiz hızla ulaşır." },
+      { q: "Güngören çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Haznedar'da dar sokakta aracım kaldı, girebiliyor musunuz?", a: "Evet, kompakt platformumuzla Haznedar ve Güneştepe içlerinde rahat çalışıyoruz." },
+      { q: "Tekstil atölyemizin servis minibüsü sabah arızalandı, işçiler yolda kaldı; acil gelir misiniz?", a: "Evet, servis araçlarına öncelik veriyoruz; sabah kuşağında Güngören'e 15 dakikada ulaşırız." },
+      { q: "Gece Merter'de depodan dönerken lastiğim patladı, o saatte hizmet var mı?", a: "Evet, 7/24 hizmetteyiz; yedek varsa yerinde takar, yoksa nöbetçi lastikçiye taşırız." },
+      { q: "Güngören'den Anadolu Yakası'na araç çekiyor musunuz?", a: "Evet, köprüler veya Avrasya Tüneli üzerinden Anadolu Yakası'nın tüm ilçelerine taşıma yapıyoruz." },
+      { q: "Aracım M1 metro çevresi otoparkında çalışmadı, gelir misiniz?", a: "Evet, metro otoparklarına akü takviyesi ve çekim için düzenli gidiyoruz." },
+      { q: "Kaza sonrası karşı tarafın sigortası mı benim kaskom mu çekiciyi öder?", a: "Kusur durumuna ve poliçelere bağlıdır; genelde kasko kendi aracınızı, karşı trafik sigortası kusurlu tarafın sorumluluğunu karşılar. Belgelerinizi düzenli veriyoruz, süreçte yol gösteririz." },
+    ],
+    neighbors: ["bahcelievler", "bagcilar", "bakirkoy", "zeytinburnu", "esenler", "fatih", "bayrampasa"],
+    blogParagraphs: [
+      "Güngören'in çekici hikâyesi büyük ölçüde Merter'in hikâyesidir: Türkiye hazır giyim toptancılığının kalbi olan Merter, her sabah yüzlerce yüklü panelvan ve kamyonetin sevkiyat turuna çıktığı bir lojistik makinesi gibi çalışır. Bu araçların arızası sadece bir araç sorunu değil, teslimat zinciri sorunudur — bu yüzden Merter vakalarında 'önce yük, sonra araç' prensibiyle iki aşamalı taşıma çözümümüz standarttır.",
+      "D-100'ün Merter kesimi, metrobüs koridoru ve Zeytinburnu-Bahçelievler arasındaki sıkışık akışıyla ilçenin ana arıza sahnesidir. Buradaki müdahalelerde metrobüs yolunun ihlal edilmemesi kritik güvenlik kuralıdır. İlçenin iç dokusu (Haznedar, Güneştepe, Akıncılar) yoğun konut + zemin katta atölye karışımıdır; dar sokaklarda çift park kaynaklı sıkışmalar ve atölye önü yükleme alanlarında yaşanan vakalar günlük işlerimizdendir.",
+      "Güngören'in kompaktlığı bizim için avantajdır: ilçenin bir ucundan diğerine 10 dakikada geçilebilir, bu yüzden varış sürelerimiz İstanbul ortalamasının altındadır. Tekstil sektörünün sezonluk ritmi çağrı hacmine de yansır: sezon hazırlık dönemlerinde (şubat-mart ve ağustos-eylül) Merter'in ticari araç trafiği ve buna bağlı arıza çağrıları belirgin biçimde artar; bu dönemlerde bölgeye ek kapasite planlarız.",
+    ],
+  },
+  {
+    slug: "kagithane",
+    name: "Kağıthane",
+    yaka: "avrupa",
+    neighborhoods: ["Merkez", "Gültepe", "Çeliktepe", "Seyrantepe", "Hamidiye", "Sanayi Mahallesi", "Nurtepe", "Çağlayan", "Gürsel"],
+    roads: ["TEM (O-3) Seyrantepe kesimi", "Cendere Caddesi", "Kağıthane-Piyalepaşa tüneli", "Büyükdere Caddesi bağlantısı (Levent sınırı)", "O-1 Çağlayan bağlantısı"],
+    landmarks: ["Vadistanbul", "İstanbul Adalet Sarayı (Çağlayan)", "Seyrantepe stadyum bölgesi (RAMS Park)", "Sadabad / Kağıthane deresi", "Axis AVM"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Kağıthane merkez / Sadabad", minutes: "15-25 dk" },
+      { area: "Çağlayan / adliye çevresi", minutes: "15-20 dk" },
+      { area: "Seyrantepe / Vadistanbul", minutes: "15-25 dk" },
+      { area: "Gültepe / Çeliktepe", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Kağıthane'de aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. Çağlayan adliyesi, Vadistanbul, Seyrantepe ve tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Kağıthane, Levent iş dünyasının arka bahçesinden İstanbul'un yeni cazibe merkezine dönüştü: Vadistanbul, Çağlayan Adliyesi (Avrupa'nın en büyük adliyelerinden) ve Seyrantepe stadyum bölgesi büyük trafik üreticileridir. TEM'in Seyrantepe kesimi ve Cendere aksı kritik geçişlerdir. Gültepe-Çeliktepe'nin dik yokuşları ise klasik müdahale bölgelerimizdir.",
+    scenario:
+      "Örnek: Çağlayan Adliyesi'ndeki duruşmanıza yetişmeye çalışırken katlı otoparkta aracınız çalışmadı; akşam da aracı almanız gerekiyor. Bizi aradığınızda duruşma saatinize göre planlarız: siz içerideyken ekibimiz otoparkta takviyeyi yapar, sorun büyükse aracı servise çekip size WhatsApp'tan fotoğraflı bilgi geçeriz.",
+    faqs: [
+      { q: "Kağıthane'de çekici ne kadar sürede gelir?", a: "Çağlayan ve merkez bölgeye 15-20 dakikada; Seyrantepe, Gültepe ve Hamidiye'ye 15-25 dakikada ulaşıyoruz." },
+      { q: "Çağlayan Adliyesi otoparkında aracım çalışmıyor, gelir misiniz?", a: "Evet, adliye otoparkı çevresi en sık hizmet verdiğimiz noktalardandır; prosedüre uygun şekilde takviye ve çekim yapıyoruz." },
+      { q: "Maç günü Seyrantepe'de (RAMS Park çevresi) aracım kaldı, ulaşabilir misiniz?", a: "Evet, maç günü trafik planını takip ediyor, kapanan yolları değil açık koridorları kullanarak ulaşıyoruz." },
+      { q: "TEM Seyrantepe kesiminde arıza yaptım, ne yapmalıyım?", a: "Emniyet şeridine alın, dörtlüleri yakın, bariyer arkasında bekleyin; bu kesimin rampalarını iyi biliyoruz, hızla geliriz." },
+      { q: "Kağıthane çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Gültepe yokuşunda aracım kaydı ve kaldırıma bindi, kurtarıyor musunuz?", a: "Evet, vinçli aracımızla kaldırım/refüj üzerine çıkmış araçları hasar büyütmeden alıyoruz." },
+      { q: "Vadistanbul otoparkından çekim yapıyor musunuz?", a: "Evet, kapalı otopark uyumlu aracımızla Vadistanbul ve çevre AVM otoparklarından çekim yapıyoruz." },
+      { q: "Cendere yolunda gece kaza yaptım, bölge tenha; güvenlik açısından ne yapmalıyım?", a: "Aracın kapılarını kilitleyip güvenli, aydınlık bir noktada bekleyin; ekibimiz yola çıktığında plaka ve araç bilgisini SMS'le doğrularız — teyitsiz kimseye aracınızı teslim etmeyin." },
+      { q: "Piyalepaşa tüneli çevresinde arıza, geliyor musunuz?", a: "Evet, tünel yaklaşımlarına öncelikli müdahale ediyoruz; tünel içindeyseniz işletme güvenliğinin yönlendirmesine uyun ve bizi arayın." },
+      { q: "Şirket filomuz Kağıthane'de (plaza bölgesi), kurumsal anlaşma yapıyor musunuz?", a: "Evet, filo müşterilerine öncelikli müdahale ve raporlu taşıma içeren anlaşmalar sunuyoruz." },
+    ],
+    neighbors: ["sisli", "besiktas", "sariyer", "eyupsultan", "beyoglu"],
+    blogParagraphs: [
+      "Kağıthane, son on yılın en hızlı dönüşen ilçelerinden: dere boyunca yükselen rezidans ve ofis projeleri, Vadistanbul aksı ve Çağlayan Adliyesi, ilçeyi Levent-Maslak iş koridorunun doğal uzantısı yaptı. Bu dönüşümün çekiciliğe yansıması net: kapalı otopark vakaları (rezidans ve AVM eksi katları) ve kurumsal filo talepleri hızla arttı. Adliye çevresi ise Türkiye'nin en yoğun 'günübirlik park' bölgelerinden biri olarak akü ve kilitli araç vakalarında zirvededir.",
+      "İlçenin klasik dokusu da görevde: Gültepe, Çeliktepe ve Nurtepe'nin dik yokuşları — özellikle kış buzlanmalarında — vinçli kurtarma gerektiren kayma vakalarının adresidir. Seyrantepe stadyum bölgesi maç günlerinde on binlerce aracı çeker; maç çıkışı toplu hareketlenmede yaşanan akü, kilit ve hafif kaza vakaları için stadyum çevresinde maç günü pozisyonu alırız.",
+      "TEM'in Seyrantepe geçişi ve Cendere Caddesi'nin kuzeye (Ayazağa-Maslak) bağlanan aksı, Kağıthane'yi Avrupa Yakası'nın kuzey-güney geçiş güzergâhına oturtur. Piyalepaşa tüneliyle Beyoğlu'na inen bağlantı da eklendiğinde, ilçe her yönden erişilebilir durumdadır — bu bizim varış sürelerimizi kısaltan bir avantajdır ve Kağıthane çağrılarında 15-25 dakika bandını istikrarla koruruz.",
+    ],
+  },
+  {
+    slug: "kucukcekmece",
+    name: "Küçükçekmece",
+    yaka: "avrupa",
+    neighborhoods: ["Sefaköy", "Halkalı", "Atakent", "Cennet", "İnönü", "Kanarya", "Yeşilova", "Söğütlü Çeşme", "İkitelli sınırı", "Atatürk Mahallesi"],
+    roads: ["D-100 (E-5) Sefaköy kesimi", "TEM Halkalı bağlantısı", "Basın Ekspres Yolu sınırı", "Halkalı Caddesi", "sahil yolu (göl kıyısı)"],
+    landmarks: ["Küçükçekmece Gölü", "Halkalı Marmaray son durağı", "ArmoniPark / 212 AVM sınırı", "Sefaköy meydan", "Atakent konut bölgesi"],
+    arrivalMinutes: "15-30",
+    arrivalTable: [
+      { area: "Sefaköy / D-100 hattı", minutes: "15-25 dk" },
+      { area: "Halkalı / Atakent", minutes: "20-30 dk" },
+      { area: "Cennet / göl kıyısı", minutes: "15-25 dk" },
+      { area: "Kanarya / Yeşilova", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Küçükçekmece'de aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici hizmeti alabilirsiniz. Sefaköy, Halkalı, göl kıyısı ve tüm mahallelere ortalama 15-30 dakikada ulaşıyoruz.",
+    localNote:
+      "Küçükçekmece, gölün etrafında şekillenen coğrafyası ve D-100'ün Sefaköy geçişiyle Avrupa Yakası'nın batı geçiş kapılarından biridir. Halkalı, Marmaray'ın son durağı ve dev konut bölgeleriyle (Atakent) kendi trafik merkezini oluşturur. Basın Ekspres sınırı plaza-otel yoğunluğu taşır. Göl kıyısı rekreasyon alanları hafta sonu vakaları üretir.",
+    scenario:
+      "Örnek: Halkalı Marmaray otoparkına sabah bıraktığınız araç akşam çalışmadı; yarın sabah da işe gitmeniz gerekiyor. Bizi aradığınızda akşam ekibimiz 20-25 dakikada gelir; akü sorunuysa takviyeyle çözer, değilse aracı gece servise bırakıp anahtarı prosedürle teslim eder, sabaha araç durumunu WhatsApp'tan raporlarız.",
+    faqs: [
+      { q: "Küçükçekmece'de çekici ne kadar sürede gelir?", a: "Sefaköy ve göl çevresine 15-25 dakikada; Halkalı-Atakent bölgesine 20-30 dakikada ulaşıyoruz." },
+      { q: "D-100 Sefaköy kesiminde arıza yaptım, metrobüs de geçiyor; ne yapmalıyım?", a: "Metrobüs yoluna girmeyin; aracı sağ şeride/cebe alın, dörtlüleri yakın, bariyer arkasında bekleyin. Ekibimiz kısa sürede ulaşır." },
+      { q: "Halkalı Marmaray otoparkında aracım çalışmıyor, geliyor musunuz?", a: "Evet, Marmaray ve metro otoparklarına akü takviyesi ve çekim için düzenli gidiyoruz." },
+      { q: "Küçükçekmece çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Göl kıyısında piknik alanında aracım çime/toprağa saplandı, kurtarır mısınız?", a: "Evet, vinçli kurtarma aracımızla yumuşak zeminlerden araç çıkarıyoruz." },
+      { q: "Atakent'te site eksi katında aracım kaldı, alçak tavana girebiliyor musunuz?", a: "Evet, alçak tavanlı kurtarma aracımızla eksi katlardan çekim yapıyoruz." },
+      { q: "Sefaköy'de gece yüklü kamyonetim arızalandı, ticari araç çekiyor musunuz?", a: "Evet, 7/24 yüklü hafif ticari araç taşıyoruz; yük emniyeti prosedürümüz standarttır." },
+      { q: "Basın Ekspres tarafında otelde konaklıyorum, kiralık aracım bozuldu; İngilizce destek var mı?", a: "Evet, İngilizce ve Arapça destek veriyoruz; kiralama firmasıyla koordinasyonu üstleniriz." },
+      { q: "Küçükçekmece'den İstanbul Havalimanı'na araç taşır mısınız?", a: "Evet, Basın Ekspres ve Kuzey Marmara bağlantılarıyla havalimanına hızlı taşıma yapıyoruz." },
+      { q: "Kanarya'da dar sokakta aracım arızalandı, büyük çekici girmez; çözümünüz ne?", a: "Kompakt platform aracımızla giriyoruz; gerekirse tekerlek paletiyle aracı uygun noktaya kaydırıp yüklüyoruz." },
+    ],
+    neighbors: ["avcilar", "bagcilar", "bahcelievler", "basaksehir", "esenyurt", "bakirkoy"],
+    blogParagraphs: [
+      "Küçükçekmece'nin çekici coğrafyasını göl ve D-100 tanımlar: Sefaköy geçişi, Avrupa Yakası'nın batı trafiğinin şah damarlarından biridir ve metrobüs koridoruyla birlikte çalışır. Buradaki arızalarda altın kural metrobüs yolundan uzak durmaktır. Gölün kuzeyinde Halkalı, Marmaray'ın Avrupa'daki son durağı olarak dev bir 'park et-devam et' merkezine dönüştü — istasyon otoparklarındaki akü ve lastik vakaları günlük rutinimizdir.",
+      "Atakent ve Halkalı toplu konut bölgeleri, İstanbul'un en büyük site yoğunluklarından birini barındırır; kapalı otopark vakaları (eksi kat aküleri, rampa kazaları, sıkışan araçlar) çağrılarımızın büyük dilimidir. Göl kıyısının rekreasyon alanları ise hafta sonları piknikçi profili üretir: çime saplanan araçlar, açık unutulan farlar ve dönüş saatinde toplu akü çağrıları.",
+      "İlçenin Basın Ekspres sınırı otel ve plaza kuşağıdır; havalimanı yolcusu ve yabancı misafir yoğunluğu nedeniyle kiralık araç vakaları ile İngilizce/Arapça destek talepleri burada yoğunlaşır. Küçükçekmece ayrıca İkitelli OSB'ye komşuluğuyla ticari araç geçiş trafiği alır — Sefaköy-Halkalı hattında yüklü araç taşımaları için yük emniyetli platformumuz sık görev yapar.",
+    ],
+  },
+  {
+    slug: "sariyer",
+    name: "Sarıyer",
+    yaka: "avrupa",
+    neighborhoods: ["Maslak", "Ayazağa", "Tarabya", "Yeniköy", "İstinye", "Emirgan", "Rumelihisarı", "Zekeriyaköy", "Bahçeköy", "Kilyos (Demirciköy hattı)", "Uskumruköy"],
+    roads: ["Büyükdere Caddesi (Maslak aksı)", "TEM Ayazağa bağlantısı", "FSM Köprüsü Avrupa yaklaşımı", "sahil yolu (Emirgan-Tarabya-Sarıyer)", "Zekeriyaköy-Kilyos yolu", "Kuzey Marmara Otoyolu bağlantıları"],
+    landmarks: ["İstinye Park", "Maslak plaza bölgesi", "Rumeli Hisarı", "Emirgan Korusu", "Tarabya koyu", "Kilyos plajları", "Belgrad Ormanı", "İTÜ Ayazağa kampüsü"],
+    arrivalMinutes: "20-35",
+    arrivalTable: [
+      { area: "Maslak / Ayazağa", minutes: "15-25 dk" },
+      { area: "İstinye / Emirgan / sahil", minutes: "20-30 dk" },
+      { area: "Sarıyer merkez / Tarabya", minutes: "25-35 dk" },
+      { area: "Zekeriyaköy / Kilyos", minutes: "30-45 dk" },
+    ],
+    intro:
+      "Sarıyer'de aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. Maslak plazalarından Kilyos plajlarına, Boğaz sahilinden Zekeriyaköy'e kadar her noktaya ortalama 20-35 dakikada ulaşıyoruz.",
+    localNote:
+      "Sarıyer, zıtlıkların ilçesi: Maslak'ın gökdelenleri ile Kilyos'un plajları, Boğaz yalıları ile Belgrad Ormanı'nın köy yolları aynı sınırlar içindedir. FSM Köprüsü'nün Avrupa yaklaşımı ve Büyükdere Caddesi kritik akslardır. Yaz hafta sonları Kilyos plaj trafiği, kışın Zekeriyaköy-Bahçeköy hattının orman içi buzlanması öne çıkar. Yüksek segment araç yoğunluğu, hassas taşıma protokolümüzü bu ilçede standart yapar.",
+    scenario:
+      "Örnek: Temmuz'da pazar günü Kilyos dönüşü, Uskumruköy virajlarında aracınız hararet yaptı; yol dar ve arkanızda plaj dönüşü konvoyu var. Bizi aradığınızda konum paylaşırsınız; ekibimiz 30-35 dakikada ulaşır, aracı virajsız güvenli cebe çekip platforma alır ve Maslak'taki servisinize taşırız.",
+    faqs: [
+      { q: "Sarıyer'de çekici ne kadar sürede gelir?", a: "Maslak-Ayazağa'ya 15-25, sahil hattına 20-30, Sarıyer merkez ve Tarabya'ya 25-35, Zekeriyaköy-Kilyos'a 30-45 dakikada ulaşıyoruz." },
+      { q: "FSM Köprüsü Avrupa yaklaşımında arıza yaptım, ne yapmalıyım?", a: "Bariyer dışına geçin, dörtlüleri yakın ve hemen arayın; köprü yaklaşımları en yüksek öncelikli müdahale bölgemizdir." },
+      { q: "Kilyos plajında kuma saplandım, kurtarıyor musunuz?", a: "Evet, vinçli kurtarma aracımızla kumdan araç çıkarma yaz aylarının rutin işidir; gaza yüklenmeyin, daha fazla gömülmeden bizi arayın." },
+      { q: "Maslak'ta plaza eksi 5. katta aracım çalışmıyor, inebiliyor musunuz?", a: "Evet, alçak tavanlı aracımız ve taşınabilir ekipmanla eksi katlara iniyoruz; Maslak plazaları düzenli hizmet bölgemizdir." },
+      { q: "Sarıyer çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Boğaz sahilinde (Emirgan-İstinye) tek şeritli yolda aracım kaldı, trafik kilitlendi; hızlı gelir misiniz?", a: "Evet, sahil hattı arızaları Boğaz trafiğini kilitlediği için öncelikli müdahale kapsamındadır." },
+      { q: "Zekeriyaköy'de kışın buzlanmada aracım yoldan çıktı, kurtarma yapar mısınız?", a: "Evet, kış aylarında Zekeriyaköy-Bahçeköy hattı için zincir donanımlı vinçli aracımız hazırdır." },
+      { q: "Lüks/spor aracım için (alçak şasili) özel rampa kullanıyor musunuz?", a: "Evet, düşük açılı rampa plakalarımız ve tekstil kayışlarımızla alçak şasili spor araçları hasarsız yüklüyoruz." },
+      { q: "İTÜ Ayazağa kampüsünden araç çekilir mi?", a: "Evet, kampüs güvenlik prosedürlerine uygun şekilde teslim alıyoruz." },
+      { q: "Belgrad Ormanı otoparkında aracım çalışmadı, orman yoluna giriyor musunuz?", a: "Evet, orman işletme kurallarına uygun şekilde otopark ve giriş noktalarına müdahale ediyoruz." },
+    ],
+    neighbors: ["besiktas", "sisli", "kagithane", "eyupsultan", "beykoz", "arnavutkoy"],
+    blogParagraphs: [
+      "Sarıyer, tek ilçede dört farklı çekicilik disiplini ister. Birincisi Maslak-Ayazağa: Türkiye'nin en yoğun plaza bölgelerinden birinde eksi katlı otopark vakaları ve kurumsal filo talepleri. İkincisi Boğaz sahili: Emirgan'dan Tarabya'ya tek şeritli tarihi yolda, arızalanan tek aracın tüm Boğaz trafiğini kilitleyebildiği hassas hat. Üçüncüsü FSM yaklaşımı: yüksek hızlı köprü trafiğinde güvenlik prosedürlü otoyol müdahalesi. Dördüncüsü kuzey kırsalı: Zekeriyaköy, Bahçeköy, Kilyos hattının orman ve plaj yolları.",
+      "Yaz aylarında Kilyos, ilçenin operasyon merkezine dönüşür: plaj otoparklarında kuma saplanan araçlar, dönüş konvoyunda hararet vakaları ve dar orman yollarında kaza müdahaleleri. Kış ise senaryoyu tersine çevirir — Belgrad Ormanı çevresindeki mikroklimada buzlanma erken başlar ve Zekeriyaköy villalarına çıkan rampalar İstanbul'un en riskli kış noktaları arasına girer. İki sezon için de ayrı ekipman seti tutarız.",
+      "Sarıyer'in araç parkı Türkiye'nin en değerlisidir: yalı ve villa bölgelerinde klasikler, spor arabalar ve üst segment SUV'lar yoğundur. Bu araçlar için hassas taşıma protokolümüz — düşük açılı rampa, jant koruma, tekstil bağlama, fotoğraflı durum raporu — Sarıyer'de istisna değil standarttır. İstinye Park ve çevresindeki vale operasyonlarından gelen kurumsal çağrılar da düzenli iş kalemlerimizdendir.",
+    ],
+  },
+];

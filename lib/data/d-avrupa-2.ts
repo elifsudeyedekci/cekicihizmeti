@@ -1,0 +1,278 @@
+import type { District } from "./types";
+
+/** Avrupa Yakası ilçeleri — Bölüm 2/4 */
+export const avrupa2: District[] = [
+  {
+    slug: "besiktas",
+    name: "Beşiktaş",
+    yaka: "avrupa",
+    neighborhoods: ["Levent", "Etiler", "Bebek", "Ortaköy", "Arnavutköy semti", "Gayrettepe", "Balmumcu", "Abbasağa", "Kuruçeşme", "Ulus"],
+    roads: ["15 Temmuz Şehitler Köprüsü Avrupa girişi", "Barbaros Bulvarı", "Büyükdere Caddesi (Levent kesimi)", "Çırağan Caddesi / sahil yolu", "O-1 Ortaköy bağlantısı"],
+    landmarks: ["Vodafone Park", "Zorlu Center", "Dolmabahçe Sarayı", "Ortaköy Meydanı", "Bebek sahili", "Levent plaza bölgesi", "Akmerkez"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Beşiktaş merkez / Barbaros", minutes: "15-20 dk" },
+      { area: "Levent / Etiler / Gayrettepe", minutes: "15-25 dk" },
+      { area: "Ortaköy / köprü girişi", minutes: "15-25 dk" },
+      { area: "Bebek / Kuruçeşme sahil", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Beşiktaş'ta aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici hizmeti alabilirsiniz. Levent'ten Bebek'e, köprü girişinden Dolmabahçe'ye tüm Beşiktaş'a ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Beşiktaş, 15 Temmuz Köprüsü'nün Avrupa ayağı, Levent'in plaza yoğunluğu ve Boğaz sahilinin (Ortaköy-Bebek) tek şeritli dar yapısıyla üç farklı müdahale profili barındırır. Maç günlerinde Vodafone Park çevresi, konser günlerinde Küçükçiftlik-Dolmabahçe hattı tamamen değişir. Sahil yolunda arızalanan tek araç bile Boğaz trafiğini kilitleyebildiği için bu hatta en hızlı müdahaleyi hedefleriz.",
+    scenario:
+      "Örnek: Cumartesi akşamı Ortaköy'de kahvaltıcılar sokağı girişinde aracınız stop etti; arkanızda sahil trafiği birikiyor. Bizi aradığınızda kompakt çekicimiz 15-20 dakikada gelir; dar sokakta ters manevra gerektirmeyen yükleme düzeniyle aracı alır, sahili rahatlatır ve sizi istediğiniz noktaya taşırız.",
+    faqs: [
+      { q: "Beşiktaş'ta çekici ne kadar sürede gelir?", a: "Merkez, Barbaros ve Levent'e 15-25 dakikada; Bebek-Kuruçeşme sahiline 20-30 dakikada ulaşıyoruz. Köprü girişi çağrılarına öncelik veriyoruz." },
+      { q: "15 Temmuz Köprüsü Avrupa girişinde (Ortaköy) aracım kaldı, ne yapmalıyım?", a: "Bariyer dışına geçin, dörtlüleri yakın ve hemen arayın; köprü yaklaşımı yüksek riskli bölgedir, ekibimiz güvenlik koridoru kurarak müdahale eder." },
+      { q: "Levent'te plaza kapalı otoparkında aracım çalışmıyor, eksi 4. kattayım; gelebilir misiniz?", a: "Evet, alçak tavanlı aracımız ve taşınabilir akü ekipmanımızla eksi katlara iniyoruz; Levent plazalarında düzenli çalışıyoruz." },
+      { q: "Beşiktaş maç günü stadyum çevresinden araç çekebiliyor musunuz?", a: "Evet, maç günü yol kapama planını takip ediyor, emniyet yönlendirmeleriyle koordineli alternatif rotadan ulaşıyoruz." },
+      { q: "Bebek sahilinde valeye verdiğim araç arızalanmış, sahiple ben ilgilenmek zorundayım; süreç nasıl işler?", a: "Araç sahibi olarak telefonla onayınız yeterli; aracı bulunduğu noktadan teslim alır, fotoğraflı durum kaydıyla dilediğiniz servise taşırız." },
+      { q: "Beşiktaş çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Lüks aracım (Porsche/Bentley segmenti) için özel taşıma yapıyor musunuz?", a: "Evet, düşük açılı rampa, tekstil kayış ve tam platform taşımayla lüks araç protokolümüz var; Etiler-Bebek hattında sık uyguluyoruz." },
+      { q: "Ulus'un dik yokuşunda aracım el freniyle kaldı, kurtarma güvenli mi?", a: "Evet, eğimli zemin kurtarmasında aracı çift emniyetle sabitleyip yüklüyoruz; Ulus ve Kuruçeşme yokuşları için standart prosedürümüzdür." },
+      { q: "Gece Akaretler'de lastiğim patladı, o saatte lastikçi bulamam; ne yapmalı?", a: "Yedek varsa yerinde takarız; yoksa aracı nöbetçi lastikçiye veya sabaha kadar güvenli noktaya taşırız — seçim sizindir." },
+      { q: "Zorlu Center otoparkından çekim yapıyor musunuz?", a: "Evet, Zorlu ve Akmerkez dahil kapalı otoparklardan yükseklik sınırına uygun aracımızla çekim yapıyoruz." },
+    ],
+    neighbors: ["sisli", "sariyer", "kagithane", "beyoglu"],
+    blogParagraphs: [
+      "Beşiktaş, İstanbul çekiciliğinin en çok 'özel durum' barındıran ilçelerinden biridir. Levent-Gayrettepe aksında Türkiye'nin en yoğun plaza otoparkları (çoğu eksi 3-4 katlı) yer alır; buradaki vakalar alçak tavan, dar rampa ve sınırlı manevra alanı üçgeninde çözülür. Boğaz sahilinde ise tablo tersine döner: açık hava, ama tek şeritli tarihi yol — Ortaköy'den Bebek'e uzanan hatta arızalanan araç dakikalar içinde kilometrelerce kuyruk yaratır.",
+      "Vodafone Park ve Dolmabahçe etkinlik alanı, ilçenin takvim bazlı trafik üreticileridir: maç ve konser akşamlarında Barbaros Bulvarı ve sahil tamamen farklı bir düzene girer. Bu günlerde Beşiktaş bölge ekibimiz etkinlik trafiği planını önceden çalışır; kapatılan yolları değil açık koridorları biliriz. Etkinlik çıkışı toplu hareketlenmede yaşanan küçük kazalar ve akü vakaları bu akşamların klasiğidir.",
+      "Etiler, Bebek ve Ulus'un araç parkı Türkiye ortalamasının çok üzerindedir: lüks SUV'lar, spor arabalar ve klasikler. Bu segment için taşıma protokolümüz standart işlemden farklıdır — düşük açılı rampa, jant koruyucu ekipman, tekstil bağlama kayışları ve teslim öncesi/sonrası fotoğraflı durum raporu. Alçak spor araçların (yerden yüksekliği 10 cm altı) yüklenmesinde ek rampa plakalarımız devreye girer.",
+    ],
+  },
+  {
+    slug: "beylikduzu",
+    name: "Beylikdüzü",
+    yaka: "avrupa",
+    neighborhoods: ["Yakuplu", "Gürpınar", "Kavaklı", "Adnan Kahveci", "Barış", "Cumhuriyet", "Büyükşehir", "Marmara", "Dereağzı"],
+    roads: ["D-100 (E-5) Beylikdüzü kesimi", "TEM Beylikdüzü bağlantısı", "Yaşam Vadisi çevre yolları", "Gürpınar sahil bağlantısı"],
+    landmarks: ["TÜYAP Fuar Merkezi", "Marmara Park AVM", "Beylikdüzü Migros (Metrobüs son durak bölgesi)", "West İstanbul Marina", "Yaşam Vadisi"],
+    arrivalMinutes: "20-30",
+    arrivalTable: [
+      { area: "Beylikdüzü merkez / Adnan Kahveci", minutes: "20-30 dk" },
+      { area: "D-100 / TÜYAP çevresi", minutes: "15-25 dk" },
+      { area: "Yakuplu / Gürpınar", minutes: "20-30 dk" },
+      { area: "Marina / sahil", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Beylikdüzü'nde aracınız bozulduysa 0535 404 80 44'ü arayın; D-100, TÜYAP, marina ve tüm mahallelere 7/24 ortalama 20-30 dakikada çekici gönderiyoruz.",
+    localNote:
+      "Beylikdüzü, metrobüsün son durağı ve D-100'ün batı ucundaki planlı konut ilçesi. TÜYAP fuar günlerinde bölge trafiği katlanır — fuar takvimi bizim için operasyon takvimidir. Site ağırlıklı konut dokusu kapalı otopark vakalarını, West Marina ise tekne sahiplerinin araç trafiğini üretir. E-5'in Haramidere kesişimi, yoğun saatlerde arıza müdahalelerinin kritik noktasıdır.",
+    scenario:
+      "Örnek: TÜYAP'taki fuara stant malzemesi getiren panelvanınız fuar otoparkı girişinde stop etti ve arkanızda araç kuyruğu oluştu. Bizi aradığınızda fuar bölgesindeki ekibimiz 15-20 dakikada gelir, aracı girişten çekip otopark alanına alır; fuar açılışınıza yetişmeniz için yük aktarımına da yardımcı oluruz.",
+    faqs: [
+      { q: "Beylikdüzü'nde çekici ne kadar sürede gelir?", a: "D-100 hattı ve TÜYAP çevresine 15-25 dakikada; merkez, Yakuplu ve Gürpınar'a 20-30 dakikada ulaşıyoruz." },
+      { q: "TÜYAP fuar günü çevre yollar kilitli, yine de gelebilir misiniz?", a: "Evet, fuar günlerinde bölgede ek ekip bulunduruyoruz ve organizasyon trafiğinin akış planını bildiğimiz için alternatif rotadan ulaşıyoruz." },
+      { q: "Metrobüsle işe gidiyorum, aracım hafta boyu site otoparkında; dönünce çalışmazsa gelir misiniz?", a: "Evet, site kapalı otoparklarına akü takviyesi için düzenli gidiyoruz; güvenlik prosedürlerine uygun çalışırız." },
+      { q: "West Marina'da teknemi bırakıp döndüm, aracım çalışmıyor; marina otoparkına girer misiniz?", a: "Evet, marina otoparkı prosedürlerine uygun şekilde akü takviyesi ve çekim yapıyoruz." },
+      { q: "Beylikdüzü çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "D-100 Haramidere kesiminde arıza yaptım, ne yapmalıyım?", a: "Aracı emniyet şeridine alın, dörtlüleri yakın, bariyer arkasında bekleyin; bu kesimi iyi bildiğimiz için ekibimiz kısa sürede ulaşır." },
+      { q: "Gürpınar sahilden gece araç çekiyor musunuz?", a: "Evet, 7/24 hizmet veriyoruz; sahil bölgesine gece varışımız genellikle 20 dakika civarındadır." },
+      { q: "Yaşam Vadisi çevresinde bisiklet yolu ihlali olmadan nasıl yükleme yapıyorsunuz?", a: "Yükleme düzenimizi yaya ve bisiklet koridorlarını kapatmayacak şekilde kurar, gerekirse kısa süreli güvenlik konisi düzeni uygularız." },
+      { q: "Esenyurt sınırındayım, hangi ekip gelir?", a: "Size en yakın müsait ekip gelir; Beylikdüzü-Esenyurt hattında ekiplerimiz ortak çalışır, sınır fark etmez." },
+      { q: "Beylikdüzü'nden İzmir'e araç taşıtacağım, şehirlerarası hizmetiniz var mı?", a: "Evet, TEM bağlantısıyla tüm illere şehirlerarası çekici ve çoklu araç taşıma hizmetimiz var." },
+    ],
+    neighbors: ["esenyurt", "avcilar", "buyukcekmece"],
+    blogParagraphs: [
+      "Beylikdüzü'nün çekici profili 'planlı şehir' karakterini yansıtır: geniş bulvarlar ve düzenli yollar müdahaleyi kolaylaştırırken, ilçenin neredeyse tamamının site dokusunda olması kapalı otopark vakalarını ana iş kalemi yapar. Metrobüsün son durağının burada olması ilginç bir örüntü yaratır: hafta içi aracını site otoparkında bırakıp metrobüsle işe gidenlerin araçları cuma akşamları 'çalışmama' rekoru kırar — akü takviye çağrılarımız cuma 17:00-21:00 arasında zirve yapar.",
+      "TÜYAP Fuar ve Kongre Merkezi, ilçenin takvim bazlı trafik motoru: büyük fuar dönemlerinde (kitap fuarı, otomobil fuarları) yüz binlerce ziyaretçi D-100'ün batı ucuna akar. Fuar günlerinde hem ziyaretçi araçlarının otopark vakaları hem stantçıların yüklü ticari araç arızaları için bölgeye ek kapasite ayırırız. Fuar takvimini operasyon planımıza işleyen tek çekici ekibi olduğumuzu söyleyebiliriz.",
+      "İlçenin güneyi (Gürpınar, marina hattı) sakin sahil karakteri taşırken, D-100-TEM arasındaki kuzey kesim lojistik depolarıyla ticari araç trafiği üretir. Beylikdüzü ayrıca İstanbul'un en genç araç parkına sahip ilçelerinden biridir; garanti kapsamındaki araçların yetkili servise taşınma talepleri burada belirgin şekilde yüksektir — yetkili servis taşımalarında tutanaklı, fotoğraflı teslim prosedürümüz standarttır.",
+    ],
+  },
+  {
+    slug: "beyoglu",
+    name: "Beyoğlu",
+    yaka: "avrupa",
+    neighborhoods: ["Taksim", "Cihangir", "Galata", "Karaköy", "Kasımpaşa", "Dolapdere", "Halıcıoğlu", "Tarlabaşı", "Şişhane", "Tophane"],
+    roads: ["Tarlabaşı Bulvarı", "Refik Saydam Caddesi", "Meclis-i Mebusan Caddesi (Tophane-Karaköy sahil)", "Haliç Köprüsü bağlantıları (O-1)", "Atatürk Köprüsü / Unkapanı bağlantısı"],
+    landmarks: ["Taksim Meydanı", "İstiklal Caddesi", "Galata Kulesi", "Galataport", "Haliç Tersaneleri", "Kasımpaşa Stadı"],
+    arrivalMinutes: "15-30",
+    arrivalTable: [
+      { area: "Taksim / Tarlabaşı", minutes: "15-25 dk" },
+      { area: "Galata / Karaköy / Tophane", minutes: "15-25 dk" },
+      { area: "Kasımpaşa / Dolapdere", minutes: "15-25 dk" },
+      { area: "Halıcıoğlu / Haliç hattı", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Beyoğlu'nda aracınız bozulduysa 0535 404 80 44 numarasını arayın; Taksim, Galata, Karaköy ve tüm mahallelere 7/24 ortalama 15-30 dakikada çekici ulaştırıyoruz. Dar sokaklar için kompakt aracımız her zaman hazır.",
+    localNote:
+      "Beyoğlu, İstanbul'un en zorlu çekicilik coğrafyası: dik yokuşlar (Galata, Cihangir), tek yönlü dar sokaklar, yoğun yaya trafiği ve turistik hareketlilik. Galataport'un açılmasıyla Tophane-Karaköy sahilinde trafik arttı. Gece hayatının merkezi olduğu için gece 02:00-05:00 kuşağında çağrı yoğunluğu diğer ilçelerin tersine yüksektir. Standart uzun çekici birçok sokağa giremez; Beyoğlu operasyonları kompakt araçla yapılır.",
+    scenario:
+      "Örnek: Gece 01:30'da Cihangir'de dik ve tek yönlü bir sokakta aracınız aküden kaldı; sokakta park halindeki araçlar arasında sıkışmış durumdasınız. Bizi aradığınızda motosikletli akü ekibimiz 15 dakikada gelir; takviye yeterli olmazsa kompakt çekicimiz sokağın tek yön akışına uygun şekilde girer ve aracı tekerlek paletleriyle çıkarır.",
+    faqs: [
+      { q: "Beyoğlu'nun dar sokaklarına çekici girebiliyor mu?", a: "Evet, Beyoğlu için kısa şasili kompakt platform ve tekerlek paleti ekipmanımız var; Cihangir, Galata ve Tarlabaşı içlerinde bu düzenle çalışıyoruz." },
+      { q: "Beyoğlu'nda çekici ne kadar sürede gelir?", a: "Taksim, Galata ve Karaköy çevresine 15-25 dakikada; Halıcıoğlu hattına 20-30 dakikada ulaşıyoruz." },
+      { q: "Galata yokuşunda aracım geri kaymaya başladı ve duvara dayadım, ne yapmalıyım?", a: "Aracı viteste ve el freni çekili bırakın, tekerlekleri kaldırıma çevirin ve araçtan uzaklaşın. Vinçli aracımızla eğimli kurtarma yapıyoruz." },
+      { q: "Gece Taksim'de eğlence dönüşü aracım çalışmadı, o saatte gelir misiniz?", a: "Evet, Beyoğlu'nda gece kuşağı bizim en yoğun çalıştığımız saatlerdir; 7/24 hizmet veriyoruz." },
+      { q: "Turistim / yabancıyım, Türkçe bilmiyorum; İngilizce destek var mı?", a: "Evet, İngilizce telefon ve WhatsApp desteği sağlıyoruz. English support available 24/7: +90 535 404 80 44." },
+      { q: "Beyoğlu çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Galataport otoparkında aracım çalışmıyor, kruvaziyer yolcusuyum ve gemim kalkacak; ne yapabilirsiniz?", a: "Öncelikli kayıt açarız: aracınızı emanet protokolüyle teslim alır, siz seyahatinize devam ederken dilediğiniz adrese teslim ederiz." },
+      { q: "Tarlabaşı Bulvarı'nda kaza yaptım, trafik kilitlenmek üzere; ne kadar hızlı gelirsiniz?", a: "Bulvar çağrılarına öncelik veriyoruz; ortalama 15-20 dakikada ulaşıp önce yolu açıyoruz." },
+      { q: "Kasımpaşa'da yüklü esnaf kamyonetim arızalandı, taşıyor musunuz?", a: "Evet, yüklü hafif ticari araçları yük emniyetiyle taşıyoruz." },
+      { q: "İstiklal Caddesi'ne yanlışlıkla girdim ve aracım arızalandı, ceza da yedim; aracı çıkarır mısınız?", a: "Evet, yayalaştırılmış bölge prosedürüne uygun şekilde zabıta/emniyet koordinasyonuyla aracı çıkarıyoruz." },
+    ],
+    neighbors: ["sisli", "besiktas", "kagithane", "eyupsultan", "fatih"],
+    blogParagraphs: [
+      "Beyoğlu, çekicilikte 'İstanbul'un en zor parkuru' unvanını hak eder: Galata'nın taş döşeli dik yokuşları, Cihangir'in park halindeki araçlarla daralan tek yönlü sokakları ve Tarlabaşı'nın yoğun dokusu, standart çekici araçların çoğunu işlevsiz bırakır. Bu ilçe için özel tuttuğumuz kompakt platform ve tekerlek paleti (go-jack) ekipmanı, sıkışık pozisyondaki araçları santim santim kaydırarak çıkarmamızı sağlar.",
+      "İlçenin ritmi de İstanbul'un geri kalanından farklıdır: gece hayatının başkenti olarak Beyoğlu'nda çağrı yoğunluğumuz gece 01:00-05:00 arasında zirve yapar — eğlence dönüşü akü, kilitli araç ve hafif kaza vakaları. Galataport'un açılması Karaköy-Tophane hattına kruvaziyer turizmi trafiği ekledi; yabancı sürücüler ve kiralık araç vakaları için İngilizce destek hattımız bu bölgede yoğun kullanılır.",
+      "Beyoğlu'nda müdahalenin bir diğer boyutu kurumsal koordinasyondur: yayalaştırılmış İstiklal bölgesi, taksi ve dolmuş hatları, zabıta uygulamaları ve etkinlik kapamaları arasında çalışırız. Taksim çevresindeki büyük etkinlik günlerinde (yılbaşı, kutlamalar) bölgeye araç girişi kısıtlanır — bu günlerde vatandaşın en sık yaşadığı sorun, kapatılan bölgede kalan aracını alamamasıdır; kapama kalktığı anda sıralı çekim için önceden kayıt alıyoruz.",
+    ],
+  },
+  {
+    slug: "buyukcekmece",
+    name: "Büyükçekmece",
+    yaka: "avrupa",
+    neighborhoods: ["Mimarsinan", "Kumburgaz", "Güzelce", "Tepecik", "Çakmaklı", "Karaağaç", "Celaliye", "Sinanoba", "Fatih Mahallesi"],
+    roads: ["D-100 (E-5) Büyükçekmece kesimi", "TEM (O-3) bağlantıları", "Kanuni Sultan Süleyman Köprüsü (tarihi)", "sahil yolu (Kumburgaz hattı)"],
+    landmarks: ["Büyükçekmece Gölü", "Kanuni Sultan Süleyman Köprüsü", "Kumburgaz sahili", "Büyükçekmece kültür parkı", "Valide Sultan Camii"],
+    arrivalMinutes: "25-40",
+    arrivalTable: [
+      { area: "Büyükçekmece merkez / Mimarsinan", minutes: "25-35 dk" },
+      { area: "Kumburgaz / sahil hattı", minutes: "25-40 dk" },
+      { area: "D-100 kesimi", minutes: "20-35 dk" },
+      { area: "Tepecik / Karaağaç", minutes: "30-45 dk" },
+    ],
+    intro:
+      "Büyükçekmece'de aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. D-100, Kumburgaz sahili ve tüm mahallelere ortalama 25-40 dakikada ulaşıyoruz.",
+    localNote:
+      "Büyükçekmece, gölün ikiye böldüğü coğrafyası ve yazlık sahil hattıyla (Kumburgaz, Güzelce, Celaliye) mevsimsel karakterli bir ilçedir: yaz hafta sonlarında sahil nüfusu ve trafiği katlanır. D-100'ün göl geçişi (köprü kesimi) rüzgârlı havalarda ve yoğun saatlerde kritik bir noktadır. Kışın sahil siteleri boşalır — uzun süre çalıştırılmayan yazlık araçlarında bahar başında akü vakaları patlar.",
+    scenario:
+      "Örnek: Temmuz'da pazar akşamı Kumburgaz sahilinden dönüş trafiğinde aracınız hararet yaptı ve D-100 göl köprüsü öncesinde durdunuz. Bizi aradığınızda ekibimiz 25-30 dakikada gelir; motoru soğutup kontrol eder, devam edilemeyecekse aracı platforma alıp İstanbul'daki servisinize taşırız.",
+    faqs: [
+      { q: "Büyükçekmece'de çekici ne kadar sürede gelir?", a: "D-100 kesimine 20-35 dakikada, merkez ve Kumburgaz'a 25-40 dakikada, iç kesimlere (Tepecik, Karaağaç) 30-45 dakikada ulaşıyoruz." },
+      { q: "Kumburgaz'da yazlıktayım, aracım bütün kış otoparkta kaldı ve çalışmıyor; ne yapmalı?", a: "Uzun süre çalıştırılmayan araçlarda akü ve fren sıkışması yaygındır; akü takviyesi ve gerekirse platformla servise taşıma için ekip gönderiyoruz." },
+      { q: "D-100 göl köprüsü kesiminde arıza yaptım, rüzgâr çok şiddetli; güvenli mi?", a: "Köprü kesiminde araç içinde beklemeyin; bariyer arkasına geçin. Ekibimiz rüzgârlı koşul prosedürüyle (ek sabitleme) müdahale eder." },
+      { q: "Büyükçekmece çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Sahilde kuma saplandım (Güzelce), kurtarma yapıyor musunuz?", a: "Evet, vinçli kurtarma aracımızla kum ve toprak zeminlerden araç çıkarıyoruz." },
+      { q: "Tepecik'te TEM bağlantısında gece kaldım, o tarafa da geliyor musunuz?", a: "Evet, TEM bağlantı kesimleri dahil ilçenin her noktasına 7/24 gidiyoruz." },
+      { q: "Karavanımla Kumburgaz kampındayım, karavan arızalandı; çekiyor musunuz?", a: "Evet, karavan ve römork taşıma ekipmanımız mevcut; kamp alanından güvenli çıkışı birlikte planlarız." },
+      { q: "Mimarsinan'dan Silivri'ye araç taşır mısınız?", a: "Evet, komşu ilçeler arası kısa mesafe taşıma günlük işimizdir." },
+      { q: "Yazlık sitedeki komşumun aracı da bozuk, iki aracı birden taşıyabilir misiniz?", a: "Evet, çoklu araç taşıma kapasitemiz var; iki araç için tek seferde çözüm planlayabiliriz." },
+      { q: "Gece sahil yolunda lastiğim patladı, bölgede lastikçi yok; ne yapıyorsunuz?", a: "Yedek varsa yerinde takıyoruz; yoksa aracı en yakın nöbetçi lastikçiye veya güvenli noktaya taşıyoruz." },
+    ],
+    neighbors: ["beylikduzu", "esenyurt", "silivri", "catalca"],
+    blogParagraphs: [
+      "Büyükçekmece'nin çekici takvimi mevsimlerle yazılır: Haziran-Eylül arasında Kumburgaz-Celaliye sahil hattının nüfusu katlanır ve pazar akşamı dönüş trafiği, D-100'ün göl geçişinde yoğun arıza penceresi yaratır. Hararet, lastik ve yakıt bitmesi — yazlık dönüşü üçlüsü — bu saatlerdeki çağrılarımızın çoğunluğudur. Kış ise tam tersi: boşalan sahil sitelerinde aylarca çalıştırılmayan araçlar, bahar başında toplu akü ve fren sıkışması vakalarına dönüşür.",
+      "İlçenin simgesi Mimar Sinan'ın Kanuni Sultan Süleyman Köprüsü, tarihî dokusuyla göl geçişinin yanında durur; modern D-100 köprü kesimi ise lodos günlerinde şiddetli yan rüzgâra açıktır. Bu kesimde yüksek profilli araçlar (panelvan, karavan, hafif kamyon) rüzgârdan etkilenir; lodoslu günlerde bölgeden gelen 'aracım savruluyor, devam edemiyorum' çağrılarında sürücüye önce güvenli bekleme noktası tarif eder, sonra taşıma planlarız.",
+      "Büyükçekmece aynı zamanda İstanbul'un batı yönü şehirlerarası çıkışının son duraklarından biridir: Tekirdağ ve Edirne yönüne gidenlerin arızaları D-100 ve TEM'in bu kesiminde yoğunlaşır. İl sınırına yakınlık nedeniyle 'İstanbul'dan çıkarken yolda kaldım' vakalarında hem geri dönüş (İstanbul'daki servise) hem ileri taşıma (Tekirdağ yönüne devam) seçeneklerini fiyatlarıyla birlikte sunar, kararı size bırakırız.",
+    ],
+  },
+  {
+    slug: "esenler",
+    name: "Esenler",
+    yaka: "avrupa",
+    neighborhoods: ["Menderes", "Oruçreis", "Havaalanı", "Fevzi Çakmak", "Turgutreis", "Kemer", "Birlik", "Nine Hatun"],
+    roads: ["TEM (O-3) Esenler bağlantıları", "D-100 bağlantısı (Esenler kavşağı)", "Atışalanı Caddesi", "Otogar çevre yolları"],
+    landmarks: ["15 Temmuz Demokrasi Otogarı (Büyük İstanbul Otogarı)", "Esenler Meydan", "Atışalanı bölgesi", "Dörtyol metro çevresi"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Otogar çevresi", minutes: "15-20 dk" },
+      { area: "Esenler merkez / meydan", minutes: "15-25 dk" },
+      { area: "Atışalanı / Havaalanı Mah.", minutes: "15-25 dk" },
+      { area: "TEM bağlantıları", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Esenler'de aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici çağırabilirsiniz. Otogar çevresi, TEM bağlantıları ve tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Esenler'in kalbi 15 Temmuz Demokrasi Otogarı'dır: Türkiye'nin en büyük otobüs terminali, günün her saati otobüs, servis ve yolcu karşılama trafiği üretir. Otobüs firmalarının arıza ihtiyaçları (ağır vasıta) ve yolcu karşılamaya gelen binek araçların vakaları iç içedir. İlçenin konut dokusu yoğun ve sokaklar dardır; Atışalanı tarafında eğim de devreye girer.",
+    scenario:
+      "Örnek: Otogar'dan yolcu almaya geldiniz, katlı otoparkta aracınız marş basmıyor; misafiriniz de kapıda bekliyor. Bizi aradığınızda otogar bölge ekibimiz 15 dakikada otoparka gelir, takviyeyle aracı çalıştırır; sorun aküdeyse yerinde değişim seçeneğini sunarız.",
+    faqs: [
+      { q: "Esenler'de çekici ne kadar sürede gelir?", a: "Otogar çevresine 15-20 dakikada, ilçenin diğer mahallelerine 15-25 dakikada ulaşıyoruz." },
+      { q: "Otogar katlı otoparkında aracım çalışmadı, gelir misiniz?", a: "Evet, otogar otoparkı prosedürlerine uygun şekilde akü takviyesi ve çekim yapıyoruz; bu bölge en sık hizmet verdiğimiz noktalardandır." },
+      { q: "Otobüs firmasıyız, körüklü otobüsümüz Esenler'de arızalandı; ağır vasıta çekiyor musunuz?", a: "Evet, otobüs ve ağır vasıta kurtarma ekipmanımız var; otobüs firmalarına kurumsal anlaşma sunuyoruz." },
+      { q: "TEM Esenler bağlantısında arıza yaptım, ne yapmalıyım?", a: "Aracı emniyet şeridine alın, dörtlüleri yakın, bariyer dışında bekleyin ve bizi arayın; bağlantı rampalarını iyi biliyoruz." },
+      { q: "Esenler çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Atışalanı'nın dar yokuşlarında aracım kaldı, girer misiniz?", a: "Evet, dar ve eğimli sokaklar için kompakt platformumuzla çalışıyoruz." },
+      { q: "Gece 04:00'te otogar'dan aldığım misafirle yola çıkarken lastiğim patladı, o saatte gelir misiniz?", a: "Evet, 7/24 fiilen sahadayız; otogar çevresine gece varışımız 15 dakika civarındadır." },
+      { q: "Esenler'den şehirlerarası araç taşıması yapıyor musunuz?", a: "Evet, TEM bağlantısıyla tüm illere taşıma yapıyoruz." },
+      { q: "Servis minibüsümüz Menderes Mahallesi'nde arızalandı, öğrenci servisi aksayacak; hızlı çözüm var mı?", a: "Servis araçlarına öncelik veriyoruz; en yakın ekibi yönlendirip aracı hızla servise taşıyor, mümkünse yerinde çözüyoruz." },
+      { q: "Kaza sonrası aracım Esenler'de otoparka çekildi, oradan servise nakil yapar mısınız?", a: "Evet, otopark çıkış işlemlerinde yol gösterir, aracı dilediğiniz servise taşırız." },
+    ],
+    neighbors: ["bagcilar", "bayrampasa", "gaziosmanpasa", "sultangazi", "gungoren", "basaksehir"],
+    blogParagraphs: [
+      "Esenler denince akla önce 15 Temmuz Demokrasi Otogarı gelir — ve çekicilik açısından otogar, kendi başına bir ekosistemdir. Günde binlerce otobüsün giriş çıkışı, yüzlerce yazıhane servisi ve on binlerce yolcu karşılama aracı… Buradaki vakalar üç katmandır: otobüs firmalarının ağır vasıta arızaları, servis minibüslerinin yoğun kullanım kaynaklı sorunları ve karşılamaya gelen binek araçların otopark vakaları. Üçü için de ayrı ekipman ve prosedürle çalışırız.",
+      "Otogar dışında Esenler, İstanbul'un en yoğun konut dokularından birine sahiptir: Menderes, Oruçreis ve Turgutreis mahallelerinin dar sokakları kompakt araç ister. Dörtyol-Atışalanı hattında eğim ve kışın buzlanma devreye girer. İlçedeki tekstil ve konfeksiyon atölyelerinin servis-sevkiyat araçları, gündüz kuşağı çağrılarının önemli kaynağıdır.",
+      "Esenler'in TEM ve D-100 arasındaki konumu, transit geçiş vakalarını da getirir: Esenler kavşağı çevresindeki rampa yoğunluğunda şerit hatası ve arıza birleşince trafik hızla kilitlenir. Bu bölgedeki müdahale önceliğimiz her zaman önce yolu açmaktır; aracınızı güvenli noktaya çektikten sonra taşıma detaylarını konuşuruz.",
+    ],
+  },
+  {
+    slug: "esenyurt",
+    name: "Esenyurt",
+    yaka: "avrupa",
+    neighborhoods: ["Merkez", "Kıraç", "Saadetdere", "İnönü", "Güzelyurt", "Pınar", "Talatpaşa", "Mehterçeşme", "Akçaburgaz", "Hoşdere bölgesi"],
+    roads: ["D-100 (E-5) Haramidere-Esenyurt kesimi", "TEM Hadımköy bağlantısı", "Hoşdere yolu", "Kıraç-Akçaburgaz sanayi aksı"],
+    landmarks: ["Torium AVM", "Esenyurt Meydan", "Akçaburgaz sanayi bölgesi", "Marmara Evleri bölgesi", "Haramidere kavşağı"],
+    arrivalMinutes: "20-30",
+    arrivalTable: [
+      { area: "Esenyurt merkez / meydan", minutes: "20-30 dk" },
+      { area: "D-100 / Haramidere / Torium", minutes: "15-25 dk" },
+      { area: "Kıraç / Akçaburgaz", minutes: "20-30 dk" },
+      { area: "Hoşdere / Hadımköy bağlantısı", minutes: "20-35 dk" },
+    ],
+    intro:
+      "Esenyurt'ta aracınız bozulduysa 0535 404 80 44'ü arayın; D-100 Haramidere kesimi, Kıraç, Akçaburgaz ve tüm mahallelere 7/24 ortalama 20-30 dakikada çekici gönderiyoruz.",
+    localNote:
+      "Esenyurt, Türkiye'nin en kalabalık ilçesi — bu tek başına çekici talep haritasını açıklar. Yüksek katlı sitelerin kapalı otoparkları, D-100 Haramidere kavşağının kronik yoğunluğu ve Kıraç-Akçaburgaz-Hoşdere üçgenindeki sanayi/lojistik trafiği günün her saatinde farklı vaka üretir. Araç yoğunluğuna oranla otopark azlığı, sokak parkı kaynaklı sıkışma ve dokunma kazalarını artırır.",
+    scenario:
+      "Örnek: Akşam 19:00'da Haramidere kavşağında, D-100'e çıkmaya çalışırken debriyajınız bitti ve rampada kaldınız. Bizi aradığınızda bölge ekibimiz 15-20 dakikada ulaşır; rampada güvenli sabitleme yapıp aracı platforma alır, sizi Akçaburgaz'daki servisinize götürür.",
+    faqs: [
+      { q: "Esenyurt'ta çekici ne kadar sürede gelir?", a: "D-100 ve Torium çevresine 15-25 dakikada; merkez, Kıraç ve Akçaburgaz'a 20-30 dakikada ulaşıyoruz." },
+      { q: "Site kapalı otoparkında eksi katta aracım çalışmıyor, inebiliyor musunuz?", a: "Evet, alçak tavanlı aracımız ve taşınabilir ekipmanımızla eksi katlara iniyoruz; Esenyurt'un yüksek katlı sitelerinde bu bizim günlük işimizdir." },
+      { q: "Haramidere kavşağında arıza yaptım, trafik çok yoğun; ne yapmalıyım?", a: "Dörtlüleri yakın, mümkünse aracı sağa alın ve araç dışında güvenli noktada bekleyin; kavşağın tüm ayaklarını bildiğimiz için hızla ulaşırız." },
+      { q: "Esenyurt çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Akçaburgaz'da fabrikamızın forklifti/iş makinesi taşınacak, yapıyor musunuz?", a: "Evet, iş makinesi ve ağır ekipman taşıma için uygun platform ve kurtarıcımız var; planlı taşımalarda randevu veriyoruz." },
+      { q: "Gece Kıraç'ta aküm bitti, gelir misiniz?", a: "Evet, 7/24 hizmet veriyoruz; Kıraç'a gece ortalama 20 dakikada ulaşırız." },
+      { q: "Sokakta park halindeki aracıma çarpıp kaçmışlar, hareket edemiyor; ne yapmalıyım?", a: "Önce fotoğraflayın ve 155'e bildirin (kaçan araç tespiti için); ardından aracı anlaşmalı servise veya eksperin göreceği noktaya çekelim." },
+      { q: "Torium AVM otoparkından çekim yapıyor musunuz?", a: "Evet, kapalı otopark uyumlu aracımızla AVM otoparklarından düzenli çekim yapıyoruz." },
+      { q: "Esenyurt'tan Anadolu Yakası'na araç taşıma ne kadar sürer?", a: "Trafiğe göre değişir; güzergâhı (Avrasya Tüneli / köprüler) trafiğe göre seçer, tahmini süreyi telefonda net söyleriz." },
+      { q: "Minibüs hattında çalışıyorum, aracım seferdeyken arızalandı; yolcularım var, öncelik verir misiniz?", a: "Evet, içinde yolcu olan toplu taşıma araçlarına öncelikli müdahale ediyoruz." },
+    ],
+    neighbors: ["beylikduzu", "avcilar", "kucukcekmece", "basaksehir", "arnavutkoy", "buyukcekmece"],
+    blogParagraphs: [
+      "Esenyurt, sayıların ilçesi: Türkiye'nin en kalabalık ilçesinde araç yoğunluğu da rekor düzeydedir ve bu, çekici talebinin hem hacmini hem çeşitliliğini belirler. Yüksek katlı site stoğunun büyüklüğü, kapalı otopark vakalarını (eksi katlarda akü, rampa kazaları, sıkışan araçlar) başka hiçbir ilçede olmadığı kadar öne çıkarır. Alçak tavanlı kurtarma aracımızın en yoğun çalıştığı ilçe Esenyurt'tur.",
+      "D-100'ün Haramidere kesimi ve kavşağı, ilçenin trafik düğümüdür: Beylikdüzü-Avcılar-Esenyurt üçgeninin tüm akışı burada kesişir. Rampa ve kavşak arızaları — özellikle debriyaj ve şanzıman sorunları — akşam saatlerinde yoğunlaşır. Kıraç-Akçaburgaz-Hoşdere hattında ise tablo ticaridir: lojistik depolar, imalat atölyeleri ve şantiyeler; yüklü araç, iş makinesi ve filo taşıma taleplerinin merkezi.",
+      "Esenyurt'ta otopark kıtlığının yarattığı özel bir vaka tipi vardır: sokak parkında sıkışan, çift park nedeniyle kilitlenen veya çarpılıp hareketsiz kalan araçlar. Bu vakalar için tekerlek paletli kaydırma ekipmanımız neredeyse her gün görevdedir. Kalabalık nüfusun getirdiği yoğun talebi karşılamak için Esenyurt-Beylikdüzü hattında ekiplerimiz ortak kapasiteyle, dinamik konumlanarak çalışır.",
+    ],
+  },
+  {
+    slug: "eyupsultan",
+    name: "Eyüpsultan",
+    yaka: "avrupa",
+    neighborhoods: ["Eyüp Merkez", "Alibeyköy", "Göktürk", "Kemerburgaz", "Rami", "Silahtarağa", "Yeşilpınar", "Akşemsettin", "Mihrimah Sultan"],
+    roads: ["TEM (O-3) Alibeyköy kesimi", "Haliç çevre bağlantıları", "Kemerburgaz-Göktürk yolu", "Kuzey Marmara Otoyolu bağlantısı (Hasdal)", "Rami kışla caddesi"],
+    landmarks: ["Eyüp Sultan Camii", "Pierre Loti tepesi", "İsfanbul (Vialand)", "Alibeyköy Osmanlı Park bölgesi", "Göktürk merkez", "Kemerburgaz Kent Ormanı"],
+    arrivalMinutes: "15-30",
+    arrivalTable: [
+      { area: "Eyüp merkez / Rami", minutes: "15-25 dk" },
+      { area: "Alibeyköy / TEM kesimi", minutes: "15-25 dk" },
+      { area: "Göktürk / Kemerburgaz", minutes: "25-35 dk" },
+      { area: "Yeşilpınar / Akşemsettin", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Eyüpsultan'da aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. Eyüp merkez, Alibeyköy, Göktürk ve Kemerburgaz dahil her noktaya ortalama 15-30 dakikada ulaşıyoruz.",
+    localNote:
+      "Eyüpsultan iki farklı dünyayı birleştirir: güneyde Haliç kıyısındaki tarihi Eyüp merkez ve yoğun Alibeyköy; kuzeyde orman içindeki Göktürk-Kemerburgaz villaları. TEM'in Alibeyköy geçişi ve Hasdal bağlantısı kritik akslardır. Dini bayram ve kandillerde Eyüp Sultan Camii çevresi on binlerce ziyaretçi çeker — bu günlerde bölge trafiği ve otopark vakaları katlanır.",
+    scenario:
+      "Örnek: Kandil gecesi Eyüp Sultan çevresinde park yeri bulamayıp yokuşa park ettiniz; dönüşte aracın el freni tutmamış ve öndeki araca dayanmış. Bizi aradığınızda ekip 20 dakikada gelir, iki aracın da hasarını fotoğraflar, aracınızı vinçle güvenle ayırıp gerekirse servise taşır, tutanak için yol gösteririz.",
+    faqs: [
+      { q: "Eyüpsultan'da çekici ne kadar sürede gelir?", a: "Eyüp merkez, Rami ve Alibeyköy'e 15-25 dakikada; Göktürk-Kemerburgaz'a 25-35 dakikada ulaşıyoruz." },
+      { q: "TEM Alibeyköy kesiminde arıza yaptım, ne yapmalıyım?", a: "Aracı emniyet şeridine alın, dörtlüleri yakın, bariyer arkasında bekleyin ve arayın; bu kesimdeki rampaları iyi biliyoruz." },
+      { q: "Göktürk'te site içinden araç çekiyor musunuz?", a: "Evet, Göktürk ve Kemerburgaz'daki sitelerin güvenlik prosedürlerine uygun şekilde araç teslim alıyoruz." },
+      { q: "Bayramda Eyüp Sultan çevresinde aracım mahsur kaldı (yol kapama), ne yapabilirim?", a: "Kapama kalkış saatlerini takip ediyoruz; kayıt açın, kapama kalkar kalkmaz sıralı çekim yapıyoruz." },
+      { q: "Eyüpsultan çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Kemerburgaz Kent Ormanı'nda piknik dönüşü aracım çamura saplandı, kurtarır mısınız?", a: "Evet, vinçli kurtarma aracımızla orman yolu ve toprak zeminlerden araç çıkarıyoruz." },
+      { q: "İsfanbul'a geldik, otoparkta aracımız çalışmadı; gelir misiniz?", a: "Evet, İsfanbul otoparkına akü takviyesi ve çekim için düzenli gidiyoruz." },
+      { q: "Alibeyköy'de metrobüs/tramvay hattı yakınında aracım kaldı, sorun olur mu?", a: "Olmaz; toplu taşıma koridorunu aksatmayacak yükleme düzeni kurarız, gerekirse trafik birimleriyle koordine oluruz." },
+      { q: "Göktürk'te lüks SUV'um için hassas taşıma var mı?", a: "Evet, lüks araç protokolümüz (tam platform, tekstil kayış, fotoğraflı rapor) Göktürk bölgesinde sık uygulanır." },
+      { q: "Kuzey Marmara Otoyolu Hasdal bağlantısında arıza, geliyor musunuz?", a: "Evet, Hasdal ve Kuzey Marmara bağlantı kesimlerine otoyol prosedürüyle müdahale ediyoruz." },
+    ],
+    neighbors: ["gaziosmanpasa", "kagithane", "beyoglu", "sultangazi", "sariyer", "arnavutkoy", "bayrampasa"],
+    blogParagraphs: [
+      "Eyüpsultan, İstanbul'un manevi merkezlerinden biri olarak takvimli trafik üretir: kandiller, Ramazan akşamları ve bayram sabahlarında Eyüp Sultan Camii çevresi on binlerce ziyaretçiyle dolar. Bu yoğunlukta yaşanan tipik vakalar — yokuşa hatalı park, el freni kazaları, kapama bölgesinde mahsur kalan araçlar — için özel bir 'ziyaret günü' prosedürümüz vardır: kapama saatlerini izler, sıralı çekim kaydı alırız.",
+      "İlçenin kuzey-güney farkı operasyonu da şekillendirir: Alibeyköy-Rami hattı yoğun konut ve TEM geçişiyle şehirli vakalar üretirken, Göktürk-Kemerburgaz orman içi villa bölgesi bambaşka taleplerle gelir: uzun süre kullanılmayan ikinci araçların aküleri, orman yolunda saplanan SUV'lar ve yüksek segment araçların hassas taşıma ihtiyaçları. Kent Ormanı ve Belgrad Ormanı'na komşu bu bölgede vinçli arazi kurtarması düzenli işimizdir.",
+      "Alibeyköy'ün ulaşım dönüşümü (tramvay, metro, cep otogarı) bölge trafiğini değiştirdi; TEM Alibeyköy rampaları ve Hasdal kavşağı, Kuzey Marmara Otoyolu bağlantısıyla birlikte Avrupa Yakası'nın kuzey aksının ana düğümlerinden biri haline geldi. Bu akslarda yaşanan arızalarda konum tarifi zorlaşır — Eyüpsultan çağrılarında WhatsApp canlı konum en büyük yardımcımızdır.",
+    ],
+  },
+];

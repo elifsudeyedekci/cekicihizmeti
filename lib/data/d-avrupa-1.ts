@@ -1,0 +1,278 @@
+import type { District } from "./types";
+
+/** Avrupa Yakası ilçeleri — Bölüm 1/4 */
+export const avrupa1: District[] = [
+  {
+    slug: "arnavutkoy",
+    name: "Arnavutköy",
+    yaka: "avrupa",
+    neighborhoods: ["Hadımköy", "Taşoluk", "Haraççı", "Bolluca", "Durusu", "Karaburun", "Hastane Mahallesi", "İmrahor"],
+    roads: ["Kuzey Marmara Otoyolu (O-7)", "İstanbul Havalimanı bağlantı yolları", "Hadımköy-TEM bağlantısı", "Arnavutköy-Habipler hattı"],
+    landmarks: ["İstanbul Havalimanı", "Hadımköy sanayi bölgesi", "Durusu (Terkos) Gölü", "Karaburun sahili"],
+    arrivalMinutes: "25-40",
+    arrivalTable: [
+      { area: "Arnavutköy merkez / Taşoluk", minutes: "25-35 dk" },
+      { area: "İstanbul Havalimanı çevresi", minutes: "25-40 dk" },
+      { area: "Hadımköy sanayi bölgesi", minutes: "25-35 dk" },
+      { area: "Durusu / Karaburun", minutes: "40-55 dk" },
+    ],
+    intro:
+      "Arnavutköy'de veya İstanbul Havalimanı yolunda aracınız bozulduysa 0535 404 80 44 numarasını arayın; Kuzey Marmara Otoyolu ve tüm mahallelere 7/24 ortalama 25-40 dakikada çekici ulaştırıyoruz.",
+    localNote:
+      "Arnavutköy, İstanbul Havalimanı'nın açılmasıyla kaderi değişen ilçe: Kuzey Marmara Otoyolu ve havalimanı bağlantı yolları ilçeyi baştan başa kat eder. Uçağa yetişme telaşındaki sürücülerin arızaları, havalimanı otoparkı kaynaklı akü vakaları ve Hadımköy sanayi bölgesinin ticari araç trafiği çağrı profilimizi belirler. Kuzeydeki Durusu-Karaburun hattı ise Karadeniz kıyısına uzanan sakin ama uzak bir bölgedir.",
+    scenario:
+      "Örnek: Gece 02:00 uçağı için havalimanına giderken Kuzey Marmara Otoyolu Arnavutköy kesiminde lastiğiniz patladı. Bizi aradığınızda konumunuzu paylaşırsınız; ekibimiz 25-30 dakikada gelir, lastiği değiştirir veya aracı platforma alır — gerekirse sizi terminale ulaştıracak çözümü birlikte kurarız.",
+    faqs: [
+      { q: "Arnavutköy'de çekici ne kadar sürede gelir?", a: "Merkez, Taşoluk ve Hadımköy'e 25-35 dakikada; havalimanı çevresine 25-40, Durusu-Karaburun hattına 40-55 dakikada ulaşıyoruz." },
+      { q: "İstanbul Havalimanı otoparkında aracım çalışmıyor, terminal otoparkına gelir misiniz?", a: "Evet, İGA otopark prosedürlerine uygun şekilde katlı ve açık otoparklara akü takviyesi ve çekici hizmeti veriyoruz." },
+      { q: "Kuzey Marmara Otoyolu'nda arıza yaptım, hangi noktada olduğumu bilmiyorum; ne yapayım?", a: "Otoyol üzerindeki kilometre taşlarını veya son geçtiğiniz kavşak tabelasını söyleyin; en pratiği WhatsApp'tan canlı konum paylaşmaktır. Emniyet şeridinde, bariyer arkasında bekleyin." },
+      { q: "Uçağım kalkmak üzere, aracım yolda kaldı; ne yapabilirsiniz?", a: "Öncelikli müdahale kaydı açıyoruz: en yakın ekip yönlendirilir, araç emanet protokolüyle teslim alınır ve siz taksi/transfer ile yolunuza devam ederken aracınızı dilediğiniz adrese teslim ederiz." },
+      { q: "Hadımköy'de fabrikamızın kamyonu arızalandı, ağır vasıta çekiyor musunuz?", a: "Evet, Hadımköy sanayi bölgesine ağır vasıta kurtarıcımızla hizmet veriyoruz; kurumsal anlaşma seçeneklerimiz de var." },
+      { q: "Arnavutköy çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre belirlenir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Durusu Gölü çevresinde piknikteyken aracım çamura saplandı, kurtarır mısınız?", a: "Evet, vinçli kurtarma aracımızla göl çevresindeki toprak zeminlerden araç çıkarıyoruz." },
+      { q: "Karaburun sahilinde gece aracım kaldı, o kadar uzağa gelir misiniz?", a: "Evet, Karaburun dahil ilçenin en uç noktalarına 7/24 gidiyoruz; varış süresini telefonda net söyleriz." },
+      { q: "Havalimanından aldığım kiralık araç arıza verdi, kiralama firmasıyla siz mi görüşürsünüz?", a: "Aracı güvenli noktaya çeker, kiralama firmasının yönlendirdiği adrese teslim ederiz; süreci üç taraflı telefonla netleştiririz." },
+      { q: "Taşoluk'ta site otoparkında aküm bitti, takviye ne kadar sürede gelir?", a: "Taşoluk'a akü takviyesi ortalama 25-35 dakikada ulaşır; aküniz ömrünü doldurduysa değişim için yönlendirme yaparız." },
+    ],
+    neighbors: ["basaksehir", "esenyurt", "eyupsultan", "sariyer", "catalca", "sultangazi"],
+    blogParagraphs: [
+      "Arnavutköy'ün çekici profili, İstanbul Havalimanı'nın gölgesinde şekillenir. Havalimanı yolculuğu doğası gereği zamana karşı yarıştır; bu yüzden Arnavutköy çağrılarının önemli kısmı 'uçağa yetişemeyeceğim' paniğiyle gelir. Bu çağrılar için özel bir akışımız var: önce yolcunun terminale ulaşması çözülür (taksi/transfer koordinasyonu), sonra araç emanet protokolüyle teslim alınıp istenen adrese taşınır. Panik anında iki sorunu aynı anda çözmeye çalışmak en büyük hatadır.",
+      "İlçenin ikinci yüzü Hadımköy'dür: TEM bağlantısıyla Avrupa Yakası'nın önemli sanayi ve lojistik havzalarından biri olan bu bölgede ticari araç yoğunluğu yüksektir. Yüklü kamyon ve panelvan kurtarmaları, depo sahalarında manevra kazaları ve soğuk zincir araçlarının acil taşıma ihtiyaçları (yükün bozulmaması için önceliklendirilir) Hadımköy çağrılarının tipik örnekleridir.",
+      "Kuzey Marmara Otoyolu'nun ilçeden geçmesi, Arnavutköy'ü Avrupa Yakası çekiciliğinde stratejik bir konuma taşıdı: Odayeri ve Hasdal bağlantılarıyla hem Sarıyer hem Eyüpsultan yönüne hızlı ulaşım kurabiliyoruz. Otoyolun yüksek hız limiti, buradaki arızalarda güvenlik prosedürünü daha da kritik hale getirir — aracınız otoyolda kaldıysa mutlaka bariyer dışında bekleyin ve reflektörünüzü en az 100 metre geriye koyun.",
+    ],
+  },
+  {
+    slug: "avcilar",
+    name: "Avcılar",
+    yaka: "avrupa",
+    neighborhoods: ["Merkez", "Cihangir", "Denizköşkler", "Ambarlı", "Firuzköy", "Gümüşpala", "Tahtakale", "Üniversite Mahallesi", "Yeşilkent"],
+    roads: ["D-100 (E-5) Avcılar kesimi", "TEM bağlantı yolu (Firuzköy)", "Ambarlı Liman yolu", "E-5 metrobüs hattı"],
+    landmarks: ["İstanbul Üniversitesi-Cerrahpaşa Avcılar Kampüsü", "Ambarlı Limanı", "Avcılar sahili", "Marmara Caddesi çarşı", "Pelican Mall bölgesi sınırı"],
+    arrivalMinutes: "15-30",
+    arrivalTable: [
+      { area: "Avcılar merkez / Marmara Cad.", minutes: "15-25 dk" },
+      { area: "D-100 / metrobüs hattı", minutes: "15-20 dk" },
+      { area: "Ambarlı / liman bölgesi", minutes: "20-30 dk" },
+      { area: "Firuzköy / Üniversite", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Avcılar'da aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici çağırabilirsiniz. D-100, Ambarlı Liman yolu ve tüm mahallelere ortalama 15-30 dakikada ulaşıyoruz.",
+    localNote:
+      "Avcılar, D-100'ün Avrupa Yakası'ndaki en yoğun batı kesimlerinden birine sahiptir; metrobüs hattıyla paralel akan bu koridorda arıza yapan araç hızla kuyruk yaratır. Ambarlı Limanı, konteyner ve TIR trafiğinin merkezi olarak ağır vasıta çağrılarını besler. Üniversite kampüsü ve sahil hattı ise günlük binek araç vakalarının yoğunlaştığı bölgelerdir.",
+    scenario:
+      "Örnek: D-100 Avcılar metrobüs köprüsü yakınında aracınız şanzıman arızasıyla yol ortasında kaldı. Bizi aradığınızda ekibimiz 15-20 dakikada güvenlik düzeni kurarak gelir, aracı hızla platforma alır; hem sizi hem trafiği rahatlatır, aracı Firuzköy sanayi bölgesindeki servisinize taşırız.",
+    faqs: [
+      { q: "Avcılar'da çekici ne kadar sürede gelir?", a: "Merkez ve D-100 hattına 15-25 dakikada, Ambarlı ve Firuzköy'e 20-30 dakikada ulaşıyoruz." },
+      { q: "D-100 Avcılar kesiminde arıza yaptım, metrobüs yolu tarafındayım; ne yapmalıyım?", a: "Metrobüs yoluna kesinlikle girmeyin; aracı sağ emniyet şeridine alın, dörtlüleri yakın, bariyer arkasında bekleyin ve bizi arayın." },
+      { q: "Ambarlı Limanı'ndan TIR/konteyner çekimi yapıyor musunuz?", a: "Evet, ağır vasıta kurtarıcımızla liman bölgesinde TIR ve çekici kurtarması yapıyoruz; liman giriş prosedürlerine aşinayız." },
+      { q: "Avcılar sahilinde gece aküm bitti, gelir misiniz?", a: "Evet, 7/24 çalışıyoruz; sahil ve merkez bölgeye gece varışımız genellikle 15 dakika civarındadır." },
+      { q: "Üniversite kampüsünde öğrenciyim, aracım çalışmıyor; kampüse girebiliyor musunuz?", a: "Evet, kampüs güvenlik prosedürüne uygun şekilde giriş yapıp aracınızı teslim alıyoruz." },
+      { q: "Avcılar çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Cihangir Mahallesi'nin yokuşlu sokaklarında aracım kaydı, kurtarma yapıyor musunuz?", a: "Evet, eğimli sokaklarda vinçli güvenli kurtarma yapıyoruz." },
+      { q: "Avcılar'dan Beylikdüzü'ne veya Esenyurt'a araç çekiyor musunuz?", a: "Evet, komşu ilçelere kısa mesafe taşıma en sık yaptığımız işlerdendir; hızlı ve pratik çözüm sunarız." },
+      { q: "Aracım sel suyunda kaldı (Avcılar alt geçit), ne yapmalıyım?", a: "Kesinlikle motoru çalıştırmayı denemeyin — su çekmiş motorda çalıştırma denemesi ağır hasar yaratır. Bizi arayın, aracı platformla çekip servise götürelim." },
+      { q: "Hafta sonu sahil trafiğinde kaza yaptım, iki araç da çekilecek; iki çekici gönderebilir misiniz?", a: "Evet, aynı kazaya birden fazla platform yönlendirebiliyoruz; iki aracı da ayrı ayrı istediğiniz adreslere taşırız." },
+    ],
+    neighbors: ["kucukcekmece", "beylikduzu", "esenyurt", "basaksehir", "bagcilar"],
+    blogParagraphs: [
+      "Avcılar, Avrupa Yakası'nın batı koridorunda D-100'ün nabzının attığı ilçedir. Metrobüs hattının varlığı buradaki müdahalelere özel bir kural ekler: arızalanan araçların sürücüleri bazen metrobüs yoluna yanaşmayı dener — bu hem yasak hem de son derece tehlikelidir. Doğru davranış sağ emniyet şeridine çekilmek, o da mümkün değilse aracı terk edip bariyer dışından yardım beklemektir.",
+      "Ambarlı Limanı, ilçenin ağır vasıta karakterini belirler: konteyner sahalarına gün boyu giren çıkan TIR'lar, liman yolunda yaşanan fren ve şanzıman arızaları ve dorse sorunları için ağır kurtarıcı ekibimiz görev yapar. Liman bölgesindeki operasyonlarda saha giriş kuralları ve yük emniyeti prosedürleri kritiktir; ekibimiz bu süreçlere hâkimdir.",
+      "Avcılar aynı zamanda 1999 depremi sonrası zemin gündemiyle anılan ve yoğun kentsel dönüşüm yaşayan bir ilçe: şantiye çevresi vakaları, dar sokaklarda hafriyat araçlarıyla paylaşılan yollar ve dönüşüm sürecindeki binaların otopark sorunları çağrı profilimize yansır. Denizköşkler ve Gümüşpala'nın eğimli sokaklarında ise kış buzlanmalarında kayma vakaları için hazırlıklı bekleriz.",
+    ],
+  },
+  {
+    slug: "bagcilar",
+    name: "Bağcılar",
+    yaka: "avrupa",
+    neighborhoods: ["Mahmutbey", "Güneşli", "Yıldıztepe", "Demirkapı", "Merkez", "Kirazlı", "Sancaktepe Mahallesi", "Göztepe Mahallesi", "Evren"],
+    roads: ["TEM Otoyolu Mahmutbey gişeleri", "Basın Ekspres Yolu", "D-100 bağlantısı (Bağcılar köprülü kavşak)", "Eski Edirne Asfaltı"],
+    landmarks: ["Mahmutbey gişeleri", "İSTOÇ Ticaret Merkezi", "Bağcılar Meydan", "Güneşli plaza bölgesi", "212 İstanbul AVM sınırı"],
+    arrivalMinutes: "15-30",
+    arrivalTable: [
+      { area: "Mahmutbey / gişeler / İSTOÇ", minutes: "15-25 dk" },
+      { area: "Güneşli / Basın Ekspres", minutes: "15-25 dk" },
+      { area: "Bağcılar merkez / meydan", minutes: "15-25 dk" },
+      { area: "Kirazlı / Demirkapı", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Bağcılar'da aracınız bozulduysa 0535 404 80 44'ü arayın; Mahmutbey gişeleri, Basın Ekspres Yolu, İSTOÇ ve tüm mahallelere 7/24 ortalama 15-30 dakikada çekici gönderiyoruz.",
+    localNote:
+      "Bağcılar, Avrupa Yakası'nın trafik düğüm noktası: TEM'in Mahmutbey gişeleri, Kuzey Marmara ve TEM trafiğinin toplandığı dev bir kapıdır; Basın Ekspres Yolu ise havalimanı-plaza koridoru olarak gün boyu yüklüdür. İSTOÇ, on binlerce ticari aracın uğrak noktasıdır. Bu üçgen içinde arıza yapan araçlar için hız her şeydir — Bağcılar'a bu yüzden yakın konumlu ekip ayırıyoruz.",
+    scenario:
+      "Örnek: Mahmutbey gişelerinden HGS şeridinden geçtikten hemen sonra aracınız yürümez hale geldi. Bizi aradığınızda gişe sonrası genişleme bölgesindeki konumunuza 15-20 dakikada ulaşır, aracı hızla yükleyip trafiği rahatlatır ve sizi Güneşli'deki servisinize götürürüz.",
+    faqs: [
+      { q: "Bağcılar'da çekici ne kadar sürede gelir?", a: "Mahmutbey, Güneşli ve merkez bölgeye 15-25 dakikada; Kirazlı-Demirkapı tarafına 20-30 dakikada ulaşıyoruz." },
+      { q: "Mahmutbey gişelerinde aracım kaldı, çok yoğun trafik var; ne yapmalıyım?", a: "Gişe bölgesi İstanbul'un en yoğun noktalarındandır; aracı mümkünse gişe sonrası cebe alın, dörtlüleri yakın, bariyer dışında bekleyin. Ekibimiz bölgeyi karış karış bilir, kısa sürede ulaşır." },
+      { q: "Basın Ekspres'te arıza yaptım, havalimanına yetişecektim; hızlı çözüm var mı?", a: "Öncelikli müdahale açıyoruz: yolcuysanız önce ulaşımınızı çözer, aracı emanet alıp istediğiniz adrese taşırız." },
+      { q: "İSTOÇ'tan yüklü kamyonetimiz arızalandı, yüklü araç çekiyor musunuz?", a: "Evet, yüklü ticari araçları yük emniyetini koruyarak taşıyoruz; İSTOÇ esnafına kurumsal anlaşma da sunuyoruz." },
+      { q: "Bağcılar meydan çevresi çok kalabalık, çekici nasıl girecek?", a: "Meydan çevresinde yaya ve minibüs yoğunluğunu bildiğimizden yan sokaklardan yaklaşıyor, yükleme noktasını telefonda netleştiriyoruz." },
+      { q: "Bağcılar çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Gece Güneşli'de plaza otoparkında aracım çalışmadı, gelir misiniz?", a: "Evet, 7/24 hizmetteyiz; Güneşli plaza bölgesine gece 15-20 dakikada ulaşırız." },
+      { q: "Tekstil atölyemizin servis minibüsü Yıldıztepe'de arızalandı, minibüs çekiyor musunuz?", a: "Evet, minibüs ve panelvan taşımaya uygun platformumuz var." },
+      { q: "Kirazlı metro çevresinde aracımı kilitli bıraktım, anahtarım içeride; yardım ediyor musunuz?", a: "Hasarsız kapı açma için çilingir iş ortağımızla çözüm sağlıyoruz; araç sahipliği doğrulaması sonrası müdahale edilir." },
+      { q: "Bağcılar'dan Anadolu Yakası'na araç taşıyor musunuz?", a: "Evet, köprüler veya Avrasya Tüneli üzerinden Anadolu Yakası'nın tüm ilçelerine taşıma yapıyoruz." },
+    ],
+    neighbors: ["kucukcekmece", "basaksehir", "esenler", "gungoren", "bahcelievler", "bakirkoy"],
+    blogParagraphs: [
+      "Bağcılar'ın çekici coğrafyası üç dev trafik üreticisinin etrafında döner: Mahmutbey gişeleri, Basın Ekspres Yolu ve İSTOÇ. Mahmutbey, Avrupa Yakası'nın kuzey-güney ve doğu-batı akslarının kesiştiği ana kapıdır; günün her saati yoğundur ve buradaki bir arıza dakikalar içinde katlanarak büyüyen kuyruklara neden olur. Bu bölgedeki müdahalelerimizde önce trafiği rahatlatma, sonra taşıma prensibiyle çalışırız.",
+      "İSTOÇ ve çevresi, Türkiye'nin en büyük toptan ticaret merkezlerinden biri olarak her gün on binlerce ticari aracı ağırlar. Yüklü kamyonet ve panelvan arızaları, burada standart işimizdir; yük emniyeti bozulmadan taşıma ve esnafın işini aksatmayacak hız temel önceliklerdir. İSTOÇ ve Güneşli'deki işletmelere filo bazlı kurumsal çekici anlaşmaları sunuyoruz.",
+      "Konut dokusunda Bağcılar, İstanbul'un en yoğun nüfuslu ilçelerinden biridir; Yıldıztepe, Demirkapı ve Evren mahallelerinin dar ve dik sokakları kompakt araç gerektirir. Metro hatlarının (Kirazlı aktarma) gelişiyle otopark vakaları arttı. Ayrıca ilçedeki yoğun tekstil ve matbaa atölyelerinin servis araçları, sabah ve akşam vardiya saatlerinde arıza çağrılarının belirgin kaynağıdır.",
+    ],
+  },
+  {
+    slug: "bahcelievler",
+    name: "Bahçelievler",
+    yaka: "avrupa",
+    neighborhoods: ["Şirinevler", "Yenibosna", "Kocasinan", "Soğanlı", "Siyavuşpaşa", "Zafer", "Cumhuriyet", "Çobançeşme", "Fevzi Çakmak"],
+    roads: ["D-100 (E-5) Şirinevler-Yenibosna kesimi", "Basın Ekspres Yolu (Yenibosna ayağı)", "TEM bağlantıları", "Eski Londra Asfaltı"],
+    landmarks: ["Şirinevler Meydanı ve metrobüs durağı", "Yenibosna plaza bölgesi", "İstanbul Ticaret Sarayı çevresi", "Bahçelievler Devlet Hastanesi"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Şirinevler / D-100 hattı", minutes: "15-20 dk" },
+      { area: "Yenibosna / Basın Ekspres", minutes: "15-20 dk" },
+      { area: "Bahçelievler merkez / Kocasinan", minutes: "15-25 dk" },
+      { area: "Soğanlı / Siyavuşpaşa", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Bahçelievler'de aracınız bozulduysa 0535 404 80 44 numarasını arayarak 7/24 çekici hizmeti alabilirsiniz. Şirinevler, Yenibosna ve D-100 hattı dahil tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Bahçelievler, D-100'ün en yoğun metrobüs koridorlarından Şirinevler-Yenibosna kesimini barındırır; Basın Ekspres'in D-100'e bağlandığı Yenibosna kavşağı, Avrupa Yakası'nın kritik düğümlerindendir. İlçe içi dokuda Eski Londra Asfaltı ve hastane çevresi gün boyu hareketlidir. Kompakt bir ilçe olduğu için varış sürelerimiz istikrarlı şekilde kısadır.",
+    scenario:
+      "Örnek: Yenibosna kavşağında Basın Ekspres'ten D-100'e dönerken aracınız stop etti ve arkanızda korna senfonisi başladı. Bizi aradığınızda 15 dakikada ulaşır, ikaz düzeni kurup aracı platforma alır ve kavşağı rahatlatırız; aracınızı da istediğiniz servise bırakırız.",
+    faqs: [
+      { q: "Bahçelievler'de çekici ne kadar sürede gelir?", a: "İlçe kompakt olduğu için tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz; D-100 hattı çağrılarında bu süre çoğunlukla 15-20 dakikadır." },
+      { q: "Şirinevler metrobüs çevresinde aracım kaldı, çok kalabalık; ne yapmalıyım?", a: "Metrobüs yoluna yanaşmayın; aracı sağ şeride/cebe alın, dörtlüleri yakın. Meydan çevresinin yoğunluğunu bildiğimiz için ekibimiz yan sokaklardan hızla ulaşır." },
+      { q: "Yenibosna'da plazada işim var, aracım otoparkta çalışmadı; akü takviyesi gelir mi?", a: "Evet, Yenibosna plaza otoparklarına 15-20 dakikada akü takviyesi gönderiyoruz." },
+      { q: "D-100'de Bahçelievler kesiminde gece kaza yaptım, iki araç çekilecek; yardım eder misiniz?", a: "Evet, 7/24 kaza müdahalesi yapıyoruz; gerekirse iki platform yönlendirir, tutanak sürecinde yol gösteririz." },
+      { q: "Bahçelievler çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Soğanlı'nın ara sokaklarında aracım arızalandı, dar sokağa çekici girer mi?", a: "Evet, dar sokaklar için kompakt platform aracımız mevcut." },
+      { q: "Hastane önünden hasta nakli sonrası aracımız çalışmadı, öncelik verir misiniz?", a: "Evet, sağlıkla ilişkili çağrılara her zaman öncelik tanıyoruz." },
+      { q: "Bahçelievler'den Atatürk Havalimanı bölgesine/İGA'ya araç taşır mısınız?", a: "Evet, her iki havalimanı yönüne de düzenli taşıma yapıyoruz." },
+      { q: "Otomatik vitesli aracım Çobançeşme'de bozuldu, otomatik araç çekmek farklı mı?", a: "Evet, otomatik vitesli araçlar tekerlekleri dönmeyecek şekilde tam platform üzerinde taşınmalıdır; aracınızı bu kurala uygun taşıyoruz." },
+      { q: "Eski Londra Asfaltı'nda minibüs şeridindeyken arıza yaptım, sorun olur mu?", a: "Olmaz; ekibimiz minibüs trafiğini aksatmadan hızlı yükleme yapar. Siz güvenli noktada bekleyin, gerisini biz hallederiz." },
+    ],
+    neighbors: ["bagcilar", "bakirkoy", "gungoren", "kucukcekmece", "esenler"],
+    blogParagraphs: [
+      "Bahçelievler, yüzölçümü küçük ama trafiği dev bir ilçe: D-100'ün Şirinevler-Yenibosna koridoru, metrobüs, minibüs ve özel araç trafiğinin üst üste bindiği, İstanbul'un en sıkışık kesitlerinden biridir. Burada arıza yapan bir aracın yaratacağı zincirleme etki çok büyük olduğundan, D-100 çağrılarında 'önce yolu aç, sonra detayları konuş' prensibiyle çalışırız.",
+      "Yenibosna kavşağı ayrı bir uzmanlık konusudur: Basın Ekspres'in D-100'e bağlandığı bu çok katlı düğümde yanlış şeride girmiş, panik yapmış veya arızalanmış araçlara neredeyse her gün müdahale ederiz. Kavşağın hangi ayağında olduğunuzu tarif etmek zordur — bu yüzden Bahçelievler'de en çok kullandığımız araç WhatsApp canlı konumdur.",
+      "İlçenin iç dokusu ise sakin konut mahalleleridir: Kocasinan, Zafer ve Siyavuşpaşa'da site otoparkı vakaları (akü, lastik, kapı kilitleme) günlük rutinimizdir. Bahçelievler'in avantajı kompaktlığıdır: nereden çağrı gelirse gelsin varış süremiz nadiren 25 dakikayı aşar; bu da onu hizmet kalitemizin en istikrarlı olduğu ilçelerden biri yapar.",
+    ],
+  },
+  {
+    slug: "bakirkoy",
+    name: "Bakırköy",
+    yaka: "avrupa",
+    neighborhoods: ["Ataköy", "Yeşilköy", "Yeşilyurt", "Florya", "Kartaltepe", "Osmaniye", "Cevizlik", "Zuhuratbaba", "Şenlikköy"],
+    roads: ["D-100 (E-5) Bakırköy kesimi", "Sahil yolu (Rauf Orbay Caddesi)", "Atatürk Havalimanı çevre yolları", "İncirli Caddesi"],
+    landmarks: ["Bakırköy Meydanı", "Ataköy Marina", "Aqua Florya", "Yeşilköy sahili", "Atatürk Havalimanı (etkinlik alanı)", "İncirli metrobüs bölgesi"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Bakırköy merkez / İncirli", minutes: "15-20 dk" },
+      { area: "Ataköy / marina", minutes: "15-20 dk" },
+      { area: "Yeşilköy / Florya sahil", minutes: "15-25 dk" },
+      { area: "D-100 hattı", minutes: "15-20 dk" },
+    ],
+    intro:
+      "Bakırköy'de aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. Ataköy'den Florya sahiline, D-100'den İncirli'ye tüm Bakırköy'e ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Bakırköy, Avrupa Yakası sahil hattının merkezi: Ataköy'ün marina ve rezidans dokusu, Yeşilköy-Florya'nın sahil trafiği ve İncirli'nin çarşı-hastane yoğunluğu farklı vaka tipleri üretir. Sahil yolu (Rauf Orbay) hafta sonları ve yaz akşamları yoğunlaşır; D-100 kesimi ise günün her saati yüklüdür. Kapalı marina ve rezidans otoparkları için alçak tavanlı aracımız bu bölgede sık görev yapar.",
+    scenario:
+      "Örnek: Pazar akşamı Florya sahilinde aile gezintisi dönüşü aracınız marş basmadı. Bizi aradığınızda 15-20 dakikada akü ekibimiz gelir; sorun aküdeyse yerinde çözer, değilse aracı platforma alır, sizi ve ailenizi mağdur etmeden eve en yakın servise taşırız.",
+    faqs: [
+      { q: "Bakırköy'de çekici ne kadar sürede gelir?", a: "Merkez, Ataköy ve D-100 hattına 15-20 dakikada; Yeşilköy-Florya sahiline 15-25 dakikada ulaşıyoruz." },
+      { q: "Ataköy Marina kapalı otoparkında aracım çalışmıyor, girebiliyor musunuz?", a: "Evet, marina ve rezidans otoparklarının yükseklik sınırına uygun alçak tavanlı kurtarma aracımızla giriyoruz." },
+      { q: "Sahil yolunda (Rauf Orbay) lastiğim patladı, yerinde değişim var mı?", a: "Evet, yedek lastiğiniz varsa yerinde değiştiriyoruz; yoksa mobil çözüm veya lastikçiye taşıma sağlıyoruz." },
+      { q: "İncirli'de hastane çevresinde aracım kaldı, yoğunlukta ulaşabilir misiniz?", a: "Evet, İncirli'nin trafiğini bildiğimiz için ara sokaklardan ulaşıyoruz; hasta ve hasta yakını çağrılarına öncelik veriyoruz." },
+      { q: "Bakırköy çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Yeşilköy'de klasik/antika aracım için hassas taşıma yapar mısınız?", a: "Evet, klasik araçlar için düşük açılı rampa ve yumuşak bağlama ekipmanıyla hasarsız taşıma yapıyoruz." },
+      { q: "D-100 Bakırköy kesiminde gece kaza yaptım, aracım sürüklenemez durumda; ne yapmalıyım?", a: "Güvenliğinizi alıp 112/155'i arayın, ardından bizi: ağır hasarlı araçlar için vinçli yükleme yapıyoruz; tutanak sürecinde yol gösteririz." },
+      { q: "Aqua Florya otoparkından araç çekimi yapıyor musunuz?", a: "Evet, AVM otoparklarından yükseklik sınırına uygun aracımızla çekim yapıyoruz." },
+      { q: "Bakırköy'den her iki havalimanına da araç taşıyor musunuz?", a: "Evet, hem İstanbul Havalimanı hem Sabiha Gökçen yönüne düzenli taşıma yapıyoruz." },
+      { q: "Elektrikli aracım Ataköy'de şarjsız kaldı, en yakın şarj istasyonuna götürür müsünüz?", a: "Evet, elektrikli aracınızı platformla en yakın hızlı şarj noktasına taşıyoruz; EV'ler asla tekerlek üzerinde çekilmez, bu kurala tam uyarız." },
+    ],
+    neighbors: ["bahcelievler", "gungoren", "zeytinburnu", "kucukcekmece", "bagcilar"],
+    blogParagraphs: [
+      "Bakırköy, Avrupa Yakası'nın sahil vitrini: Ataköy marinasından Florya'ya uzanan hat, İstanbul'un en yoğun hafta sonu sahil trafiğini taşır. Bu hattın vaka profili kendine özgüdür — gezinti dönüşü akü bitmesi, sahil otoparklarında lastik sorunları ve yaz akşamlarının yoğunluğunda buluşma noktası kazaları. Sahil yolunun tek alternatifli yapısı nedeniyle buradaki arızalara hızlı müdahale, trafiğin kilitlenmemesi için kritiktir.",
+      "İlçenin ikinci yüzü İncirli-Bakırköy meydan aksıdır: hastaneler, adliye ve çarşı yoğunluğu gün içi kısa mesafe vakaları üretir. Kapalı otopark yoğunluğu da yüksektir — Bakırköy'de çağrıların ciddi bölümü katlı otoparklardan gelir ve alçak tavanlı kurtarma aracımız bu ilçede neredeyse her gün görev yapar.",
+      "Ataköy ve Yeşilköy'ün rezidans ve konak dokusu, yüksek segment ve klasik araç yoğunluğu getirir; bu araçlar için özel taşıma protokolümüz (düşük açılı rampa, tekstil kayış, fotoğraflı teslim raporu) vardır. Eski Atatürk Havalimanı alanındaki büyük etkinlik günlerinde (fuar, miting) bölge trafiği tamamen değişir; etkinlik takvimini izleyerek o günlerde Yeşilköy tarafına ek ekip planlarız.",
+    ],
+  },
+  {
+    slug: "basaksehir",
+    name: "Başakşehir",
+    yaka: "avrupa",
+    neighborhoods: ["Başak", "Kayaşehir", "Bahçeşehir 1. Kısım", "Bahçeşehir 2. Kısım", "Güvercintepe", "Şahintepe", "Ziya Gökalp", "İkitelli OSB"],
+    roads: ["TEM Otoyolu Başakşehir bağlantıları", "Kuzey Marmara Otoyolu bağlantısı", "Başakşehir-Hadımköy yolu", "Onurkent-İkitelli aksı"],
+    landmarks: ["Başakşehir Çam ve Sakura Şehir Hastanesi", "Mall of İstanbul", "İkitelli Organize Sanayi Bölgesi", "Başakşehir Fatih Terim Stadyumu", "Sular Vadisi"],
+    arrivalMinutes: "20-30",
+    arrivalTable: [
+      { area: "Başak / Kayaşehir", minutes: "20-30 dk" },
+      { area: "İkitelli OSB / MOİ çevresi", minutes: "15-25 dk" },
+      { area: "Bahçeşehir 1-2. Kısım", minutes: "20-30 dk" },
+      { area: "Şehir hastanesi çevresi", minutes: "20-30 dk" },
+    ],
+    intro:
+      "Başakşehir'de aracınız bozulduysa 0535 404 80 44 numarasını arayın; Kayaşehir, Bahçeşehir, İkitelli OSB ve şehir hastanesi çevresi dahil her noktaya 7/24 ortalama 20-30 dakikada çekici ulaştırıyoruz.",
+    localNote:
+      "Başakşehir, planlı toplu konut bölgeleri (Kayaşehir, Bahçeşehir) ile Türkiye'nin en büyük organize sanayi bölgelerinden İkitelli'yi aynı sınırda buluşturur. Çam ve Sakura Şehir Hastanesi, günde on binlerce ziyaretçi trafiği üretir. Site içi kapalı otoparklar ve geniş bulvarlarıyla vaka profili 'otopark + otoyol bağlantısı' ağırlıklıdır; İkitelli tarafında ise ticari araç arızaları öndedir.",
+    scenario:
+      "Örnek: Çam ve Sakura Şehir Hastanesi'nin katlı otoparkında refakatçi olarak beklediğiniz üç gün boyunca araç hiç çalıştırılmadı ve akü bitti. Bizi aradığınızda otopark prosedürüne uygun şekilde takviye ekibimiz gelir; akü toparlamazsa aracı platformla çıkarıp yeni akü çözümüne veya servise taşırız.",
+    faqs: [
+      { q: "Başakşehir'de çekici ne kadar sürede gelir?", a: "İkitelli ve MOİ çevresine 15-25 dakikada; Kayaşehir, Başak ve Bahçeşehir'e 20-30 dakikada ulaşıyoruz." },
+      { q: "Çam ve Sakura Şehir Hastanesi otoparkında aracım çalışmıyor, gelir misiniz?", a: "Evet, hastanenin katlı otoparklarına akü takviyesi ve çekim için düzenli gidiyoruz; hasta ve refakatçi çağrılarına öncelik veriyoruz." },
+      { q: "İkitelli OSB'de iş makinamız/kamyonumuz arızalandı, ağır vasıta hizmetiniz var mı?", a: "Evet, OSB'ye ağır vasıta kurtarıcı ve platformlarımızla hizmet veriyoruz; işletmelere kurumsal anlaşma sunuyoruz." },
+      { q: "Mall of İstanbul otoparkından araç çekebiliyor musunuz?", a: "Evet, kapalı otopark yükseklik sınırlarına uygun aracımızla MOİ ve çevre AVM otoparklarından çekim yapıyoruz." },
+      { q: "Bahçeşehir gölet çevresinde aracım kaldı, site içine girebiliyor musunuz?", a: "Evet, site güvenlik prosedürlerine uygun şekilde giriş yapıp aracınızı teslim alıyoruz." },
+      { q: "Başakşehir çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Kuzey Marmara Otoyolu Başakşehir bağlantısında arıza yaptım, geliyor musunuz?", a: "Evet, otoyol bağlantı kesimlerine güvenlik prosedürüyle müdahale ediyoruz; bariyer dışında bekleyin ve konum paylaşın." },
+      { q: "Maç günü stadyum çevresinde aracım kaldı, ulaşabilir misiniz?", a: "Evet, maç günü trafik planlarını takip ediyoruz; polis yönlendirmeleriyle koordineli alternatif rotadan ulaşırız." },
+      { q: "Elektrikli aracım Kayaşehir'de şarjsız kaldı, nasıl taşıyorsunuz?", a: "Elektrikli araçlar yalnızca kayar platformla taşınır; en yakın hızlı şarj istasyonuna veya dilediğiniz noktaya götürürüz." },
+      { q: "Başakşehir'den şehirlerarası taşıma yapıyor musunuz?", a: "Evet, Kuzey Marmara ve TEM bağlantılarıyla tüm illere şehirlerarası çekici hizmetimiz var." },
+    ],
+    neighbors: ["arnavutkoy", "esenyurt", "kucukcekmece", "bagcilar", "sultangazi", "esenler", "avcilar"],
+    blogParagraphs: [
+      "Başakşehir, İstanbul'un en genç ve en planlı ilçelerinden biri; çekicilik açısından da 'yeni İstanbul'un profilini taşır. Geniş bulvarlar müdahaleyi kolaylaştırır ama devasa site otoparkları yeni tür vakalar üretir: eksi katlarda çalışmayan araçlar, otopark rampalarında kayan lastikler ve uzun süre kullanılmayan ikinci araçların akü sorunları. Kapalı otopark müdahalesi Başakşehir işlerimizin en büyük dilimidir.",
+      "Çam ve Sakura Şehir Hastanesi, Avrupa'nın en büyük sağlık komplekslerinden biri olarak kendi trafik ekosistemini yarattı: refakatçilerin günlerce otoparkta bekleyen araçları, şehir dışından gelen hasta yakınlarının yol yorgunu araçları ve acil durumlarda hastaneye zor atan araçlar. Sağlık bağlantılı tüm çağrılarımızda önceliklendirme prosedürü uygularız.",
+      "İkitelli OSB ise ilçenin ticari yükünü taşır: binlerce atölye ve fabrikanın sevkiyat araçları için OSB içi arıza müdahalesi, yüklü araç taşıma ve mesai bitimi toplu çıkış saatlerindeki kazalar tipik işlerimizdir. Kuzey Marmara Otoyolu bağlantısının açılmasıyla Başakşehir, hem İstanbul Havalimanı'na hem TEM'e hızlı erişilen bir konum kazandı — bu da şehirlerarası taşıma taleplerini artırdı.",
+    ],
+  },
+  {
+    slug: "bayrampasa",
+    name: "Bayrampaşa",
+    yaka: "avrupa",
+    neighborhoods: ["Yıldırım", "Kartaltepe", "Muratpaşa", "Terazidere", "Vatan", "Cevatpaşa", "Altıntepsi", "İsmetpaşa"],
+    roads: ["TEM Otoyolu (O-3) Bayrampaşa kesimi", "D-100 bağlantıları (Esenler kavşağı)", "Abdi İpekçi Caddesi", "Numunebağı Caddesi"],
+    landmarks: ["Forum İstanbul AVM", "Bayrampaşa Meydan", "eski Sağmalcılar bölgesi", "Terazidere metro çevresi", "Bayrampaşa sebze-meyve hali bölgesi"],
+    arrivalMinutes: "15-25",
+    arrivalTable: [
+      { area: "Bayrampaşa merkez / meydan", minutes: "15-25 dk" },
+      { area: "TEM kesimi / Forum İstanbul", minutes: "15-20 dk" },
+      { area: "Terazidere / Vatan", minutes: "15-25 dk" },
+      { area: "Hal bölgesi", minutes: "15-25 dk" },
+    ],
+    intro:
+      "Bayrampaşa'da aracınız bozulduysa 0535 404 80 44 numarasından 7/24 çekici çağırabilirsiniz. TEM kesimi, Forum İstanbul çevresi ve tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz.",
+    localNote:
+      "Bayrampaşa, TEM'in şehir içinden geçtiği nadir kesimlerden birine sahiptir; O-3'ün Bayrampaşa geçişi hem şehir içi hem transit trafiği taşır. Sebze-meyve hali, gece yarısından sabaha kamyon ve kamyonet trafiği üretir — hal çevresinde gece ticari araç arızaları yoğundur. Forum İstanbul, hafta sonu otopark vakalarının merkezi; iç mahalleler ise yoğun ve dar dokuludur.",
+    scenario:
+      "Örnek: Gece 03:30'da hale mal getiren kamyonetiniz Terazidere'de şanzıman arızası verdi; kasada bozulabilir ürün var. Bizi aradığınızda gece ekibimiz 20 dakikada ulaşır, yüklü aracı dengesini koruyarak platforma alır ve önce hale (yükün teslimi), ardından servise taşıma şeklinde iki aşamalı çözüm uygularız.",
+    faqs: [
+      { q: "Bayrampaşa'da çekici ne kadar sürede gelir?", a: "İlçe kompakt olduğu için tüm mahallelere ortalama 15-25 dakikada ulaşıyoruz; TEM kesimi çağrılarına öncelik veriyoruz." },
+      { q: "TEM Bayrampaşa kesiminde arıza yaptım, şehir içi trafik de karışıyor; ne yapmalıyım?", a: "Aracı emniyet şeridine alın, dörtlüleri yakın, bariyer arkasına geçin. Bu kesimin şehir içi bağlantılarını bildiğimiz için ekibimiz en uygun yönden hızla ulaşır." },
+      { q: "Hale gece mal getiriyorum, kamyonetim sık arıza yapıyor; gece hizmetiniz garantili mi?", a: "Evet, 7/24 fiilen sahadayız; hal çevresi gece çağrıları bizim için rutindir. Ticari müşterilere öncelikli anlaşma da sunuyoruz." },
+      { q: "Forum İstanbul otoparkında aracım çalışmadı, gelir misiniz?", a: "Evet, Forum İstanbul'un kapalı otoparkına uygun alçak tavanlı aracımızla düzenli çekim yapıyoruz." },
+      { q: "Bayrampaşa çekici ücreti ne kadar?", a: "Ücret mesafe ve araç tipine göre değişir. Fiyat almak için hemen arayınız: 0535 404 80 44." },
+      { q: "Yıldırım Mahallesi'nin dar yokuşlarında aracım kaldı, büyük araç girer mi?", a: "Dar sokaklar için kompakt platformumuz var; Yıldırım ve Altıntepsi içlerinde bu araçla çalışıyoruz." },
+      { q: "Metroya bırakıp gittiğim aracım akşam çalışmadı (Terazidere), akü takviyesi ne kadar sürede gelir?", a: "Terazidere'ye ortalama 15-20 dakikada akü ekibi gönderiyoruz." },
+      { q: "Tekstil atölyemizin yüklü panelvanı kaldı, yükle birlikte taşıyor musunuz?", a: "Evet, yük emniyetini koruyarak yüklü panelvan taşıyoruz." },
+      { q: "Bayrampaşa'dan Anadolu Yakası'na gece araç taşır mısınız?", a: "Evet, gece dahil köprüler veya Avrasya Tüneli üzerinden Anadolu Yakası'na taşıma yapıyoruz." },
+      { q: "Kaza yaptım ve karşı taraf tutanak imzalamıyor, ne yapmalıyım?", a: "Anlaşmazlık varsa 155'i arayıp polis tutanağı isteyin; biz aracınızı güvenli noktaya çeker, fotoğraflı hasar kaydı için belge düzenleriz." },
+    ],
+    neighbors: ["esenler", "eyupsultan", "gaziosmanpasa", "zeytinburnu", "fatih", "gungoren"],
+    blogParagraphs: [
+      "Bayrampaşa'nın çekici hayatını iki saat dilimi yönetir: gündüz TEM geçişi ve Forum İstanbul trafiği, gece ise sebze-meyve halinin kamyon sirkülasyonu. Hal, İstanbul'un gıda lojistiğinin kalbi olarak gece yarısından sabah 06:00'ya kadar binlerce ticari aracı ağırlar; bu araçların yaşadığı arızalarda yükün (çoğu zaman bozulabilir gıda) zamanında teslimi araç kadar önemlidir. İki aşamalı çözüm — önce yük teslimi, sonra servis — bu bölgeye özel geliştirdiğimiz protokoldür.",
+      "TEM'in Bayrampaşa kesimi, otoyolun şehir dokusuyla iç içe geçtiği ender yerlerdendir: kısa mesafede çok sayıda katılım-ayrılma rampası vardır ve bu rampa yoğunluğu, şerit değiştirme kazalarını besler. Bu kesimdeki müdahalelerde rampa trafiğini okuyarak konumlanmak gerekir; ekibimiz bölgenin her rampasını bilir.",
+      "İlçenin iç mahalleleri (Yıldırım, Altıntepsi, Muratpaşa) İstanbul'un en yoğun konut dokularından biridir; dar sokaklar, dik kesimler ve sınırlı otopark alanı kompakt araç gerektirir. Bayrampaşa ayrıca güçlü bir tekstil ve imalat esnafına sahiptir — atölye servis araçları ve yüklü panelvanlar, gündüz çağrılarımızın önemli kaynağıdır.",
+    ],
+  },
+];

@@ -24,6 +24,7 @@ export const metadata: Metadata = {
       "tr-TR": "/blog",
       "en-US": "/en/blog",
       ar: "/ar/blog",
+      "x-default": "/blog",
     },
   },
 };

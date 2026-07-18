@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 interface SearchItem {
@@ -12,6 +13,7 @@ interface SearchItem {
 export function SiteSearch({ items }: { items?: SearchItem[] }) {
   const [q, setQ] = useState("");
   const data = items ?? [];
+  const router = useRouter();
 
   const results = useMemo(() => {
     if (!q.trim()) return [];
@@ -22,7 +24,14 @@ export function SiteSearch({ items }: { items?: SearchItem[] }) {
   }, [q, data]);
 
   return (
-    <div className="mx-auto max-w-xl">
+    <form
+      className="mx-auto max-w-xl"
+      onSubmit={(e) => {
+        e.preventDefault();
+        if (q.trim()) router.push(`/ara?q=${encodeURIComponent(q.trim())}`);
+      }}
+      role="search"
+    >
       <label htmlFor="site-search" className="mb-2 block text-sm font-semibold text-[var(--color-navy-900)]">
         Sitede Ara
       </label>
@@ -46,6 +55,6 @@ export function SiteSearch({ items }: { items?: SearchItem[] }) {
           ))}
         </ul>
       )}
-    </div>
+    </form>
   );
 }

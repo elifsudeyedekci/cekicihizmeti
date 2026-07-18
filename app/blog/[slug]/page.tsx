@@ -8,12 +8,12 @@ import { BlogEndCta } from "@/components/BlogEndCta";
 import { ArrivalTable } from "@/components/ArrivalTable";
 import { RichParagraph } from "@/components/RichParagraph";
 import { JsonLd } from "@/components/JsonLd";
-import { articleSchema } from "@/lib/schema";
+import { articleSchema, howToSchema } from "@/lib/schema";
 import { SITE } from "@/lib/config";
 import { TowImageGallery } from "@/components/TowImageGallery";
 import { BlogMeta } from "@/components/BlogMeta";
 import { blogAltKeyword, getTowImages } from "@/lib/data/images";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, findHowToSection } from "@/lib/seo";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -45,6 +45,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     .map((s) => getPost(s))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
+  const howToSection = findHowToSection(post.sections);
+
   return (
     <>
       <JsonLd
@@ -57,6 +59,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           image: `${SITE.url}${getTowImages(post.slug, blogAltKeyword(post.title))[0].file}`,
         })}
       />
+      {howToSection && (
+        <JsonLd
+          data={howToSchema({
+            name: howToSection.heading,
+            description: post.metaDescription,
+            steps: howToSection.paragraphs,
+          })}
+        />
+      )}
       <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: post.title, href: `/blog/${post.slug}` }]} />
       <article className="mx-auto max-w-3xl px-4 pb-10">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[var(--color-cta-600)]">

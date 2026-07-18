@@ -21,6 +21,7 @@ export const metadata: Metadata = {
       "tr-TR": "/",
       "en-US": "/en",
       ar: "/ar",
+      "x-default": "/",
     },
   },
   ...socialMeta("/ar", "ar-home", "إسطنبول", {

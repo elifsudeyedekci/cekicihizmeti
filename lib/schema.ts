@@ -25,6 +25,8 @@ export function localBusinessSchema() {
     telephone: SITE.phoneIntl,
     priceRange: "$$",
     description: SITE.description,
+    email: SITE.email,
+    foundingDate: `${SITE.foundingYear}`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "İstanbul",
@@ -41,11 +43,69 @@ export function localBusinessSchema() {
       opens: "00:00",
       closes: "23:59",
     },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: SITE.phoneIntl,
+      contactType: "customer service",
+      areaServed: "TR",
+      availableLanguage: ["tr", "en", "ar"],
+    },
     areaServed: districts.map((d) => ({
       "@type": "City",
       name: `${d.name}, İstanbul`,
     })),
     sameAs: PROFILES,
+  };
+}
+
+/**
+ * WebSite şeması + SearchAction — Google'ın "sitelinks search box" özelliği için gereklidir.
+ * /ara sayfası gerçek bir arama sonucu döndürür (bkz. app/ara/page.tsx), bu yüzden action
+ * gerçek/işlevsel bir URL şablonuna işaret eder (sahte/boş bir action değildir).
+ */
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE.url}/#website`,
+    name: SITE.name,
+    url: SITE.url,
+    inLanguage: "tr-TR",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE.url}/ara?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+/**
+ * HowTo şeması — "adım adım ne yapmalısınız" tipi numaralı talimat bölümleri için.
+ * `steps` her biri "1. **Başlık**: açıklama" veya "1. açıklama" formatındaki paragraf
+ * dizisidir (bkz. districtSafetyGuide, vehicleTypeSafetySection vb.); burada parse edilip
+ * yapılandırılmış HowToStep dizisine çevrilir.
+ */
+export function howToSchema(opts: { name: string; description: string; steps: string[] }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: opts.name,
+    description: opts.description,
+    step: opts.steps.map((raw, i) => {
+      const cleaned = raw.replace(/^\s*\d+\.\s*/, "");
+      const boldMatch = cleaned.match(/^\*\*([^*]+)\*\*:?\s*(.*)$/);
+      const name = boldMatch ? boldMatch[1] : cleaned.slice(0, 60);
+      const text = (boldMatch ? boldMatch[2] : cleaned).replace(/\*\*/g, "");
+      return {
+        "@type": "HowToStep",
+        position: i + 1,
+        name,
+        text: text || name,
+      };
+    }),
   };
 }
 

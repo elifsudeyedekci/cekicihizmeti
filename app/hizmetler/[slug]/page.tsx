@@ -11,10 +11,10 @@ import { BlogEndCta } from "@/components/BlogEndCta";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { JsonLd } from "@/components/JsonLd";
 import { RichParagraph } from "@/components/RichParagraph";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, howToSchema } from "@/lib/schema";
 import { SITE } from "@/lib/config";
 import { TowImageGallery } from "@/components/TowImageGallery";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, findHowToSection } from "@/lib/seo";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -66,6 +66,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     .map((s) => getService(s))
     .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
+  const howToSection = findHowToSection(service.sections ?? []);
+
   return (
     <>
       <JsonLd
@@ -75,6 +77,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           url: `${SITE.url}/hizmetler/${service.slug}`,
         })}
       />
+      {howToSection && (
+        <JsonLd
+          data={howToSchema({
+            name: howToSection.heading,
+            description: service.metaDescription,
+            steps: howToSection.paragraphs,
+          })}
+        />
+      )}
       <Breadcrumbs
         items={[
           { name: "Hizmetlerimiz", href: "/hizmetler" },

@@ -31,6 +31,21 @@ const OG_LOCALE: Record<"tr" | "en" | "ar", string> = {
   ar: "ar_AR",
 };
 
+/**
+ * Bir blog/hizmet sayfasının `sections` dizisinde numaralı adım listesi (ör. "1. **X**: ...")
+ * içeren İLK bölümü bulur — HowTo şeması için kullanılır. Her ilçe/marka/otoyol/araç-tipi/hizmet
+ * sayfasında zaten en az bir numaralı süreç/güvenlik bölümü var; bunu ayrıca yazmaya gerek yok,
+ * mevcut içerikten programatik olarak çıkarılır.
+ */
+export function findHowToSection<T extends { heading: string; paragraphs: string[] }>(
+  sections: T[]
+): T | undefined {
+  return sections.find((s) => {
+    const numbered = s.paragraphs.filter((p) => /^\s*\d+\.\s/.test(p));
+    return numbered.length >= 3 && numbered.length === s.paragraphs.length;
+  });
+}
+
 export function socialMeta(
   path: string,
   seed: string,

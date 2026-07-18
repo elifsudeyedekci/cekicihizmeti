@@ -43,6 +43,7 @@ export function Footer() {
           <ul className="space-y-2">
             <li><Link href="/hakkimizda" className="hover:text-white">Hakkımızda</Link></li>
             <li><Link href="/iletisim" className="hover:text-white">İletişim</Link></li>
+            <li><Link href="/ara" className="hover:text-white">Sitede Ara</Link></li>
             <li><Link href="/sss" className="hover:text-white">Sık Sorulan Sorular</Link></li>
             <li><Link href="/fiyatlandirma" className="hover:text-white">Fiyatlandırma</Link></li>
             <li><Link href="/kvkk" className="hover:text-white">KVKK Aydınlatma Metni</Link></li>

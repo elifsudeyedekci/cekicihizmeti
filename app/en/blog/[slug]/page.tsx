@@ -14,6 +14,7 @@ import { SITE } from "@/lib/config";
 import { TowImageGallery } from "@/components/TowImageGallery";
 import { BlogMeta } from "@/components/BlogMeta";
 import { blogAltKeyword, getTowImages } from "@/lib/data/images";
+import { socialMeta } from "@/lib/seo";
 
 const EN_CATEGORY_LABEL: Record<BlogCategory, string> = {
   cornerstone: "Main Guide",
@@ -38,10 +39,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getEnPost(slug);
   if (!post) return {};
+  const path = `/en/blog/${post.slug}`;
   return {
     title: post.metaTitle,
     description: post.metaDescription,
-    alternates: { canonical: `/en/blog/${post.slug}` },
+    alternates: { canonical: path },
+    ...socialMeta(path, `${post.slug}-en`, blogAltKeyword(post.title, "en"), {
+      title: post.metaTitle,
+      description: post.metaDescription,
+      type: "article",
+      locale: "en",
+    }),
   };
 }
 

@@ -4,12 +4,17 @@ import { services } from "@/lib/data/services";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "Hizmetlerimiz — Oto Çekici, Yol Yardım, Kaza Çekicisi";
+const DESCRIPTION =
+  "İstanbul'da 7/24 oto çekici, yol yardım, kaza sonrası araç çekme, ağır vasıta, motosiklet, lüks/elektrikli araç ve şehirlerarası taşıma hizmetleri.";
 
 export const metadata: Metadata = {
-  title: "Hizmetlerimiz — Oto Çekici, Yol Yardım, Kaza Çekicisi",
-  description:
-    "İstanbul'da 7/24 oto çekici, yol yardım, kaza sonrası araç çekme, ağır vasıta, motosiklet, lüks/elektrikli araç ve şehirlerarası taşıma hizmetleri.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/hizmetler" },
+  ...socialMeta("/hizmetler", "hizmetler", "Hizmetlerimiz", { title: TITLE, description: DESCRIPTION }),
 };
 
 export default function ServicesHubPage() {

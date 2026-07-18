@@ -5,12 +5,20 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { FaqSection } from "@/components/FaqSection";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "İstanbul Avrupa Yakası 7/24 Çekici Hizmeti";
+const DESCRIPTION =
+  "Beşiktaş, Şişli, Bakırköy, Bağcılar, Esenyurt dahil Avrupa Yakası'nın 25 ilçesinde 7/24 oto çekici ve yol yardım hizmeti. Hemen arayın: 0535 404 80 44";
 
 export const metadata: Metadata = {
-  title: "İstanbul Avrupa Yakası 7/24 Çekici Hizmeti",
-  description:
-    "Beşiktaş, Şişli, Bakırköy, Bağcılar, Esenyurt dahil Avrupa Yakası'nın 25 ilçesinde 7/24 oto çekici ve yol yardım hizmeti. Hemen arayın: 0535 404 80 44",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/bolgeler/avrupa-yakasi" },
+  ...socialMeta("/bolgeler/avrupa-yakasi", "avrupa-yakasi", "Avrupa Yakası", {
+    title: TITLE,
+    description: DESCRIPTION,
+  }),
 };
 
 const faqs = [

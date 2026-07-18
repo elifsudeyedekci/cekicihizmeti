@@ -6,11 +6,15 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const AR_TITLE = "سطحة سحب سيارات إسطنبول ٢٤/٧ | مساعدة على الطريق — 0535 404 80 44";
+const AR_DESCRIPTION =
+  "خدمة سطحة سحب سيارات ومساعدة على الطريق على مدار الساعة في جميع أحياء إسطنبول الـ٣٩. سحب بمنصة مسطحة، إنقاذ بعد الحوادث، شحن بطارية، تغيير إطارات. اتصل الآن: 0535 404 80 44";
 
 export const metadata: Metadata = {
-  title: "سطحة سحب سيارات إسطنبول ٢٤/٧ | مساعدة على الطريق — 0535 404 80 44",
-  description:
-    "خدمة سطحة سحب سيارات ومساعدة على الطريق على مدار الساعة في جميع أحياء إسطنبول الـ٣٩. سحب بمنصة مسطحة، إنقاذ بعد الحوادث، شحن بطارية، تغيير إطارات. اتصل الآن: 0535 404 80 44",
+  title: AR_TITLE,
+  description: AR_DESCRIPTION,
   alternates: {
     canonical: "/ar",
     languages: {
@@ -19,11 +23,11 @@ export const metadata: Metadata = {
       ar: "/ar",
     },
   },
-  openGraph: {
-    locale: "ar_AR",
-    title: "سطحة سحب سيارات إسطنبول ٢٤/٧",
-    description: "خدمة سطحة سحب سيارات ومساعدة على الطريق على مدار الساعة في إسطنبول. اتصل الآن: 0535 404 80 44",
-  },
+  ...socialMeta("/ar", "ar-home", "إسطنبول", {
+    locale: "ar",
+    title: AR_TITLE,
+    description: AR_DESCRIPTION,
+  }),
 };
 
 const faqs = [

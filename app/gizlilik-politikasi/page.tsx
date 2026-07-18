@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/config";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "Gizlilik ve Çerez Politikası";
+const DESCRIPTION =
+  "Çekici Hizmeti İstanbul web sitesinde kullanılan çerezler, Google Analytics/Yandex Metrica gibi üçüncü taraf araçlar ve gizlilik uygulamalarımız hakkında bilgi.";
 
 export const metadata: Metadata = {
-  title: "Gizlilik ve Çerez Politikası",
-  description:
-    "Çekici Hizmeti İstanbul web sitesinde kullanılan çerezler, Google Analytics/Yandex Metrica gibi üçüncü taraf araçlar ve gizlilik uygulamalarımız hakkında bilgi.",
+  title: TITLE,
+  description: DESCRIPTION,
+  ...socialMeta("/gizlilik-politikasi", "gizlilik-politikasi", "İstanbul", { title: TITLE, description: DESCRIPTION }),
   alternates: { canonical: "/gizlilik-politikasi" },
 };
 

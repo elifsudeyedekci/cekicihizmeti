@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 import { SITE } from "@/lib/config";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
 
 const RESERVED = ["anadolu-yakasi", "avrupa-yakasi"];
 
@@ -23,10 +24,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const d = getDistrict(slug);
   if (!d) return {};
   const arrival = /\d/.test(d.arrivalMinutes) ? `ortalama ${d.arrivalMinutes} dk varış süresi` : d.arrivalMinutes.toLowerCase();
+  const title = `${d.name} Çekici Hizmeti | 7/24 — 0535 404 80 44`;
+  const description = `${d.name}'de 7/24 oto çekici ve yol yardım hizmeti veriyoruz. K1 belgeli, sigortalı ekibimizle ${arrival}. Hemen arayın: 0535 404 80 44`;
+  const path = `/bolgeler/${d.slug}`;
   return {
-    title: `${d.name} Çekici Hizmeti | 7/24 — 0535 404 80 44`,
-    description: `${d.name}'de 7/24 oto çekici ve yol yardım hizmeti veriyoruz. K1 belgeli, sigortalı ekibimizle ${arrival}. Hemen arayın: 0535 404 80 44`,
-    alternates: { canonical: `/bolgeler/${d.slug}` },
+    title,
+    description,
+    alternates: { canonical: path },
+    ...socialMeta(path, d.slug, d.name, { title, description }),
   };
 }
 

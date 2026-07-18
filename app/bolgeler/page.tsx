@@ -4,12 +4,17 @@ import { anadoluDistricts, avrupaDistricts } from "@/lib/data/districts";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "Bölgelerimiz — İstanbul'un 39 İlçesinde Çekici Hizmeti";
+const DESCRIPTION =
+  "Anadolu Yakası ve Avrupa Yakası'nın tüm ilçelerinde 7/24 oto çekici ve yol yardım hizmeti. İlçenizi seçin, tahmini varış sürenizi görün.";
 
 export const metadata: Metadata = {
-  title: "Bölgelerimiz — İstanbul'un 39 İlçesinde Çekici Hizmeti",
-  description:
-    "Anadolu Yakası ve Avrupa Yakası'nın tüm ilçelerinde 7/24 oto çekici ve yol yardım hizmeti. İlçenizi seçin, tahmini varış sürenizi görün.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/bolgeler" },
+  ...socialMeta("/bolgeler", "bolgeler", "İstanbul'un 39 ilçesi", { title: TITLE, description: DESCRIPTION }),
 };
 
 export default function RegionsHubPage() {

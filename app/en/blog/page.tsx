@@ -4,11 +4,20 @@ import { enPosts } from "@/lib/blog/posts-en";
 import type { BlogCategory } from "@/lib/blog/types";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const EN_BLOG_TITLE = "Blog — Tow Truck & Roadside Assistance Guides";
+const EN_BLOG_DESCRIPTION =
+  "24/7 tow truck and roadside assistance guides for Istanbul's districts, both sides of the Bosphorus, and travelers. What to know if you break down in Istanbul.";
 
 export const metadata: Metadata = {
-  title: "Blog — Tow Truck & Roadside Assistance Guides",
-  description:
-    "24/7 tow truck and roadside assistance guides for Istanbul's districts, both sides of the Bosphorus, and travelers. What to know if you break down in Istanbul.",
+  title: EN_BLOG_TITLE,
+  description: EN_BLOG_DESCRIPTION,
+  ...socialMeta("/en/blog", "en-blog", "Istanbul", {
+    locale: "en",
+    title: EN_BLOG_TITLE,
+    description: EN_BLOG_DESCRIPTION,
+  }),
   alternates: {
     canonical: "/en/blog",
     languages: {

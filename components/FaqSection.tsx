@@ -1,6 +1,7 @@
 import type { Faq } from "@/lib/data/types";
 import { JsonLd } from "./JsonLd";
 import { faqPageSchema } from "@/lib/schema";
+import { RichParagraph } from "./RichParagraph";
 
 export function FaqSection({ faqs, title = "Sık Sorulan Sorular" }: { faqs: Faq[]; title?: string }) {
   return (
@@ -16,7 +17,7 @@ export function FaqSection({ faqs, title = "Sık Sorulan Sorular" }: { faqs: Faq
                 +
               </span>
             </summary>
-            <p className="mt-3 text-[#2d3f57]">{f.a}</p>
+            <RichParagraph text={f.a} className="mt-3 text-[#2d3f57]" />
           </details>
         ))}
       </div>

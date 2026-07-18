@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/config";
@@ -26,9 +26,18 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     siteName: SITE.name,
-    url: SITE.url,
   },
+  twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    title: SITE.name,
+    statusBarStyle: "default",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#10233b",
 };
 
 export default function RootLayout({

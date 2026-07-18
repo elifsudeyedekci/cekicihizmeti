@@ -5,12 +5,20 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { FaqSection } from "@/components/FaqSection";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "İstanbul Anadolu Yakası 7/24 Çekici Hizmeti";
+const DESCRIPTION =
+  "Kadıköy, Üsküdar, Ümraniye, Maltepe, Kartal, Pendik dahil Anadolu Yakası'nın 14 ilçesinde 7/24 oto çekici ve yol yardım hizmeti. Hemen arayın: 0535 404 80 44";
 
 export const metadata: Metadata = {
-  title: "İstanbul Anadolu Yakası 7/24 Çekici Hizmeti",
-  description:
-    "Kadıköy, Üsküdar, Ümraniye, Maltepe, Kartal, Pendik dahil Anadolu Yakası'nın 14 ilçesinde 7/24 oto çekici ve yol yardım hizmeti. Hemen arayın: 0535 404 80 44",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/bolgeler/anadolu-yakasi" },
+  ...socialMeta("/bolgeler/anadolu-yakasi", "anadolu-yakasi", "Anadolu Yakası", {
+    title: TITLE,
+    description: DESCRIPTION,
+  }),
 };
 
 const faqs = [

@@ -3,10 +3,12 @@ import { districts } from "./data/districts";
 import { TOW_IMAGES } from "./data/images";
 import type { Faq } from "./data/types";
 
-/** Şema görsellerinde kullanılacak varsayılan görsel — gerçek bir logo/kurumsal görsel eklenene kadar
- * merkezi görsel havuzundaki ilk fotoğraf kullanılır (bkz. lib/data/images.ts). Böylece hiçbir sayfa
- * artık var olmayan /logo.png veya /og-default.jpg gibi kırık bir URL'e referans vermez. */
+/** Şema görsellerinde kullanılacak varsayılan görsel (temsili çekici fotoğrafı) — bkz. lib/data/images.ts.
+ * Böylece hiçbir sayfa artık var olmayan /logo.png veya /og-default.jpg gibi kırık bir URL'e referans vermez. */
 const DEFAULT_SCHEMA_IMAGE = `${SITE.url}${TOW_IMAGES[0].file}`;
+
+/** Gerçek kurumsal logo — Organization.logo ve publisher.logo alanlarında (temsili fotoğraflardan ayrı) kullanılır. */
+const LOGO_URL = `${SITE.url}/images/cekici/logo-512.png`;
 
 /** JSON-LD schema builder'lar — her sayfa <script type="application/ld+json"> ile bunları gömer. */
 
@@ -18,6 +20,7 @@ export function localBusinessSchema() {
     name: SITE.legalName,
     alternateName: SITE.name,
     image: DEFAULT_SCHEMA_IMAGE,
+    logo: LOGO_URL,
     url: SITE.url,
     telephone: SITE.phoneIntl,
     priceRange: "$$",
@@ -115,9 +118,26 @@ export function articleSchema(opts: {
     publisher: {
       "@type": "Organization",
       name: SITE.legalName,
-      logo: { "@type": "ImageObject", url: DEFAULT_SCHEMA_IMAGE },
+      logo: { "@type": "ImageObject", url: LOGO_URL },
     },
     author: { "@type": "Organization", name: SITE.legalName },
+  };
+}
+
+/**
+ * SpeakableSpecification — sesli asistan/GEO görünürlüğü için, sayfanın hangi CSS seçicilerinin
+ * sesli okunmaya uygun (alıntılanabilir, kısa, net) olduğunu işaretler. Ana sayfada özet paragraf
+ * ve SSS bölümü için kullanılır (bkz. app/page.tsx — .speakable-summary / .speakable-faq sınıfları).
+ */
+export function speakableSchema(cssSelectors: string[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: SITE.url,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: cssSelectors,
+    },
   };
 }
 

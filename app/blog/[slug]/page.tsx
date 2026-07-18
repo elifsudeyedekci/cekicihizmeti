@@ -13,6 +13,7 @@ import { SITE } from "@/lib/config";
 import { TowImageGallery } from "@/components/TowImageGallery";
 import { BlogMeta } from "@/components/BlogMeta";
 import { blogAltKeyword, getTowImages } from "@/lib/data/images";
+import { socialMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -22,10 +23,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
+  const path = `/blog/${post.slug}`;
   return {
     title: post.metaTitle,
     description: post.metaDescription,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: path },
+    ...socialMeta(path, post.slug, blogAltKeyword(post.title), {
+      title: post.metaTitle,
+      description: post.metaDescription,
+      type: "article",
+    }),
   };
 }
 

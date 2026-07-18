@@ -3,12 +3,17 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqSection } from "@/components/FaqSection";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "Sık Sorulan Sorular";
+const DESCRIPTION =
+  "Çekici hizmeti, fiyatlandırma, sigorta, gece hizmeti ve daha fazlası hakkında sık sorulan sorular ve cevapları.";
 
 export const metadata: Metadata = {
-  title: "Sık Sorulan Sorular",
-  description:
-    "Çekici hizmeti, fiyatlandırma, sigorta, gece hizmeti ve daha fazlası hakkında sık sorulan sorular ve cevapları.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/sss" },
+  ...socialMeta("/sss", "sss", "Sık Sorulan Sorular", { title: TITLE, description: DESCRIPTION }),
 };
 
 const faqs = [

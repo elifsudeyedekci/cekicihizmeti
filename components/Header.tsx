@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE } from "@/lib/config";
 import { PhoneButton } from "./CtaButtons";
 
@@ -24,7 +25,14 @@ export function Header() {
           onClick={() => setOpen(false)}
           className="flex items-center gap-2 font-extrabold text-[var(--color-navy-900)]"
         >
-          <span className="text-xl">🚨</span>
+          <Image
+            src="/images/cekici/logo-512.png"
+            alt={`${SITE.name} logo`}
+            width={36}
+            height={36}
+            priority
+            className="h-8 w-8 rounded-lg md:h-9 md:w-9"
+          />
           <span className="text-base leading-tight md:text-lg">{SITE.name}</span>
         </Link>
 

@@ -14,6 +14,7 @@ import { SITE } from "@/lib/config";
 import { TowImageGallery } from "@/components/TowImageGallery";
 import { BlogMeta } from "@/components/BlogMeta";
 import { blogAltKeyword, getTowImages } from "@/lib/data/images";
+import { socialMeta } from "@/lib/seo";
 
 const AR_CATEGORY_LABEL: Record<BlogCategory, string> = {
   cornerstone: "الدليل الرئيسي",
@@ -38,10 +39,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getArPost(slug);
   if (!post) return {};
+  const path = `/ar/blog/${post.slug}`;
   return {
     title: post.metaTitle,
     description: post.metaDescription,
-    alternates: { canonical: `/ar/blog/${post.slug}` },
+    alternates: { canonical: path },
+    ...socialMeta(path, `${post.slug}-ar`, blogAltKeyword(post.title, "ar"), {
+      title: post.metaTitle,
+      description: post.metaDescription,
+      type: "article",
+      locale: "ar",
+    }),
   };
 }
 

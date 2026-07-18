@@ -6,11 +6,15 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const EN_TITLE = "24/7 Tow Truck Istanbul | Roadside Assistance — 0535 404 80 44";
+const EN_DESCRIPTION =
+  "24/7 tow truck and roadside assistance across all 39 districts of Istanbul. Flatbed towing, accident recovery, battery jump-start, tire change. Call now: 0535 404 80 44";
 
 export const metadata: Metadata = {
-  title: "24/7 Tow Truck Istanbul | Roadside Assistance — 0535 404 80 44",
-  description:
-    "24/7 tow truck and roadside assistance across all 39 districts of Istanbul. Flatbed towing, accident recovery, battery jump-start, tire change. Call now: 0535 404 80 44",
+  title: EN_TITLE,
+  description: EN_DESCRIPTION,
   alternates: {
     canonical: "/en",
     languages: {
@@ -19,12 +23,11 @@ export const metadata: Metadata = {
       ar: "/ar",
     },
   },
-  openGraph: {
-    locale: "en_US",
-    title: "24/7 Tow Truck Istanbul | Roadside Assistance",
-    description:
-      "24/7 tow truck and roadside assistance across all 39 districts of Istanbul. Call now: 0535 404 80 44",
-  },
+  ...socialMeta("/en", "en-home", "Istanbul", {
+    locale: "en",
+    title: EN_TITLE,
+    description: EN_DESCRIPTION,
+  }),
 };
 
 const faqs = [

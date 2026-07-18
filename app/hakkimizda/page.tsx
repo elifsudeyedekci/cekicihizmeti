@@ -4,12 +4,17 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { TrustBadges, StatsCounter } from "@/components/TrustBadges";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "Hakkımızda";
+const DESCRIPTION =
+  "İstanbul'un 39 ilçesinde K1 belgeli, sigortalı ve 7/24 çalışan oto çekici ve yol yardım ekibi. Kim olduğumuzu ve nasıl çalıştığımızı öğrenin.";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda",
-  description:
-    "İstanbul'un 39 ilçesinde K1 belgeli, sigortalı ve 7/24 çalışan oto çekici ve yol yardım ekibi. Kim olduğumuzu ve nasıl çalıştığımızı öğrenin.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/hakkimizda" },
+  ...socialMeta("/hakkimizda", "hakkimizda", "Hakkımızda", { title: TITLE, description: DESCRIPTION }),
 };
 
 export default function AboutPage() {

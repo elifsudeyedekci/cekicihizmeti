@@ -4,11 +4,20 @@ import { arPosts } from "@/lib/blog/posts-ar";
 import type { BlogCategory } from "@/lib/blog/types";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const AR_BLOG_TITLE = "المدونة — أدلة سطحة السحب والمساعدة على الطريق";
+const AR_BLOG_DESCRIPTION =
+  "أدلة خدمة سطحة السحب والمساعدة على الطريق على مدار الساعة لأحياء إسطنبول وجانبيها والمسافرين. كل ما تحتاج معرفته إذا تعطلت سيارتك في إسطنبول.";
 
 export const metadata: Metadata = {
-  title: "المدونة — أدلة سطحة السحب والمساعدة على الطريق",
-  description:
-    "أدلة خدمة سطحة السحب والمساعدة على الطريق على مدار الساعة لأحياء إسطنبول وجانبيها والمسافرين. كل ما تحتاج معرفته إذا تعطلت سيارتك في إسطنبول.",
+  title: AR_BLOG_TITLE,
+  description: AR_BLOG_DESCRIPTION,
+  ...socialMeta("/ar/blog", "ar-blog", "إسطنبول", {
+    locale: "ar",
+    title: AR_BLOG_TITLE,
+    description: AR_BLOG_DESCRIPTION,
+  }),
   alternates: {
     canonical: "/ar/blog",
     languages: {

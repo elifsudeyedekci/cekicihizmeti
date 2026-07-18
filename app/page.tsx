@@ -10,9 +10,14 @@ import { GeoDetect } from "@/components/GeoDetect";
 import { FaqSection } from "@/components/FaqSection";
 import { PillarContentSection } from "@/components/PillarContentSection";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { speakableSchema } from "@/lib/schema";
+
+const HOME_TITLE = `İstanbul Oto Çekici ve Yol Yardım | 7/24 — ${SITE.phone}`;
 
 export const metadata: Metadata = {
-  title: `İstanbul Oto Çekici ve Yol Yardım | 7/24 — ${SITE.phone}`,
+  title: HOME_TITLE,
   description: SITE.description,
   alternates: {
     canonical: "/",
@@ -22,6 +27,7 @@ export const metadata: Metadata = {
       ar: "/ar",
     },
   },
+  ...socialMeta("/", "home", "İstanbul", { title: HOME_TITLE, description: SITE.description }),
 };
 
 const FEATURED_SERVICE_SLUGS = [
@@ -59,6 +65,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={speakableSchema([".speakable-summary", ".speakable-faq"])} />
       <section className="bg-[var(--color-navy-900)] py-14 text-white md:py-20">
         <div className="mx-auto max-w-5xl px-4 text-center">
           <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold">
@@ -67,7 +74,7 @@ export default function HomePage() {
           <h1 className="text-3xl font-extrabold leading-tight md:text-5xl">
             İstanbul'un Her Yerinde 7/24 Oto Çekici ve Yol Yardım
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--color-navy-200)]">
+          <p className="speakable-summary mx-auto mt-4 max-w-2xl text-lg text-[var(--color-navy-200)]">
             Aracınız bozulduysa, kaza yaptıysanız veya yolda kaldıysanız 0535 404 80 44 numarasını
             arayın. İstanbul'un 39 ilçesine ortalama 20-40 dakikada, K1 belgeli ve sigortalı ekiplerle
             ulaşıyoruz.
@@ -179,7 +186,9 @@ export default function HomePage() {
         </section>
       )}
 
-      <FaqSection faqs={homeFaqs} title="Sık Sorulan Sorular" />
+      <div className="speakable-faq">
+        <FaqSection faqs={homeFaqs} title="Sık Sorulan Sorular" />
+      </div>
 
       <PillarContentSection />
     </>

@@ -5,12 +5,17 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { FaqSection } from "@/components/FaqSection";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "Fiyatlandırma | Çekici Hizmeti — 0535 404 80 44";
+const DESCRIPTION =
+  "Çekici ve yol yardım hizmetlerimizde ücret; mesafe, araç tipi ve işlemin zorluğuna göre belirlenir. Fiyat almak için hemen arayın: 0535 404 80 44";
 
 export const metadata: Metadata = {
-  title: "Fiyatlandırma",
-  description:
-    "Çekici ve yol yardım hizmetlerimizde ücret; mesafe, araç tipi ve işlemin zorluğuna göre belirlenir. Fiyat almak için hemen arayın: 0535 404 80 44",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/fiyatlandirma" },
+  ...socialMeta("/fiyatlandirma", "fiyatlandirma", "Fiyatlandırma", { title: TITLE, description: DESCRIPTION }),
 };
 
 const faqs = [

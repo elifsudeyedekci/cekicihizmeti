@@ -4,11 +4,16 @@ import { businessMapEmbed } from "@/lib/data/districts";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton, ShareLocationButton } from "@/components/CtaButtons";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "İletişim";
+const DESCRIPTION = `${SITE.name} ile 7/24 iletişime geçin: ${SITE.phone} numarasından arayın veya WhatsApp'tan yazın. İstanbul'un her ilçesine hizmet veriyoruz.`;
 
 export const metadata: Metadata = {
-  title: "İletişim",
-  description: `${SITE.name} ile 7/24 iletişime geçin: ${SITE.phone} numarasından arayın veya WhatsApp'tan yazın. İstanbul'un her ilçesine hizmet veriyoruz.`,
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/iletisim" },
+  ...socialMeta("/iletisim", "iletisim", "İletişim", { title: TITLE, description: DESCRIPTION }),
 };
 
 export default function ContactPage() {

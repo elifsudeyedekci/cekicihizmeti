@@ -5,11 +5,15 @@ import type { BlogCategory } from "@/lib/blog/types";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SiteSearch } from "@/components/SiteSearch";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "Çekici ve Yol Yardım Blog — 90+ Rehber Yazısı";
+const DESCRIPTION =
+  "İlçe, marka, otoyol ve araç tipine göre hazırlanmış 7/24 çekici ve yol yardım rehberleri. İstanbul'da yolda kaldığınızda bilmeniz gereken her şey burada.";
 
 export const metadata: Metadata = {
-  title: "Çekici ve Yol Yardım Blog — 90+ Rehber Yazısı",
-  description:
-    "İlçe, marka, otoyol ve araç tipine göre hazırlanmış 7/24 çekici ve yol yardım rehberleri. İstanbul'da yolda kaldığınızda bilmeniz gereken her şey burada.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: "/blog",
     languages: {
@@ -18,6 +22,7 @@ export const metadata: Metadata = {
       ar: "/ar/blog",
     },
   },
+  ...socialMeta("/blog", "blog", "Blog Rehberlerimiz", { title: TITLE, description: DESCRIPTION }),
 };
 
 const CATEGORY_ORDER: BlogCategory[] = [

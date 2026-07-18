@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/config";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TowImageGallery } from "@/components/TowImageGallery";
+import { socialMeta } from "@/lib/seo";
+
+const TITLE = "KVKK Aydınlatma Metni";
+const DESCRIPTION =
+  "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında Çekici Hizmeti İstanbul aydınlatma metni: hangi verileri, neden ve nasıl işlediğimiz.";
 
 export const metadata: Metadata = {
-  title: "KVKK Aydınlatma Metni",
-  description:
-    "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında Çekici Hizmeti İstanbul aydınlatma metni: hangi verileri, neden ve nasıl işlediğimiz.",
+  title: TITLE,
+  description: DESCRIPTION,
+  ...socialMeta("/kvkk", "kvkk", "İstanbul", { title: TITLE, description: DESCRIPTION }),
   alternates: { canonical: "/kvkk" },
 };
 

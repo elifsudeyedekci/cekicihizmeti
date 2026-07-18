@@ -41,6 +41,12 @@ export interface District {
   blogParagraphs: string[];
 }
 
+export interface ServiceSection {
+  heading: string;
+  /** "**kalın**" ve "[metin](/yol)" (dahili link) kalıplarını destekler — bkz. RichParagraph */
+  paragraphs: string[];
+}
+
 export interface Service {
   slug: string;
   name: string;
@@ -52,6 +58,8 @@ export interface Service {
   bullets: string[];
   faqs: Faq[];
   relatedServiceSlugs: string[];
+  /** Süreç anlatımı, teknik detay, iç link bölümleri (3000+ kelime hedefi için) */
+  sections?: ServiceSection[];
 }
 
 export interface Brand {

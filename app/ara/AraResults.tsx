@@ -1,53 +1,57 @@
 "use client";
 
-import { useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { services } from "@/lib/data/services";
-import { districts } from "@/lib/data/districts";
-import { brands } from "@/lib/data/brands";
-import { highways } from "@/lib/data/highways";
-import { posts, CATEGORY_LABEL } from "@/lib/blog/registry";
+import { searchSite } from "@/lib/search";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
-
-interface Item {
-  title: string;
-  href: string;
-  category: string;
-}
-
-const ITEMS: Item[] = [
-  ...services.map((s) => ({ title: s.name, href: `/hizmetler/${s.slug}`, category: "Hizmet" })),
-  ...districts.map((d) => ({ title: `${d.name} Çekici`, href: `/bolgeler/${d.slug}`, category: "Bölge" })),
-  ...brands.map((b) => ({ title: `${b.name} Çekici Hizmeti`, href: `/blog/${b.slug}-cekici-hizmeti`, category: "Marka" })),
-  ...highways.map((h) => ({ title: h.name, href: `/blog/${h.slug}-arac-arizasi-cekici`, category: "Otoyol/Köprü" })),
-  ...posts.map((p) => ({ title: p.title, href: `/blog/${p.slug}`, category: CATEGORY_LABEL[p.category] })),
-];
 
 export function AraResults() {
   const searchParams = useSearchParams();
-  const q = (searchParams.get("q") ?? "").trim();
+  const router = useRouter();
+  const initialQ = searchParams.get("q") ?? "";
+  const [q, setQ] = useState(initialQ);
 
-  const results = useMemo(() => {
-    if (!q) return [];
-    const needle = q.toLocaleLowerCase("tr");
-    return ITEMS.filter((it) => it.title.toLocaleLowerCase("tr").includes(needle)).slice(0, 30);
-  }, [q]);
+  // Adres çubuğundaki ?q= değeri (paylaşılan/geri-ileri gezinilen bir link) değişirse input'u senkronize et.
+  useEffect(() => {
+    setQ(searchParams.get("q") ?? "");
+  }, [searchParams]);
+
+  const results = useMemo(() => searchSite(q, 30), [q]);
+
+  function handleChange(value: string) {
+    setQ(value);
+    const url = value.trim() ? `/ara?q=${encodeURIComponent(value.trim())}` : "/ara";
+    router.replace(url, { scroll: false });
+  }
 
   return (
     <div className="mt-6">
-      {!q && (
-        <p className="text-sm text-[#5a6b80]">
-          Arama yapmak için adres çubuğuna <code>?q=kelime</code> ekleyebilir veya üst menüdeki arama
-          kutusunu kullanabilirsiniz.
+      <form role="search" onSubmit={(e) => e.preventDefault()}>
+        <label htmlFor="ara-input" className="mb-2 block text-sm font-semibold text-[var(--color-navy-900)]">
+          Ne arıyorsunuz?
+        </label>
+        <input
+          id="ara-input"
+          type="search"
+          autoFocus
+          value={q}
+          onChange={(e) => handleChange(e.target.value)}
+          placeholder="Örn. Kadıköy, BMW, akü takviyesi, TEM Otoyolu..."
+          className="w-full rounded-lg border border-[var(--color-navy-200)] px-4 py-3 text-base outline-none focus:border-[var(--color-cta-500)]"
+        />
+      </form>
+
+      {!q.trim() && (
+        <p className="mt-4 text-sm text-[#5a6b80]">
+          İlçe (Kadıköy, Üsküdar...), marka (BMW, Mercedes...), hizmet (akü takviyesi, lastik
+          değişimi...) veya otoyol (TEM, D-100...) adı yazarak arayabilirsiniz.
         </p>
       )}
 
-      {q && results.length === 0 && (
-        <div className="rounded-xl border border-[var(--color-navy-100)] bg-white p-6 text-center">
-          <p className="font-semibold text-[var(--color-navy-900)]">
-            "{q}" için sonuç bulunamadı.
-          </p>
+      {q.trim() && results.length === 0 && (
+        <div className="mt-4 rounded-xl border border-[var(--color-navy-100)] bg-white p-6 text-center">
+          <p className="font-semibold text-[var(--color-navy-900)]">"{q}" için sonuç bulunamadı.</p>
           <p className="mt-2 text-sm text-[#5a6b80]">
             Aracınızla ilgili yardıma mı ihtiyacınız var? Doğrudan arayın, size yardımcı olalım.
           </p>
@@ -60,7 +64,7 @@ export function AraResults() {
 
       {results.length > 0 && (
         <>
-          <p className="mb-3 text-sm text-[#5a6b80]">
+          <p className="mb-3 mt-4 text-sm text-[#5a6b80]">
             "{q}" için {results.length} sonuç bulundu.
           </p>
           <ul className="grid gap-2 sm:grid-cols-2">

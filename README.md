@@ -17,6 +17,27 @@ npm run build    # statik export -> out/
 çıktısı `out/` klasörüne yazılır. Bu klasörü herhangi bir statik hosting'e (cPanel, Netlify,
 Cloudflare Pages, S3+CDN, Vercel vb.) yükleyebilirsiniz. Node.js sunucusu gerekmez.
 
+### Önemli: .txt/.xml dosyalarında UTF-8 charset (llms.txt, ai.txt, robots.txt, sitemap.xml)
+
+Statik export'ta `next.config.ts`'teki `headers()` fonksiyonu ÇALIŞMAZ (yalnızca Node.js sunucusu
+modunda çalışır) — bu yüzden `.txt`/`.xml` dosyalarının `Content-Type` header'ındaki charset,
+barındırma sunucunuzun varsayılan MIME ayarlarına bağlıdır. Birçok Apache/cPanel kurulumu `.txt`
+dosyalarını charset belirtmeden (`text/plain`, UTF-8 değil) sunar; bu da `İ, ş, ı, ğ, ü, ö, ç`
+gibi Türkçe karakterlerin tarayıcıda bozuk (mojibake) görünmesine yol açar.
+
+- **Apache/cPanel**: `public/.htaccess` dosyası zaten bunu otomatik çözer (build ile birlikte
+  `out/` klasörüne kopyalanır) — ekstra bir şey yapmanıza gerek yok.
+- **nginx**: Sunucu bloğunuza şunu ekleyin:
+  ```nginx
+  location ~* \.(txt|xml)$ {
+      charset utf-8;
+      default_type "text/plain; charset=utf-8";
+  }
+  ```
+- **Vercel/Netlify/Cloudflare Pages**: Bu sağlayıcılar genelde UTF-8'i doğru algılar; yine de
+  yayına aldıktan sonra `curl -I https://siteniz.com/llms.txt` ile `charset=utf-8` çıktığını
+  teyit edin.
+
 ## Ortam değişkenleri (opsiyonel)
 
 `.env.example` dosyasını `.env.local` olarak kopyalayıp GA4 / GTM / Yandex Metrica ID'lerinizi

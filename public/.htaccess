@@ -1,0 +1,19 @@
+# Statik export'taki metin dosyaları (llms.txt, ai.txt, robots.txt, sitemap.xml) için doğru
+# charset — Apache/cPanel'in varsayılan mime.types eşlemesi .txt'yi çoğunlukla yalnızca
+# "text/plain" olarak (charset belirtmeden) sunar; bu da tarayıcının/istemcinin UTF-8 çok
+# baytlı Türkçe karakterleri (İ, ş, ı, ğ, ü, ö, ç) yanlış decode etmesine (mojibake) yol açar.
+# next.config.ts'teki `headers()` fonksiyonu `output: "export"` ile ÇALIŞMAZ (yalnızca Node.js
+# sunucusunda çalışır), bu yüzden charset burada, statik dosyayla birlikte taşınan bu dosyada
+# tanımlanmalıdır.
+AddType 'text/plain; charset=UTF-8' .txt
+AddType 'application/xml; charset=UTF-8' .xml
+AddDefaultCharset UTF-8
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(txt|xml)$">
+    Header set Content-Type "text/plain; charset=UTF-8"
+  </FilesMatch>
+  <FilesMatch "\.xml$">
+    Header set Content-Type "application/xml; charset=UTF-8"
+  </FilesMatch>
+</IfModule>

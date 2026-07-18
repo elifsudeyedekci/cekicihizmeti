@@ -3,25 +3,25 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { searchSite, type SearchItem } from "@/lib/search";
 
-interface SearchItem {
-  title: string;
-  href: string;
-  category: string;
-}
-
+/**
+ * Sayfa içi arama kutusu (blog hub, 404 sayfası). Ayrı bir `items` verilmezse merkezi arama
+ * kaynağını (lib/search.ts — 39 ilçe, 20 marka, 12 hizmet, 7 otoyol, tüm bloglar) kullanır; bu,
+ * header'daki HeaderSearch ve /ara sayfasıyla aynı kaynak ve aynı eşleştirme mantığıdır.
+ */
 export function SiteSearch({ items }: { items?: SearchItem[] }) {
   const [q, setQ] = useState("");
-  const data = items ?? [];
   const router = useRouter();
 
   const results = useMemo(() => {
     if (!q.trim()) return [];
-    const needle = q.trim().toLocaleLowerCase("tr");
-    return data
-      .filter((it) => it.title.toLocaleLowerCase("tr").includes(needle))
-      .slice(0, 8);
-  }, [q, data]);
+    if (items) {
+      const needle = q.trim().toLocaleLowerCase("tr");
+      return items.filter((it) => it.title.toLocaleLowerCase("tr").includes(needle)).slice(0, 8);
+    }
+    return searchSite(q, 8);
+  }, [q, items]);
 
   return (
     <form

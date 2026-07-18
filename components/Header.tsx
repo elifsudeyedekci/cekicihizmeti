@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SITE } from "@/lib/config";
 import { PhoneButton } from "./CtaButtons";
+import { HeaderSearch } from "./HeaderSearch";
 
 const NAV = [
   { href: "/hizmetler", label: "Hizmetlerimiz" },
@@ -45,6 +46,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <HeaderSearch className="hidden w-48 lg:block xl:w-56" />
           <PhoneButton className="hidden text-sm md:inline-flex" />
           <button
             type="button"
@@ -72,6 +74,7 @@ export function Header() {
           className="border-t border-[var(--color-navy-100)] bg-white lg:hidden"
         >
           <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3">
+            <HeaderSearch className="mb-2" onNavigate={() => setOpen(false)} />
             {NAV.map((item) => (
               <Link
                 key={item.href}

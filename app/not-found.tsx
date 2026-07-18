@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/lib/data/services";
 import { districts } from "@/lib/data/districts";
-import { posts, CATEGORY_LABEL } from "@/lib/blog/registry";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { SiteSearch } from "@/components/SiteSearch";
 
@@ -14,12 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default function NotFound() {
-  const searchItems = [
-    ...services.map((s) => ({ title: s.name, href: `/hizmetler/${s.slug}`, category: "Hizmet" })),
-    ...districts.map((d) => ({ title: `${d.name} Çekici`, href: `/bolgeler/${d.slug}`, category: "Bölge" })),
-    ...posts.map((p) => ({ title: p.title, href: `/blog/${p.slug}`, category: CATEGORY_LABEL[p.category] })),
-  ];
-
   const popularServices = services.slice(0, 6);
   const popularDistricts = districts.slice(0, 8);
 
@@ -40,7 +33,7 @@ export default function NotFound() {
       </div>
 
       <div className="mt-8">
-        <SiteSearch items={searchItems} />
+        <SiteSearch />
       </div>
 
       <div className="mt-10 text-left">

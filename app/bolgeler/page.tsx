@@ -3,6 +3,7 @@ import Link from "next/link";
 import { anadoluDistricts, avrupaDistricts } from "@/lib/data/districts";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "Bölgelerimiz — İstanbul'un 39 İlçesinde Çekici Hizmeti",
@@ -25,6 +26,7 @@ export default function RegionsHubPage() {
           <PhoneButton />
           <WhatsAppButton />
         </div>
+        <TowImageGallery seed="bolgeler" keyword="İstanbul'un 39 ilçesi" />
       </section>
 
       <section className="mx-auto max-w-5xl px-4 pb-6">

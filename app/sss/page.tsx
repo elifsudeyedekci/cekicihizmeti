@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqSection } from "@/components/FaqSection";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "Sık Sorulan Sorular",
@@ -47,6 +48,7 @@ export default function FaqPage() {
           <PhoneButton />
           <WhatsAppButton />
         </div>
+        <TowImageGallery seed="sss" keyword="Sık Sorulan Sorular" />
       </section>
       <FaqSection faqs={faqs} title="Tüm Sorular" />
     </>

@@ -297,7 +297,7 @@ export const bilgilendirici1Posts: BlogPost[] = [
         paragraphs: [
           "Kapsamlı bir kasko poliçesine sahip bir sürücünün aracı, evinin önünde aküsü bitmiş şekilde çalışmayı reddettiğini varsayalım. Sürücü önce poliçesinin yol yardım maddesini hatırlar ve sigorta şirketinin çağrı merkezini arar; operatör, yıllık kullanım hakkının uygun olduğunu ve anlaşmalı bir yol yardım firmasının yönlendirileceğini belirtir. Yaklaşık 30-40 dakika içinde anlaşmalı ekip gelir, akü takviyesi yapar ve sürücüden herhangi bir ödeme talep edilmez.",
           "Aynı sürücü bir hafta sonra, gece geç saatte şehir dışında bir yolda kaza yapar. Bu kez aciliyet yüksektir; sigortanın anlaşmalı firmasının o bölgeye uzak olduğunu öğrenince, kendi tercih ettiği bir çekici firmasını arar ve aracını güvenli bir noktaya taşıtır. Ertesi gün faturayı sigorta şirketine ileterek geri ödeme talep eder; poliçesinde bu tür bir esneklik olduğu için talep kabul edilir.",
-          "Bu örnek, kasko sahibi bir sürücünün hem planlı hem acil durumlarda farklı stratejiler izleyebileceğini, ama her iki durumda da belge ve iletişimin kritik olduğunu gösterir.",
+          "Bu örnek, kasko sahibi bir sürücünün hem planlı hem acil durumlarda farklı stratejiler izleyebileceğini, ama her iki durumda da belge ve iletişimin kritik olduğunu gösterir. Üçüncü bir örnekte, aynı sürücü bir yıl sonra yurt dışına çıkarken aracını havalimanı otoparkına bırakır ve iki hafta sonra döndüğünde akünün tamamen boşaldığını fark eder; bu durumda kaskosunun yol yardım maddesini arayarak yerinde takviye alır ve ek bir masraf ödemez, çünkü bu vaka poliçesinin arıza kapsamına giren bir durumdur.",
         ],
       },
       {
@@ -383,6 +383,28 @@ export const bilgilendirici1Posts: BlogPost[] = [
         paragraphs: [
           "Bazı sürücüler, kasko üzerinden çekme-kurtarma hizmeti kullanmanın hasarsızlık indirimini etkileyeceğini düşünüp bu teminatı kullanmaktan çekinir. Ancak genellikle sadece hasar (çarpma, kaza) tazminatı talep etmek hasarsızlık kademesini etkiler; arıza kaynaklı yol yardım kullanımı çoğu poliçede bu kademeyi etkilemez. Yine de bu detayın poliçeden poliçeye değişebileceğini unutmayın ve emin değilseniz sigorta şirketinize doğrudan sorun.",
           "Bu belirsizlik nedeniyle bazı sürücüler basit bir akü vakasında bile sigortayı aramayıp doğrudan cepten ödeme yapmayı tercih eder — bu tamamen kişisel bir tercihtir ve hem doğru hem yanlış olabilir; net cevap sigorta şirketinizin poliçe şartlarında yazılıdır.",
+        ],
+      },
+      {
+        heading: "Kasko Poliçesinde Ek Sürücü ve Araç Kullanım Amacı Neden Önemli",
+        paragraphs: [
+          "Kasko poliçeleri genellikle poliçede tanımlı sürücü veya sürücüleri kapsar; aracınızı düzenli olarak kullanan bir aile üyesi varsa ve poliçede 'ek sürücü' olarak tanımlı değilse, bu kişinin yaşadığı bir arızada yol yardım teminatının geçerli olup olmayacağı şirketten şirkete değişebilir. Poliçe yenilerken aracı kimlerin kullanacağını net belirtmeniz, ileride yaşanabilecek bu tür belirsizlikleri önler.",
+          "Aracınızın kullanım amacı da (özel kullanım, ticari kullanım, uygulama üzerinden yolcu/yemek taşımacılığı) teminatı doğrudan etkiler. Özel kullanım için alınmış bir kaskoyla ticari amaçla kullanılan bir araçta yaşanan arızada, sigorta şirketi teminatı reddedebilir. Aracınızın fiili kullanım şeklini poliçenizle uyumlu tutmanız, çekici masrafının karşılanması açısından kritik bir detaydır.",
+        ],
+      },
+      {
+        heading: "Dijital Sigorta Uygulamaları ve Anlık Poliçe Sorgulama",
+        paragraphs: [
+          "Çoğu sigorta şirketi artık mobil uygulama üzerinden poliçe detaylarınızı, yol yardım teminatınızın kapsamını ve yıllık kullanım hakkınızın ne kadarının kaldığını anlık olarak görüntülemenize imkân tanır. Arıza anında bu uygulamayı açıp teminatınızı hızlıca kontrol etmeniz, çağrı merkezini beklemeden karar vermenizi kolaylaştırır.",
+          "Bazı uygulamalar üzerinden doğrudan yol yardım talebi de oluşturabilirsiniz; bu, telefon hattının yoğun olduğu durumlarda (örneğin kar yağışlı bir günde şehir genelinde artan talep) alternatif bir başvuru kanalı sağlar. Yine de aciliyet yüksekse, uygulama üzerinden talep oluşturmakla yetinmeyip doğrudan bir çekici firmasını da aramanız, çifte güvence sağlar.",
+        ],
+      },
+      {
+        heading: "Sigorta Şirketleri Neden Çekici Masrafında Limit Uygular",
+        paragraphs: [
+          "Sigorta şirketlerinin yol yardım/çekme teminatına yıllık kullanım sayısı veya mesafe limiti koymasının temel nedeni, bu hizmetin sık ve kötüye kullanılabilir bir teminat olmasıdır; limitsiz bir teminat, primlerin genel olarak yükselmesine yol açar. Bu yüzden şirketler, makul bir kullanım sıklığı üzerinden fiyatlandırma yapar ve bunu poliçe şartlarında açıkça belirtir.",
+          "Bir sürücü olarak bu limitleri bilmek, yıl içinde kaç kez bu teminattan yararlanabileceğinizi ve gerekirse ne zaman kendi cebinizden ödeme yapmanız gerekeceğini önceden planlamanızı sağlar. Sık arıza yaşayan eski bir aracınız varsa, bu limitin yıl ortasında dolabileceğini göz önünde bulundurup alternatif bir çekici numarasını da yedek olarak bulundurmanız faydalı olur.",
+          "Bazı sigorta şirketleri, aynı yıl içinde limitin dolması durumunda indirimli bir ek hizmet ücreti sunar; bu seçeneğin olup olmadığını poliçe yenileme döneminde sormanız, ihtiyaç anında tamamen kendi imkanlarınıza kalmamanızı sağlar.",
         ],
       },
     ],
@@ -584,6 +606,43 @@ export const bilgilendirici1Posts: BlogPost[] = [
           "Bu belgeleri fiziksel olarak yanınızda taşımak zorunda değilsiniz; telefonunuzda fotoğraf olarak saklamanız da yeterlidir. Bu küçük hazırlık, özellikle stresli bir arıza anında zaman kazandıran pratik bir adımdır.",
         ],
       },
+      {
+        heading: "Hava Koşullarına Göre Çekici Çağırırken Ek Dikkat Noktaları",
+        paragraphs: [
+          "Kar yağışlı bir günde çekici çağırıyorsanız, firmanın kış lastiği/zincir donanımlı araca sahip olup olmadığını sormanız önemlidir; standart lastiklerle gelen bir platform, karlı ve buzlu bir yokuşta size ulaşmakta zorlanabilir. Bu tür günlerde talep de arttığı için, varış süresinin normalden uzun olabileceğini baştan bilmeniz beklenti yönetiminde faydalıdır.",
+          "Sağanak yağış veya sis durumunda, konumunuzu tarif ederken görüş mesafesinin düşük olduğunu ve referans noktalarının (tabela, bina) uzaktan görülmesinin zor olabileceğini unutmayın; bu koşullarda WhatsApp üzerinden canlı konum paylaşmak, sözlü tarife göre çok daha güvenilir sonuç verir. Fırtınalı veya çok rüzgârlı havalarda, özellikle yüksek profilli araçlar (panelvan, karavan) için bekleme noktanızı rüzgârın en az etkilediği bir yere almanız önerilir.",
+          "Aşırı sıcak yaz günlerinde, aracınızda beklerken klima olmadan uzun süre kapalı kalmamaya, mümkünse gölgelik bir alanda beklemeye özen gösterin; bu, hem sizin konforunuz hem sağlığınız için önemlidir.",
+        ],
+      },
+      {
+        heading: "Turist veya Yabancı Plakalı Araç Sahipleri İçin Ek Bilgiler",
+        paragraphs: [
+          "Türkiye'yi ziyaret eden bir turist olarak kiralık veya kendi yabancı plakalı aracınızla arızalanırsanız, çekici firmasını ararken İngilizce (bazı firmalarda Arapça) destek olup olmadığını sormanız iletişimi kolaylaştırır. Kiralık araçlarda öncelikle kiralama firmasının kendi yol yardım hattını aramanız, hem hızlı hem genellikle maliyetsiz bir çözüm sunar.",
+          "Yabancı plakalı kendi aracınızla (transit geçiş yapan sürücüler için) arızalanırsanız, gümrük ve geçici ithalat belgelerinizin firma tarafından anlaşılır şekilde değerlendirilmesi için bu belgeleri hazır bulundurmanız faydalı olur. Pasaport veya uluslararası sürücü belgeniz, kimlik teyidi sürecini hızlandırır.",
+          "İstanbul'da turistik yoğunluğun yüksek olduğu Sultanahmet, Beyoğlu, Beşiktaş gibi bölgelerde hizmet veren firmaların yabancı dil desteği ve kiralama firmalarıyla koordinasyon deneyimi genellikle daha gelişmiştir; bu bölgelerde arızalanırsanız bu deneyime sahip bir firma tercih etmeniz süreci kolaylaştırır.",
+        ],
+      },
+      {
+        heading: "Çekici Çağırmadan Önce Aracınızı Kendi Gözünüzle Kontrol Edin",
+        paragraphs: [
+          "Çağrı yapmadan önce aracınızın etrafında hızlı bir görsel kontrol yapmanız — görünür bir sıvı sızıntısı var mı, lastiklerden biri belirgin şekilde inik mi, egzozdan anormal bir duman çıkıyor mu — telefonda vereceğiniz bilgiyi zenginleştirir. Bu birkaç saniyelik gözlem, ekibin doğru ekipmanla yola çıkmasına katkı sağlar.",
+          "Ancak bu kontrolü yaparken kendinizi trafiğe veya başka bir tehlikeye maruz bırakmayın; otoyol gibi riskli bir noktadaysanız, bu gözlemi atlayıp doğrudan güvenli bir konuma geçmeniz her zaman önceliklidir. Kontrol sırasında motor kaputunu açacaksanız, motorun aşırı ısınmış olabileceğini unutmayın ve sıcak parçalara dokunmaktan kaçının.",
+        ],
+      },
+      {
+        heading: "Çekici Firmasıyla Uzun Vadeli İlişki Kurmanın Faydaları",
+        paragraphs: [
+          "Aynı çekici firmasını birden fazla kez kullandıysanız, firma aracınızın geçmiş arıza kayıtlarını hatırlayabilir ve bu bilgi doğru ekibin daha hızlı yönlendirilmesine yardımcı olabilir. Düzenli müşteriler için bazı firmalar öncelikli hat veya daha hızlı yanıt süresi gibi ek kolaylıklar da sunabilir.",
+          "Aracınızın markasını, modelini ve varsa önceki arıza geçmişini bir firmayla paylaşmış olmak, ileride yeni bir arıza yaşadığınızda tekrar baştan anlatmanıza gerek bırakmaz; bu, özellikle sık seyahat eden veya filo aracı kullanan sürücüler için zaman kazandıran bir avantajdır.",
+        ],
+      },
+      {
+        heading: "Çekici Hizmeti Sonrası Geri Bildirim Vermenin Değeri",
+        paragraphs: [
+          "Hizmet sonrası firmaya kısa bir geri bildirim vermeniz — ne iyi gitti, ne geliştirilebilir — hem firmanın hizmet kalitesini artırmasına katkı sağlar hem de gelecekte benzer bir ihtiyacınız olduğunda hangi noktalara dikkat edeceğinizi netleştirir. Ciddi firmalar bu tür geri bildirimleri memnuniyetle karşılar ve süreçlerini buna göre iyileştirir.",
+          "Özellikle sorunsuz geçen bir deneyim yaşadıysanız, bu bilgiyi not almanız — hangi firma, hangi telefon numarası, ne kadar sürede geldiler — ileride tekrar ihtiyaç duyduğunuzda karar verme sürecinizi hızlandırır. Aile içinde bu numarayı paylaşmanız, herkesin aynı güvenilir hizmete kolayca ulaşmasını sağlar. İstanbul'un 39 ilçesinin tamamına 7/24 hizmet veren, K1 belgeli ve sigortalı ekibimize 0535 404 80 44 numarasından ulaşabilirsiniz.",
+        ],
+      },
     ],
     faqs: [
       { q: "Çekici firmasının resmi yetki belgesi olup olmadığını nasıl anlarım?", a: "Telefonda doğrudan sorabilirsiniz; ciddi firmalar bu bilgiyi paylaşmaktan çekinmez." },
@@ -769,6 +828,54 @@ export const bilgilendirici1Posts: BlogPost[] = [
         paragraphs: [
           "Eviniz veya işyerinizin otoparkında gece yaşanan bir arıza, açık yol üzerinde yaşanan bir arızaya göre çok daha az risk taşır; bu durumda aceleci davranmanıza gerek yoktur, sabah bile bekleyebilirsiniz. Ancak ertesi gün erken bir randevunuz veya işe gitme zorunluluğunuz varsa, gece içinde müdahale talep etmeniz ve bunu telefonda belirtmeniz, ekibin önceliklendirmesine yardımcı olur.",
           "Kapalı ve güvenlikli sitelerde, gece güvenlik görevlisine durumu bildirmeniz ve çekici ekibinin giriş izni almasını kolaylaştırmanız, sürecin daha hızlı ilerlemesini sağlar; bazı siteler dışarıdan araç girişini kısıtlı saatlerde yapabildiğinden bu detayı önceden çekici firmasına iletmeniz faydalıdır.",
+        ],
+      },
+      {
+        heading: "Gece Arızalarında Sigorta/Kasko İletişimi Nasıl Yürütülür",
+        paragraphs: [
+          "Kaskonuzda yol yardım teminatı varsa, gece saatlerinde de sigorta şirketinizin çağrı merkezi genellikle 7/24 açıktır; ancak anlaşmalı yol yardım firmasının gece saatlerinde o bölgeye ulaşım süresi gündüze göre daha uzun olabilir. Aciliyet yüksekse — tenha bir noktadaysanız veya güvenlik kaygınız varsa — sigortayı beklemek yerine doğrudan güvenilir bir çekici firmasını aramanız, faturayı sonradan sigortaya iletmeniz daha güvenli bir yaklaşımdır.",
+          "Gece yaşanan bir kazada da aynı mantık geçerlidir: önce güvenliğiniz, ardından gerekiyorsa resmi tespit, sigorta bildirimini ise güvenli bir noktaya ulaştıktan sonra da yapabilirsiniz. Gece saatlerinde sigorta sürecini hemen başlatmak zorunlu değildir; aracınızın ve sizin güvende olmanız her zaman önceliklidir.",
+        ],
+      },
+      {
+        heading: "Yağmurlu veya Sisli Gece Koşullarında Ek Riskler",
+        paragraphs: [
+          "Gece zaten düşük olan görünürlük, yağmur veya sis eklendiğinde çok daha kritik hale gelir. Böyle bir gecede arızalanırsanız, reflektörünüzü normalden biraz daha uzağa yerleştirmeniz ve dörtlü flaşörünüzün ıslak havada da net görünür olduğundan emin olmanız önerilir. Sisli gecelerde bariyer dışında beklerken bile kendi konumunuzu net bilmeniz — hangi kavşağa, hangi tabelaya yakın olduğunuz — ekibin size ulaşmasını hızlandırır.",
+          "Yağmurlu gecelerde zemin kayganlığı nedeniyle bariyer dışına geçerken de dikkatli adım atmanız, düşme veya kayma riskini azaltır. Bu koşullarda ekibimiz ek ikaz lambası ve gerekirse yavaş yaklaşım prosedürüyle sahaya gelir; sabırlı olmanız, hem sizin hem ekibin güvenliği açısından önemlidir.",
+        ],
+      },
+      {
+        heading: "Gece Vakalarında Anlaşmalı Otopark ve Servislerle Koordinasyon",
+        paragraphs: [
+          "Gece yaşanan bir arıza sonrası aracınızı bırakacağınız servis kapalıysa, güvenli ve gözetimli bir otoparka geçici olarak bırakmak pratik bir çözümdür; ekibimiz bu tür anlaşmalı veya güvenilir otoparklara yönlendirme yapabilir. Sabah servis açıldığında aracınızın kaydını ve durumunu takip etmeniz için otoparktan alınan makbuzu saklamanız önerilir.",
+          "Bazı yetkili servisler gece teslim noktası (kilitli bir alan, anahtar kutusu) sunar; bu tür bir imkân varsa, ekibimiz aracınızı doğrudan bu noktaya teslim edebilir ve siz sabah servisle iletişime geçebilirsiniz. Bu, gece boyunca aracınızın açıkta beklemesini önleyen pratik bir çözümdür.",
+        ],
+      },
+      {
+        heading: "Gece Vakalarında Toplu Taşıma ve Alternatif Ulaşım Seçenekleri",
+        paragraphs: [
+          "Gece bir arıza yaşadığınızda ve aracınızın taşınması biraz zaman alacaksa, kendi ulaşımınız için gece taksi hatlarını veya uygulama üzerinden çağrılabilen araçları değerlendirmeniz, çekici ekibini beklerken zaman kaybetmemenizi sağlar. Aracınızı emanet protokolüyle bırakıp kendi yolculuğunuza devam edebilirsiniz; bu durumda fotoğraflı durum raporu almanız her zamankinden daha önemlidir.",
+          "Gece geç saatte toplu taşımanın sınırlı olduğu bölgelerdeyseniz, güvenilir bir yakınınızı arayıp sizi almasını istemeniz de makul bir seçenektir; bu süre zarfında aracınızın yanında beklemek zorunda değilsiniz, çekici ekibiyle telefonla koordineli kalmanız yeterlidir.",
+        ],
+      },
+      {
+        heading: "Gece Yakıt İstasyonlarının Bekleme Noktası Olarak Rolü",
+        paragraphs: [
+          "İstanbul'da çoğu yakıt istasyonu 7/24 açıktır ve aydınlık, kameralı, genellikle görevlisi bulunan bir ortam sunar; aracınız hâlâ kısmen hareket edebiliyorsa, en yakın istasyona kadar güvenle ilerleyip orada beklemeniz, açık yolda beklemekten çok daha güvenlidir. İstasyon görevlisine durumu bildirmeniz, hem sizin rahatlamanızı sağlar hem de gerektiğinde ek bir gözlemci konumunda olur.",
+          "Yakıt istasyonunda beklerken çekici firmanıza tam adresi (istasyonun markası, cadde ismi) net iletmeniz, ekibin sizi kolayca bulmasını sağlar. Bu tür bir noktada beklemek, özellikly yalnız seyahat eden sürücüler için gece güvenliği açısından önerilen en pratik çözümlerden biridir.",
+        ],
+      },
+      {
+        heading: "Gece Vakalarında Sigortanızın Asistans Uygulamasını Kullanmak",
+        paragraphs: [
+          "Birçok sigorta şirketinin mobil uygulaması, gece saatlerinde de çalışan bir 'acil yardım' butonu içerir; bu buton üzerinden konumunuz otomatik olarak paylaşılır ve size en yakın anlaşmalı yol yardım noktası yönlendirilir. Bu özelliği önceden keşfetmiş olmak, gece bir arıza yaşadığınızda ek bir seçenek sunar.",
+          "Ancak uygulama üzerinden yapılan başvurunun onaylanma ve ekip yönlendirme süresi, doğrudan bir çekici firmasını aramaktan daha uzun sürebilir; aciliyet yüksekse iki yöntemi eş zamanlı denemeniz (hem uygulama hem doğrudan arama) en hızlı sonucu almanızı sağlar.",
+        ],
+      },
+      {
+        heading: "Gece Vakalarında Ekip Sayımızın Bölgesel Dağılımı",
+        paragraphs: [
+          "İstanbul genelinde gece nöbetçi ekiplerimiz, geçmiş çağrı yoğunluğuna göre stratejik noktalarda konumlanır; bu sayede şehrin farklı bölgelerinde gece bir arıza yaşandığında ortalama varış sürelerimiz gündüze yakın kalır. Bu dağılım, sürekli güncellenen bir veri setine dayanır ve mevsimsel/dönemsel değişikliklere göre ayarlanır. Hangi ilçede olursanız olun, gece aradığınızda size en yakın müsait ekip yönlendirilir ve tahmini varış süresi telefonda net şekilde bildirilir. Bu güvenlik rehberini aklınızda tutmanız, gece yaşanan bir arızayı stresli bir deneyimden yönetilebilir bir sürece dönüştürür. Sorularınız olursa, gece dahil 7/24 aynı numaradan bize ulaşabilirsiniz: 0535 404 80 44. K1 belgeli ve sigortalı nöbetçi ekiplerimiz, İstanbul'un 39 ilçesinin tamamında gece güvenliğinizi önceliklendiren bir prosedürle çalışır.",
         ],
       },
     ],
@@ -968,10 +1075,31 @@ export const bilgilendirici1Posts: BlogPost[] = [
         ],
       },
       {
+        heading: "Apartman veya Site Otoparkında Yaşanan Arızalarda Hangi Hizmet Devreye Girer",
+        paragraphs: [
+          "Kapalı bir otoparkta uzun süre hareket ettirilmeyen bir araçta en sık görülen sorun akü boşalmasıdır; bu durum neredeyse her zaman yol yardımla, yerinde takviyeyle çözülür. Yol yardım aracının kapalı otoparka girebilmesi için tavan yüksekliği kısıtlaması olup olmadığını önceden belirtmeniz, uygun boyutta bir aracın gönderilmesini sağlar.",
+          "Otoparkta aracınız fiziksel olarak hareket ettirilemiyorsa (örneğin lastik tamamen sönmüş ve jant zemine temas ediyorsa, ya da vites kilitli kalmışsa), bu durumda yerinde müdahale yeterli olmayabilir ve aracın tekerlek paletleriyle çekici platformuna alınması gerekebilir. Bu ayrımı net anlamak için, telefonda aracın son ne zaman çalıştığını ve gösterge panelinde ne gördüğünüzü paylaşmanız faydalıdır.",
+        ],
+      },
+      {
+        heading: "Yol Yardım/Çekici Ayrımı Elektrikli Bisiklet ve Mikro Mobilite Araçlarında Geçerli mi",
+        paragraphs: [
+          "Elektrikli scooter, elektrikli bisiklet gibi mikro mobilite araçları, geleneksel yol yardım/çekici hizmetinin kapsamı dışındadır; bu araçlar için genellikle üretici veya paylaşım platformunun kendi servis ağı devreye girer. Ancak bir otomobil ile elektrikli bisiklet arasında kaza yaşanmışsa, otomobil tarafı için standart kaza sonrası çekici süreci işler.",
+          "Bu ayrımı bilmeniz, yanlış bir hizmet beklentisiyle zaman kaybetmemenizi sağlar; şüpheniz varsa telefonda aracınızın tipini net belirtmeniz, doğru yönlendirmeyi almanızı kolaylaştırır.",
+        ],
+      },
+      {
         heading: "Yol Yardım Hizmetinin Sınırları: Ne Zaman Yeterli Olmaz",
         paragraphs: [
           "Yol yardım ekibi yerinde bir müdahale denedikten sonra sorunun çözülemediğini fark ederse (örneğin akü takviyesi yapıldı ama araç yine de çalışmadı), bu noktada çekiciye geçiş kararı verilir. Bu karar, ekibin sahadaki gözlemine dayanır ve genellikle yerinde birkaç deneme sonrası netleşir; gereksiz yere uzun süre denemekle vakit kaybetmek yerine, makul bir denemeden sonra taşımaya geçmek daha verimlidir.",
           "Bazı durumlarda yol yardım ekibi, aracın dışarıdan bakıldığında basit görünen bir sorununun aslında daha derin bir arızanın belirtisi olduğunu fark edebilir (örneğin sürekli tükenen akünün alternatör kaynaklı olması); bu durumda size hem geçici çözümü hem de kalıcı çözüm için servise gitmenizi önerir.",
+        ],
+      },
+      {
+        heading: "Yaz ve Kış Aylarında Yol Yardım/Çekici Talebindeki Mevsimsel Değişim",
+        paragraphs: [
+          "Kış aylarında akü kaynaklı yol yardım çağrılarımız belirgin şekilde artar; soğuk hava akü kapasitesini düşürdüğü için, yazın sorunsuz çalışan bir akü kışın ilk soğuk sabahlarda marş vermeyebilir. Bu dönemde çekici (taşıma) talebi de kısmen artar çünkü buzlanma kaynaklı kayma kazaları ve şanzıman/fren sistemi arızaları çoğalır.",
+          "Yaz aylarında ise dengeler değişir: yol yardım tarafında hararet ve klima gazı kaynaklı çağrılar, çekici tarafında ise uzun tatil yolculuklarında yaşanan ciddi motor arızaları öne çıkar. Bayram ve tatil dönemlerinde her iki hizmete olan talep de eş zamanlı olarak yükselir; bu dönemlerde ekip sayımızı artırarak varış sürelerini korumaya çalışıyoruz.",
         ],
       },
     ],
@@ -1165,6 +1293,54 @@ export const bilgilendirici1Posts: BlogPost[] = [
           "Bazı durumlarda diğer sürücüler durumu ihbar ederek trafik yönetimine (155) bildirebilir; bu, sizin haberiniz olmadan bile ek bir güvenlik katmanı oluşturabilir. Bu yüzden otoyolda arızalanan bir aracın genellikle beklediğinden daha hızlı fark edilip yardım alabildiğini bilmeniz, panik anında sizi biraz rahatlatabilir.",
         ],
       },
+      {
+        heading: "Otoyolda Arıza Yaparken Cep Telefonu Kullanımı ve Trafik Kameralarının Rolü",
+        paragraphs: [
+          "Bariyer dışına geçtikten sonra telefonunuzu kullanmanız güvenlidir ve önerilir; ancak trafik şeridi içinde veya aracın yakınındayken uzun telefon görüşmelerine dalıp çevrenizdeki trafiği izlemeyi ihmal etmeyin. Konumunuzu paylaşırken kısa ve net konuşmak, hem sizin dikkatinizin dağılmamasını hem de karşı taraftaki operatörün bilgiyi hızlı almasını sağlar.",
+          "Çoğu otoyol kesimi trafik kameralarıyla izlenir; bu kameralar arızalı bir aracı genellikle kısa sürede tespit eder ve otoyol işletmesi veya trafik ekipleri durumdan haberdar olabilir. Bu, sizin aramanızın yerini tutmaz ama bazı durumlarda ek bir güvenlik katmanı oluşturur — özellikle telefon şebekesinin zayıf olduğu kesimlerde bu tespit önemli olabilir.",
+        ],
+      },
+      {
+        heading: "Ağır Vasıta Sürücüleri İçin Otoyolda Arıza Ek Kuralları",
+        paragraphs: [
+          "Kamyon, TIR veya otobüs gibi ağır vasıtalarda otoyol arızası, binek araçlardan farklı bir risk profili taşır: bu araçlar daha uzun ikaz mesafesi gerektirir ve emniyet şeridine tam olarak sığmayabilir. Bu durumda üçgen reflektörü normalden daha uzağa (mümkünse 100 metrenin üzerine) yerleştirmeniz ve aracın dörtlü flaşörünün yanı sıra varsa yandaki dönüş sinyallerini de kullanmanız önerilir.",
+          "Ağır vasıta arızalarında tonaja uygun kurtarıcı gerektiğinden, çekici firmasını ararken aracın tipini (kaç dingilli, yüklü mü boş mu) net belirtmeniz, doğru ekipmanla gelinmesini sağlar. Yük taşıyan bir araçtaysanız, yükün güvenliği için ayrıca önlem almanız (varsa yük sabitleme kontrolü) gerekebilir; bu konuda ekibimiz size telefonda yönlendirme yapar.",
+        ],
+      },
+      {
+        heading: "Otoyol Arızası Sonrası Servise Ulaşım: Sizi Kim Nereye Götürür",
+        paragraphs: [
+          "Aracınız çekiciyle taşınırken siz ve yolcularınız genellikle çekici aracının kabininde veya kendi imkanlarınızla (taksi, yakınınızın aracı) hedef noktaya ulaşırsınız; bu detayı arama sırasında netleştirmeniz, teslim noktasında kimin bekleyeceğini önceden planlamanızı sağlar. Bazı firmalar sınırlı sayıda yolcu için çekici aracında yer sağlayabilir; bu imkânın olup olmadığını telefonda sormanız faydalıdır.",
+          "Otoyol üzerinde aracınızdan ayrılmanız gerekiyorsa (örneğin işe yetişmek için), aracınızı emanet protokolüyle ekibimize bırakabilir, fotoğraflı durum raporu ve teslim adresini netleştirerek yolunuza devam edebilirsiniz. Bu esneklik, özellikle zaman baskısı altındaki sürücüler için otoyol arızasının günün geri kalanını tamamen etkilemesini önler.",
+        ],
+      },
+      {
+        heading: "Otoyol Kenarındaki Dinlenme Tesislerinin Rolü",
+        paragraphs: [
+          "Aracınız hâlâ kısmen hareket edebiliyorsa ve bir sonraki dinlenme tesisine kadar güvenle ilerleyebiliyorsanız, orada durmak emniyet şeridinde beklemekten çok daha güvenlidir; tesisler aydınlık, geniş ve trafikten tamamen izole bir bekleme alanı sunar. Bu tercih, ancak aracı zorlamadan ve güvenli şekilde ilerletebiliyorsanız geçerlidir — motor arızası ciddiyse veya duman/koku varsa bu denemeyi yapmayın.",
+          "Dinlenme tesisinde beklerken bile çekici firmanızı arayıp net konum (tesisin adı, hangi yönde) bildirmeniz, ekibin sizi hızlıca bulmasını sağlar. Bu tesislerde genellikle bir kafeterya veya market de bulunduğundan, uzun bir bekleme söz konusuysa bu imkanlardan yararlanabilirsiniz.",
+        ],
+      },
+      {
+        heading: "Otoyolda Arıza Sonrası Sürücü Belgesi ve Ruhsat Kontrolü",
+        paragraphs: [
+          "Çekici ekibi geldiğinde, özellikle aracınız sizin adınıza kayıtlı değilse (örneğin bir yakınınızın aracını kullanıyorsanız), ruhsat ve kimlik bilgilerinin teyit edilmesi standart bir prosedürdür. Bu belgeleri telefonunuzda fotoğraf olarak bulundurmanız, sahada zaman kaybetmeden teslim sürecinin tamamlanmasını sağlar.",
+          "Aracı üçüncü bir kişiye (örneğin bir aile üyesine) teslim ettirecekseniz, bu kişinin bilgilerini önceden çekici firmasına iletmeniz, siz orada olmasanız bile sürecin sorunsuz ilerlemesini sağlar.",
+        ],
+      },
+      {
+        heading: "Otoyol Kenarında Beklerken Aracınızın Motor Kaputu Açık mı Kalmalı",
+        paragraphs: [
+          "Bazı sürücüler arıza sinyali vermek amacıyla motor kaputunu açık bırakır; ancak bu, otoyolda ek bir görsel karmaşa yaratabilir ve rüzgârlı havalarda kaputun aniden kapanması risk oluşturabilir. Dörtlü flaşör ve reflektör, kaputu açık bırakmaktan çok daha etkili ve standart bir ikaz yöntemidir.",
+          "Motor kaputunu sadece ekibimizin veya kendinizin kısa bir kontrol yapması gerektiğinde, güvenli bir noktada ve dikkatli şekilde açmanız yeterlidir; bunu bir 'arıza işareti' olarak sürekli açık bırakmanıza gerek yoktur.",
+        ],
+      },
+      {
+        heading: "Otoyolda Arıza Sonrası Sigortanıza Ne Zaman Haber Vermelisiniz",
+        paragraphs: [
+          "Basit bir arızada (akü, lastik, yakıt) sigorta bildirimi acil değildir; öncelik aracınızı güvenli bir noktaya taşıtmaktır. Ancak arızanın nedeni belirsizse veya ciddi bir mekanik sorun şüphesi varsa, servise ulaştıktan sonra durumu kayıt altına almanız ileride garanti sürecinde işinize yarayabilir. Otoyolda yaşadığınız her arıza için 0535 404 80 44 numaramızı arayabilir, güvenlik adımlarını uyguladıktan sonra 7/24 destek alabilirsiniz. Bu rehberdeki adımları önceden bilmeniz, otoyolda arıza anında panik yerine kontrollü bir tepki vermenizi sağlar ve hem sizin hem çevrenizdeki sürücülerin güvenliğini korur. K1 belgeli, sigortalı ve otoyol güvenlik prosedürüne hâkim ekibimiz, İstanbul'un tüm otoyol ve köprü güzergâhlarında 7/24 hizmet vermeye hazırdır.",
+        ],
+      },
     ],
     faqs: [
       { q: "Otoyolda arıza yaptığımda ilk ne yapmalıyım?", a: "Dörtlü flaşörünüzü yakıp mümkün olduğunca sağa, emniyet şeridine alın." },
@@ -1287,6 +1463,26 @@ export const bilgilendirici1Posts: BlogPost[] = [
         ],
       },
       {
+        heading: "Aracınızın Markası ve Yaşı Kimi Arayacağınızı Etkiler mi",
+        paragraphs: [
+          "Yeni ve hâlâ garanti kapsamındaki bir aracınız varsa, arıza garanti şartlarıyla ilgiliyse önce yetkili servisin yol yardım hattını değerlendirmek mantıklı olabilir; ancak aciliyet varsa bağımsız bir çekici firmasını aramaktan çekinmeyin, aracınızı yine de yetkili servise yönlendirebilirler. Eski bir aracınız varsa ve garanti söz konusu değilse, doğrudan güvendiğiniz bir çekici/yol yardım firmasını aramanız en hızlı yoldur.",
+          "İthal veya nadir bulunan bir markanız varsa, aracınızın özel bakım/taşıma gereksinimleri olabileceğini telefonda belirtmeniz faydalıdır; bazı firmalar belirli markalarda daha fazla deneyime sahiptir ve bu bilgi doğru ekibin yönlendirilmesine yardımcı olur.",
+        ],
+      },
+      {
+        heading: "Birden Fazla Aracınız Arızalandığında (Aile/İşletme) Nasıl Hareket Edilir",
+        paragraphs: [
+          "Aynı anda birden fazla aracınız (örneğin aile içinde iki araç veya küçük bir işletmenin birkaç aracı) arızalanırsa, tek bir çağrı ile durumu bildirip her aracın konumunu ve arıza türünü ayrı ayrı anlatmanız, firmanın birden fazla ekip planlamasına yardımcı olur. Bu tür durumlarda öncelik sıralaması yapmanız — hangi aracın daha acil olduğu — ekibin kaynak dağıtımını daha verimli yapmasını sağlar.",
+          "İşletme sahipleri için, bu tür çoklu arıza durumlarının düzenli yaşandığı biliniyorsa, önceden bir kurumsal anlaşma yapmak, her seferinde sıfırdan pazarlık yapmak yerine önceden belirlenmiş bir süreçle hızlı hizmet almanızı sağlar.",
+        ],
+      },
+      {
+        heading: "Aracınız Bozulduğunda Sosyal Medya Üzerinden Yardım İstemek Güvenli mi",
+        paragraphs: [
+          "Sosyal medya veya mahalle uygulamaları üzerinden 'bu bölgede güvenilir çekici var mı' diye sormak bazı durumlarda faydalı bilgi verebilir; ancak önerilen bir firmayı da yukarıda anlattığımız kriterlerle (belge, sigorta, plaka teyidi) değerlendirmeniz gerekir. Sosyal medyada önerilmiş olması tek başına güvence oluşturmaz; önceden araştırılmış, K1 belgeli bir numarayı kayıtlı tutmak her zaman daha güvenilir bir yöntemdir. Bu yüzden bir arıza yaşamadan önce güvenilir bir numarayı bulup kaydetmeniz, panik anında zaman kazandıran en pratik hazırlıktır. Bu rehberde anlattığımız karar ağacını ve iletişim bilgilerini not almanız, gelecekte yaşayabileceğiniz her türlü araç sorununda size zaman kazandıracaktır. İstanbul'un her ilçesinde, her arıza tipinde 0535 404 80 44 numarası tek bir noktadan doğru yönlendirmeyi almanızı sağlar.",
+        ],
+      },
+      {
         heading: "Filo ve Şirket Araçlarında Karar Süreci Nasıl İşler",
         paragraphs: [
           "Şirket aracı kullanan bir çalışan için genellikle şirketin kendi prosedürü vardır — örneğin önce filo yöneticisine haber verme veya şirketin anlaşmalı çekici firmasını arama zorunluluğu. Bu prosedür bilinmiyorsa, aciliyet durumunda önce güvenliği sağlamak, sonra hem şirketi hem de (varsa) anlaşmalı firmayı bilgilendirmek en doğru sıralamadır.",
@@ -1354,6 +1550,27 @@ export const bilgilendirici1Posts: BlogPost[] = [
         paragraphs: [
           "Sahada en sık karşılaştığımız hatalardan biri, tehlike anında bile önce 'kaç para tutar' sorusuna takılıp aramayı geciktirmektir; otoyol ortasında veya karanlık bir noktada bu gecikme, dakikalar içinde ciddi bir güvenlik riskine dönüşebilir. Güvenliğiniz söz konusu olduğunda önce arayıp durumu bildirmeniz, fiyat ve süreç detaylarını yol üzerinde konuşmanız her zaman daha doğrudur. Bir diğer sık hata, arızanın türünü net anlatmadan 'aracım çalışmıyor' demekle yetinmektir; bu, ekibin doğru ekipmanla değil, genel bir varsayımla yola çıkmasına neden olabilir ve süreci uzatabilir.",
           "Bazı sürücüler, aracın hafif bir arızayla çalışmaya devam edebileceğini düşünüp kısa mesafe bile olsa sürmeye çalışır; ancak örneğin bir soğutma sıvısı uyarısına rağmen yola devam etmek, basit bir arızayı motor değişimi gerektiren büyük bir hasara dönüştürebilir. Bir diğer yaygın hata, birden fazla numarayı art arda arayıp hangi ekibin geldiğini takip edememektir — bu karmaşa, hem sizin hem ekiplerin zaman kaybetmesine yol açar. Tek bir güvenilir numarayı (0535 404 80 44) arayıp durumu net anlatmak, bu hataların neredeyse tamamının önüne geçer.",
+        ],
+      },
+      {
+        heading: "Motosiklet Sürücüleri İçin Arıza Anında Kimi Aramalı",
+        paragraphs: [
+          "Motosikletiniz arızalanırsa veya kaza yaşarsanız, standart binek aracı platformu motosiklet taşımaya uygun değildir; arama sırasında aracınızın motosiklet olduğunu belirtmeniz, özel bağlama aparatlı (ön tekerlek kızağı, çift kayış) bir platformun yönlendirilmesini sağlar. Yanlış ekipmanla gelen bir çekicinin motosikleti güvenle taşıyamaması, hem zaman kaybına hem de olası hasara yol açabilir.",
+          "Yağmurlu veya kaygan zeminde motosiklet kazası yaşadıysanız, önce kendi güvenliğinizi (yola çıkan diğer araçlardan uzaklaşmak) sağlamanız, ardından motosikletin durumunu (devrilmiş mi, sürülebilir mi) telefonda net anlatmanız önemlidir. Motosiklet miğferi ve koruyucu ekipmanınızı çıkarmadan önce, ciddi bir yaralanma şüphesi varsa 112'yi aramanız önceliklidir.",
+        ],
+      },
+      {
+        heading: "Klasik veya Koleksiyon Araç Sahipleri İçin Özel Değerlendirmeler",
+        paragraphs: [
+          "Klasik veya koleksiyon değeri olan bir aracınız arızalanırsa, standart bir çekici yerine düşük açılı rampa, yumuşak tekstil kayış ve hassas yükleme deneyimi olan bir ekip aramanız önerilir; bu tür araçlarda boya, jant veya alt takım hasarı geri dönüşü zor bir değer kaybına yol açabilir. Arama sırasında aracın klasik/koleksiyon değeri olduğunu belirtmeniz, ekibin bu hassasiyetle yola çıkmasını sağlar.",
+          "Bu tür araçların çoğu zaman standart yedek parça bulunabilirliği de sınırlı olduğundan, aracın hangi servise veya uzman ustaya taşınacağını önceden net bilmeniz, taşıma sürecini daha planlı hale getirir. Sigortanız varsa, klasik araç poliçelerinin çoğu zaman standart kaskodan farklı, değer bazlı bir yapıya sahip olduğunu unutmayın — çekici masrafı karşılama şartları da farklılaşabilir.",
+        ],
+      },
+      {
+        heading: "Aracınız Bozulduğunda İş/Okul Randevunuzu Nasıl Yönetirsiniz",
+        paragraphs: [
+          "Aracınız işe veya okula giderken bozulursa, önceliğiniz genellikle hem aracın çözümü hem de kendi ulaşımınızdır. Bu durumda çekici/yol yardım firmasını arayıp durumu bildirdikten sonra, taksi veya toplu taşıma ile kendi yolculuğunuza devam edip aracınızı emanet protokolüyle ekibe bırakabilirsiniz; bu şekilde randevunuzu kaçırmadan aracınızın da güvenle taşınmasını sağlarsınız.",
+          "Okula geç kalacak bir öğrenciyseniz veya çocuğunuzu okula bırakma yolundaysanız, bu aciliyeti telefonda belirtmeniz, mümkünse önceliklendirilmiş bir müdahale planlanmasına yardımcı olabilir. Her durumda, panik yapıp acele bir karar vermek yerine, durumu net anlatıp iki ihtiyacınızı (ulaşım ve araç) ayrı ayrı çözmeniz en sağlıklı yaklaşımdır.",
         ],
       },
     ],

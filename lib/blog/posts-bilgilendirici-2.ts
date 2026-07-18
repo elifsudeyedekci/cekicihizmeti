@@ -165,6 +165,55 @@ export const bilgilendirici2Posts: BlogPost[] = [
           "Gece geç saatlerde yalnız bir sürücüyseniz, bizi aradığınızda bu durumu belirtmeniz, hem önceliklendirme hem de ekibin sizi ararken ekstra bir teyit araması gibi ek güvenlik adımları uygulamasını sağlar. Ekip yola çıktığında gönderdiğimiz plaka/sürücü SMS'i, gece senaryolarında özellikle önemlidir; bu teyidi almadan hiçbir araca yaklaşmayın.",
         ],
       },
+      {
+        heading: "Yanınızda Bulundurmanız Gereken Belgeler",
+        paragraphs: [
+          "Yolda kaldığınızda ekibimizin veya gerekirse trafik/sigorta yetkililerinin isteyebileceği temel belgeleri (araç ruhsatı, sürücü belgesi, varsa kasko poliçe fotokopisi) araçta bulundurmanız süreci hızlandırır. Bu belgeler özellikle kaza sonrası taşımalarda veya sigorta sürecinde talep edilebilir.",
+          "Dijital kopyalar da (telefonunuzda ruhsat ve poliçe fotoğrafı) pratikte işe yarar; orijinal belgeler araçta unutulmuş olsa bile dijital kopya çoğu durumda yeterli olur. Bu küçük hazırlık, yolda kaldığınız anda ek bir strese dönüşebilecek bir detayı önceden çözer.",
+        ],
+      },
+      {
+        heading: "Yolunuza Devam Etmek İçin Alternatif Ulaşım",
+        paragraphs: [
+          "Aracınız taşınırken siz aynı yere gitmek zorunda değilsiniz; kimlik/plaka teyidi sonrası aracı emanet edip taksi, ride-hailing uygulaması veya toplu taşımayla yolunuza devam edebilirsiniz. Merkezi ilçelerde bu alternatifler kolayca bulunurken, Şile veya Çatalca gibi uzak bölgelerde seçenek daha kısıtlı olabilir; bu durumda bekleme süresini planlarken bunu göz önünde bulundurmanızı öneririz.",
+          "İş toplantısına veya uçağa yetişmeniz gereken acil bir durumdaysanız, bunu bizi ararken belirtmeniz, önceliklendirme ve size en hızlı çözümü sunma konusunda yardımcı olur; bazı durumlarda önce sizi bir noktaya bırakıp aracınızı sonra taşımak da bir seçenek olabilir.",
+        ],
+      },
+      {
+        heading: "Yolda Kalma Deneyiminden Sonra Yapmanız Gerekenler",
+        paragraphs: [
+          "Aracınız güvenli bir noktaya taşındıktan sonra, arızanın tekrarlamaması için servisle birlikte kök nedenini netleştirmeniz önemlidir; sadece belirtiyi (örneğin aracın çalışmaması) gidermek yerine neden çalışmadığını anlamak, benzer bir durumun tekrarlanmasını önler.",
+          "Kaza kaynaklı bir yolda kalma yaşadıysanız, sigorta sürecinizi takip ederken bizim düzenlediğimiz fotoğraflı durum raporunu ve çekme faturasını saklamanız faydalı olur; bu belgeler hasar tespit sürecinde destekleyici niteliktedir.",
+        ],
+      },
+      {
+        heading: "Yolda Kalmanın Sık Görülen Fiziksel ve Psikolojik Etkileri",
+        paragraphs: [
+          "Yolda kalmak, özellikle ilk kez yaşayan sürücüler için beklenenden daha fazla stres yaratabilir; kalp atışının hızlanması, ellerin titremesi gibi tepkiler normaldir ve utanılacak bir durum değildir. Bu tepkinin farkında olmak, sakinleşmek için birkaç derin nefes almanıza ve daha net düşünmenize yardımcı olabilir.",
+          "Tekrarlayan yolda kalma deneyimleri yaşayan sürücülerde zamanla bir kaygı birikebilir; bu durumda aracınızın düzenli bakımını önceliklendirmek ve güvenilir bir çekici numarasını (0535 404 80 44) her zaman erişilebilir tutmak, bu kaygıyı azaltmanın en pratik yoludur.",
+        ],
+      },
+      {
+        heading: "Yolda Kaldığınızda Diğer Sürücülerle İletişim",
+        paragraphs: [
+          "Bazen yoldan geçen iyi niyetli sürücüler durup yardım teklif edebilir; bu teklifi nazikçe değerlendirebilirsiniz ama profesyonel bir çekici çağırdığınızı belirtmeniz, hem sizin hem onların gereksiz risk almasını önler. Özellikle otoyolda, durup yardım etmeye çalışan bir aracın kendisi de risk altına girebilir.",
+          "Elektrikli ikaz üçgeni veya cep telefonu feneri gibi ek görünürlük araçlarını kullanmanız, hem sizi arayan bir yardımsever sürücüye hem de bizim ekibimize konumunuzu daha kolay fark ettirir.",
+        ],
+      },
+      {
+        heading: "Yolda Kalmadan Önce Önleyici Kontrol Alışkanlığı",
+        paragraphs: [
+          "Birçok yolda kalma vakası, aslında önceden fark edilebilecek belirtilerin göz ardı edilmesinden kaynaklanır: birkaç gündür zayıf marş veren bir akü, aracın rölantide titremesi veya gösterge panelinde yanıp sönen bir uyarı ışığı gibi. Bu belirtileri fark ettiğinizde erkenden bir servise danışmanız, yolda kalma riskini önemli ölçüde azaltır.",
+          "Aylık kısa bir öz kontrol (lastik basıncı, akü kutup başları, silecek durumu) alışkanlığı edinmek, uzun vadede hem daha az yolda kalma yaşamanızı hem de yaşadığınızda daha hazırlıklı olmanızı sağlar.",
+        ],
+      },
+      {
+        heading: "Kiralık Araçla Yolda Kalırsanız Farklı Olan Noktalar",
+        paragraphs: [
+          "Kiralık bir araçla yolda kaldıysanız, öncelik yine güvenliğinizdir; aracı güvenli noktaya alıp bizi aradıktan sonra kiralama şirketinin size verdiği acil durum hattını da bilgilendirmeniz gerekir. Çoğu kiralama sözleşmesinde yol yardım/çekici masrafı kapsanır ama süreç kiralama şirketinin kendi prosedürüne göre işler.",
+          "Bizi arayan bir kiralık araç sürücüsüne, aracı öncelikle güvenli bir noktaya taşımamızın ardından kiralama şirketinin talimatına göre (kendi anlaşmalı servisi veya iade noktası) yönlendirme yapıyoruz; bu süreçte kira sözleşmenizin bir kopyasını (dijital de olabilir) yanınızda bulundurmanız faydalı olur.",
+        ],
+      },
     ],
     faqs: [
       { q: "Yolda kaldığımda ilk kimi aramalıyım?", a: "Sadece araç arızası varsa (kaza yok) doğrudan bizi arayın: 0535 404 80 44. Kaza veya yaralanma varsa önce 112/155'i arayın." },
@@ -325,6 +374,82 @@ export const bilgilendirici2Posts: BlogPost[] = [
         paragraphs: [
           "Zincir takmadan önce aracı, mümkünse düz ve trafikten uzak bir noktada — bir banket, dinlenme alanı veya geniş bir yol kenarı — durdurmak gerekir; eğimli veya trafiğin yoğun olduğu bir noktada zincir takmaya çalışmak hem size hem çevrenizdeki araçlara risk oluşturur. Dörtlü flaşörünüzü yakıp reflektörünüzü yerleştirdikten sonra, zincirin üreticinin belirttiği tekerleklere (çoğunlukla çekiş tekerlekleri) doğru yönde ve gevşek kalmayacak şekilde takıldığından emin olun.",
           "Zinciri taktıktan sonra birkaç metre yavaşça ilerleyip inerek gerginliği kontrol etmek, sürüş sırasında zincirin gevşeyip karoseriye veya çamurluğa çarpmasını önler. Zincirle sürüşte hız genellikle düşük tutulmalı ve kar/buz bittiğinde zincir mümkün olan en kısa sürede çıkarılmalıdır; asfalt üzerinde uzun süre zincirle sürmek hem lastiğe hem yol yüzeyine zarar verir. Zinciri kendiniz takmakta zorlanıyorsanız veya doğru teçhizata sahip değilseniz, bizi aramanız daha güvenli bir çözümdür.",
+        ],
+      },
+      {
+        heading: "Dört Çeker (4x4/AWD) Araçlarda Kış Güvenliği Yanılgısı",
+        paragraphs: [
+          "Birçok sürücü dört çeker veya AWD sisteme sahip bir araçla kışın her koşulda güvenle sürüş yapabileceğini düşünür; bu kısmen doğru olsa da eksik bir varsayımdır. Dört çeker sistem sizin KALKIŞ ve İVMELENME kabiliyetinizi artırır — yani aracın tekerlekleri daha az patinaj yapar — ancak FRENLEME mesafesini kısaltmaz. Buzlu bir zeminde 4x4 bir araç da tekerlekleri kilitlenince aynı mesafede kayar.",
+          "Bu yanılgı, 4x4 araç sahiplerinin normalden daha hızlı sürmesine ve sonunda viraj veya fren gerektiren bir noktada kontrolü kaybetmesine yol açabilir. Ekibimiz kış aylarında aldığı çağrıların önemli bir kısmının, tam da bu \"aracım her koşulda güvenli\" güveniyle hızlı giden 4x4 sürücülerinden geldiğini gözlemliyor; dört çeker sistem, kış lastiğinin ve temkinli sürüşün yerini tutmaz.",
+        ],
+      },
+      {
+        heading: "Kar Küreme ve Tuzlama Çalışmalarının Trafiğe Etkisi",
+        paragraphs: [
+          "İstanbul Büyükşehir Belediyesi ve ilçe belediyeleri, yoğun kar yağışı beklentisinde ana arterlere önceden tuz/kum serper ve kar yağışı başladığında kürüme ekipleri sahaya çıkar; ancak bu çalışma şehrin tamamını aynı anda kapsayamaz, öncelik ana arterlere ve köprü/otoyol bağlantılarına verilir. Ara sokaklar ve yokuşlu mahalle içi yollar genellikle daha geç veya hiç müdahale görmez.",
+          "Bu nedenle ana cadde temizlenmiş görünse bile, sapacağınız ara sokağın hâlâ karlı/buzlu olabileceğini unutmayın; hız kesmeden bir ana yoldan dar bir sokağa dönmek, zemin sürtünmesindeki ani değişim nedeniyle kaymaya yol açabilir. Kürüme ve tuzlama çalışması yapılan bölgelerde iş makinelerine yaklaşırken de mesafeli ve dikkatli olmanızı öneririz.",
+        ],
+      },
+      {
+        heading: "Kar/Buzda Güvenli Takip Mesafesi Nasıl Hesaplanır",
+        paragraphs: [
+          "Kuru asfaltta önerilen takip mesafesi (yaklaşık 2 saniye kuralı) kar ve buzda yeterli değildir; fren mesafesi buzlu zeminde kuru asfalta göre 5-10 kat uzayabilir. Bu yüzden kış aylarında önünüzdeki araçla aranızda en az 4-6 saniyelik bir mesafe bırakmanızı öneririz — bu, önünüzdeki araç aniden frene bastığında güvenli şekilde durabilmeniz için gereken payı sağlar.",
+          "Otoyolda bu mesafe daha da kritik hale gelir çünkü hız daha yüksektir ve fren mesafesi mutlak olarak da uzar. Ekibimiz kış aylarında otoyol üzerinde zincirleme kazaların büyük kısmının, kısa takip mesafesi ve yüksek hızın bir araya gelmesinden kaynaklandığını gözlemliyor.",
+        ],
+      },
+      {
+        heading: "Toplu Taşıma Alternatifleri Yoğun Kar Günlerinde",
+        paragraphs: [
+          "Yoğun kar yağışı beklenen günlerde, özellikle Çamlıca, Beykoz'un kuzeyi veya Şile yolu gibi riskli bölgelerde yaşıyorsanız, mümkünse özel aracınız yerine metro, metrobüs veya toplu taşımayı tercih etmeniz hem sizin güvenliğiniz hem de trafik yoğunluğunun azalması açısından faydalıdır.",
+          "Bu tercih aynı zamanda kar küreme ve tuzlama ekiplerinin işini kolaylaştırır; yollarda daha az araç olması, kürüme ekiplerinin ana arterleri daha hızlı temizlemesine ve dolaylı olarak sizin de bir sonraki yolculuğunuzun daha güvenli olmasına katkı sağlar.",
+        ],
+      },
+      {
+        heading: "Kışlık Lastik ile Dört Mevsim Lastik Arasındaki Fark",
+        paragraphs: [
+          "Dört mevsim (all-season) lastikler, yaz ve kış koşulları arasında bir uzlaşma sunar ama her iki uçta da özel lastiklere göre daha düşük performans gösterir; İstanbul gibi kışın gerçekten sert don ve kar yaşayabilen ama yılın büyük kısmında ılıman olan bir şehirde, dört mevsim lastik makul bir seçenek olabilir ama şiddetli kar/buz koşullarında gerçek kış lastiğinin tutunma performansına ulaşamaz.",
+          "Sık kar yağışı alan ve eğimli bir bölgede yaşıyorsanız (Çamlıca, Beykoz kuzeyi gibi), gerçek kış lastiğine geçiş yapmanız güvenlik açısından daha isabetli bir tercihtir; düz ve merkezi bir bölgede yaşıyorsanız dört mevsim lastik yeterli olabilir.",
+        ],
+      },
+      {
+        heading: "Kar Yağışı Öncesi Meteorolojik Uyarıları Takip Etmek",
+        paragraphs: [
+          "Meteoroloji Genel Müdürlüğü'nün kar/don uyarıları, genellikle yağıştan 24-48 saat önce yayınlanır; bu uyarıları takip etmek, kış lastiğine geçiş, zincir hazırlığı ve seyahat planlaması için değerli bir zaman penceresi sağlar.",
+          "Ekibimiz de bu uyarıları takip ederek riskli bölgelere ek ekip ve ekipman konumlandırması yapar; sizin de aynı bilgiyi takip etmeniz, hem bireysel hazırlığınız hem de olası bir çağrınızda ne kadar süre bekleyebileceğinizi gerçekçi değerlendirmeniz açısından faydalıdır.",
+        ],
+      },
+      {
+        heading: "Kar Yağışında Yayaların ve Motosiklet Sürücülerinin Karşılaştığı Riskler",
+        paragraphs: [
+          "Kar ve buzda sadece araç sürücüleri değil, yayalar ve özellikle motosiklet sürücüleri de ciddi risk altındadır; motosikletin iki tekerlek üzerindeki denge yapısı, buzlu zeminde araçlara göre çok daha hassastır. Kar/buz beklentisi olan günlerde motosikletle seyahati mümkünse ertelemenizi öneririz.",
+          "Yaya olarak buzlu kaldırımlarda yürürken küçük ve dengeli adımlar atmak, ellerinizi ceplerinizde tutmak yerine dengeyi korumak için serbest bırakmak, düşme riskini azaltır. Bu basit önlemler, kış aylarında hem sürücüler hem yayalar için geçerlidir.",
+        ],
+      },
+      {
+        heading: "Kar Yağışı Sırasında Cam Buğulanmasıyla Mücadele",
+        paragraphs: [
+          "Kar ve soğuk havada araç içi ile dışı arasındaki sıcaklık farkı, camların hızla buğulanmasına yol açar; bu, görüş mesafenizi aniden ve ciddi şekilde azaltabilir. Klimayı düşük sıcaklıkta ama açık tutmak, hava akışını cama yönlendirmek, buğulanmayı önlemenin en hızlı yoludur.",
+          "Yolda kalıp buğulu bir camla ilerlemeye devam etmek yerine, güvenli bir noktada durup camları tam olarak açmanız veya klimayı ayarlamanız, birkaç dakikalık gecikmeye değecek kadar önemlidir; görüş mesafesi kısıtlıyken sürüşe devam etmek ciddi bir kaza riski taşır.",
+        ],
+      },
+      {
+        heading: "Kışlık Bakım Randevusu İçin Doğru Zamanlama",
+        paragraphs: [
+          "Kış öncesi bakım randevularını sonbaharın son haftalarına bırakmak yerine, ekim ayı gibi erken bir dönemde planlamanız, servislerin yoğunluk yaşadığı kasım-aralık dönemine denk gelmeden randevu almanızı kolaylaştırır. Kış lastiği değişimi de aynı mantıkla erken planlanırsa, ilk soğuk hava dalgasında lastikçilerin yoğun kuyruklarından etkilenmezsiniz.",
+          "Erken planlama, sadece randevu bulma kolaylığı değil, aracınızın kışa daha hazırlıklı girmesi anlamına da gelir; son dakikaya bırakılan bir akü veya lastik kontrolü, ilk soğuk sabahta sürpriz bir arızayla karşılaşma riskini artırır.",
+        ],
+      },
+      {
+        heading: "Kar Yağışı Sonrası Aracınızı Çalıştırmadan Önce Kontrol Listesi",
+        paragraphs: [
+          "Bir gece boyunca kar altında kalan aracınızı çalıştırmadan önce, egzoz borusunun kar ile tıkalı olmadığından emin olun; tıkalı bir egzoz, motor çalışırken karbonmonoksitin kabine sızmasına yol açabilir. Ayrıca lastiklerin etrafındaki karı temizlemeniz, ilk hareket anında daha iyi tutunma sağlar.",
+          "Cam ve aynaların tam olarak temizlendiğinden emin olduktan sonra yola çıkmanız, hem görüş açınızı korur hem de kısmen temizlenmiş bir camla sürüşün getirdiği riskleri ortadan kaldırır.",
+        ],
+      },
+      {
+        heading: "Kapanış Notu",
+        paragraphs: [
+          "İstanbul'da kar ve buzlanma kaynaklı bir araç sorunu yaşarsanız, kış donanımlı ekibimize 0535 404 80 44 numarasından 7/24 ulaşabilirsiniz.",
         ],
       },
     ],
@@ -495,6 +620,82 @@ export const bilgilendirici2Posts: BlogPost[] = [
         paragraphs: [
           "Elektrikli bir araç su baskınından etkilendiyse, standart araçlara göre ek bir dikkat gerekir: yüksek voltaj bataryası su ile temas etmişse veya temas şüphesi varsa, aracı çalıştırmamanın yanı sıra kapı kollarına ve metal aksama gereksiz temastan kaçınmanız önerilir. Bu, olağan koşullarda çok düşük bir risk olsa da, üretici güvenlik kılavuzlarının önerdiği bir tedbirdir.",
           "Ekibimiz elektrikli araç su hasarı vakalarında, aracı taşımadan önce üretici acil müdahale prosedürüne uygun şekilde yüksek voltaj sistemini izole eder ve aracı sadece tam platformda, dört tekerleği yerden kesilmiş halde taşır. Bu araçların servise ulaştığında batarya paketinin su geçirmezlik kontrolünden geçirilmesi, uzun vadeli güvenlik açısından atlanmaması gereken bir adımdır.",
+        ],
+      },
+      {
+        heading: "Yağmur Suyu Altyapısı ve Neden Bazı Noktalar Tekrar Tekrar Su Alır",
+        paragraphs: [
+          "Bazı bölgelerin her şiddetli yağışta tekrar su altında kalması tesadüf değildir; bu genellikle o noktanın çevresine göre daha alçak kotta olması, yağmur suyu ızgaralarının yaprak/çöp ile tıkanması veya altyapı kapasitesinin güncel yağış yoğunluğuna yetmemesi gibi yapısal nedenlerden kaynaklanır. Bu tip \"kronik\" su baskını noktaları, yerel sürücüler arasında zaten bilinir.",
+          "Eğer sık kullandığınız bir güzergâhta böyle tekrarlayan bir nokta varsa, şiddetli yağış uyarısı olan günlerde bu noktayı önceden not edip alternatif bir güzergâh planlamanız, anlık karar vermek zorunda kalmaktan çok daha güvenlidir.",
+        ],
+      },
+      {
+        heading: "Kapalı Otopark ve Bina Bodrum Katlarında Su Baskını Riski",
+        paragraphs: [
+          "Şiddetli yağışlarda sadece açık yollar değil, eğimli giriş rampasına sahip kapalı otoparklar ve bina bodrum katları da su baskını riski taşır; su, rampadan aşağı akarak otopark katına dolabilir. Böyle bir bölgede aracınızı bırakacaksanız, şiddetli yağış uyarısı olan günlerde mümkünse üst kat veya açık, yüksek kotlu bir park alanını tercih etmenizi öneririz.",
+          "Eğer aracınız bir bodrum otoparkta su baskınından etkilendiyse, aracın bulunduğu kattaki su seviyesi düşene kadar beklemek ve motoru çalıştırmadan bizi aramak, sel/su hasarında uyguladığımız standart yaklaşımla birebir aynıdır; bu tip kapalı alan vakalarında da aracı platforma alıp taşırken aynı özeni gösteririz.",
+        ],
+      },
+      {
+        heading: "Sel Sonrası Toplu Taşıma ve Alternatif Ulaşım Planlaması",
+        paragraphs: [
+          "Şiddetli bir sağanak sonrası aracınız su hasarı aldıysa, servise gidiş sürecinde (genelde birkaç gün sürebilen) alternatif ulaşım ihtiyacınız olacaktır. Bu dönemde toplu taşıma, taksi veya kısa süreliğine kiralık araç gibi seçenekleri değerlendirebilirsiniz; aracınızı biz servise taşırken siz bu süreci paralel olarak planlayabilirsiniz.",
+          "Sel/su baskını günlerinde İstanbul'un bazı bölgelerinde toplu taşıma hatları da (metrobüs, otobüs güzergâhları) geçici olarak etkilenebilir; bu tür günlerde yol durumunu ve toplu taşıma güncellemelerini takip etmeniz, hem araç hem alternatif ulaşım planlamanızda size zaman kazandırır.",
+        ],
+      },
+      {
+        heading: "Sel Hasarlı Araçların İkinci El Piyasasındaki Yeri",
+        paragraphs: [
+          "Su hasarı yaşamış ve düzgün onarılmamış bir araç, zamanla elektronik arızalar, korozyon ve koku gibi kalıcı sorunlar geliştirebilir; bu yüzden bir araç satın alırken sel geçmişi olup olmadığını ekspertiz raporuyla kontrol ettirmeniz önemlidir. Bizim düzenlediğimiz çekme faturaları ve durum raporları, aracın su hasarı geçmişinin şeffaf şekilde belgelenmesine katkı sağlar.",
+          "Eğer aracınız su hasarı sonrası doğru şekilde (motor kontrolü, elektronik konektör temizliği, halı altı kurutma) onarıldıysa, bu süreci belgelemeniz gelecekteki bir satışta alıcıya güven verir; şeffaflık, hem sizin hem karşı tarafın yararınadır.",
+        ],
+      },
+      {
+        heading: "Sel Sırasında Yayaların ve Bisikletlilerin Karşılaştığı Riskler",
+        paragraphs: [
+          "Su baskını sadece araç sahiplerini değil, o sırada yürüyen veya bisikletle geçen kişileri de etkiler; derin su birikintilerinde açık rögar kapaklarının yerinden oynaması, görünmeyen bir tehlike oluşturabilir. Aracınızla ilerlerken yayalara ve bisikletlilere yakın geçerken hız kesmeniz, oluşturacağınız dalganın onları etkilememesi için önemlidir.",
+          "Ekibimiz sel/su baskını çağrılarına giderken de bu riski göz önünde bulundurur; sahaya ulaştığımızda hem aracınızın hem çevredeki yayaların güvenliğini gözeterek hareket ederiz.",
+        ],
+      },
+      {
+        heading: "Sel Sonrası Belediye ve Altyapı Çalışmalarını Takip Etmek",
+        paragraphs: [
+          "Şiddetli bir su baskını sonrası, ilgili belediye birimleri genellikle etkilenen bölgede yağmur suyu ızgaralarını temizler ve gerekirse ek drenaj önlemi alır; bu çalışmaların tamamlanma süresi bölgeye göre değişir. Sık su alan bir bölgede yaşıyorsanız, belediyenin resmi duyurularını takip etmeniz, bir sonraki şiddetli yağışta ne bekleyeceğinizi anlamanıza yardımcı olur.",
+          "Bazı bölgelerde tekrarlayan su baskını şikayetleri, zamanla kalıcı altyapı iyileştirmelerine (yeni drenaj hattı, yükseltilmiş yol kotu) yol açabilir; bu süreç genellikle uzun vadelidir ama yerel yönetimle iletişimde kalmak, sorunun görünür kalmasını sağlar.",
+        ],
+      },
+      {
+        heading: "Ticari Araç ve Filo Sahipleri İçin Sel Riski Yönetimi",
+        paragraphs: [
+          "Filo halinde araç işleten şirketler için, sürücülere sel/su baskını riskli bölgeler ve doğru davranış kuralları konusunda düzenli bilgilendirme yapmak, hem araç hasarını hem de operasyonel aksamayı önler. Sürücülerin \"motoru asla çalıştırmama\" kuralını bilmesi, filo yöneticisinin en çok önem vermesi gereken güvenlik mesajlarından biridir.",
+          "Şiddetli yağış uyarısı olan günlerde filo araçlarının güzergâhlarını önceden gözden geçirmek ve bilinen riskli noktalardan kaçınacak şekilde planlamak, hem sürücü güvenliğini hem de filo maliyetlerini korur.",
+        ],
+      },
+      {
+        heading: "Su Baskını Riskini Azaltmak İçin Araç Bazında Alınabilecek Önlemler",
+        paragraphs: [
+          "Motor hava alma noktasının konumunu bilmeniz (genellikle ön tampon altı veya motor bölmesinin yan tarafı), aracınızın hangi su seviyesinde risk altına girdiğini tahmin etmenize yardımcı olur; bu bilgiyi aracınızın kullanım kılavuzunda veya yetkili serviste öğrenebilirsiniz.",
+          "Aracınızda su baskını riskine karşı ekstra bir önlem olarak, camlarınızı acil durumda kırmak için küçük bir cam kırma aparatı bulundurmanızı öneririz; bu ucuz ve küçük bir ekipman, nadir ama ciddi bir senaryoda hayat kurtarıcı olabilir.",
+        ],
+      },
+      {
+        heading: "Sağanak Sonrası İlk 24 Saatte Aracınızı Kontrol Ettirmenin Önemi",
+        paragraphs: [
+          "Su temasından şüphelendiğiniz bir araç için, sağanak bittikten sonraki ilk 24 saat içinde bir servise kontrol ettirmeniz, olası bir sorunun büyümeden tespit edilmesini sağlar; özellikle elektronik konektörlerde başlayan hafif bir korozyon, erken müdahaleyle kolayca önlenebilirken, gecikmeyle kalıcı bir arızaya dönüşebilir.",
+          "Bu kontrolü ertelemek, özellikle aracınızı günlük kullanıyorsanız cazip gelebilir; ama su temaslı bir aracın \"şimdilik normal çalışıyor\" görünmesi, gizli bir sorunun olmadığı anlamına gelmez. Erken kontrol, uzun vadede hem güvenliğiniz hem cüzdanınız için daha isabetlidir.",
+        ],
+      },
+      {
+        heading: "Su Baskınında Klasik ve Koleksiyon Araçlar İçin Ekstra Hassasiyet",
+        paragraphs: [
+          "Klasik veya koleksiyon değeri olan bir araç su baskınından etkilendiyse, standart bir araca göre çok daha dikkatli bir yaklaşım gerekir; orijinal iç döşeme, elektrik tesisatı ve motor parçaları modern araçlara göre nem ve korozyona karşı daha hassas olabilir. Bu tip araçları taşırken ve servise yönlendirirken, sahibinin özel talimatlarını dikkatle uyguluyoruz.",
+          "Koleksiyon aracınız su hasarı riskiyle karşılaştıysa, standart bir serviste değil, o modele özel deneyimi olan bir uzmanla çalışmanızı öneririz; bu tercih için sizinle birlikte doğru adresi netleştirebiliriz.",
+        ],
+      },
+      {
+        heading: "Sorularınız İçin Bize Ulaşın",
+        paragraphs: [
+          "Su baskını veya sel kaynaklı bir araç sorununuz varsa, 0535 404 80 44 numarasından 7/24 bize ulaşabilirsiniz; motoru çalıştırmadığınız sürece aracınız bekleme süresince ek bir hasar riski taşımaz.",
         ],
       },
     ],
@@ -680,6 +881,90 @@ export const bilgilendirici2Posts: BlogPost[] = [
           "Değerlendirme sürecinde ortağımızın geri bildirimlerini doğrudan operasyonel iyileştirmeye dönüştürüyoruz; örneğin belirli bir bölgede tekrarlayan bir gecikme raporlanırsa, o bölgeye ek kapasite planlaması yaparak sorunu kalıcı şekilde çözmeye çalışırız. Bu karşılıklı geri bildirim döngüsü, iş ortaklığımızın sürdürülebilirliğinin temelini oluşturur.",
         ],
       },
+      {
+        heading: "Ortaklık Sürecinde Karşılaşılan Zorluklar ve Çözüm Yaklaşımımız",
+        paragraphs: [
+          "Yeni bir kurumsal ortaklık kurulurken en sık karşılaşılan zorluk, çağrı yönlendirme sürecinin iki tarafın sistemleri arasında ilk başta tam oturmamasıdır — örneğin konum bilgisinin eksik iletilmesi veya araç tipi bilgisinin gecikmesi gibi. Bu tip başlangıç sürtünmelerini, ilk birkaç hafta boyunca daha sık iletişim kurarak ve süreci karşılıklı ince ayar yaparak hızla çözüyoruz.",
+          "Bir diğer sık karşılaşılan durum, beklenen çağrı hacminin gerçek hacimden farklı çıkmasıdır; bu durumda kapasite planlamamızı gerçek verilere göre yeniden ayarlıyoruz. Şeffaf iletişim ve düzenli veri paylaşımı, bu tür başlangıç zorluklarının kalıcı bir soruna dönüşmeden çözülmesini sağlıyor.",
+        ],
+      },
+      {
+        heading: "Bir Asistans Firması Çekici Ortağı Seçerken Nelere Dikkat Etmeli",
+        paragraphs: [
+          "Bir asistans veya sigorta firması çekici ortağı değerlendirirken dikkat etmesi gereken temel kriterler şunlardır: coğrafi kapsama genişliği (tek bir bölgeyle mi sınırlı yoksa şehrin tamamını mı kapsıyor), gerçek 7/24 kapasite (gece vardiyasının sahada mı yoksa sadece çağrı yönlendirmesi mi olduğu), belgeli ve sigortalı olma durumu, ve raporlama/şeffaflık standardı.",
+          "Bizim bu kriterlerin her birinde net bir duruşumuz var: İstanbul'un 39 ilçesinin tamamına, gerçek sahada bekleyen ekiplerle, K1 belgeli ve sigortalı şekilde, fotoğraflı raporlamayla hizmet veriyoruz. Bir asistans firması bu kriterleri karşılaştırmalı olarak değerlendirirken, bu sayfada anlattığımız detayları kontrol listesi gibi kullanabilir.",
+        ],
+      },
+      {
+        heading: "Uluslararası Sigorta Gruplarıyla Çalışma Deneyimimiz",
+        paragraphs: [
+          "Türkiye'de faaliyet gösteren, merkezi yurt dışında olan sigorta gruplarının Türkiye operasyonlarıyla da çalışıyoruz; bu tip ortaklıklarda genellikle daha standardize raporlama formatları ve daha sık performans denetimi bekleniyor. Bu, bizim zaten uyguladığımız fotoğraflı rapor ve düzenli veri paylaşımı yaklaşımımızla doğal olarak örtüşüyor.",
+          "Çok uluslu bir sigorta grubunun Türkiye birimiyle çalışırken, iletişim dilinin ve raporlama formatının kurum içi standartlarına uyarlanması gerekebilir; bu tür özel taleplere görüşme aşamasında esneklikle yaklaşıyoruz.",
+        ],
+      },
+      {
+        heading: "Bölgesel Kapasite Planlaması Kurumsal Ortaklıklar İçin Neden Önemli",
+        paragraphs: [
+          "Bir asistans firmasının müşteri tabanı belirli ilçelerde yoğunlaşıyorsa, bu bilgiyi bizimle paylaşması, o bölgelere ek kapasite ayırmamıza ve daha kısa yanıt süreleri sunmamıza imkan tanır. Örneğin, merkezi ilçelerde yoğun bir portföyü olan bir sigorta şirketiyle çalışırken, o bölgelerdeki ekip yoğunluğumuzu artırarak SLA hedeflerini daha rahat karşılıyoruz.",
+          "Bu tür bölgesel planlama, ortaklığın olgunlaştığı ilk birkaç ay içinde netleşir; başlangıçta genel kapasitemizle hizmet verirken, gerçek çağrı verisi biriktikçe kapasiteyi ortağımızın ihtiyacına göre optimize ediyoruz.",
+        ],
+      },
+      {
+        heading: "Asistans Firmalarının Müşteri Memnuniyeti Anketlerine Katkımız",
+        paragraphs: [
+          "Birçok asistans firması, poliçe sahiplerine hizmet sonrası memnuniyet anketi gönderir; bizim sahadaki performansımız bu anketlerin sonuçlarını doğrudan etkiler. Bu yüzden her operasyonda profesyonel iletişim, doğru bilgilendirme ve zamanında müdahaleyi önceliklendiriyoruz — bu sadece bizim değil, ortağımızın da itibarını korur.",
+          "Bir ortağımızdan memnuniyet anketi sonuçlarıyla ilgili geri bildirim aldığımızda, bu veriyi ekip eğitimlerimize ve süreç iyileştirmelerimize dahil ediyoruz; bu, karşılıklı fayda sağlayan sürekli bir iyileştirme döngüsü oluşturuyor.",
+        ],
+      },
+      {
+        heading: "Rakip Firmalardan Ayrılan Yaklaşımımız",
+        paragraphs: [
+          "Sektörde bazı çekici firmaları, asistans çağrılarını alt yükleniciye devrederek (taşeronlaştırarak) çalışır; bu model bazen hizmet kalitesinde tutarsızlığa yol açabilir çünkü her taşeronun standardı farklı olabilir. Bizim yaklaşımımız, kendi doğrudan ekiplerimizle çalışmak ve her operasyonda aynı K1 belgeli, sigortalı standardı uygulamaktır.",
+          "Bu doğrudan operasyon modeli, bir sorun yaşandığında sorumluluğun net olması ve geri bildirimin doğrudan bize ulaşıp hızlıca operasyonel değişikliğe dönüşmesi anlamına gelir; taşeronlu bir yapıda bu geri bildirim döngüsü genellikle daha yavaş işler.",
+        ],
+      },
+      {
+        heading: "Ortaklık Görüşmesine Nasıl Hazırlanmalısınız",
+        paragraphs: [
+          "İlk görüşmemizde verimli bir değerlendirme yapabilmemiz için, tahmini aylık/yıllık çağrı hacminizi, hizmet vermek istediğiniz coğrafi kapsamı ve mevcut varsa başka bir çekici ortağıyla yaşadığınız zorlukları paylaşmanız faydalı olur. Bu bilgiler, sizin ihtiyacınıza en uygun modeli daha hızlı netleştirmemizi sağlar.",
+          "Hazırlıksız bir görüşme de sorun değil; genel hatlarıyla ihtiyacınızı anlatmanız yeterlidir, detayları birlikte netleştiririz. Görüşmeyi 0535 404 80 44 üzerinden telefonla veya talep ederseniz yüz yüze planlayabiliriz.",
+        ],
+      },
+      {
+        heading: "Küçük Ölçekli Acenteler ve Bireysel Brokerlar İçin de Kapı Açık",
+        paragraphs: [
+          "Büyük sigorta gruplarının yanı sıra, tek bir bölgede faaliyet gösteren küçük ölçekli sigorta acenteleri veya bireysel brokerlarla da esnek koşullarda çalışabiliyoruz; hacminiz düşük olsa bile, müşterilerinize güvenilir bir çekici çözümü sunmak istiyorsanız görüşme yapmaktan memnuniyet duyarız.",
+          "Küçük ölçekli ortaklıklarda genellikle daha basit bir işleyiş (telefonla çağrı iletimi, aylık fatura) yeterli olur; büyüdükçe ihtiyaç duyulan ek süreçleri (düzenli raporlama, SLA takibi) birlikte zaman içinde ekleyebiliriz.",
+        ],
+      },
+      {
+        heading: "Ortaklığı Sonlandırma veya Değiştirme Süreci",
+        paragraphs: [
+          "İş ortaklığımızda esneklik önemli bir ilkedir; ihtiyaçlarınız değiştiğinde (kapsamın daralması, farklı bir hizmet modeline geçiş gibi) süreci birlikte gözden geçirip anlaşmayı güncelliyoruz. Katı ve uzun vadeli bağlayıcı sözleşmeler yerine, karşılıklı memnuniyete dayalı, esnek bir çalışma ilişkisini tercih ediyoruz.",
+          "Bir ortaklığı sonlandırmak isterseniz, sürecin karşılıklı olarak düzenli iletişimle ve devam eden vakaların sorunsuz tamamlanmasını sağlayacak şekilde yürütülmesini önceliklendiriyoruz; bu, hem bizim hem sizin itibarınızı koruyan profesyonel bir yaklaşımdır.",
+        ],
+      },
+      {
+        heading: "Ortaklarımızdan Aldığımız Geri Bildirimler Ne Yönde Değişim Yarattı",
+        paragraphs: [
+          "Geçmişte bir ortağımızdan gelen geri bildirim üzerine, çağrı sonrası durum güncellemesi gönderme sıklığımızı artırdık; bu küçük ama etkili değişiklik, poliçe sahiplerinin bekleme sürecinde daha bilgilendirilmiş hissetmesini sağladı. Bu tür somut örnekler, geri bildirim döngümüzün gerçekten operasyonel değişikliğe dönüştüğünü gösteriyor.",
+          "Ortaklarımızın önerileri her zaman uygulanabilir olmasa da, her öneriyi ciddiye alıp değerlendiriyoruz; bu karşılıklı diyalog, iş ortaklıklarımızın zamanla daha iyi işlemesini sağlayan en önemli unsurlardan biri.",
+        ],
+      },
+      {
+        heading: "Görüşme Talebi İçin İletişim",
+        paragraphs: [
+          "Sigorta veya asistans firması olarak İstanbul genelinde güvenilir bir çekici ortağı arıyorsanız, ilk görüşme için 0535 404 80 44 numarasını arayabilir veya WhatsApp üzerinden yazabilirsiniz; ihtiyacınızı kısaca anlatmanız, size en uygun görüşme zamanını ve formatını (telefon veya yüz yüze) planlamamız için yeterlidir.",
+          "Görüşme sonrasında karar vermeniz için zaman tanıyoruz; bizi tercih etmeden önce başka ortaklarla da görüşmek isterseniz bu tamamen doğal bir süreçtir, herhangi bir aciliyet baskısı hissetmenizi istemeyiz.",
+        ],
+      },
+      {
+        heading: "Kapanış Notu",
+        paragraphs: [
+          "İstanbul'un 39 ilçesinde 7/24, K1 belgeli ve sigortalı bir çekici ortağı arayan her sigorta ve asistans firmasıyla konuşmaya hazırız; 0535 404 80 44 numarasını arayarak ilk adımı atabilirsiniz. Ölçeğiniz büyük veya küçük olsun, ihtiyacınıza uygun bir çalışma modeli üzerinde birlikte anlaşabiliriz.",
+          "Görüşme öncesinde aklınıza takılan herhangi bir soru varsa, bu sayfada anlattığımız süreçlerin (kapsama, raporlama, SLA, fatura) herhangi birini daha detaylı konuşmak isterseniz, tek yapmanız gereken bizi aramak; sorularınızı sabırla yanıtlarız.",
+        ],
+      },
     ],
     faqs: [
       { q: "Sigorta/asistans firması olarak sizinle nasıl ortaklık kurabiliriz?", a: "0535 404 80 44 numarasından bizi arayarak hizmet kapsamınızı ve beklentilerinizi konuşabilir, ortaklık detaylarını netleştirebilirsiniz." },
@@ -858,6 +1143,96 @@ export const bilgilendirici2Posts: BlogPost[] = [
         ],
       },
       {
+        heading: "Ekip Kıyafeti ve Kurumsal Kimlik",
+        paragraphs: [
+          "Sahadaki her ekip üyemiz, gece ve gündüz görünürlüğü artıran reflektörlü kurumsal kıyafet giyer; bu, hem otoyol gibi riskli ortamlarda güvenliği artırır hem de müşterilerimizin bize ulaşan ekibi kolayca tanımasını sağlar. Aracımız yola çıktığında ilettiğimiz plaka ve sürücü bilgisiyle birlikte, bu kurumsal görünüm de kimlik teyidinin bir parçasıdır.",
+          "Kurumsal kimliğimiz sadece görünümle sınırlı değil; her ekip üyesi standart bir iletişim ve davranış protokolüne göre çalışır — kendini tanıtma, durum değerlendirmesi, süreç bilgilendirmesi gibi adımlar her çağrıda aynı sırayla ve aynı özenle uygulanır.",
+        ],
+      },
+      {
+        heading: "Ekipman Yatırım Yaklaşımımız",
+        paragraphs: [
+          "Yeni ekipman alımına karar verirken önceliğimiz, sahadan gelen gerçek ihtiyaçtır: belirli bir araç tipinde (örneğin elektrikli araçlar) çağrı hacmi arttıkça, o segment için ek ekipman veya ek eğitim yatırımı yapıyoruz. Bu, talebi önceden tahmin etmeye çalışmak yerine, gerçek saha verisine dayalı bir yatırım stratejisidir.",
+          "Ekipman yatırımlarımızda güvenlik ve hasarsızlık her zaman maliyetin önündedir; daha ucuz ama daha az güvenli bir ekipman yerine, aracın ve sürücünün güvenliğini önceliklendiren çözümleri tercih ediyoruz. Bu yaklaşım, uzun vadede hem müşteri memnuniyetini hem de operasyonel güvenilirliğimizi koruyor.",
+        ],
+      },
+      {
+        heading: "Müşteri Geri Bildiriminin Ekipman Kararlarına Etkisi",
+        paragraphs: [
+          "Müşterilerimizden gelen geri bildirimler, ekipman ve süreç kararlarımızı doğrudan etkiler; örneğin belirli bir araç tipinde (örneğin alçak şasili spor araçlar) tekrarlayan bir zorluk raporlanırsa, o segment için ek rampa veya farklı bir yükleme tekniği geliştiriyoruz.",
+          "Bu geri bildirim döngüsü, filomuzun statik değil sürekli gelişen bir yapı olmasını sağlıyor; bugünkü ekipman setimiz, yıllar içinde binlerce vakadan öğrendiğimiz derslerin birikimiyle şekillendi.",
+        ],
+      },
+      {
+        heading: "Gelecek Planları: Yeni Ekipman ve Teknoloji Yatırımları",
+        paragraphs: [
+          "Elektrikli araç oranının artmasıyla birlikte, önümüzdeki dönemde daha fazla flatbed kapasitesi ve yüksek voltaj güvenliği konusunda ek eğitim yatırımı planlıyoruz. Otonom sürüş destek sistemlerinin (ADAS) yaygınlaşması da, bu sistemlere sahip araçların taşınmasında yeni protokoller gerektirebilir; bu alanı yakından takip ediyoruz.",
+          "Uzun vadede, filo ve ekipman yönetimimizdeki dijital takip sistemini daha da geliştirerek, kurumsal ortaklarımıza gerçek zamanlı araç konum ve kapasite görünürlüğü sunmayı hedefliyoruz; bu, hem operasyonel verimliliğimizi hem şeffaflığımızı artıracak bir adım olacak.",
+        ],
+      },
+      {
+        heading: "Ekip Sayımız ve Vardiya Sistemi",
+        paragraphs: [
+          "Filomuzu 7/24 kesintisiz çalıştırabilmek için ekiplerimizi vardiya sistemiyle yönetiyoruz; gündüz vardiyası yoğun trafik saatlerine göre, gece vardiyası ise tenha bölgelere hızlı ulaşım ve güvenlik önceliğine göre planlanır. Vardiya geçişlerinde bölgesel kapsamanın kesintiye uğramaması için örtüşen geçiş saatleri uyguluyoruz.",
+          "Yoğun talep dönemlerinde (kar yağışı, bayram tatilleri, büyük etkinlik günleri) normal vardiya sayısının üzerine çıkarak ek ekip görevlendiriyoruz; bu esnek planlama, beklenmedik talep artışlarında bile makul varış sürelerini korumamızı sağlıyor.",
+        ],
+      },
+      {
+        heading: "Ekipman Temizliği ve Hijyen Standartları",
+        paragraphs: [
+          "Araçlarımızın platform ve kabin içi temizliği düzenli olarak yapılır; özellikle farklı araç tiplerini (örneğin su hasarlı bir araç sonrası standart bir binek aracı) art arda taşıdığımız durumlarda, ekipmanın kirlilik veya koku taşımaması için temizlik rutinimize özen gösteririz.",
+          "Yolcu taşıyan bir aracınızı emanet ettiğinizde, platform ve bağlama ekipmanının temiz olması sadece estetik değil, aynı zamanda profesyonellik göstergesidir; bu detaya müşterilerimizin dikkat ettiğini biliyoruz ve buna göre çalışıyoruz.",
+        ],
+      },
+      {
+        heading: "Ekipman Seçimi ve Çevresel Sorumluluk",
+        paragraphs: [
+          "Filomuzdaki araçların düzenli bakımı, sadece güvenlik değil çevresel etki açısından da önemlidir; iyi bakımlı bir motor daha az emisyon üretir. Araç yenileme politikamızda yakıt verimliliği de değerlendirdiğimiz kriterlerden biridir.",
+          "Elektrikli araç taşımacılığındaki artan deneyimimiz, kendi filomuzda da elektrikli/hibrit araçları değerlendirme konusunda bize fikir veriyor; ileride uygun teknoloji olgunlaştığında filomuzun bir kısmını bu yönde güncellemeyi düşünüyoruz.",
+        ],
+      },
+      {
+        heading: "Ekipmanlarımızı Gösterime Açık Tutmamız",
+        paragraphs: [
+          "Kurumsal müşterilerimiz veya büyük hacimli iş ortaklarımız talep ederse, filomuzu ve ekipmanlarımızı yerinde inceleme imkanı sunuyoruz; bu şeffaflık, özellikle uzun vadeli bir ortaklık kararı verecek kurumlar için güven inşa eden bir adım.",
+          "Bireysel müşterilerimiz için de, ekibimiz sahaya geldiğinde kullandığı ekipmanın nasıl çalıştığını (örneğin platform yükleme mekanizmasını) merak ederlerse kısaca açıklamaktan çekinmiyoruz; bu şeffaflık, hizmetin arkasındaki süreci görünür kılıyor.",
+        ],
+      },
+      {
+        heading: "Ekipman Arızası Durumunda Yedekleme Prosedürümüz",
+        paragraphs: [
+          "Sahadaki bir ekipmanda (örneğin hidrolik sistemde) beklenmedik bir arıza yaşanırsa, o bölgedeki yedek aracımız devreye girer ve müşteri bekletilmeden hizmet devam eder; bu yedekleme yaklaşımı, tek bir ekipman arızasının hizmet kalitesini etkilemesini önler.",
+          "Ekipman arızası nadiren sahada, müşteri aracı yüklenmiş haldeyken ortaya çıkarsa, en yakın yedek aracımız derhal yönlendirilir ve araç güvenli şekilde transfer edilir; bu senaryo son derece nadir olsa da, prosedürümüz bu ihtimali de kapsayacak şekilde tasarlandı.",
+        ],
+      },
+      {
+        heading: "Filomuzun Marka ve Model Çeşitliliği",
+        paragraphs: [
+          "Kayar platform araçlarımızda farklı üreticilerin farklı taşıma kapasitesi ve platform uzunluğu sunan modellerini kullanıyoruz; bu çeşitlilik, kompakt bir binek aracından uzun dingil mesafeli bir ticari araca kadar geniş bir yelpazeyi tek filo içinde karşılamamızı sağlıyor.",
+          "Ekipman markası seçerken güvenilirlik ve yedek parça bulunabilirliğini önceliklendiriyoruz; bu, bir aracımızda arıza çıktığında onarım sürecinin hızlı tamamlanmasını ve filonun sahadaki kapasitesinin kesintisiz sürmesini sağlıyor.",
+        ],
+      },
+      {
+        heading: "Ekip ve Ekipman Arasındaki Uyumun Önemi",
+        paragraphs: [
+          "En iyi ekipman bile, onu doğru kullanacak deneyimli bir ekip olmadan tam potansiyelini gösteremez; bu yüzden yeni bir ekipman aldığımızda, ekiplerimize o ekipmana özel eğitim vermeden sahaya çıkarmıyoruz. Ekipman ve insan kaynağı yatırımını her zaman birlikte düşünüyoruz.",
+          "Bu yaklaşım, filomuzun sadece teknik olarak güçlü değil, aynı zamanda o gücü doğru kullanabilen bir ekiple desteklenmiş olmasını sağlıyor; müşterilerimiz için asıl fark yaratan da bu ikisinin bir arada olması.",
+        ],
+      },
+      {
+        heading: "Sorularınız İçin Bize Ulaşın",
+        paragraphs: [
+          "Filomuz veya ekipmanlarımız hakkında burada yanıtlanmayan bir sorunuz varsa, 0535 404 80 44 numarasından bize ulaşabilir, aracınızın özel durumuna göre hangi ekipmanın kullanılacağını öğrenebilirsiniz. Her araç ve her durum kendine özgüdür; en doğru bilgiyi telefon görüşmesinde paylaşırız.",
+          "Kurumsal bir filo için toplu bilgi almak isterseniz de aynı numaradan bize ulaşabilir, ihtiyacınıza uygun ekipman ve kapasite planlamasını birlikte görüşebiliriz.",
+        ],
+      },
+      {
+        heading: "Kapanış Notu",
+        paragraphs: [
+          "Filomuzun tamamı, İstanbul'un 39 ilçesinde 7/24 hizmet verecek şekilde konumlandırılmış ve düzenli bakımdan geçirilmiştir; hangi ekipmana ihtiyacınız olduğundan emin değilseniz, durumu telefonda anlatmanız yeterlidir.",
+        ],
+      },
+      {
         heading: "Sonuç",
         paragraphs: [
           "Filomuzun çeşitliliği, İstanbul'un her köşesinde, her araç tipi için doğru çözümü sunabilmemizin temelidir. Aracınızın tipi ne olursa olsun 0535 404 80 44'ü arayarak fiyat ve müdahale süresi bilgisi alabilirsiniz; K1 belgeli, sigortalı ekibimiz 7/24 hazır.",
@@ -1032,6 +1407,96 @@ export const bilgilendirici2Posts: BlogPost[] = [
           "Bazı müşterilerimiz, referans programına katılmak için önceden bir kayıt yaptırmaları veya özel bir kod almaları gerektiğini düşünüyor; oysa süreç bundan çok daha basit — yönlendirdiğiniz kişinin bizi aradığında sizin adınızı söylemesi yeterli. Bir diğer yanlış varsayım, programın sadece belirli bir hizmet türü (örneğin sadece kaza sonrası taşıma) için geçerli olduğu yönünde; oysa yukarıda anlattığımız gibi her hizmet türü kapsam dahilindedir.",
           "Bazı müşterilerimiz de yönlendirmenin sadece aynı gün içinde geçerli sayıldığını düşünüyor; halbuki yönlendirilen kişi biraz zaman geçtikten sonra da bizi arasa, referans kaydı yine de değerlendirilir. Bu tür yanlış varsayımları netleştirmek için, aklınıza takılan her soruyu doğrudan 0535 404 80 44 üzerinden bize sorabilirsiniz; güncel ve size özel cevabı telefonda paylaşırız.",
           "Bir başka sık karışan nokta, referans programının kurumsal iş ortaklığıyla aynı şey olduğu düşüncesidir; oysa bu ikisi farklı ölçeklerde çalışır ve farklı amaçlara hizmet eder. Hangi kapsamda değerlendirileceğinizden emin değilseniz, durumu kısaca anlatmanız yeterlidir — size uygun modeli birlikte netleştiririz; bu kısa telefon görüşmesi genellikle birkaç dakika içinde netlik kazandırır.",
+        ],
+      },
+      {
+        heading: "Referans Programının Zaman İçinde Nasıl Gelişebileceği",
+        paragraphs: [
+          "Referans programımızı şu an nispeten basit ve esnek bir yapıda tutuyoruz; bunun nedeni, programın doğal bir tavsiye kültürünü desteklemesini istememiz ve karmaşık kurallarla bu doğallığı bozmak istememiz. Zaman içinde müşteri sayımız ve yönlendirme hacmimiz büyüdükçe, programı daha yapılandırılmış bir sisteme (örneğin dijital takip, otomatik bildirim) taşımayı değerlendirebiliriz.",
+          "Böyle bir gelişim yaşanırsa, mevcut müşterilerimize önceden bilgi vereceğiz ve geçiş sürecinde hiçbir yönlendirmenin kaybolmaması için gerekli önlemleri alacağız; şu an için sürecin basitliği, hem bizim hem sizin için en pratik yaklaşım.",
+        ],
+      },
+      {
+        heading: "Dijital Kanallar Üzerinden Referans Takibi",
+        paragraphs: [
+          "Şu anda referans takibimiz büyük ölçüde telefon ve WhatsApp üzerinden yürüyor; yönlendirdiğiniz kişi bizi aradığında sizin adınızı belirtmesi, bu takibin temelini oluşturuyor. İlerleyen dönemde, isterseniz bir yönlendirme yapmadan önce bize kısa bir WhatsApp mesajıyla haber vermeniz, takibi daha da netleştirebilir.",
+          "Dijital bir takip sistemine geçiş yapmamız halinde bile, sürecin sizin için karmaşıklaşmamasını önceliklendireceğiz; amacımız her zaman basit ve şeffaf bir deneyim sunmak, gereksiz bürokrasi yaratmak değil.",
+        ],
+      },
+      {
+        heading: "Referans Programı ve Müşteri Sadakati Arasındaki İlişki",
+        paragraphs: [
+          "Referans programı, aslında sadakatin bir ölçüsüdür: bir hizmeti gerçekten beğenmeyen bir müşteri, çevresine o hizmeti önermez. Bu yüzden yüksek referans oranı, bizim için sadece yeni müşteri kazanma aracı değil, hizmet kalitemizin dolaylı bir göstergesidir de.",
+          "Sadık müşterilerimizin zaman içinde birden fazla kişiyi yönlendirdiğini görüyoruz; bu, tek seferlik bir teşvikten çok, kurduğumuz güven ilişkisinin doğal bir sonucu. Programımızı bu doğal davranışı desteklemek üzere tasarladık, yapay bir teşvik mekanizması olarak değil.",
+        ],
+      },
+      {
+        heading: "Sıkça Sorulan Ek Sorular: Referans Programının İnceliklerine",
+        paragraphs: [
+          "Bazı müşterilerimiz, yönlendirdikleri kişinin farklı bir şehre taşınması durumunda referansın geçerli olup olmadığını soruyor; hizmet kapsamımız İstanbul ile sınırlı olduğu için, yönlendirilen kişinin İstanbul'da bir hizmet talebi olması gerekiyor. Bir diğer sık soru, aynı kişiyi birden fazla kez yönlendirip yönlendiremeyeceğiniz; farklı tarihlerde farklı ihtiyaçlarla gelen aynı kişi için yeniden değerlendirme yapılabilir, bu durumu telefonda birlikte netleştiririz.",
+          "Bazı müşterilerimiz de yönlendirdikleri kişinin hizmet almadan önce vazgeçmesi durumunda ne olacağını merak ediyor; bu durumda bir yönlendirme gerçekleşmediği için referans da değerlendirilmez, ancak aynı kişi ileride tekrar ihtiyaç duyup bizi ararsa yönlendirmeniz yine geçerli sayılır.",
+        ],
+      },
+      {
+        heading: "Bir Referans Zinciri Zaman İçinde Nasıl Büyür",
+        paragraphs: [
+          "Referans zincirleri genellikle organik olarak büyür: bir müşterimiz bir arkadaşını yönlendirir, o arkadaş hizmetten memnun kalır ve kendi çevresine bizi önerir. Bu zincir, tek bir yönlendirmeyle sınırlı kalmaz; yıllar içinde bir müşteri ağı, birbirini tanıyan onlarca kişiye kadar genişleyebilir.",
+          "Bu tip organik büyüme, bizim için en değerli müşteri kazanım kanalıdır çünkü güvene dayalıdır — biri size bir firmayı önerdiğinde, o tavsiyenin arkasında gerçek bir deneyim vardır. Referans programımız, bu doğal süreci ödüllendirerek teşvik etmeyi amaçlıyor, yapay bir pazarlama taktiği olarak değil.",
+        ],
+      },
+      {
+        heading: "Referans Programı ile Sosyal Medya Paylaşımları Arasındaki İlişki",
+        paragraphs: [
+          "Bazı müşterilerimiz, deneyimlerini kendi sosyal medya hesaplarında da paylaşıyor; bu tür paylaşımlar teknik olarak referans programının doğrudan bir parçası olmasa da, aynı güven zincirinin bir uzantısıdır. Bir paylaşımın ardından yeni bir müşteri bizi arayıp o paylaşımdan geldiğini belirtirse, bu bilgiyi de not ediyoruz.",
+          "Sosyal medya üzerinden gelen bu tür dolaylı yönlendirmelerin, doğrudan bir referans programı kaydı gerektirmediğini ama bizim için aynı ölçüde değerli olduğunu belirtmek isteriz; hangi kanaldan geldiğinizi bilmek, hangi iletişim yollarının müşterilerimize ulaştığını anlamamıza yardımcı oluyor.",
+        ],
+      },
+      {
+        heading: "Yeni Müşterilerin Referans Yoluyla Geldiğinde Fark Ettiği Şeyler",
+        paragraphs: [
+          "Referansla gelen müşterilerimizin çoğu, ilk aramalarında zaten neyi bekleyeceklerini biliyor — yönlendiren kişiden aldıkları bilgi sayesinde varış süremiz, iletişim tarzımız ve hizmet standardımız hakkında önceden bir fikirleri oluyor. Bu, hem onların beklentisini yönetmemizi kolaylaştırıyor hem de ilk temasta güven inşa etme sürecini hızlandırıyor.",
+          "Bununla birlikte, referansla gelen her müşteriye de sıfırdan, kendi durumuna özel bir değerlendirme yapıyoruz; genel bir tavsiyeye dayanarak süreci otomatikleştirmiyoruz, çünkü her aracın ve her arızanın kendine özgü koşulları vardır.",
+        ],
+      },
+      {
+        heading: "Referans Programının Uzun Vadeli Hedefi",
+        paragraphs: [
+          "Referans programımızın nihai hedefi, sadece kısa vadeli müşteri kazanımı değil, İstanbul'da güvenilir bir çekici hizmeti ihtiyacı olan herkesin, tanıdığı birinin tavsiyesiyle bize kolayca ulaşabildiği bir ağ oluşturmaktır. Bu ağ büyüdükçe, panik anında rastgele arama yapıp güvenilirliğinden emin olmadığı bir firmayla çalışmak zorunda kalan sürücü sayısının azalacağını düşünüyoruz.",
+          "Bu uzun vadeli hedefe ulaşmak, sadece pazarlama çabasıyla değil, her operasyonda tutarlı ve güvenilir hizmet sunmakla mümkün; referans programı bu tutarlılığın doğal bir sonucu olarak var oluyor, tersi değil.",
+        ],
+      },
+      {
+        heading: "Referans Programı Hakkında Son Bir Not: Dürüstlük Önce Gelir",
+        paragraphs: [
+          "Bir yakınınızı bize yönlendirirken, sadece avantajdan faydalanmak için değil gerçekten memnun kaldığınız için önermeniz, hem yönlendirdiğiniz kişi hem bizim için en sağlıklı senaryodur. Memnun olmadığınız bir noktayı bizimle paylaşmanız, hem o sorunu çözmemizi hem de programın güven temelini korumamızı sağlar.",
+          "Bu dürüstlük ilkesi, referans programımızın tüm işleyişinin temelini oluşturuyor; amacımız yapay bir teşvikle değil, gerçek memnuniyetle büyüyen bir müşteri ağı kurmak.",
+        ],
+      },
+      {
+        heading: "Referans Programını Diğer Aile Üyelerinizle Paylaşmak",
+        paragraphs: [
+          "Ailenizde birden fazla araç sahibi varsa (örneğin ebeveynleriniz veya kardeşleriniz), onları da bize yönlendirebilirsiniz; aile içi yönlendirmeler de normal bir referans gibi değerlendirilir. Bu, özellikle yaşlı aile üyelerinin güvenilir bir çekici numarasına kolayca ulaşmasını sağlamak isteyen müşterilerimiz arasında sık görülen bir kullanım şeklidir.",
+          "Bize ulaştığınızda, ailenizin tamamı için tek bir referans kaydı yerine her yönlendirmeyi ayrı ayrı değerlendiriyoruz; bu, her aile üyesinin kendi deneyimine göre adil bir şekilde değerlendirilmesini sağlıyor.",
+        ],
+      },
+      {
+        heading: "İş Yerinizdeki Meslektaşlarınızı Yönlendirmek",
+        paragraphs: [
+          "Bazı müşterilerimiz, iş yerindeki meslektaşlarına da bizi öneriyor; özellikle aynı ofis veya sanayi bölgesinde çalışan bir grup için, birden fazla kişinin aynı güvenilir çekici numarasını bilmesi pratik bir avantaj sağlıyor. Bu tip toplu ama gayriresmi yönlendirmeler de normal referans süreciyle aynı şekilde değerlendiriliyor.",
+          "İş yerinizde araç filosu yöneten biriyseniz veya meslektaşlarınızın düzenli araç ihtiyacı varsa, bireysel referans yerine kurumsal iş ortaklığı modelini değerlendirmek daha uygun olabilir; hangi modelin sizin durumunuza uyduğunu netleştirmek için bizi arayabilirsiniz.",
+        ],
+      },
+      {
+        heading: "Referans Programı Deneyiminizi Bizimle Paylaşın",
+        paragraphs: [
+          "Referans programı üzerinden bize ulaşan yeni müşterilerimizin deneyimi bizim için değerli bir geri bildirim kaynağıdır; hem yönlendiren hem yönlendirilen tarafın memnuniyetini takip ederek programın gerçekten işlediğinden emin oluyoruz.",
+          "Sürecin herhangi bir aşamasında bir aksaklık yaşarsanız, bunu doğrudan 0535 404 80 44 üzerinden bize iletmeniz, hem sizin sorununuzu çözmemizi hem de programı geliştirmemizi sağlar.",
+        ],
+      },
+      {
+        heading: "Son Bir Hatırlatma",
+        paragraphs: [
+          "Referans programı hakkında aklınıza takılan herhangi bir soru için 0535 404 80 44 numarasını aramanız yeterli; güncel koşulları ve size özel durumu birlikte netleştirelim.",
         ],
       },
       {

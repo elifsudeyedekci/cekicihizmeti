@@ -5,6 +5,7 @@ import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "سطحة سحب سيارات إسطنبول ٢٤/٧ | مساعدة على الطريق — 0535 404 80 44",
@@ -110,6 +111,7 @@ export default function ArabicHomePage() {
             label="راسلنا عبر واتساب"
           />
         </div>
+        <TowImageGallery seed="ar-home" keyword="إسطنبول" count={3} locale="ar" />
       </section>
 
       <section className="prose-tow mx-auto max-w-3xl px-4 py-6">

@@ -51,7 +51,10 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-[var(--color-navy-400)]">
-        © {year} {SITE.legalName}. Tüm hakları saklıdır.
+        © {year} {SITE.legalName}. Tüm hakları saklıdır. ·{" "}
+        <a href="/images/cekici/CREDITS.md" className="underline hover:text-white">
+          Görsel kaynakları
+        </a>
       </div>
     </footer>
   );

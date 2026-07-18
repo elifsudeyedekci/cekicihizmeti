@@ -3,6 +3,7 @@ import { SITE } from "@/lib/config";
 import { businessMapEmbed } from "@/lib/data/districts";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton, ShareLocationButton } from "@/components/CtaButtons";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "İletişim",
@@ -52,6 +53,8 @@ export default function ContactPage() {
           <h2>E-posta</h2>
           <p>Acil olmayan sorularınız için: {SITE.email}</p>
         </div>
+
+        <TowImageGallery seed="iletisim" keyword="İletişim" />
 
         <div className="mt-6 overflow-hidden rounded-xl border border-[var(--color-navy-100)]">
           <iframe

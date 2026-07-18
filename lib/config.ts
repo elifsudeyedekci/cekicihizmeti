@@ -20,7 +20,7 @@ export const SITE = {
   geo: { lat: 41.0082, lng: 28.9784 },
   openingHours: "Mo-Su 00:00-24:00",
   description:
-    "İstanbul'un tüm ilçelerinde 7/24 oto çekici, yol yardım ve oto kurtarma hizmeti. Anadolu ve Avrupa Yakası'nda ortalama 20-40 dakikada yanınızdayız. K1 belgeli, sigortalı ve resmi kayıtlı.",
+    "İstanbul'un tüm ilçelerinde 7/24 oto çekici, yol yardım ve oto kurtarma hizmeti. Ortalama 20-40 dakikada yanınızdayız. K1 belgeli, sigortalı işletmeyiz.",
 } as const;
 
 /** WhatsApp linki üretir; mesaj ön-doldurulmuş gelir (örn. "Merhaba, Ümraniye'de aracım bozuldu"). */

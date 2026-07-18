@@ -124,6 +124,7 @@ function districtScenarioBank(d: District): BlogSection {
     `**Lastik değişimi**: ${d.neighborhoods[Math.min(1, d.neighborhoods.length - 1)]} bölgesinde patlak lastikle kalan bir sürücü için, yedek lastik varsa yerinde torklu değişim yapılır; yoksa araç en yakın lastikçiye taşınır.`,
     `**Kapalı otopark/site vakası**: ${d.name}'deki kapalı otoparklarda uzun süre çalıştırılmayan araçlarda akü bitmesi ve lastik basınç kaybı sık görülür; alçak tavanlı aracımızla bu otoparklara giriyoruz.`,
     `**Gece çağrısı**: ${d.name}'de gece saatlerinde gelen çağrılarda nöbetçi ekibimiz plaka/sürücü bilgisini SMS ile teyit ettirir; bu, tenha noktalarda güvenliğinizi korumak için uyguladığımız standart prosedürdür.`,
+    `**Yakıt bitmesi**: ${d.roads[Math.min(1, d.roads.length - 1)]} üzerinde veya ${d.name} içindeki bir sokakta yakıtı biten sürücüler için güvenli taşıma kabıyla ihtiyaç kadar yakıtı yerinde getiriyoruz; bu vaka çekiciye gerek kalmadan dakikalar içinde çözülür.`,
   ];
   return { heading: `${d.name}'de Sık Karşılaşılan Vaka Senaryoları`, paragraphs: templates };
 }
@@ -149,6 +150,7 @@ function districtLandmarkSection(d: District): BlogSection {
     paragraphs: [
       `Konum tarif ederken en pratik yöntem WhatsApp'tan canlı konum paylaşmaktır; ancak telefon hattında sözlü tarif gerekirse ${d.name}'deki şu noktaları referans alabilirsiniz: ${d.landmarks.join(", ")}. Ekibimiz bu noktaların etrafını iyi bildiği için "buraya yakınım" demeniz genelde yeterlidir.`,
       `${d.landmarks[0]} çevresi özellikle yoğun saatlerde referans noktası olarak kullanışlıdır; buradan gelen çağrılarda ekibimiz alternatif güzergâhları bilir ve yoğunluğa takılmadan ulaşır.`,
+      `Konum tarifinde emin değilseniz endişelenmeyin; telefonda birlikte netleştiririz. Yakındaki bir işletme tabelası, sokak levhası veya son geçtiğiniz kavşak bile ekibimizin ${d.name} içinde sizi bulması için yeterli olur.`,
     ],
   };
 }
@@ -160,6 +162,7 @@ function districtWhyChooseUs(d: District): BlogSection {
       `${d.name}'de K1 yetki belgeli, sigortalı ve resmi kayıtlı bir ekip olarak çalışıyoruz. Aracınız ne olursa olsun (binek, SUV, ticari, motosiklet, elektrikli, ağır vasıta) doğru ekipmanla, hasar bırakmadan taşıyoruz.`,
       `${d.name} sınırları içinde konumlanmış ekiplerimiz sayesinde ortalama varış süremiz ${d.arrivalMinutes} dakikadır; bu süre gece saatlerinde trafiğin azalmasıyla genelde kısalır.`,
       `Yükleme öncesi ve sonrası fotoğraflı durum raporu düzenliyoruz; bu belge hem sizin hem bizim için şeffaflık sağlar ve gerekirse sigorta sürecinizde kullanılabilir. Fiyat konusunda tek kural nettir: hiçbir sayfada rakam paylaşmıyoruz, arayan herkese anında ve net fiyat bilgisi veriyoruz.`,
+      `${d.name} sakinlerinin bizi tekrar tercih etmesinin en büyük sebebi tutarlılıktır: ilk aramada verdiğimiz süre ve fiyat bilgisiyle sahada karşılaştığınız süreç aynıdır, sürpriz ek ücret veya beklenmedik gecikme yaşatmıyoruz.`,
     ],
   };
 }
@@ -177,8 +180,76 @@ function districtSafetyGuide(d: District): BlogSection {
   };
 }
 
+function districtInsuranceSection(d: District): BlogSection {
+  return {
+    heading: `${d.name}'de Sigorta ve Kasko Yönlendirmesi`,
+    paragraphs: [
+      `${d.name} içinde kaza kaynaklı bir çağrıda, tutanak/tespit süreciniz için gereken temel yönlendirmeyi telefonda yapıyoruz; çekici faturamız kasko dosyanızda kullanılabilir.`,
+      `Kasko poliçenizde çekme-kurtarma teminatı varsa sigorta şirketinizle koordineli çalışabiliyoruz; poliçe kapsamı dışında kalsa bile aynı hızda hizmet veriyor, fiyat konusunda telefonda anında net bilgi veriyoruz.`,
+      `Yükleme öncesi ve sonrası çektiğimiz fotoğraflı durum raporu, ${d.name}'deki taşımalarınızda olası bir hasar tartışmasında hem sizi hem bizi koruyan şeffaf bir belgedir.`,
+      `Birçok sürücü kaskosunun çekme-kurtarma teminatı olduğunu bilmez ve gereksiz yere cepten ödeme yapar; ${d.name}'de bizi ararken poliçenizin asistans hattını da kontrol etmenizi öneririz — biz her durumda eksiksiz fatura ve fotoğraflı rapor sağlarız.`,
+    ],
+  };
+}
+
+function districtCallProcessSection(d: District): BlogSection {
+  return {
+    heading: `0535 404 80 44'ü Aradığınızda ${d.name} İçin Süreç Nasıl İşliyor`,
+    paragraphs: [
+      `1. **Telefonda ön teşhis**: Aracınızın modelini, yaşadığınız belirtiyi (ses, koku, uyarı ışığı, hareket edip etmediği) ve ${d.name} içindeki konumunuzu soruyoruz; bu bilgiler ekibimizin doğru ekipmanla yola çıkmasını sağlıyor.`,
+      `2. **Konum teyidi**: WhatsApp'tan canlı konum paylaşmanızı istiyoruz; sözlü tarif gerekiyorsa ${d.landmarks[0]} gibi ${d.name}'deki bilinen bir noktayı referans alıyoruz.`,
+      `3. **Yola çıkış ve bilgilendirme**: Ekip yola çıktığında size tahmini varış süresini ve gelecek personelin plaka/isim bilgisini iletiyoruz; ${d.name}'e ortalama ${d.arrivalMinutes} dakikada ulaşırız ve bu teyit özellikle gece saatlerinde güvenliğiniz için önemlidir.`,
+      `4. **Yerinde değerlendirme**: Sahaya ulaşan ekibimiz önce yerinde çözüm (akü takviyesi, lastik değişimi) mümkün mü diye bakar; bu, her arızanın çekici gerektirmediği gerçeğinden yola çıkan, gereksiz masrafı önleyen bir yaklaşımdır.`,
+      `5. **Taşıma ve teslim**: Gerekiyorsa aracınız kayar platformla yüklenir; yükleme öncesi/sonrası fotoğraflı durum raporu tutulur ve araç ${d.name} içinde veya dışında sizin belirlediğiniz adrese teslim edilir. Fiyat bilgisi süreç boyunca telefonda net şekilde verilir.`,
+    ],
+  };
+}
+
+function districtDocumentationSection(d: District): BlogSection {
+  return {
+    heading: `${d.name}'de Belge, Fatura ve Güvence`,
+    paragraphs: [
+      `${d.name} içinde yaptığımız her taşımada yasal fatura düzenliyoruz; bu fatura hem kurumsal müşteriler hem kasko/sigorta süreci yürüten müşteriler için gereken resmi belgedir.`,
+      `Yükleme öncesi ve sonrası çektiğimiz fotoğraflar, aracın taşıma öncesindeki mevcut durumunu (varsa önceki hasar, lastik/jant durumu) kayıt altına alır; bu, hem sizi hem bizi olası bir anlaşmazlıkta koruyan şeffaf bir uygulamadır ve gerektiğinde sigorta dosyanızda kullanılabilir.`,
+      `K1 yetki belgeli ve sigortalı bir firma olarak, ${d.name}'deki taşımalarınızda oluşabilecek olağandışı bir durumda da güvence altında olursunuz; bu belgeleri talep etmeniz halinde memnuniyetle paylaşırız.`,
+    ],
+  };
+}
+
+function districtSeasonalSection(d: District): BlogSection {
+  return {
+    heading: `${d.name}'de Mevsimsel ve Zamana Bağlı Çağrı Profili`,
+    paragraphs: [
+      `**Kış ayları**: Soğuk hava akü kapasitesini düşürür; ${d.name}'deki ekibimiz kış aylarında akü takviye taleplerinde belirgin bir artış gözlemler. Kış lastiği kullanılmayan araçlarda ${d.roads[0]} gibi güzergâhlarda kayma riski de bu dönemde artar.`,
+      `**Yaz ayları**: Uzun süre trafikte bekleyen araçlarda motor ve klima sistemi normalden fazla yük altında kalır; ${d.name}'de yaz aylarında hararet kaynaklı çağrılarımız çoğalır, özellikle öğle saatlerinde.`,
+      `**Tatil ve bayram dönemleri**: ${d.name}'den geçen veya bu ilçeye giriş/çıkış yapan tatil trafiğinde araç yoğunluğu artar; bu dönemlerde ekip sayımızı artırarak varış sürelerini korumaya çalışıyoruz.`,
+      `**Gece saatleri**: ${d.name}'de gece geç saatlerde trafik seyrekleşir; bu hem daha hızlı ulaşmamızı sağlar hem de nöbetçi ekibimizin plaka/sürücü teyidi göndermesini daha da önemli kılar.`,
+    ],
+  };
+}
+
+function districtNeighborComparisonSection(d: District, neighbors: District[]): BlogSection {
+  if (neighbors.length === 0) {
+    return {
+      heading: `${d.name} ve Çevresi`,
+      paragraphs: [
+        `${d.name}, İstanbul'un ${d.yaka === "anadolu" ? "Anadolu" : "Avrupa"} Yakası'nda kendine özgü bir trafik ve coğrafya profiline sahiptir; ekibimiz bu profile uygun ekipman ve güzergâh bilgisiyle çalışır.`,
+      ],
+    };
+  }
+  const paragraphs = neighbors.map(
+    (n) =>
+      `**${d.name} — ${n.name} hattı**: ${d.name}'den ${n.name}'e geçiş yapan sürücüler için de hizmet veriyoruz; ${n.name}'in ${n.roads[0]} güzergâhı ve ${n.landmarks[0]} çevresi, iki ilçe arasındaki çağrılarda sık kullandığımız referans noktalarındandır.`
+  );
+  return { heading: `${d.name} ve Komşu İlçelerle Bağlantı`, paragraphs };
+}
+
 export function generateDistrictPosts(): BlogPost[] {
   return districts.map((d) => {
+    const neighborDistricts = d.neighbors
+      .map((n) => districts.find((x) => x.slug === n))
+      .filter((x): x is District => Boolean(x));
+
     const sections: BlogSection[] = [
       { heading: `${d.name}'de Çekici İhtiyacı Neden Farklıdır`, paragraphs: [d.localNote] },
       { heading: "Örnek Vaka: Bu Bölgede Nasıl Çalışıyoruz", paragraphs: [d.scenario] },
@@ -188,12 +259,18 @@ export function generateDistrictPosts(): BlogPost[] {
       { heading: `${d.name}'de Çekicilik: Yerel Gözlemler`, paragraphs: d.blogParagraphs },
       districtScenarioBank(d),
       districtServiceOverview(d),
+      districtSeasonalSection(d),
+      districtNeighborComparisonSection(d, neighborDistricts),
       districtWhyChooseUs(d),
+      districtInsuranceSection(d),
+      districtCallProcessSection(d),
+      districtDocumentationSection(d),
       districtSafetyGuide(d),
       {
         heading: "Sonuç",
         paragraphs: [
           `${d.name}'de yaşıyor veya bu ilçeden geçiyor olun, aracınızla ilgili herhangi bir sorunda tek yapmanız gereken 0535 404 80 44'ü aramak. K1 belgeli, sigortalı ve 7/24 çalışan ekibimiz, ${d.name}'in tüm mahallelerine ortalama ${d.arrivalMinutes} dakikada ulaşır ve fiyat konusunda net bilgiyi telefonda anında verir.`,
+          `Bu rehberde anlattığımız her şey — mahalleler, yollar, senaryolar, süreç adımları — ${d.name}'de yaşayan veya bu ilçeden sık geçen sürücülerin gerçek sorularından ve gerçek çağrılarımızdan derlendi. Aracınızla ilgili bir sorun yaşadığınızda bu bilgiyi tekrar okumanıza bile gerek kalmadan, tek yapmanız gereken telefonu elinize almak.`,
         ],
       },
     ];
@@ -202,8 +279,8 @@ export function generateDistrictPosts(): BlogPost[] {
       slug: `${d.slug}-cekici-hizmeti`,
       category: "ilce",
       title: `${d.name} Çekici Hizmeti | 7/24 Oto Çekici`,
-      metaTitle: `${d.name} Çekici Hizmeti | 7/24 Oto Çekici — 0535 404 80 44`,
-      metaDescription: `${d.name}'de 7/24 oto çekici ve yol yardım hizmeti. Ortalama ${d.arrivalMinutes} dakikada varış. Hemen arayın: 0535 404 80 44`,
+      metaTitle: `${d.name} Çekici Rehberi | 7/24 — 0535 404 80 44`,
+      metaDescription: `${d.name} çekici hizmeti rehberi: mahalleler, yollar, varış süresi ve sık sorulan sorular. Ortalama ${d.arrivalMinutes} dk varış, K1 belgeli. Ara: 0535 404 80 44`,
       intro: d.intro,
       datePublished: TODAY,
       dateModified: TODAY,
@@ -256,6 +333,7 @@ function brandTowingMethodSection(b: Brand): BlogSection {
       `${b.name} ${lowModel} gibi alçak gövdeli veya spor odaklı gövdelerde standart rampa açısı ön tampon/difüzör ile temas edebilir; bu durumda düşük açılı rampa ve ek plakalar kullanarak aracın hiçbir noktasını yere sürtmeden platforma alıyoruz.`,
       `Yükleme öncesi ve sonrası aracınızın fotoğraflı durum raporunu tutuyoruz; bu, hem sizin hem bizim için şeffaflık sağlıyor ve gerektiğinde sigorta sürecinizde kullanılabiliyor. Jant ve lastik yüzeyine temas eden noktalarda tekstil kayış kullanarak çelik zincirin bırakabileceği izleri de önlüyoruz.`,
       `Sık yapılan bir hata, aracı "kısa mesafe zaten, halatla idare ederiz" diyerek çekmeye çalışmaktır; ${b.name} gibi elektronik yoğunluğu yüksek araçlarda bu, birkaç yüz metrelik mesafede bile şanzıman veya fren sistemine kalıcı hasar verebilir. Mesafe ne olursa olsun doğru yöntem tam platformdur.`,
+      `Ekibimiz her ${b.name} yüklemesinde aynı kontrol listesini uygular: aracın nötr/park konumu, elektronik el freni durumu, dört teker temasının tam kesilip kesilmediği ve kayış gerginliği. Bu standart prosedür, aracın modelinden bağımsız olarak her seferinde aynı güvenli sonucu garanti eder.`,
     ],
   };
 }
@@ -268,6 +346,7 @@ function brandInsuranceSection(b: Brand): BlogSection {
       `Garanti kapsamındaki bir arızada aracı yetkili olmayan bir servise götürmek bazı durumlarda garanti şartlarını etkileyebilir; emin değilseniz telefonda birlikte değerlendirir, isterseniz doğrudan yetkili servise yönlendiririz.`,
       `Kaza kaynaklı çağrılarda tutanak ve sigorta süreciniz için gereken temel yönlendirmeyi yapıyoruz; çekici faturamız kasko dosyanızda kullanılabilir. Yükleme öncesi ve sonrası çektiğimiz fotoğraflar, hasar tespit sürecinde ek belge olarak işinize yarayabilir.`,
       `Kasko poliçenizde yol yardım/çekici hizmeti varsa sigorta şirketinizle koordineli çalışabiliyoruz; poliçe kapsamı dışında kalan durumlarda da aynı hızda, net bilgilendirmeyle hizmet veriyoruz — fiyat konusunda tek kural nettir: hiçbir sayfada rakam paylaşmıyoruz, arayan herkese telefonda anında net bilgi veriyoruz.`,
+      `Bazı ${b.name} sahipleri kaskosunun çekme-kurtarma teminatını unutur ve gereksiz yere cepten ödeme yapar; aracınızı ararken poliçenizin asistans hattını da kontrol etmenizi öneririz — biz doğrudan sigorta şirketinizin anlaşmalı hizmeti olmasak da, sizin adınıza gerekli belge ve faturayı eksiksiz sağlarız.`,
     ],
   };
 }
@@ -281,6 +360,7 @@ function brandSeasonalSection(b: Brand): BlogSection {
       ? `**Elektrikli/hibrit modeller için mevsimsel not**: Soğuk havada batarya menzili belirgin şekilde düşer; kışın planladığınızdan daha erken şarj ihtiyacı doğabilir. Sıcak yaz günlerinde ise hızlı şarj istasyonlarında batarya termal yönetimi devreye girdiğinden şarj süresi uzayabilir — her iki durumda da yol ortasında kalmamak için şarj payını normalden geniş tutmanızı öneririz.`
       : `**Uzun yolculuk öncesi kontrol**: Şehirlerarası bir ${b.name} yolculuğu öncesinde akü kutup başları, lastik diş derinliği ve fren balatalarının kontrol ettirilmesi, yolda kalma riskini büyük ölçüde azaltır; bu basit kontroller çoğu zaman bizi aramanıza hiç gerek bırakmaz.`,
     `**Bayram/tatil trafiği**: Yoğun tatil çıkışlarında İstanbul'un ana arterlerinde saatlerce süren trafik, motoru ve soğutma sistemini normalden fazla zorlar; bu dönemlerde ${b.name} araçlarda hararet ve akü kaynaklı çağrılarımız belirgin şekilde artar. Ekip sayımızı bu dönemlerde artırarak varış sürelerini korumaya çalışıyoruz.`,
+    `Bu mevsimsel notların ortak noktası şudur: basit ve ucuz bir önleyici kontrol, pahalı ve stresli bir yolda kalma anını önler. ${b.name} sahiplerine periyodik bakım takvimlerini aksatmamalarını öneriyoruz; ihtiyaç duyduğunuzda ise 7/24 buradayız.`,
   ];
   return { heading: `${b.name} Sahipleri İçin Mevsimsel Bakım ve Yol Notları`, paragraphs };
 }
@@ -293,6 +373,7 @@ function brandMistakesChecklist(b: Brand): BlogSection {
     `3. **Elektronik park frenini/vites kilidini zorlamak**: Akü bittiğinde el frenini veya vites kolunu zorla hareket ettirmeye çalışmak mekanizmaya zarar verebilir; doğru yöntem 12V takviye veya tekerlek paletleriyle hasarsız yükleme yapmaktır.`,
     `4. **"Kısa mesafede halat yeter" diye düşünmek**: Mesafe ne kadar kısa olursa olsun, ${b.name}'in otomatik/yarı otomatik şanzıman veya dört çeker sistemi varsa halatla çekim birkaç yüz metrede bile kalıcı hasar bırakabilir.`,
     `5. **Servis tercihini son ana bırakmak**: Garanti durumunuzu ve gitmek istediğiniz servisi önceden netleştirirseniz, aracınız yola çıktığı andan itibaren doğru adrese yönlendirilir; bu hem zaman hem tekrar taşıma masrafından tasarruf sağlar.`,
+    `6. **Aracın konumunu belirsiz tarif etmek**: "Şu civarda" gibi genel bir tarif yerine WhatsApp'tan canlı konum paylaşmak, ${b.name} aracınıza ulaşma süremizi ciddi şekilde kısaltır; özellikle site içi veya sokak isimlerinin karışık olduğu bölgelerde bu fark daha da belirgindir.`,
   ];
   return { heading: `${b.name} Sahiplerinin Sık Yaptığı Hatalar`, paragraphs };
 }
@@ -354,6 +435,39 @@ function brandCallProcessSection(b: Brand): BlogSection {
   };
 }
 
+function brandWarrantyImpactSection(b: Brand): BlogSection {
+  return {
+    heading: `${b.name} İçin Çekmenin Garanti ve Değer Üzerindeki Etkisi`,
+    paragraphs: [
+      `Doğru yöntemle (tam platform, üretici prosedürüne uygun bağlama noktaları) yapılan bir çekme işlemi ${b.name} aracınızın garantisini hiçbir şekilde etkilemez; garanti kaybı genelde yanlış çekim yöntemi (halatla tekerlek üzerinde çekim, yanlış noktadan bağlama) sonucu oluşan mekanik hasardan kaynaklanır.`,
+      `İkinci el satış değeri açısından da aynı mantık geçerlidir: ${b.name} aracınızın şasi, tampon veya alt takımında çekim kaynaklı bir hasar yoksa, çekilmiş olması aracın değerini etkilemez; biz bu yüzden her taşımada hasarsızlığı önceliğimiz olarak görüyoruz.`,
+      `Ekspertiz raporunda "çekici ile taşındı" notu, hasar kaydından farklı bir şeydir ve olumsuz bir işaret değildir; asıl önemli olan taşıma sırasında herhangi bir fiziksel hasarın oluşmamasıdır — bunu belgelemek için yükleme öncesi/sonrası fotoğraflı rapor tutuyoruz.`,
+    ],
+  };
+}
+
+function brandDistrictCoverageSection(b: Brand): BlogSection {
+  // Coğrafi olarak dağılmış, her ilçenin gerçek yol/landmark bilgisiyle beslenen 16 ilçelik örneklem
+  const step = Math.max(1, Math.floor(districts.length / 16));
+  const sample = districts.filter((_, i) => i % step === 0).slice(0, 16);
+  const paragraphs = sample.map(
+    (d) =>
+      `**${d.name}**: ${d.name}'de ${b.name} aracınız için ${d.roads[0]} güzergâhı ve ${d.landmarks[0]} çevresi dahil tüm mahallelere ortalama ${d.arrivalMinutes} dakikada ulaşıyoruz.`
+  );
+  return { heading: `İstanbul'un Çeşitli Bölgelerinde ${b.name} Çekici Hizmeti`, paragraphs };
+}
+
+function brandPartsLogisticsSection(b: Brand): BlogSection {
+  return {
+    heading: `${b.name} İçin Parça ve Lojistik Süreci`,
+    paragraphs: [
+      `${b.name} aracınız yetkili servise taşınacaksa, servisin parça stok durumu ve randevu yoğunluğu bazen bekleme süresini etkileyebilir; isterseniz taşıma öncesinde servisle telefon köprüsü kurup randevu/parça durumunu netleştirmenize yardımcı oluyoruz.`,
+      `Özel serviste tamir edilecekse, ${b.name} için orijinal veya muadil parça tedarik süresi servisin tedarikçi ağına göre değişir; bu süreçte aracınızı bekletmemek için doğrudan servise teslim ediyor, gerekirse ikinci bir taşıma için de hazır bekliyoruz.`,
+      `Sigorta/kasko sürecinde parça onayı bekleyen ${b.name} araçlarında, aracı onaylı body shop'a veya kasko şirketinin anlaşmalı servisine taşımak genelde süreci hızlandırır; hangi adrese taşınacağını bilmiyorsanız telefonda bu konuda da yönlendirme yapıyoruz.`,
+    ],
+  };
+}
+
 export function generateBrandPosts(): BlogPost[] {
   return brands.map((b) => {
     const sampleDistricts = [
@@ -376,6 +490,9 @@ export function generateBrandPosts(): BlogPost[] {
       brandWhyChooseUsSection(b),
       brandServiceComparisonSection(b),
       brandDocumentationSection(b),
+      brandPartsLogisticsSection(b),
+      brandWarrantyImpactSection(b),
+      brandDistrictCoverageSection(b),
       brandCallProcessSection(b),
       {
         heading: `İstanbul'da 7/24 ${b.name} Çekici Hizmeti`,
@@ -383,12 +500,15 @@ export function generateBrandPosts(): BlogPost[] {
           `İstanbul'un 39 ilçesinin tamamında ${b.name} araçlar için 7/24 çekici ve yol yardım hizmeti veriyoruz. Akü takviyesi, lastik değişimi ve yakıt ikmali gibi yol yardım hizmetlerimizle çoğu vakayı çekiciye gerek kalmadan yerinde çözüyoruz; çözülemeyen durumlarda aracınızı ${b.name} için doğru prosedürle, tam platformda taşıyoruz.`,
           `${districtNames.join(", ")} gibi hem Avrupa hem Anadolu yakasının farklı noktalarında konumlanmış ekiplerimiz sayesinde şehrin neresinde olursanız olun ${b.name} aracınıza makul bir sürede ulaşabiliyoruz; tam konumunuzu WhatsApp'tan paylaşmanız süreci daha da hızlandırır.`,
           `${b.name} için hem binek hem (varsa) ticari/SUV gövdeli modellerde aynı özenle çalışıyoruz; aracınızın modelini ve yaşadığınız belirtiyi telefonda kısaca anlatmanız, ekibimizin doğru ekipmanla (düşük açılı rampa, go-jack, vinç) yola çıkmasını sağlar.`,
+          `Randevulu planlı taşımalar (ekspertiz, galeri teslimi, ikinci el alım-satım öncesi kontrol) için de ${b.name} sahiplerinden düzenli talep alıyoruz; bu tür taşımalarda saat ve adres netleştiği için süreç daha da sorunsuz ilerler, aracınız belirlenen randevu saatinden önce hedef adreste olur.`,
+          `${b.name} aracınız için düzenli müşterilerimizin en çok sorduğu konu hız değil güvenilirlik oluyor: aracın nasıl taşındığını, kimin taşıdığını ve hangi belgeyle teslim edildiğini bilmek istiyorlar. Bu yüzden her adımı (telefon görüşmesi, yola çıkış bilgilendirmesi, yükleme fotoğrafı, teslim fotoğrafı) şeffaf tutuyoruz.`,
         ],
       },
       {
         heading: "Sonuç",
         paragraphs: [
           `${b.name} aracınızla ilgili herhangi bir arıza, kaza veya yol yardım ihtiyacında 0535 404 80 44'ü arayın. K1 belgeli, sigortalı ekibimiz İstanbul'un her noktasına 7/24 ulaşır, ${b.name} için doğru taşıma prosedürünü uygular ve fiyat bilgisini telefonda anında verir.`,
+          `Bu rehberde anlattığımız model bazlı notlar, arıza tipleri ve süreç adımları, ${b.name} sahiplerinden yıllar içinde aldığımız gerçek çağrılardan derlendi. Aracınızla ilgili bir sorun yaşadığınızda tek yapmanız gereken telefonu elinize almak; gerisini biz hallederiz.`,
         ],
       },
     ];
@@ -398,7 +518,7 @@ export function generateBrandPosts(): BlogPost[] {
       category: "marka",
       title: `${b.name} Çekici Hizmeti İstanbul | 7/24`,
       metaTitle: `${b.name} Çekici Hizmeti İstanbul | 7/24 — 0535 404 80 44`,
-      metaDescription: `${b.name} araçlar için İstanbul'da 7/24 çekici ve yol yardım hizmeti. Marka özel taşıma prosedürleri. Hemen arayın: 0535 404 80 44`,
+      metaDescription: `${b.name} araçlar için İstanbul'da 7/24 çekici ve yol yardım hizmeti veriyoruz. Marka özel taşıma prosedürü, K1 belgeli ekip. Hemen arayın: 0535 404 80 44`,
       intro: b.intro,
       datePublished: TODAY,
       dateModified: TODAY,
@@ -441,6 +561,7 @@ function highwaySafetyDeepDive(h: Highway): BlogSection {
       `Bu nedenle ${h.name} üzerinde arıza yaptığınızda uygulamanız gereken adımlar tesadüfi değil, yıllar içinde edinilmiş güvenlik deneyiminin özetidir: reflektör mesafesi, bariyer dışında bekleme ve doğru konum bildirimi hayat kurtarır.`,
       `Ekiplerimiz ${h.name} güzergâhında düzenli çalıştığı için bu yolun her kavşağını, gişesini ve riskli noktasını bilir; sizi telefonda doğru şekilde yönlendirir ve güvenlik koridoru kurarak müdahale eder.`,
       `Emniyet şeridinde beklerken en tehlikeli davranış, aracın arkasında veya yanında durup arızayı incelemeye çalışmaktır; sürücülerin dikkatinin dağıldığı, telefonla meşgul olduğu anlarda bu bölgeye yapılan çarpmalar ağır sonuçlanabilir. Bariyer dışına geçmek istemsiz de olsa hayat kurtarıcı bir refleks olmalıdır.`,
+      `Bu kuralların hiçbiri teorik değildir; ${h.name} üzerinde yıllardır saha tecrübesi edinen ekibimiz, doğru ikaz yapmayan bir aracın kazaya karışma riskinin doğru ikaz yapana göre kat kat yüksek olduğunu defalarca gözlemlemiştir. Sizi ararken verdiğimiz talimatlar bu gözleme dayanır, genel geçer bir öğüt değildir.`,
     ],
   };
 }
@@ -456,6 +577,8 @@ const HIGHWAY_SCENARIO_TEMPLATES = [
     `**Ağır vasıta (TIR/kamyon/otobüs) arızası**: ${h.name} üzerindeki ağır vasıta trafiği diğer aksların çoğundan fazladır; bu araçlar için tonaja uygun kurtarıcı ve yük emniyeti prosedürü uygulanır, binek araçtan farklı bir uzmanlık gerektirir.`,
   (h: Highway) =>
     `**Yakıt/şarj bitmesi**: ${h.name} üzerinde yakıtı veya şarjı biten bir araç için güvenli kapta yakıt ikmali ya da elektrikli araçlarda flatbed ile en yakın DC şarj istasyonuna taşıma hizmeti veriyoruz; bu vaka özellikle tesis aralıklarının uzun olduğu kesimlerde sık yaşanır.`,
+  (h: Highway) =>
+    `**Lastik patlaması**: ${h.name} üzerinde yüksek hızda patlayan bir lastik hem sürücü hem çevredeki araçlar için ciddi risk taşır; direksiyonu sıkıca tutup yavaşça durmak, ani fren yapmamak esastır. Ekibimiz yerinde lastik değişimi veya gerekirse platformla taşıma yapar.`,
 ];
 
 function highwayNoteElaboration(note: string, h: Highway): string {
@@ -520,6 +643,7 @@ function highwayEquipmentSection(h: Highway): BlogSection {
       `${h.name} üzerindeki çağrılarda standart flatbed (kayar platform) kurtarıcılarımızın yanı sıra, ağır vasıta arızaları için tonaja uygun ayrı bir kurtarıcı filomuz bulunur; hangi araç tipiyle geleceğimizi telefonda konum ve araç bilgisiyle birlikte planlarız.`,
       `Güvenlik koridoru kurmak bizim için standart prosedürdür: aracımız arızalı aracın arkasına, trafiği uyaracak şekilde konumlanır, ekip üyeleri reflektörlü yelekle çalışır ve yükleme bariyer dışından, mümkün olan en kısa sürede tamamlanır.`,
       `${h.name} üzerinde yola çıkan ekibimiz size plaka ve sürücü bilgisini SMS/WhatsApp üzerinden iletir; özellikle tenha kesimlerde veya gece saatlerinde bu teyidi almadan aracınızı kimseye teslim etmemenizi öneririz.`,
+      `Ekipmanımızın tamamı düzenli periyodik bakımdan geçer; kayış, vinç halatı ve hidrolik sistemler ${h.name} gibi yüksek trafikli bir güzergâhta arıza riskini en aza indirecek şekilde kontrol edilir.`,
     ],
   };
 }
@@ -531,6 +655,7 @@ function highwayPracticalInfoSection(h: Highway): BlogSection {
       `**Hangi araçlar müdahale edebilir**: ${h.name} güzergâhında hem binek/SUV hem ticari/ağır vasıta araçlarına müdahale ediyoruz; ağır vasıta çağrılarında tonaja uygun ayrı bir kurtarıcı filomuzla geliyoruz.`,
       `**Konum bildirimi**: Bu güzergâhta en pratik yöntem WhatsApp'tan canlı konum paylaşmaktır; sözlü tarif gerekirse son geçtiğiniz kavşak/gişe adını ve gidiş yönünüzü (hangi istikamete gittiğinizi) söylemeniz yeterlidir.`,
       `**Varış süresi**: ${h.name} üzerindeki varış sürelerimiz bulunduğunuz kesime göre değişir; telefonda net bir süre veriyoruz ve ekip yola çıktıktan sonra da güncel bilgi paylaşıyoruz, sizi bekletmeden şeffaf iletişim kuruyoruz.`,
+      `**Ödeme ve fatura**: Taşıma tamamlandıktan sonra nakit, kredi kartı veya havale/IBAN ile ödeme alıyor, talep halinde fatura düzenliyoruz; ${h.name} üzerindeki taşımalar da diğer tüm hizmetlerimiz gibi resmi kayıtlı ve belgelidir.`,
     ],
   };
 }
@@ -542,6 +667,7 @@ function highwayLocalKnowledgeSection(h: Highway): BlogSection {
       `${h.name} güzergâhında yıllardır düzenli çağrı alan bir ekip olarak, bu aksın hangi kesimlerinde trafik daha sık kilitleniyor, hangi noktalarda güvenli durma cebi bulunuyor ve hangi saatlerde yoğunluk artıyor gibi pratik bilgileri biliyoruz.`,
       `Bu yerel bilgi, telefonda sizi doğru şekilde yönlendirmemizi (örneğin bir sonraki güvenli cebe kadar ilerlemenizi önermek gibi) ve sahaya çıktığımızda alternatif güzergâhlarla trafiğe takılmadan ulaşmamızı sağlıyor.`,
       `${h.name} üzerinde her gün onlarca çağrı karşılayan bir ekip olarak, bu güzergâha özgü riskleri (rüzgâr, buzlanma, yoğun saatler, ağır vasıta trafiği) baştan bilerek doğru ekipman ve doğru zamanlamayla yola çıkıyoruz; bu da sizin için daha kısa bekleme ve daha güvenli bir müdahale anlamına geliyor.`,
+      `Bu birikim aynı zamanda telefondaki iletişimimize de yansır: ${h.name} üzerinde konumunuzu tarif ederken kullandığınız bir referans noktasını duyar duymaz hangi kesimde olduğunuzu ve oraya en hızlı hangi güzergâhtan ulaşabileceğimizi biliriz; bu, ilk telefon görüşmesinden itibaren zaman kazandıran bir avantajdır.`,
     ],
   };
 }
@@ -553,6 +679,7 @@ function highwayCoordinationSection(h: Highway): BlogSection {
       `Kazalı veya çok şeritli trafiği etkileyen vakalarda, gerekirse 112 ve trafik ekipleriyle koordineli çalışıyoruz; önceliğimiz her zaman yaralı varsa can güvenliği, ardından trafik akışının en kısa sürede normale dönmesidir.`,
       `${h.name} üzerinde köprü/tünel işletmesinin kendi güvenlik/müdahale ekipleri varsa (özellikle köprü üstü ve tünel içi vakalarda), önce onların araca güvenli alana alması beklenir; ardından taşımayı biz üstleniriz.`,
       `Bu koordinasyon sayesinde hem sizin güvenliğiniz sağlanır hem de trafiği gereksiz yere uzun süre kapatmadan, mümkün olan en hızlı şekilde yolu açık tutmaya katkıda bulunuruz.`,
+      `${h.name} gibi işletme kontrolündeki bir güzergâhta bizim rolümüz net bir sınırla ayrılır: işletmenin kendi ekibi aracınızı ilk müdahaleyle güvenli bir alana çıkarır, biz ise oradan itibaren istediğiniz servise veya adrese taşımayı üstleniriz. Bu iş bölümü sayesinde her iki taraf da kendi uzmanlık alanında hızlı ve güvenli çalışır.`,
     ],
   };
 }
@@ -585,6 +712,58 @@ function highwaySeasonalSection(h: Highway): BlogSection {
       `**Yaz ve tatil trafiği**: Yaz aylarında ve bayram tatillerinde ${h.name} üzerindeki trafik yoğunluğu belirgin şekilde artar; uzun süre düşük hızda seyreden araçlarda hararet vakaları çoğalır. Bu dönemlerde ekip sayımızı artırarak varış sürelerini korumaya çalışıyoruz.`,
       `**Gece ve tenha saatler**: Gece geç saatlerde ${h.name} üzerindeki trafik seyrekleşir, bu da hem hız artışına hem de arızalanan bir aracın daha uzun süre fark edilmemesine yol açabilir; dörtlü flaşör ve reflektörü doğru mesafede konumlandırmak bu saatlerde hayati önem taşır.`,
       `**Yağışlı havalar**: Ani sağanak yağışta görüş mesafesi düşer ve zemin kayganlaşır; su birikintisine giren araçlarda motor stop etmesi durumunda aracı tekrar çalıştırmaya çalışmadan, çekilmeden bizi aramanızı öneririz — su çekmiş bir motoru çalıştırmak ağır hasara yol açabilir.`,
+      `Bu mevsimsel döngüyü yıllardır ${h.name} üzerinde çalışan ekibimiz iyi bilir; hangi ayda hangi tür çağrının artacağını öngörerek ekip ve ekipman planlamasını buna göre yapıyoruz. Bu öngörü, sizin için daha kısa bekleme süresi anlamına gelir.`,
+    ],
+  };
+}
+
+function highwayVehicleTypeNotesSection(h: Highway): BlogSection {
+  return {
+    heading: `${h.name} Üzerinde Araç Tipine Göre Farklılaşan Müdahale`,
+    paragraphs: [
+      `**Binek/SUV araçlar**: ${h.name} üzerinde en sık müdahale ettiğimiz grup binek ve SUV araçlardır; akü, lastik ve hararet kaynaklı arızalar standart flatbed kurtarıcımızla hızlı şekilde çözülür.`,
+      `**Ticari araçlar (panelvan, minibüs)**: Yolcu veya yük taşıyan ticari araçlarda önce yolcuların/malın güvenliği, ardından aracın taşınması planlanır; ${h.name} üzerinde bu tür çağrılara öncelik veriyoruz çünkü genelde zaman baskısı yüksektir.`,
+      `**Ağır vasıta (TIR, kamyon, otobüs)**: ${h.name} üzerindeki ağır vasıta arızaları tonaja uygun ayrı bir kurtarıcı filosu ve yük emniyeti prosedürü gerektirir; bu araçlar için müdahale süresi binek araçlara göre biraz daha uzun olabilir çünkü doğru ekipmanla gelmemiz gerekir.`,
+      `**Motosiklet**: ${h.name} gibi yüksek hızlı bir akste arızalanan veya kaza yapan motosikletler için özel bağlama aparatlı platform kullanıyoruz; motosikletli sürücülerin otoyol üzerinde yaya olarak beklemesi özellikle riskli olduğundan bariyer dışına geçmelerini önceliğimiz olarak vurguluyoruz.`,
+      `**Elektrikli araçlar**: ${h.name} üzerinde şarjı biten bir elektrikli araç için flatbed ile en yakın DC hızlı şarj istasyonuna taşıma yapıyoruz; bu, yol kenarında mobil şarj beklemekten çok daha hızlı bir çözümdür.`,
+    ],
+  };
+}
+
+function highwayTrafficPatternSection(h: Highway): BlogSection {
+  return {
+    heading: `${h.name}'de Trafik Akış Deseni ve Ne Anlama Geldiği`,
+    paragraphs: [
+      `${h.name} üzerindeki trafik akışı gün içinde belirgin bir döngü izler; bu döngüyü bilmek hem sizin yolculuğunuzu planlamanıza hem bizim ekip sayımızı doğru zamanlamamıza yardımcı olur.`,
+      `Şerit değiştirme yoğunluğunun arttığı kavşak ve gişe yakınlarında arıza riski de artar; bu noktalarda arızalanan bir aracın diğer sürücüler için oluşturduğu risk, düz bir kesimdekinden daha yüksektir.`,
+      `${h.name} üzerinde yavaşlayan veya duran trafikte, arızalanan aracınızı hiçbir zaman aniden durdurmayın; mümkün olduğunca yavaşlayarak ve sinyal vererek güvenli bir noktaya doğru ilerlemeye çalışın, tamamen duramıyorsanız dörtlü flaşörünüzü yakıp bizi arayın.`,
+    ],
+  };
+}
+
+function highwayAlternativeRoutesSection(h: Highway): BlogSection {
+  const allMatched = h.districtSlugs
+    .map((s) => districts.find((d) => d.slug === s))
+    .filter((d): d is District => Boolean(d));
+  return {
+    heading: `${h.name} Kapanırsa veya Yoğunsa Alternatif Güzergâh Bilgisi`,
+    paragraphs: [
+      `${h.name} üzerinde kaza, bakım çalışması veya aşırı yoğunluk nedeniyle trafiğin durduğu anlarda, arızalanan bir aracın kurtarılması ek koordinasyon gerektirir; ekibimiz bu tür durumlarda güzergâhın açık kesimlerinden ilerleyerek size ulaşır.`,
+      ...allMatched.map(
+        (d) => `**${d.name} üzerinden bağlantı**: ${h.name} bu kesimde yoğunsa, ${d.name} sınırlarındaki ${d.roads[0]} yan yol bağlantısı üzerinden sahaya ulaşabiliyoruz; bu tür yan yol bilgisi otoyol tam kapalıyken bile ekiplerimizin gecikmeden yola çıkmasını sağlar.`
+      ),
+      `Otoyol/köprü işletmesinin resmî trafik bilgilendirmelerini (VMS panoları, radyo trafik anonsları) takip ediyoruz; ${h.name} üzerinde planlı bir bakım çalışması varsa bunu önceden bilip ekip planlamamızı buna göre yapıyoruz.`,
+    ],
+  };
+}
+
+function highwayMaintenanceSection(h: Highway): BlogSection {
+  return {
+    heading: `${h.name}'de Bakım Çalışmaları ve Trafik Yoğunluğu Saatleri`,
+    paragraphs: [
+      `Otoyol ve köprü işletmeleri genelde gece geç saatlerde veya hafta içi trafiğin en az olduğu dönemlerde planlı bakım çalışması yapar; ${h.name} üzerinde bu tür bir çalışma sırasında arızalanan araçlara ulaşım için işletmenin kendi ekipleriyle koordineli hareket ediyoruz.`,
+      `${h.name}'nin en yoğun olduğu saatler genelde sabah 07:30-09:30 ve akşam 17:30-20:00 aralığıdır; bu saatlerde emniyet şeridinde bekleyen bir araç için müdahale süremiz yoğunluk nedeniyle birkaç dakika uzayabilir, ancak güvenlik protokolümüz değişmez.`,
+      `Hafta sonu ve tatil günlerinde ${h.name} üzerindeki trafik profili hafta içinden farklıdır; sabah yerine öğleden sonra ve akşam saatlerinde yoğunluk artar. Ekibimiz bu döngüyü bildiği için vardiya planlamasını buna göre yapar.`,
     ],
   };
 }
@@ -605,6 +784,10 @@ export function generateHighwayPosts(): BlogPost[] {
       highwayCallProcessSection(h),
       highwayScenarioBank(h),
       highwaySeasonalSection(h),
+      highwayAlternativeRoutesSection(h),
+      highwayMaintenanceSection(h),
+      highwayTrafficPatternSection(h),
+      highwayVehicleTypeNotesSection(h),
       {
         heading: `${h.name}'de Neden Deneyimli Ekip Önemli`,
         paragraphs: [
@@ -618,6 +801,7 @@ export function generateHighwayPosts(): BlogPost[] {
         heading: "Sonuç",
         paragraphs: [
           `${h.name} üzerinde veya yaklaşımlarında yaşadığınız her türlü araç arızası, kaza veya yol yardım ihtiyacında 0535 404 80 44'ü arayın. Güvenlik önce gelir: doğru ikaz ve bekleme kurallarını uyguladıktan sonra bizi arayın, 7/24 yanınızdayız ve fiyat bilgisini telefonda anında veririz.`,
+          `Bu rehberdeki güvenlik adımları ve süreç bilgisi, ${h.name} üzerinde yıllar içinde aldığımız gerçek çağrılardan derlendi. Bir dahaki sefere bu güzergâhta yolda kalırsanız, tek yapmanız gereken önce güvenliğinizi sağlamak, sonra telefonu elinize almak.`,
         ],
       },
     ];
@@ -627,7 +811,7 @@ export function generateHighwayPosts(): BlogPost[] {
       category: "otoyol",
       title: `${h.name} Üzerinde Araç Arızası ve Çekici`,
       metaTitle: h.metaTitle,
-      metaDescription: `${h.name} üzerinde arıza yaptıysanız güvenlik adımlarını ve 7/24 çekici hizmetimizi öğrenin. Hemen arayın: 0535 404 80 44`,
+      metaDescription: `${h.name} üzerinde arıza yaptıysanız güvenlik adımlarını ve 7/24 çekici hizmetimizi öğrenin; K1 belgeli ekip. Hemen arayın: 0535 404 80 44`,
       intro: h.intro,
       datePublished: TODAY,
       dateModified: TODAY,
@@ -666,6 +850,7 @@ function vehicleTypeIssueDeepDive(v: VehicleType): BlogSection {
     paragraphs: [
       `Telefon trafiğimizi düzenli olarak analiz ediyoruz; ${v.name.toLocaleLowerCase("tr")} kapsamındaki araçlardan gelen çağrıların büyük kısmı aşağıdaki vaka tiplerinde toplanıyor. Her biri için telefonda uyguladığımız ön teşhis yöntemi ve sahadaki yaklaşımımız farklıdır:`,
       ...paragraphs,
+      `Bu vaka listesi durağan değildir; mevsime, kullanım yoğunluğuna ve trafiğe göre ağırlıkları değişir. Ekibimiz bu değişimi düzenli olarak takip eder ve ekip/ekipman planlamasını buna göre günceller.`,
     ],
   };
 }
@@ -694,6 +879,8 @@ function vehicleTypeIstanbulSection(v: VehicleType): BlogSection {
       `Telefonda yaptığımız ön teşhisle, mümkün olan durumlarda önce yerinde çözüm (akü takviyesi, lastik değişimi) sunuyoruz; çözülemeyen vakalarda aracınızı üretici prosedürlerine uygun şekilde taşıyoruz. Bu ön teşhis hem sizin bekleme sürenizi kısaltır hem gereksiz bir taşımanın önüne geçer.`,
       `${districtNames.join(", ")} gibi hem Avrupa hem Anadolu yakasının farklı noktalarında konumlanmış ekiplerimiz sayesinde şehrin neresinde olursanız olun ${v.name.toLocaleLowerCase("tr")} kapsamındaki aracınıza makul bir sürede ulaşabiliyoruz.`,
       `Dar sokak, kapalı otopark, site girişi veya otoyol emniyet şeridi fark etmeksizin, ${v.name.toLocaleLowerCase("tr")} sınıfının gövde ölçülerine ve ağırlığına uygun platform/kurtarıcı ile geliyoruz; aracın bulunduğu ortamı telefonda kısaca tarif etmeniz doğru ekipmanla yola çıkmamızı sağlar.`,
+      `Randevulu planlı taşımalar (ekspertiz, galeri teslimi, ikinci el kontrol) için de ${v.name.toLocaleLowerCase("tr")} sahiplerinden düzenli talep alıyoruz; adres ve saat netleştiğinde süreç sorunsuz ilerler ve aracınız belirlenen randevudan önce hedef adreste olur.`,
+      `Müşterilerimizin bu araç sınıfında en çok önem verdiği konu güvenilirlik ve şeffaflıktır: aracın nasıl, kim tarafından ve hangi belgeyle taşındığını bilmek istiyorlar. Bu yüzden telefon görüşmesinden teslim fotoğrafına kadar her adımı belgeliyoruz.`,
     ],
   };
 }
@@ -707,6 +894,7 @@ function vehicleTypeSafetySection(v: VehicleType): BlogSection {
       `3. Durumu telefonda kısaca anlatın: ne zaman başladı, hangi uyarı ışığı yandı, ses/koku/duman var mı, araç ${v.name.toLocaleLowerCase("tr")} kapsamında hangi modelde? Bu bilgiler ekibimizin doğru ekipmanla (rampa açısı, go-jack, vinç) yola çıkmasını sağlar.`,
       `4. 0535 404 80 44'ü arayın veya WhatsApp'tan konumunuzu paylaşın; ekibimiz yola çıktığında size plaka ve sürücü bilgisini iletir, özellikle gece saatlerinde bu teyidi almadan aracınızı kimseye teslim etmeyin.`,
       `5. Aracı kendi imkânlarınızla kurtarmaya/çalıştırmaya çalışmayın; özellikle elektronik sistem, aktarma organı veya yüksek voltaj şüphesi olan durumlarda yanlış müdahale hasarı büyütebilir.`,
+      `6. Ekip yola çıktıktan sonra da telefonunuzu açık tutun; bazen konum tarifini netleştirmek veya araca yaklaşırken son bir teyit almak için tekrar arayabiliriz, bu küçük iletişim adımı varış süresini kısaltır.`,
     ],
   };
 }
@@ -752,6 +940,7 @@ function vehicleTypeInsuranceSection(v: VehicleType): BlogSection {
       `Aracınız garanti kapsamındaysa yetkili servise taşınması genelde en mantıklı seçenektir; garanti dışıysa güvendiğiniz özel servise veya markaya özel uzman servislere taşıyabiliriz — karar tamamen sizindir, biz her iki seçeneğe de aynı özenle taşıma yaparız.`,
       `Kaza kaynaklı çağrılarda tutanak ve sigorta süreciniz için gereken temel yönlendirmeyi yapıyoruz; çekici faturamız kasko dosyanızda kullanılabilir. Yükleme öncesi ve sonrası çektiğimiz fotoğraflar hasar tespit sürecinde ek belge olarak işinize yarayabilir.`,
       `Filo veya kurumsal kullanımdaki ${v.name.toLocaleLowerCase("tr")} kapsamındaki araçlar için öncelikli müdahale ve raporlu taşıma içeren anlaşmalar sunuyoruz; detay için telefonla iletişime geçmeniz yeterli.`,
+      `Kasko poliçenizin çekme-kurtarma teminatını kontrol etmenizi öneririz; birçok sürücü bu teminatın var olduğunu bilmediği için gereksiz yere cepten ödeme yapar. Biz doğrudan sigorta şirketinizin anlaşmalı hizmeti olmasak da, poliçenizde kullanabileceğiniz eksiksiz fatura ve fotoğraflı rapor sağlarız.`,
     ],
   };
 }
@@ -829,6 +1018,7 @@ function vehicleTypeDocumentationSection(v: VehicleType): BlogSection {
       `Yükleme öncesi ve sonrası çektiğimiz fotoğraflar, aracın taşıma öncesindeki mevcut durumunu (varsa önceki hasar, yük durumu, lastik/jant durumu) kayıt altına alır; bu, hem sizi hem bizi olası bir anlaşmazlıkta koruyan şeffaf bir uygulamadır.`,
       `K1 yetki belgeli ve sigortalı bir firma olarak, ${v.name.toLocaleLowerCase("tr")} kapsamındaki aracınızın taşınması sırasında oluşabilecek olağandışı bir durumda da güvence altında olursunuz; bu belgeleri talep etmeniz halinde memnuniyetle paylaşırız.`,
       `Filo/kurumsal müşterilerimiz için aylık toplu faturalandırma ve raporlama seçeneği de sunuyoruz; birden fazla aracınız için düzenli hizmet ihtiyacınız varsa telefonla detaylı bilgi alabilirsiniz.`,
+      `Talep ederseniz taşıma sırasında kilometre ve teslim saatini de rapora ekleyebiliyoruz; bu detay özellikle uzun mesafe veya şehirlerarası taşımalarda tercih ediliyor.`,
     ],
   };
 }
@@ -842,6 +1032,41 @@ function vehicleTypeCallProcessSection(v: VehicleType): BlogSection {
       `3. **Yola çıkış ve bilgilendirme**: Ekip yola çıktığında size tahmini varış süresini ve gelecek personelin plaka/isim bilgisini iletiyoruz; bu teyit özellikle gece saatlerinde güvenliğiniz için önemlidir.`,
       `4. **Yerinde değerlendirme**: Sahaya ulaşan ekibimiz önce yerinde çözüm (takviye, lastik değişimi, yakıt ikmali) mümkün mü diye bakar; değilse ${v.name.toLocaleLowerCase("tr")} sınıfına uygun yönteme (tam platform, go-jack, vinç) geçer.`,
       `5. **Taşıma ve teslim**: Yükleme öncesi/sonrası fotoğraflı durum raporu tutulur, araç sizin belirlediğiniz adrese (servis, ev, işyeri) teslim edilir; fiyat bilgisi süreç boyunca telefonda net şekilde verilir.`,
+    ],
+  };
+}
+
+function vehicleTypeFleetSection(v: VehicleType): BlogSection {
+  return {
+    heading: `${v.name} Filo ve Kurumsal Müşteriler İçin`,
+    paragraphs: [
+      `Filo halinde ${v.name.toLocaleLowerCase("tr")} kapsamında araç işleten kurumsal müşterilerimize öncelikli dispatch ve aylık toplu faturalandırma seçeneği sunuyoruz; birden fazla aracın aynı anda arızalanması gibi olağandışı durumlarda ek ekip yönlendirmesi yapabiliyoruz.`,
+      `Kurumsal sözleşmeli müşterilerimiz için araç başına ortalama müdahale süresini takip ediyor, düzenli raporlama sağlıyoruz; bu, filo yöneticilerinin araç arıza istatistiklerini takip etmesine yardımcı oluyor.`,
+      `Tek seferlik bireysel çağrılarla kurumsal sözleşmeli çağrılar arasında hizmet kalitesi açısından fark yoktur; her ikisinde de aynı K1 belgeli, sigortalı standartla, fotoğraflı durum raporuyla çalışıyoruz.`,
+      `Filo yöneticileri için önemli bir diğer konu belgeleme sürekliliğidir: her taşımanın fatura ve fotoğraflı raporunu tek bir noktadan (e-posta veya talep halinde ortak bir klasör üzerinden) düzenli olarak iletebiliyoruz; bu, yıl sonu araç bakım/arıza raporlaması yapan kurumsal müşterilerimiz için pratik bir kolaylık sağlıyor.`,
+    ],
+  };
+}
+
+function vehicleTypeDistrictCoverageSection(v: VehicleType): BlogSection {
+  const step = Math.max(1, Math.floor(districts.length / 14));
+  const sample = districts.filter((_, i) => i % step === 0).slice(0, 14);
+  const paragraphs = sample.map(
+    (d) =>
+      `**${d.name}**: ${d.name}'de ${v.name.toLocaleLowerCase("tr")} kapsamındaki aracınız için ${d.roads[0]} güzergâhı ve ${d.landmarks[0]} çevresi dahil tüm mahallelere ortalama ${d.arrivalMinutes} dakikada ulaşıyoruz.`
+  );
+  return { heading: `İstanbul'un Çeşitli Bölgelerinde ${v.name} Hizmeti`, paragraphs };
+}
+
+function vehicleTypeMaintenanceTipsSection(v: VehicleType): BlogSection {
+  return {
+    heading: `${v.name} Sahiplerine Önleyici Bakım Önerileri`,
+    paragraphs: [
+      `Düzenli akü kontrolü ve kutup başı temizliği, ${v.name.toLocaleLowerCase("tr")} kapsamındaki araçlarda en sık gördüğümüz "aracım çalışmıyor" çağrılarının önemli bir kısmını baştan önler; akü 3 yaşını geçtiyse yılda bir kez yük testi yaptırmanızı öneririz.`,
+      `Lastik diş derinliği ve hava basıncının ayda bir kontrol edilmesi, hem patlak lastik kaynaklı çağrıları hem de ıslak zeminde kayma riskini azaltır; özellikle uzun yolculuk öncesi bu kontrol kritik önem taşır.`,
+      `Fren balatası ve disk aşınmasının periyodik bakımlarda takip edilmesi, özellikle yüklü/ağır kullanılan ${v.name.toLocaleLowerCase("tr")} kapsamındaki araçlarda beklenmedik fren arızalarını önler.`,
+      `Uzun yolculuk öncesi soğutma sıvısı seviyesi ve radyatör/hortum durumunun kontrol ettirilmesi, yaz aylarında sık yaşanan hararet kaynaklı yolda kalma vakalarının önüne geçer.`,
+      `Bu önleyici bakım adımlarının çoğu birkaç dakika sürer ve neredeyse hiç maliyeti yoktur; buna karşılık yolda kalıp çekici çağırmak hem zaman hem masraf demektir. ${v.name} sahiplerine düzenli olarak bu basit kontrolleri hatırlatıyoruz çünkü en iyi çekici hizmeti, hiç ihtiyaç duymadığınız hizmettir.`,
     ],
   };
 }
@@ -860,12 +1085,16 @@ export function generateVehicleTypePosts(): BlogPost[] {
       vehicleTypeComparisonSection(v),
       vehicleTypeDocumentationSection(v),
       vehicleTypeExperienceSection(v),
+      vehicleTypeMaintenanceTipsSection(v),
+      vehicleTypeFleetSection(v),
+      vehicleTypeDistrictCoverageSection(v),
       vehicleTypeCallProcessSection(v),
       vehicleTypeSafetySection(v),
       {
         heading: "Sonuç",
         paragraphs: [
           `${v.name} kapsamındaki her türlü arıza, kaza veya yol yardım ihtiyacında 0535 404 80 44'ü arayın. K1 belgeli, sigortalı ekibimiz İstanbul'un her noktasına 7/24 ulaşır, doğru ekipman ve prosedürle aracınızı hasarsız şekilde taşır ve fiyat bilgisini telefonda anında verir.`,
+          `Bu rehberde anlattığımız teknik notlar ve süreç adımları, ${v.name.toLocaleLowerCase("tr")} kapsamındaki araçlardan yıllar içinde aldığımız gerçek çağrılardan derlendi. Aracınızla ilgili bir sorun yaşadığınızda tek yapmanız gereken telefonu elinize almak; gerisini biz hallederiz.`,
         ],
       },
     ];
@@ -875,7 +1104,7 @@ export function generateVehicleTypePosts(): BlogPost[] {
       category: "arac-tipi",
       title: v.name,
       metaTitle: `${v.name} İstanbul | 7/24 — 0535 404 80 44`,
-      metaDescription: `${v.name} konusunda İstanbul'da 7/24 uzman çekici hizmeti. Hemen arayın: 0535 404 80 44`,
+      metaDescription: `${v.name} konusunda İstanbul'da 7/24 uzman çekici hizmeti. K1 belgeli, sigortalı, ortalama 20-40 dk varış. Ara: 0535 404 80 44`,
       intro: v.intro,
       datePublished: TODAY,
       dateModified: TODAY,

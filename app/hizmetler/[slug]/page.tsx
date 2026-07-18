@@ -9,6 +9,7 @@ import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 import { SITE } from "@/lib/config";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -63,6 +64,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <p key={i}>{p}</p>
           ))}
         </div>
+
+        <TowImageGallery seed={service.slug} keyword={service.shortName} />
 
         <ul className="mt-6 grid gap-2 sm:grid-cols-2">
           {service.bullets.map((b) => (

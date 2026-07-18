@@ -11,6 +11,9 @@ import { RichParagraph } from "@/components/RichParagraph";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema } from "@/lib/schema";
 import { SITE } from "@/lib/config";
+import { TowImageGallery } from "@/components/TowImageGallery";
+import { BlogMeta } from "@/components/BlogMeta";
+import { blogAltKeyword, getTowImages } from "@/lib/data/images";
 
 const AR_CATEGORY_LABEL: Record<BlogCategory, string> = {
   cornerstone: "الدليل الرئيسي",
@@ -57,6 +60,7 @@ export default async function ArabicBlogPostPage({ params }: { params: Promise<{
           url: `${SITE.url}/ar/blog/${post.slug}`,
           datePublished: post.datePublished,
           dateModified: post.dateModified,
+          image: `${SITE.url}${getTowImages(`${post.slug}-ar`, blogAltKeyword(post.title, "ar"), 2, "ar")[0].file}`,
         })}
       />
       <Breadcrumbs items={[{ name: "المدونة", href: "/ar/blog" }, { name: post.title, href: `/ar/blog/${post.slug}` }]} />
@@ -65,10 +69,12 @@ export default async function ArabicBlogPostPage({ params }: { params: Promise<{
           {AR_CATEGORY_LABEL[post.category]}
         </p>
         <h1 className="text-3xl font-extrabold text-[var(--color-navy-900)] md:text-4xl">{post.title}</h1>
-        <p className="mt-2 text-sm text-[#5a6b80]">آخر تحديث: {post.dateModified}</p>
+        <BlogMeta dateModified={post.dateModified} locale="ar" />
         <div className="prose-tow mt-6">
           <p className="text-lg font-medium">{post.intro}</p>
         </div>
+
+        <TowImageGallery seed={`${post.slug}-ar`} keyword={blogAltKeyword(post.title, "ar")} locale="ar" />
         {post.arrivalTable && (
           <div className="mt-6">
             <h2 className="mb-3 text-xl font-bold text-[var(--color-navy-900)]">أوقات الوصول التقديرية</h2>

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/config";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "Gizlilik ve Çerez Politikası",
-  description: "Web sitemizde kullanılan çerezler, üçüncü taraf araçlar ve gizlilik uygulamalarımız hakkında bilgi.",
+  description:
+    "Çekici Hizmeti İstanbul web sitesinde kullanılan çerezler, Google Analytics/Yandex Metrica gibi üçüncü taraf araçlar ve gizlilik uygulamalarımız hakkında bilgi.",
   alternates: { canonical: "/gizlilik-politikasi" },
 };
 
@@ -17,6 +19,8 @@ export default function PrivacyPage() {
           Gizlilik ve Çerez Politikası
         </h1>
         <p className="mt-2 text-sm text-[#5a6b80]">Son güncelleme: 15.01.2026</p>
+
+        <TowImageGallery seed="gizlilik-politikasi" keyword="İstanbul" count={2} />
 
         <div className="prose-tow mt-6">
           <h2>1. Genel Bilgi</h2>

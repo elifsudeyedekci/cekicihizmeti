@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/lib/data/services";
 import { districts } from "@/lib/data/districts";
 import { posts, CATEGORY_LABEL } from "@/lib/blog/registry";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { SiteSearch } from "@/components/SiteSearch";
+
+export const metadata: Metadata = {
+  title: "Sayfa Bulunamadı (404) | Çekici Hizmeti İstanbul",
+  description:
+    "Aradığınız sayfa bulunamadı. Çekici ve yol yardım için 0535 404 80 44'ü arayın veya sitede arama yapıp aradığınız ilçe/hizmet sayfasına ulaşın.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   const searchItems = [

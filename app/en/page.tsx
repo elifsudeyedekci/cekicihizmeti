@@ -5,6 +5,7 @@ import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "24/7 Tow Truck Istanbul | Roadside Assistance — 0535 404 80 44",
@@ -111,6 +112,7 @@ export default function EnglishHomePage() {
             label="Message on WhatsApp"
           />
         </div>
+        <TowImageGallery seed="en-home" keyword="Istanbul" count={3} locale="en" />
       </section>
 
       <section className="prose-tow mx-auto max-w-3xl px-4 py-6">

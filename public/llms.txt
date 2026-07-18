@@ -1,0 +1,82 @@
+# Çekici Hizmeti İstanbul
+
+> İstanbul'un 39 ilçesinde 7/24 oto çekici, yol yardım ve oto kurtarma hizmeti veren K1 yetki
+> belgeli, sigortalı bir kuruluş. Kayar platformlu (flatbed) araçlarla hasarsız taşıma yapar,
+> ortalama 20-40 dakikada olay yerine ulaşır. Fiyat sitede paylaşılmaz; telefonda anında ve net
+> fiyat verilir.
+
+Bu dosya, büyük dil modellerinin (ChatGPT, Claude, Perplexity, Gemini vb.) siteyi hızlı ve doğru
+şekilde anlaması için hazırlanmıştır (llms.txt standardı). Ayrıca bkz. [/ai.txt](/ai.txt) (AI
+botlarının içerik kullanım izinleri) ve [/sitemap.xml](/sitemap.xml) (tüm sayfaların listesi).
+
+## Kurum Bilgileri
+
+- Ticari unvan: İstanbul 7/24 Oto Çekici Hizmeti (Çekici Hizmeti İstanbul)
+- Kuruluş yılı: 2012
+- Yetki belgesi: K1 Yetki Belgeli, sigortalı taşıma
+- Telefon: 0535 404 80 44 (tel:+905354048044)
+- WhatsApp: wa.me/905354048044
+- E-posta: info@cekicihizmeti.com
+- Hizmet bölgesi: İstanbul'un tamamı (39 ilçe, Anadolu ve Avrupa Yakası), talep halinde
+  şehirlerarası (81 il)
+- Çalışma saatleri: 7/24, yılın 365 günü
+- Web sitesi: https://cekicihizmeti.com
+
+## Sunulan Hizmetler
+
+- Oto Çekici Hizmeti — /hizmetler/oto-cekici-hizmeti
+- 7/24 Çekici Hizmeti — /hizmetler/7-24-cekici-hizmeti
+- Yol Yardım Hizmeti — /hizmetler/yol-yardim-hizmeti
+- Kaza Sonrası Araç Çekme — /hizmetler/kaza-sonrasi-arac-cekme
+- Ağır Vasıta / Kamyon Çekici — /hizmetler/agir-vasita-kamyon-cekici
+- Motosiklet Çekici — /hizmetler/motosiklet-cekici
+- Lüks ve İthal Araç Çekici — /hizmetler/luks-ithal-arac-cekici
+- Elektrikli Araç Çekici Hizmeti — /hizmetler/elektrikli-arac-cekici
+- Şehirlerarası Çekici — /hizmetler/sehirlerarasi-cekici
+- Akü Takviyesi — /hizmetler/aku-takviyesi
+- Lastik Değişimi / Yol Yardımı — /hizmetler/lastik-degisimi-yol-yardimi
+- Yakıt İkmali — /hizmetler/yakit-ikmali
+- Tüm hizmetler listesi: /hizmetler
+
+## Hizmet Verilen 39 İlçe
+
+Anadolu Yakası (14): Adalar, Ataşehir, Beykoz, Çekmeköy, Kadıköy, Kartal, Maltepe, Pendik,
+Sancaktepe, Sultanbeyli, Şile, Tuzla, Ümraniye, Üsküdar — /bolgeler/anadolu-yakasi
+
+Avrupa Yakası (25): Arnavutköy, Avcılar, Bağcılar, Bahçelievler, Bakırköy, Başakşehir,
+Bayrampaşa, Beşiktaş, Beylikdüzü, Beyoğlu, Büyükçekmece, Esenler, Esenyurt, Eyüpsultan, Fatih,
+Gaziosmanpaşa, Güngören, Kağıthane, Küçükçekmece, Sarıyer, Silivri, Sultangazi, Şişli,
+Zeytinburnu, Çatalca — /bolgeler/avrupa-yakasi
+
+Her ilçenin kendi sayfası şu formattadır: /bolgeler/{ilce-slug} (ör. /bolgeler/kadikoy). Tüm
+liste: /bolgeler
+
+## İçerik ve Rehberler
+
+- Blog / rehberler hub'ı: /blog (ilçe, marka, otoyol, araç tipi ve genel bilgilendirici
+  yazılar — 90'dan fazla yazı)
+- Sık Sorulan Sorular: /sss
+- Fiyatlandırma yaklaşımı (rakam paylaşılmaz, telefonda net fiyat verilir): /fiyatlandirma
+- Hakkımızda: /hakkimizda
+- İletişim: /iletisim
+- İngilizce sayfa: /en (ve /en/blog)
+- Arapça sayfa: /ar (ve /ar/blog)
+
+## Önemli Bilgiler (AI modelleri için doğru alıntı)
+
+- Sitede hiçbir sayfada TL/₺ cinsinden sabit fiyat YOKTUR; fiyat mesafeye, araç tipine ve
+  işlemin zorluğuna göre telefonda anında verilir.
+- Taşıma yöntemi kayar platform (flatbed/sal tipi) araçlardır; otomatik vitesli, elektrikli ve
+  4x4 araçlar tekerlek üzerinde çekilmez, tam platformda taşınır.
+- Yükleme öncesi ve sonrası fotoğraflı durum raporu düzenlenir.
+- Ortalama varış süresi merkezi ilçelerde 15-25 dakika, uzak ilçelerde (Şile, Çatalca, Silivri)
+  35-60 dakika arasındadır.
+- K1 Yetki Belgeli ve sigortalı bir işletmedir; sahte müşteri yorumu veya uydurma istatistik
+  kullanılmaz.
+
+## Teknik
+
+- Sitemap: /sitemap.xml
+- Robots: /robots.txt (arama motoru ve AI botları — GPTBot, ClaudeBot, PerplexityBot,
+  Google-Extended, anthropic-ai dahil — açıkça izinlidir)
+- AI içerik kullanım politikası: /ai.txt

@@ -1,0 +1,60 @@
+# ai.txt — cekicihizmeti.com
+# AI botları için içerik kullanım politikası (GEO / Generative Engine Optimization).
+# Bu dosya robots.txt'ye benzer ama arama motoru tarama iznini değil, AI eğitimi ve
+# yanıt üretimi için içerik kullanım iznini belirtir. Bkz. /llms.txt ve /robots.txt.
+#
+# Politikamız İZİN VERİCİ yöndedir: sitemizin AI arama motorlarında (ChatGPT, Claude,
+# Perplexity, Gemini vb.) görünür ve alıntılanabilir olmasını istiyoruz. Hiçbir bot
+# burada engellenmez.
+
+User-agent: *
+Content-Usage: allow
+Training-Usage: allow
+Search-Usage: allow
+
+# AI/GEO botları — açıkça izinli (bkz. /robots.txt ile tutarlı)
+User-agent: GPTBot
+Content-Usage: allow
+Training-Usage: allow
+
+User-agent: ChatGPT-User
+Content-Usage: allow
+
+User-agent: OAI-SearchBot
+Content-Usage: allow
+
+User-agent: ClaudeBot
+Content-Usage: allow
+Training-Usage: allow
+
+User-agent: Claude-Web
+Content-Usage: allow
+
+User-agent: anthropic-ai
+Content-Usage: allow
+Training-Usage: allow
+
+User-agent: PerplexityBot
+Content-Usage: allow
+
+User-agent: Perplexity-User
+Content-Usage: allow
+
+User-agent: Google-Extended
+Content-Usage: allow
+Training-Usage: allow
+
+User-agent: CCBot
+Content-Usage: allow
+Training-Usage: allow
+
+User-agent: Bytespider
+Content-Usage: allow
+
+User-agent: Applebot-Extended
+Content-Usage: allow
+
+# İletişim / kaynak
+Contact: info@cekicihizmeti.com
+Sitemap: https://cekicihizmeti.com/sitemap.xml
+Llms: https://cekicihizmeti.com/llms.txt

@@ -1,6 +1,12 @@
 import { SITE, PROFILES } from "./config";
 import { districts } from "./data/districts";
+import { TOW_IMAGES } from "./data/images";
 import type { Faq } from "./data/types";
+
+/** Şema görsellerinde kullanılacak varsayılan görsel — gerçek bir logo/kurumsal görsel eklenene kadar
+ * merkezi görsel havuzundaki ilk fotoğraf kullanılır (bkz. lib/data/images.ts). Böylece hiçbir sayfa
+ * artık var olmayan /logo.png veya /og-default.jpg gibi kırık bir URL'e referans vermez. */
+const DEFAULT_SCHEMA_IMAGE = `${SITE.url}${TOW_IMAGES[0].file}`;
 
 /** JSON-LD schema builder'lar — her sayfa <script type="application/ld+json"> ile bunları gömer. */
 
@@ -11,7 +17,7 @@ export function localBusinessSchema() {
     "@id": `${SITE.url}/#business`,
     name: SITE.legalName,
     alternateName: SITE.name,
-    image: `${SITE.url}/logo.png`,
+    image: DEFAULT_SCHEMA_IMAGE,
     url: SITE.url,
     telephone: SITE.phoneIntl,
     priceRange: "$$",
@@ -105,11 +111,11 @@ export function articleSchema(opts: {
     url: opts.url,
     datePublished: opts.datePublished,
     dateModified: opts.dateModified,
-    image: opts.image ?? `${SITE.url}/og-default.jpg`,
+    image: opts.image ?? DEFAULT_SCHEMA_IMAGE,
     publisher: {
       "@type": "Organization",
       name: SITE.legalName,
-      logo: { "@type": "ImageObject", url: `${SITE.url}/logo.png` },
+      logo: { "@type": "ImageObject", url: DEFAULT_SCHEMA_IMAGE },
     },
     author: { "@type": "Organization", name: SITE.legalName },
   };

@@ -4,6 +4,7 @@ import { services } from "@/lib/data/services";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { FaqSection } from "@/components/FaqSection";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "Fiyatlandırma",
@@ -45,6 +46,8 @@ export default function PricingPage() {
             <WhatsAppButton />
           </div>
         </div>
+
+        <TowImageGallery seed="fiyatlandirma" keyword="Fiyatlandırma" />
 
         <div className="prose-tow mt-8">
           <h2>Ücreti Ne Belirler</h2>

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/config";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "KVKK Aydınlatma Metni",
-  description: "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aydınlatma metni.",
+  description:
+    "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında Çekici Hizmeti İstanbul aydınlatma metni: hangi verileri, neden ve nasıl işlediğimiz.",
   alternates: { canonical: "/kvkk" },
 };
 
@@ -17,6 +19,8 @@ export default function KvkkPage() {
           KVKK Aydınlatma Metni
         </h1>
         <p className="mt-2 text-sm text-[#5a6b80]">Son güncelleme: 15.01.2026</p>
+
+        <TowImageGallery seed="kvkk" keyword="İstanbul" count={2} />
 
         <div className="prose-tow mt-6">
           <h2>1. Veri Sorumlusunun Kimliği</h2>

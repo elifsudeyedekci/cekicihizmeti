@@ -3,6 +3,7 @@ import Link from "next/link";
 import { services } from "@/lib/data/services";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "Hizmetlerimiz — Oto Çekici, Yol Yardım, Kaza Çekicisi",
@@ -25,6 +26,7 @@ export default function ServicesHubPage() {
           <PhoneButton />
           <WhatsAppButton />
         </div>
+        <TowImageGallery seed="hizmetler" keyword="Hizmetlerimiz" />
       </section>
 
       <section className="mx-auto max-w-5xl px-4 pb-16">

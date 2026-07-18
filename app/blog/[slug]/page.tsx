@@ -10,6 +10,9 @@ import { RichParagraph } from "@/components/RichParagraph";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema } from "@/lib/schema";
 import { SITE } from "@/lib/config";
+import { TowImageGallery } from "@/components/TowImageGallery";
+import { BlogMeta } from "@/components/BlogMeta";
+import { blogAltKeyword, getTowImages } from "@/lib/data/images";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -44,6 +47,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           url: `${SITE.url}/blog/${post.slug}`,
           datePublished: post.datePublished,
           dateModified: post.dateModified,
+          image: `${SITE.url}${getTowImages(post.slug, blogAltKeyword(post.title))[0].file}`,
         })}
       />
       <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: post.title, href: `/blog/${post.slug}` }]} />
@@ -52,11 +56,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {CATEGORY_LABEL[post.category]}
         </p>
         <h1 className="text-3xl font-extrabold text-[var(--color-navy-900)] md:text-4xl">{post.title}</h1>
-        <p className="mt-2 text-sm text-[#5a6b80]">Son güncelleme: {post.dateModified}</p>
+        <BlogMeta dateModified={post.dateModified} />
 
         <div className="prose-tow mt-6">
           <p className="text-lg font-medium">{post.intro}</p>
         </div>
+
+        <TowImageGallery seed={post.slug} keyword={blogAltKeyword(post.title)} />
 
         {post.arrivalTable && (
           <div className="mt-6">

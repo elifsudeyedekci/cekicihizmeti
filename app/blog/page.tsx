@@ -4,12 +4,20 @@ import { posts, CATEGORY_LABEL } from "@/lib/blog/registry";
 import type { BlogCategory } from "@/lib/blog/types";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SiteSearch } from "@/components/SiteSearch";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
-  title: "Blog — Çekici ve Yol Yardım Rehberleri",
+  title: "Çekici ve Yol Yardım Blog — 90+ Rehber Yazısı",
   description:
-    "İlçe, marka, otoyol ve araç tipine göre 7/24 çekici ve yol yardım rehberleri. İstanbul'da yolda kaldığınızda bilmeniz gerekenler.",
-  alternates: { canonical: "/blog" },
+    "İlçe, marka, otoyol ve araç tipine göre hazırlanmış 7/24 çekici ve yol yardım rehberleri. İstanbul'da yolda kaldığınızda bilmeniz gereken her şey burada.",
+  alternates: {
+    canonical: "/blog",
+    languages: {
+      "tr-TR": "/blog",
+      "en-US": "/en/blog",
+      ar: "/ar/blog",
+    },
+  },
 };
 
 const CATEGORY_ORDER: BlogCategory[] = [
@@ -42,6 +50,7 @@ export default function BlogHubPage() {
         <div className="mt-6 max-w-xl">
           <SiteSearch items={searchItems} />
         </div>
+        <TowImageGallery seed="blog" keyword="Blog Rehberlerimiz" />
       </div>
 
       {CATEGORY_ORDER.map((cat) => {

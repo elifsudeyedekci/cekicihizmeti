@@ -14,6 +14,9 @@ export interface District {
   slug: string;
   name: string;
   yaka: "anadolu" | "avrupa";
+  /** İlçe merkezinin yaklaşık enlem/boylamı (geolocation ile en yakın ilçe eşleştirmesi için) */
+  lat: number;
+  lng: number;
   /** İlçedeki gerçek mahalleler (görsel alt-text, içerik ve SSS'lerde kullanılır) */
   neighborhoods: string[];
   /** İlçeden geçen / ilçeye bağlanan gerçek yol, otoyol, köprüler */

@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { districts } from "@/lib/data/districts";
+import { nearestDistrict } from "@/lib/data/districts";
 
-/** Basit tarayıcı geolocation: en yakın ilçeyi tahmin edip bölge sayfasına yönlendirme önerir. */
+/** Tarayıcı geolocation: gerçek enlem/boylama Haversine mesafesiyle en yakın ilçeyi bulup bölge sayfasına yönlendirme önerir. */
 export function GeoDetect() {
   const [suggestion, setSuggestion] = useState<{ name: string; slug: string } | null>(null);
   const [dismissed, setDismissed] = useState(false);
@@ -17,14 +17,8 @@ export function GeoDetect() {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const { latitude, longitude } = pos.coords;
-        // İstanbul merkez etrafında kaba bölge tahmini: Anadolu/Avrupa ayrımı boylam 29.02 civarı Boğaz hattı
-        const isAnadolu = longitude > 29.05;
-        const candidates = districts.filter((d) => d.yaka === (isAnadolu ? "anadolu" : "avrupa"));
-        if (candidates.length > 0) {
-          const pick = candidates[Math.floor(Math.random() * Math.min(3, candidates.length))];
-          setSuggestion({ name: pick.name, slug: pick.slug });
-        }
-        void latitude;
+        const nearest = nearestDistrict(latitude, longitude);
+        setSuggestion({ name: nearest.name, slug: nearest.slug });
       },
       () => {
         /* izin verilmedi, sessizce geç */

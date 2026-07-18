@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE } from "@/lib/config";
+import { SITE, STATS } from "@/lib/config";
 import { services } from "@/lib/data/services";
 import { districts } from "@/lib/data/districts";
 import { posts } from "@/lib/blog/registry";
@@ -9,11 +9,19 @@ import { TrustBadges, StatsCounter } from "@/components/TrustBadges";
 import { GeoDetect } from "@/components/GeoDetect";
 import { FaqSection } from "@/components/FaqSection";
 import { PillarContentSection } from "@/components/PillarContentSection";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
-  title: `${SITE.name} | 7/24 Oto Çekici, Yol Yardım — ${SITE.phone}`,
+  title: `İstanbul Oto Çekici ve Yol Yardım | 7/24 — ${SITE.phone}`,
   description: SITE.description,
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "tr-TR": "/",
+      "en-US": "/en",
+      ar: "/ar",
+    },
+  },
 };
 
 const FEATURED_SERVICE_SLUGS = [
@@ -78,6 +86,10 @@ export default function HomePage() {
       <TrustBadges />
       <StatsCounter />
 
+      <div className="mx-auto max-w-5xl px-4">
+        <TowImageGallery seed="home" keyword="İstanbul" count={3} />
+      </div>
+
       <section className="mx-auto max-w-5xl px-4 py-10">
         <div className="mb-6 flex items-end justify-between">
           <h2 className="text-2xl font-bold text-[var(--color-navy-900)] md:text-3xl">Hizmetlerimiz</h2>
@@ -127,16 +139,19 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-5xl px-4 py-10">
         <h2 className="mb-6 text-2xl font-bold text-[var(--color-navy-900)] md:text-3xl">Neden Bizi Tercih Etmelisiniz</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { t: "K1 Belgeli, Sigortalı", d: "Resmi kayıtlı, sigortalı taşıma ile aracınız güvende." },
-            { t: "Gerçek 7/24 Hizmet", d: "Gece dahil telefonu her zaman açan nöbetçi ekip." },
-            { t: "Hasarsız Taşıma", d: "Kayar platformla dört tekerlek yerden kesilerek taşıma." },
-            { t: "39 İlçenin Tamamı", d: "Şile'den Silivri'ye İstanbul'un her noktasına ulaşıyoruz." },
-            { t: "Şeffaf Süreç", d: "Yükleme öncesi/sonrası fotoğraflı durum raporu." },
-            { t: "Net Fiyat Bilgisi", d: "Telefonda anında ve net fiyat, sürpriz yok." },
+            { icon: "🛡️", t: "K1 Belgeli, Sigortalı", d: "Resmi kayıtlı, sigortalı taşıma ile aracınız güvende." },
+            { icon: "🕐", t: "Gerçek 7/24 Hizmet", d: "Gece dahil telefonu her zaman açan nöbetçi ekip." },
+            { icon: "🚛", t: "Hasarsız Taşıma", d: "Kayar platformla dört tekerlek yerden kesilerek taşıma." },
+            { icon: "📍", t: "39 İlçenin Tamamı", d: "Şile'den Silivri'ye İstanbul'un her noktasına ulaşıyoruz." },
+            { icon: "⏱️", t: "Ortalama Varış Süresi", d: `Merkezi ilçelerde ortalama ${STATS.avgArrivalMinutes} dakikada yanınızdayız.` },
+            { icon: "📸", t: "Şeffaf Süreç", d: "Yükleme öncesi/sonrası fotoğraflı durum raporu." },
+            { icon: "💬", t: "Net Fiyat Bilgisi", d: "Telefonda anında ve net fiyat, sürpriz yok." },
+            { icon: "📄", t: "Resmi Kayıtlı İşletme", d: "Fatura kesilen, denetlenebilir kurumsal hizmet." },
           ].map((item) => (
             <div key={item.t} className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-[var(--color-navy-100)]">
+              <div aria-hidden="true" className="mb-2 text-2xl">{item.icon}</div>
               <h3 className="font-bold text-[var(--color-navy-900)]">{item.t}</h3>
               <p className="mt-2 text-sm text-[#5a6b80]">{item.d}</p>
             </div>

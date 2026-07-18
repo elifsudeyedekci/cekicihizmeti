@@ -11,6 +11,9 @@ import { RichParagraph } from "@/components/RichParagraph";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema } from "@/lib/schema";
 import { SITE } from "@/lib/config";
+import { TowImageGallery } from "@/components/TowImageGallery";
+import { BlogMeta } from "@/components/BlogMeta";
+import { blogAltKeyword, getTowImages } from "@/lib/data/images";
 
 const EN_CATEGORY_LABEL: Record<BlogCategory, string> = {
   cornerstone: "Main Guide",
@@ -57,6 +60,7 @@ export default async function EnglishBlogPostPage({ params }: { params: Promise<
           url: `${SITE.url}/en/blog/${post.slug}`,
           datePublished: post.datePublished,
           dateModified: post.dateModified,
+          image: `${SITE.url}${getTowImages(`${post.slug}-en`, blogAltKeyword(post.title, "en"), 2, "en")[0].file}`,
         })}
       />
       <Breadcrumbs items={[{ name: "Blog", href: "/en/blog" }, { name: post.title, href: `/en/blog/${post.slug}` }]} />
@@ -65,10 +69,12 @@ export default async function EnglishBlogPostPage({ params }: { params: Promise<
           {EN_CATEGORY_LABEL[post.category]}
         </p>
         <h1 className="text-3xl font-extrabold text-[var(--color-navy-900)] md:text-4xl">{post.title}</h1>
-        <p className="mt-2 text-sm text-[#5a6b80]">Last updated: {post.dateModified}</p>
+        <BlogMeta dateModified={post.dateModified} locale="en" />
         <div className="prose-tow mt-6">
           <p className="text-lg font-medium">{post.intro}</p>
         </div>
+
+        <TowImageGallery seed={`${post.slug}-en`} keyword={blogAltKeyword(post.title, "en")} locale="en" />
         {post.arrivalTable && (
           <div className="mt-6">
             <h2 className="mb-3 text-xl font-bold text-[var(--color-navy-900)]">Estimated Arrival Times</h2>

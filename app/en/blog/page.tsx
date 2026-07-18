@@ -3,12 +3,20 @@ import Link from "next/link";
 import { enPosts } from "@/lib/blog/posts-en";
 import type { BlogCategory } from "@/lib/blog/types";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "Blog — Tow Truck & Roadside Assistance Guides",
   description:
     "24/7 tow truck and roadside assistance guides for Istanbul's districts, both sides of the Bosphorus, and travelers. What to know if you break down in Istanbul.",
-  alternates: { canonical: "/en/blog" },
+  alternates: {
+    canonical: "/en/blog",
+    languages: {
+      "tr-TR": "/blog",
+      "en-US": "/en/blog",
+      ar: "/ar/blog",
+    },
+  },
 };
 
 const EN_CATEGORY_LABEL: Record<BlogCategory, string> = {
@@ -34,6 +42,7 @@ export default function EnglishBlogHubPage() {
           24/7 tow truck and roadside assistance guides for Istanbul's districts, both sides of the
           Bosphorus, and travelers — everything you need to know if your car breaks down in this city.
         </p>
+        <TowImageGallery seed="en-blog" keyword="Istanbul" locale="en" />
       </div>
 
       {CATEGORY_ORDER.map((cat) => {

@@ -10,6 +10,7 @@ import { PhoneButton, WhatsAppButton, ShareLocationButton } from "@/components/C
 import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 import { SITE } from "@/lib/config";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 const RESERVED = ["anadolu-yakasi", "avrupa-yakasi"];
 
@@ -21,9 +22,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const d = getDistrict(slug);
   if (!d) return {};
+  const arrival = /\d/.test(d.arrivalMinutes) ? `ortalama ${d.arrivalMinutes} dk varış süresi` : d.arrivalMinutes.toLowerCase();
   return {
-    title: `${d.name} Çekici Hizmeti | 7/24 Oto Çekici — 0535 404 80 44`,
-    description: `${d.name}'de 7/24 oto çekici ve yol yardım hizmeti. Ortalama ${d.arrivalMinutes} dk varış süresi. Hemen arayın: 0535 404 80 44`,
+    title: `${d.name} Çekici Hizmeti | 7/24 — 0535 404 80 44`,
+    description: `${d.name}'de 7/24 oto çekici ve yol yardım hizmeti veriyoruz. K1 belgeli, sigortalı ekibimizle ${arrival}. Hemen arayın: 0535 404 80 44`,
     alternates: { canonical: `/bolgeler/${d.slug}` },
   };
 }
@@ -64,6 +66,8 @@ export default async function DistrictPage({ params }: { params: Promise<{ slug:
           <WhatsAppButton message={`Merhaba, ${d.name}'de aracım bozuldu.`} />
           <ShareLocationButton message={`Merhaba, ${d.name}'de konumum:`} />
         </div>
+
+        <TowImageGallery seed={d.slug} keyword={d.name} />
 
         <h2 className="mt-8 mb-3 text-xl font-bold text-[var(--color-navy-900)]">Tahmini Varış Süreleri</h2>
         <ArrivalTable rows={d.arrivalTable} />

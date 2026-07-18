@@ -3,6 +3,7 @@ import { SITE, STATS } from "@/lib/config";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { TrustBadges, StatsCounter } from "@/components/TrustBadges";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
@@ -25,6 +26,8 @@ export default function AboutPage() {
           <PhoneButton />
           <WhatsAppButton />
         </div>
+
+        <TowImageGallery seed="hakkimizda" keyword="Hakkımızda" />
 
         <div className="prose-tow mt-8">
           <h2>Kim Olduğumuz</h2>

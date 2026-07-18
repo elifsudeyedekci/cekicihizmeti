@@ -18,11 +18,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: {
-    default: `${SITE.name} | 7/24 Oto Çekici, Yol Yardım — ${SITE.phone}`,
-    template: `%s | ${SITE.name}`,
-  },
-  description: SITE.description,
+  title: `${SITE.name} | 7/24 Oto Çekici, Yol Yardım`,
+  description:
+    "İstanbul'un 39 ilçesinde 7/24 oto çekici ve yol yardım veriyoruz. K1 belgeli, sigortalı taşıma, ortalama 20-40 dakika varış. Hemen arayın: 0535 404 80 44",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

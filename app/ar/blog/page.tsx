@@ -3,12 +3,20 @@ import Link from "next/link";
 import { arPosts } from "@/lib/blog/posts-ar";
 import type { BlogCategory } from "@/lib/blog/types";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "المدونة — أدلة سطحة السحب والمساعدة على الطريق",
   description:
     "أدلة خدمة سطحة السحب والمساعدة على الطريق على مدار الساعة لأحياء إسطنبول وجانبيها والمسافرين. كل ما تحتاج معرفته إذا تعطلت سيارتك في إسطنبول.",
-  alternates: { canonical: "/ar/blog" },
+  alternates: {
+    canonical: "/ar/blog",
+    languages: {
+      "tr-TR": "/blog",
+      "en-US": "/en/blog",
+      ar: "/ar/blog",
+    },
+  },
 };
 
 const AR_CATEGORY_LABEL: Record<BlogCategory, string> = {
@@ -34,6 +42,7 @@ export default function ArabicBlogHubPage() {
           أدلة خدمة سطحة السحب والمساعدة على الطريق على مدار الساعة لأحياء إسطنبول وجانبيها والمسافرين —
           كل ما تحتاج معرفته إذا تعطلت سيارتك في هذه المدينة.
         </p>
+        <TowImageGallery seed="ar-blog" keyword="إسطنبول" locale="ar" />
       </div>
 
       {CATEGORY_ORDER.map((cat) => {

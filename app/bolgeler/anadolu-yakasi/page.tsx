@@ -4,6 +4,7 @@ import { anadoluDistricts } from "@/lib/data/districts";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { FaqSection } from "@/components/FaqSection";
+import { TowImageGallery } from "@/components/TowImageGallery";
 
 export const metadata: Metadata = {
   title: "İstanbul Anadolu Yakası 7/24 Çekici Hizmeti",
@@ -49,6 +50,7 @@ export default function AnadoluYakasiPage() {
             ortalama 15-25 dakikada, Şile ve Beykoz'un kuzey kesimleri gibi uzak noktalara 30-60 dakikada ulaşıyoruz.
           </p>
         </div>
+        <TowImageGallery seed="anadolu-yakasi" keyword="Anadolu Yakası" />
       </section>
       <section className="mx-auto max-w-3xl px-4 py-6">
         <h2 className="mb-4 text-xl font-bold text-[var(--color-navy-900)]">Anadolu Yakası İlçeleri</h2>
